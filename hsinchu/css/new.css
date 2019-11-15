@@ -1,0 +1,146 @@
+@charset "UTF-8";
+*{
+	font-family: '微軟正黑體';
+	margin:0 auto;
+	padding:0;
+}
+.clear{
+	clear:both;
+}
+.content-1{
+	max-width:1000px;
+	background-color: #fff;
+	margin:0 auto;
+	padding-top:5%;
+}
+/* 麵包屑 */
+.content-1 .breadcrumb{
+	background-color:#fff;
+	margin:0;
+	padding-left:10%;
+}
+
+.content-1 .new2 h1,.modal-content h1{
+	display:block;
+	text-align:center;
+	font-size:20px;
+	color:#6DA7D1;
+}
+.content-1 .new2 hr,.modal-content hr{
+	height:3px;
+	border:none;
+	background-color:#6DA7D1;
+	max-width:80%;
+	margin-top:10px;
+}
+
+.content-1 .box1{
+	box-shadow:0 0  13px #D1D1D1;
+	font-size:14px;
+	width:80%;
+	margin:0 auto;
+}
+.content-1 .box1 li{
+	list-style:none;
+	border-bottom-width:1px;
+	border-bottom-style:dashed;
+	border-bottom-color:#D6D6D6;
+	margin:10px;
+	padding:0 15px 5px 13px;
+}
+.content-1 .box1 li:last-child{
+	border:none;
+}
+.content-1 .box1 li:first-child{
+	padding-top:2%;
+}
+.content-1 .box1 img{
+	padding-right:10px;
+}
+.content-1 .box1 a{
+	text-decoration:none;
+	display:inline-block;
+	padding:5px 0px;
+	color:black;
+}
+.content-1 .box1 .newcontent:before{
+	content: "";
+	display: inline-block;
+	width:7px;
+	height:7px;
+	border-radius:50%;
+	background-color:#166BBF;
+	position: relative;
+	right:0px;
+}
+.content-1 .box1-1{
+	display:inline-block;
+	float:right;
+	color: #082E77;
+	padding-top:5px;
+}
+.content-1 .box1 a .newcontent{
+	display : inline-block;
+  	text-overflow : ellipsis;
+  	white-space : nowrap;
+  	overflow : hidden;
+  	width:30em;
+}
+
+
+.content-1 nav{
+	text-align:center;
+}
+
+/* 按鈕按下來後跳出來的視窗 */
+.modal-content{
+	padding-top:20px;
+	padding-bottom:10px;
+	text-align:center;
+}
+.modal-dialog{
+	margin-top:60px;
+}
+
+/* 關閉按鈕 */
+.btn-default{
+	background-color:#6DA7D1;
+	color:#fff;
+}
+
+@media(max-width:768px){
+.content-1 .box1 li{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+.content-1 li .box1-1{
+ 	margin-right: 0;
+
+}
+
+@media(max-width:414px){
+	.content-1 .box1 a .newcontent{
+  	width:21em;
+}
+}
+
+@media(max-width:375px){
+
+.content-1 .box1 a{
+	margin:0;
+	padding:0px;
+}
+.content-1 .box1 a .newcontent{
+	display :inline-block;
+  	text-overflow : ellipsis;
+  	white-space : nowrap;
+  	overflow : hidden;
+  	width:18em;
+}
+.content-1 .box1 .newcontent:before{
+	bottom:0px;
+}
+
+}
+
