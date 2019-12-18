@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>健康同步系統 安裝說明</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<style>
+		*{
+			margin:0;
+			padding:0
+		}
+		li{
+			list-style:none;
+		}
+		header .banner{
+			text-align:center;
+			color:#121212;
+			background:url("img/banner.png") no-repeat;
+			padding-top:30px;
+			padding-bottom:60px;
+			background-size:cover;
+			background-position:center;
+		}
+		header .banner h1,header .banner h4{
+			font-weight:normal;
+			padding-top:10px;
+		}
+
+		article .each-box{
+			margin:0 auto;
+			height:165px;
+			max-width:1000px;
+		}
+		article .light-blue{
+			background-color:#F2F9FD;
+		}
+		article .navy-blue{
+			background-color:#52748D;
+		}
+		article div .step{
+			text-align:center;
+			font-size:25px;
+			width:47%;
+			margin:0 auto;
+			padding-top:5px;
+		}
+		article .light-blue .step{
+			color:#356296;
+			border-bottom:solid 0.5px #356296;
+		}
+		article .navy-blue .step{
+			color:#ffff;
+			border-bottom:solid 0.5px #ffff;
+		}
+
+		article .one{
+			text-align:center;
+			margin-top:4.5%;
+		}
+		article .one .one-1{
+			color:#121212;
+		}
+		article .one .one-2{
+			font-size:18px;	
+		}
+		article .one a{
+			color:#ffff;
+			background: linear-gradient(#9ACDF2,#4F97CB);
+			padding:10px 12px;
+			border-radius:10px;
+			margin-left:10px;
+			text-decoration:none;
+		}
+		article .one a:hover{
+			background: linear-gradient(#B5D2FF,#4771B4);
+		}
+		
+		article .two , article .four{
+			color:#ffff;
+			text-align:center;
+		}
+		article .font-yellow{
+			color:#F8FFC3;
+		}
+		article .two .two-2 img{
+			width:196px;
+			vertical-align:top;
+			margin-top:10px;
+		}
+		article .two .two-1{
+			width:27%;
+			display:inline-block;
+			text-align:left;
+			margin-top:20px;
+		}
+		
+		article .three{
+			color:#121212;
+			text-align:center;
+		}
+		article .font-blue{
+			color:#5984E6;
+		}
+		article .three .three-1{
+			display:inline-block;
+			width:27%;
+			text-align:left;
+			margin-top:30px;
+			padding-right:23px;
+		}
+		article .three .three-2 img{
+			width:156.8px;
+			vertical-align:top;
+			margin-top:10px
+		}		
+		
+		article .four .four-1{
+			display:inline-block;
+			text-align:left;
+			width:20%;
+			margin-top:15px;
+			padding-right:15px;
+			word-break:break-all;
+		}
+		article .four .four-2 img{
+			width:250px;
+			vertical-align:top;
+			margin-top:33px;
+		}
+		article .four .four-1 a{
+			color:#7BD1FF;
+		}
+		article .four .four-1 a:hover{
+			color:#B1F0FF;
+		}
+		article .four .four-2{
+			position:relative;
+		}
+		article .four .url{
+			color:black;
+			position:absolute;
+			top:-30px;
+			left:60px;
+		}
+
+		footer{
+			background-color:#FFF9F7;
+			color:#485160;
+			font-size:14px;
+			text-align:center;
+			padding-bottom:5px;
+			padding-top:5px;
+		}
+		footer span{
+			padding-left:5%;
+			padding-right:5%;
+		}
+		footer img{
+			width:15px;
+			position:relative;
+			top:1px;
+		}
+		@media(max-width:877px){
+			article .four .url{
+				top:-52px
+			}
+		}
+
+		@media(max-width:768px){
+			header .banner{
+				padding-top:15px;
+				padding-bottom:20px;
+			}
+			article{
+				font-size:14px;
+			}
+			article .each-box{
+				height:auto;
+			}
+			article .one{
+				margin-top:8%;
+				padding-bottom:9%;
+			}
+			article .one a{
+				padding:7px;
+				margin-left:0px;
+			}
+			article .one .one-2{
+				font-size:16px;
+			}
+			article .two .two-1{
+				display:block;
+				margin:0 auto;
+				margin-top:10px;
+				width:72%;
+			}
+			article .two .two-2 img{
+				margin-top:5px;
+				padding-bottom:10px;
+			}
+			article .three .three-1{
+				display:block;
+				width:39%;
+				margin:0 auto;
+				margin-top:7px;
+				padding-right:0px;
+			}
+			article .three .three-2 img{
+				padding-bottom:10px;
+			}
+			article .four .four-1{
+				display:block;
+				width:84%;
+				margin:0 auto;
+				margin-top:10px;
+				padding-right:0px;
+			}
+			article .four .four-2 img{
+				margin-top:10px;
+				padding-bottom:20px;
+			}
+			article .four .url{
+				top: 28px;
+    			left: 69px;
+			}
+			footer span{
+				display:block;
+				padding:5px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="banner">
+			<h1>健康同步系統</h1>
+			<h4>安裝說明</h4>	
+		</div>
+	</header>
+
+
+	<article>
+
+		<div class="light-blue each-box">
+			<div class="step">STEP. 1</div>
+			<div class="one">
+				<span class="one-1">點我下載</span>
+				<span class="one-2">
+					<a href="http://repo.schoolsoft.com.tw/health/health_client.exe">
+						<img src="img/step1.png" alt="">
+						全誼健康資料客戶端安裝程式
+					</a>
+				</span>
+			</div>
+		</div>
+
+		<div class="navy-blue each-box">
+			<div class="step">STEP. 2</div>
+			<div class="two">
+				<span class="two-1">
+					將
+					<span class="font-yellow">
+						全誼健康資料客戶端安裝程式
+					</span>
+					檔案放置於
+					<span class="font-yellow">
+						學生健康資訊系統
+					</span>
+					資料庫主機桌面上
+				</span>
+				<span class="two-2">
+					<img src="img/step2.svg" alt="">
+				</span>
+			</div>
+		</div>
+
+		<div class="light-blue each-box">
+			<div class="step">STEP. 3</div>
+			<div class="three">
+				<span class="three-1">
+					點選
+					<span class="font-blue">
+						全誼健康資料客戶端安裝程式
+					</span>
+					進行安裝
+				</span>
+				<span class="three-2">
+					<img src="img/step3.svg" alt="">
+				</span>
+			</div>
+		</div>
+
+		<div class="navy-blue each-box">
+			<div class="step">STEP. 4</div>
+			<div class="four">
+				<span class="four-1">
+					安裝完畢請開啟瀏覽器，輸入
+						<a href="https://esa.ntpc.edu.tw" target="_blank">https://esa.ntpc.edu.tw</a>
+					確認是否可連線至新北市校務系統首頁
+				</span>
+				<span class="four-2">
+					<span class="url">https://esa.ntpc.edu.tw</span>
+					<img src="img/step4.svg" alt="">
+				</span>
+			</div>
+		</div>
+
+	</article>
+
+
+	<footer>
+		<span>全誼資訊</span>
+		<span>
+			<img src="img/phone.svg" alt="">
+			(02)2264-2345
+		</span>
+		<span>
+			<img src="img/map.svg" alt="">
+			新北市土城區忠義路21號4樓
+		</span>
+	</footer>
+</body>
+</html>
