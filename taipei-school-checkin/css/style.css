@@ -1,0 +1,285 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	padding: 0;
+	margin: 0;
+}
+
+ul, li, ol{
+	list-style:none;
+}
+
+.clear{
+	clear:both;
+}
+
+header{
+	background-color:#ffffff;
+	box-shadow:0 3px 6px #326EA8;
+	max-width:100%;
+	position:relative;
+	padding:10px 0;
+}
+
+.my_top{
+	max-width:1000px;
+	margin:0 auto;
+}
+
+.my_top h5{
+	color:black;
+	font-size:28px;
+}
+
+.my_top h5 span{
+	color:#6A6A6A;
+	font-size:21px;
+	font-weight:300;
+}
+
+article{
+	background-image:url("../img/bg.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+	background-size:cover;
+}
+
+.my_content{
+	max-width:800px;
+	margin:0 auto;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.my_content h1{
+	color:#ffffff;
+	font-size:38px;
+	text-align:center;
+	font-weight:400;
+}
+
+::-webkit-input-placeholder{
+  color:#C4C4C4;
+  font-weight:300;
+}
+::-moz-placeholder{
+  color:#C4C4C4;
+  font-weight:300;
+}
+::-moz-placeholder{
+  color:#C4C4C4;
+  font-weight:300;
+}
+
+.my_enter{
+	max-width:700px;
+	margin:20px auto;
+	border-radius:5px;
+}
+
+.my_enter_box{
+	background-color:#ffffff;
+	border-radius:5px;
+}
+
+.enter_down{
+	color:#ffffff;
+	font-size:15px;
+	font-weight:300;
+}
+
+.enter_box{
+	width:70%;
+	border:0px;
+	padding:12px 0 0px 15px;
+	border-radius:5px;
+	outline:none;
+	font-size:23px;
+}
+
+.enter_btn{
+	background-color:#47A60F;
+	color:#ffffff;
+	padding:15px;
+	font-size:20px;
+	font-weight:400;
+	border-radius:5px;
+	border:0px;
+	float:right;
+	outline:none;
+}
+
+.enter_btn:hover{
+	background-color:#296f00;
+	transition:all .3s;
+}
+
+.enter_btn img{
+	position:relative;
+	top:-2px;
+	padding-left:2px;
+}
+
+.down_box{
+	border-radius:5px;
+	background-color:rgba(255,255,255,.9);
+	margin-bottom: 15px;
+}
+
+.down_box_inside{
+	padding:10px 15px;
+}
+
+.my_title{
+	background-color:#47A60F;
+	color:#ffffff;
+	font-size:20px;
+	font-weight:400;
+	border-right:5px;
+	padding:5px 8px;
+}
+
+/* 公告欄 */
+
+.my_sml_title{
+	color:#1A1A1A;
+	font-size:16px;
+}
+
+.my_sml_title:before{
+	content: "";
+	display:inline-block;
+	background-color:#88C72D;
+	width:6px;
+	height:18px;
+	position:relative;
+	top:3px;
+}
+
+.my_announcement_words{
+	color:#717171;
+	font-size:14px;
+	display:block;
+	padding:5px 0px 8px 10px;
+}
+
+/* 國小列表 */
+
+.my_btn{
+	background-color: #ffffff;
+	border-color:#E0E0E0;
+	margin:2px 5px;
+	color:#567148;
+	padding:8px 35px;
+}
+
+.my_btn:hover{
+	background-color:#88C72D;
+	color:#ffffff;
+	border-color:#E0E0E0;
+	transition:all .3s ease;
+	outline:none;
+}
+
+.my_btn:focus{
+	background-color: #ffffff;
+	border-color:#E0E0E0;
+	margin:2px 5px;
+	color:#567148;
+	outline:none;
+}
+
+.inside_title{
+	font-size:20px;
+	background-color:#47A60F;
+	padding:10px;
+	border-radius:5px;
+	color:#ffffff;
+}
+
+.school_list_inside ul{
+	padding:10px;
+	font-size:16px;
+}
+
+.school_list_inside li:before{
+	content:"";
+	display:inline-block;
+	background-color:#567148;
+	border-radius: 50%;
+	width:6px;
+	height: 6px;
+	position:relative;
+	top:-3px;
+	margin-right: 5px;
+}
+
+.modal-content{
+	width:800px;
+	margin:0 auto;
+	top: 100px;
+}
+
+@media(max-width:768px){
+	.my_top h5{
+		text-align:center;
+		display:inline-block;
+	}
+
+	.my_top h5 span{
+		display: inline-block;	
+	}
+
+	.my_enter_box{
+		background-color:rgba(0,0,0,0);
+	}
+
+	.enter_box{
+		width:90%;
+		margin:0 auto;
+		display:block;
+		padding:10px;
+	}
+
+	.enter_btn{
+		margin:10px auto;
+		display:block;
+		float:none;
+		padding:10px 15px;
+	}
+
+	.enter_down{
+		text-align:center;
+	}
+
+	.down_box{
+		width:95%;
+		margin:0 auto;
+		margin-bottom:15px;
+	}
+
+	.modal-content{
+		top:80px;
+		width:95%;
+		margin:0 auto;
+	}
+
+	.my_content{
+		width:100%;
+		padding-bottom: 30px;
+	}
+
+	.my_content h1 span{
+		display: inline-block;
+		padding-top: 8px;
+	}
+}
+
+
+
+
+
