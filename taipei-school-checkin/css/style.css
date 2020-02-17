@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+
 *{
 	margin: 0;
 	padding: 0;
 }
 
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
 h1,h2,h3,h4,h5,h6{
 	padding: 0;
 	margin: 0;
+	font-family: 'Noto Sans TC', sans-serif;
 }
 
 ul, li, ol{
@@ -20,8 +27,9 @@ header{
 	background-color:#ffffff;
 	box-shadow:0 3px 6px #326EA8;
 	max-width:100%;
-	position:relative;
+	position:fixed;
 	padding:10px 0;
+	width:100%;
 }
 
 .my_top{
@@ -46,12 +54,13 @@ article{
 	background-attachment:fixed;
 	background-position:center;
 	background-size:cover;
+	height:100vh;
 }
 
 .my_content{
 	max-width:800px;
 	margin:0 auto;
-	padding-top: 60px;
+	padding-top: 100px;
 	padding-bottom: 60px;
 }
 
