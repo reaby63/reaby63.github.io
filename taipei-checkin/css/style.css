@@ -9,7 +9,7 @@ body{
 	font-family: 'Noto Sans TC', sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6{
 	padding: 0;
 	margin: 0;
 	font-family: 'Noto Sans TC', sans-serif;
@@ -38,23 +38,14 @@ header{
 }
 
 .my_top h5{
-	display:inline-block;
 	color:black;
 	font-size:28px;
-	vertical-align:top;
 }
 
-.my_top h5 p{
-	font-size:14px;
-	font-weight:100;
-}
-
-.my_top h4{
+.my_top h5 span{
 	color:#6A6A6A;
 	font-size:21px;
 	font-weight:300;
-	margin-left:5px;
-	display:inline-block;
 }
 
 article{
@@ -69,7 +60,8 @@ article{
 .my_content{
 	max-width:800px;
 	margin:0 auto;
-	padding-top: 110px;
+	padding-top: 100px;
+	padding-bottom: 60px;
 }
 
 .my_content h1{
@@ -242,18 +234,13 @@ article{
 }
 
 @media(max-width:768px){
-	.my_top{
-		text-align:center;
-	}
-
 	.my_top h5{
+		text-align:center;
 		display:inline-block;
 	}
 
-	.my_top h4{
-		display: inline-block;
-		margin-left:40px;
-		margin-top: 5px;
+	.my_top h5 span{
+		display: inline-block;	
 	}
 
 	.my_enter_box{
@@ -293,7 +280,6 @@ article{
 	.my_content{
 		width:100%;
 		padding-bottom: 30px;
-		padding-top: 130px;
 	}
 
 	.my_content h1 span{
