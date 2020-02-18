@@ -101,21 +101,34 @@ article{
 .my_enter_box{
 	background-color:#ffffff;
 	border-radius:5px;
+	box-shadow:0 3px 5px rgba(0,0,0,.3);
 }
 
 .enter_down{
 	color:#ffffff;
 	font-size:15px;
 	font-weight:300;
+	text-align:right;
+	margin-top: 5px;
 }
 
 .enter_box{
-	width:70%;
+	width:60%;
 	border:0px;
 	padding:12px 0 0px 15px;
 	border-radius:5px;
 	outline:none;
 	font-size:23px;
+}
+
+.enter_box_img{
+	width:8.8%;
+	padding:18px;
+	display:inline-block;
+	background-color:#ffffff;
+	border-radius:5px 0 0 5px;
+	vertical-align:top;
+	border-right:solid 1px #e8e8e8;
 }
 
 .enter_btn{
@@ -124,7 +137,7 @@ article{
 	padding:15px;
 	font-size:20px;
 	font-weight:400;
-	border-radius:5px;
+	border-radius:0 5px 5px 0;
 	border:0px;
 	float:right;
 	outline:none;
@@ -156,7 +169,7 @@ article{
 	color:#ffffff;
 	font-size:20px;
 	font-weight:400;
-	border-right:5px;
+	border-radius:5px 5px 0 0;
 	padding:5px 8px;
 }
 
@@ -258,6 +271,11 @@ article{
 
 	.my_enter_box{
 		background-color:rgba(0,0,0,0);
+		box-shadow:0 0 0;
+	}
+
+	.enter_box_img{
+		display:none;
 	}
 
 	.enter_box{
@@ -272,6 +290,7 @@ article{
 		display:block;
 		float:none;
 		padding:10px 15px;
+		border-radius:5px;
 	}
 
 	.enter_down{
