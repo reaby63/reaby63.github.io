@@ -110,6 +110,7 @@ article{
 	font-weight:300;
 	text-align:right;
 	margin-top: 5px;
+	text-shadow:0 0 5px rgba(0,0,0,.5);
 }
 
 .enter_box{
