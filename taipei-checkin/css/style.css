@@ -115,9 +115,9 @@ article{
 }
 
 .enter_box{
-	width:88.5%;
+	width: calc(100% - 60px);
 	border:0px;
-	padding:10px 20px;
+	padding:12px 20px;
 	border-radius:30px;
 	outline:none;
 	font-size:23px;
@@ -139,7 +139,9 @@ article{
 	padding:10px;
 	border-radius:50%;
 	border:0px;
-	/* float:right; */
+	float:right;
+	margin-right: 5px;
+	margin-top: 2px;
 	display:inline-block;
 	outline:none;
 	vertical-align: super;
@@ -156,8 +158,6 @@ article{
 }
 
 .enter_btn img{
-	position:relative;
-	top:-2px;
 	padding-left:2px;
 }
 
@@ -280,28 +280,8 @@ article{
 		margin-top: 5px;
 	}
 
-	.my_enter_box{
-		background-color:rgba(0,0,0,0);
-		box-shadow:0 0 0;
-	}
-
-	.enter_box_img{
-		display:none;
-	}
-
-	.enter_box{
-		width:90%;
+	.enter_02{
 		margin:0 auto;
-		display:block;
-		padding:10px;
-	}
-
-	.enter_btn{
-		margin:10px auto;
-		display:block;
-		float:none;
-		padding:10px 15px;
-		border-radius:5px;
 	}
 
 	.enter_down{
