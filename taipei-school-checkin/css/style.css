@@ -93,9 +93,15 @@ article{
 }
 
 .my_enter{
-	max-width:700px;
+	max-width:500px;
 	margin:20px auto;
 	border-radius:5px;
+	margin-bottom:30px;
+}
+
+.enter_02{
+	background-color:#ffffff;
+	border-radius:30px;
 }
 
 .my_enter_box{
@@ -114,10 +120,10 @@ article{
 }
 
 .enter_box{
-	width:60%;
+	width: calc(100% - 60px);
 	border:0px;
-	padding:12px 0 0px 15px;
-	border-radius:5px;
+	padding:12px 20px;
+	border-radius:30px;
 	outline:none;
 	font-size:23px;
 }
@@ -132,16 +138,19 @@ article{
 	border-right:solid 1px #e8e8e8;
 }
 
+
 .enter_btn{
 	background-color:#47A60F;
 	color:#ffffff;
-	padding:15px;
-	font-size:20px;
-	font-weight:400;
-	border-radius:0 5px 5px 0;
+	padding:10px;
+	border-radius:50%;
 	border:0px;
 	float:right;
+	margin-right: 5px;
+	margin-top: 2px;
+	display:inline-block;
 	outline:none;
+	vertical-align: super;
 }
 
 .enter_btn:hover{
@@ -150,8 +159,6 @@ article{
 }
 
 .enter_btn img{
-	position:relative;
-	top:-2px;
 	padding-left:2px;
 }
 
@@ -256,6 +263,11 @@ article{
 }
 
 @media(max-width:768px){
+	
+	.enter_02{
+		margin:0 auto;
+	}
+
 	.my_top{
 		text-align:center;
 	}
@@ -275,24 +287,19 @@ article{
 		box-shadow:0 0 0;
 	}
 
-	.enter_box_img{
-		display:none;
-	}
-
-	.enter_box{
-		width:90%;
-		margin:0 auto;
-		display:block;
-		padding:10px;
-	}
-
-	.enter_btn{
-		margin:10px auto;
-		display:block;
-		float:none;
-		padding:10px 15px;
-		border-radius:5px;
-	}
+.enter_btn{
+	background-color:#47A60F;
+	color:#ffffff;
+	padding:10px;
+	border-radius:50%;
+	border:0px;
+	float:right;
+	margin-right: 5px;
+	margin-top: 2px;
+	display:inline-block;
+	outline:none;
+	vertical-align: super;
+}
 
 	.enter_down{
 		text-align:center;
