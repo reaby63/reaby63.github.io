@@ -25,7 +25,7 @@ ul, li, ol{
 
 header{
 	background-color:#ffffff;
-	box-shadow:0 3px 6px #dcdcdc;
+	box-shadow:0 3px 6px #326EA8;
 	max-width:100%;
 	position:fixed;
 	padding:10px 0;
@@ -69,11 +69,11 @@ article{
 .my_content{
 	max-width:800px;
 	margin:0 auto;
-	padding-top: 110px;
+	padding-top: 130px;
 }
 
 .my_content h1{
-	color:#6d6d6d;
+	color:#ffffff;
 	font-size:38px;
 	text-align:center;
 	font-weight:400;
@@ -93,9 +93,10 @@ article{
 }
 
 .my_enter{
-	max-width:700px;
+	max-width:500px;
 	margin:20px auto;
 	border-radius:5px;
+	margin-bottom:30px;
 }
 
 .my_enter_box{
@@ -105,18 +106,19 @@ article{
 }
 
 .enter_down{
-	color:#6d6d6d;
+	color:#ffffff;
 	font-size:15px;
 	font-weight:300;
-	text-align:right;
+/* 	text-align:right; */
 	margin-top: 5px;
+	text-shadow:0 0 5px rgba(0,0,0,.5);
 }
 
 .enter_box{
-	width:60%;
+	width:88.5%;
 	border:0px;
-	padding:12px 0 0px 15px;
-	border-radius:5px;
+	padding:10px 20px;
+	border-radius:30px;
 	outline:none;
 	font-size:23px;
 }
@@ -134,13 +136,18 @@ article{
 .enter_btn{
 	background-color:#47A60F;
 	color:#ffffff;
-	padding:15px;
-	font-size:20px;
-	font-weight:400;
-	border-radius:0 5px 5px 0;
+	padding:10px;
+	border-radius:50%;
 	border:0px;
-	float:right;
+	/* float:right; */
+	display:inline-block;
 	outline:none;
+	vertical-align: super;
+}
+
+.enter_02{
+	background-color:#ffffff;
+	border-radius:30px;
 }
 
 .enter_btn:hover{
@@ -156,12 +163,12 @@ article{
 
 .down_box{
 	border-radius:5px;
-	background-color:rgba(255,255,255,.9);
+	background-color:rgba(0,0,0,.2);
 	margin-bottom: 15px;
 }
 
 .down_box_inside{
-	padding:10px 15px;
+	padding:15px;
 }
 
 .my_title{
@@ -176,11 +183,12 @@ article{
 /* 公告欄 */
 
 .my_sml_title{
-	color:#1A1A1A;
-	font-size:16px;
+	color:#ffffff;
+	font-size:21px;
+	text-align:center;
 }
 
-.my_sml_title:before{
+/* .my_sml_title:before{
 	content: "";
 	display:inline-block;
 	background-color:#88C72D;
@@ -188,23 +196,26 @@ article{
 	height:18px;
 	position:relative;
 	top:3px;
-}
+} */
 
 .my_announcement_words{
-	color:#717171;
+	color:#ffffff;
 	font-size:14px;
 	display:block;
-	padding:5px 0px 8px 10px;
+	padding:8px 10px;
 }
 
 /* 國小列表 */
+.my_school_list{
+	margin-top:15px ;
+}
 
 .my_btn{
 	background-color: #ffffff;
 	border-color:#E0E0E0;
-	margin:2px 5px;
+	margin:6px 5px;
 	color:#567148;
-	padding:8px 35px;
+	padding:7px 26px;
 }
 
 .my_btn:hover{
@@ -227,7 +238,7 @@ article{
 	font-size:20px;
 	background-color:#47A60F;
 	padding:10px;
-	border-radius:5px;
+	border-radius:5px 5px 0 0;
 	color:#ffffff;
 }
 
