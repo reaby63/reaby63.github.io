@@ -240,9 +240,12 @@ article{
 
 .number_img{
 	max-width:280px;
-	max-height:50px;
-	background-color:pink;
+	height:50px;
 	margin-top: 5px;
+}
+
+.number_img img{
+	max-width: 130px;
 }
 
 .enter_btn{
