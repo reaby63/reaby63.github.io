@@ -239,29 +239,50 @@ article{
 	color:#ffffff;
 }
 
+.school_list_inside{
+	background-color:rgba(255,255,255,.9);
+}
+
 .school_list_inside ul{
-	padding:10px;
+	padding:5px;
 	font-size:16px;
 	display:inline-block;
+	vertical-align:top;
 }
 
 .school_list_inside li{
-	margin-bottom: 5px;
+	margin: 10px 0px;/* 
+	border:1px solid #dddddd; */
+	padding:5px 10px;
+	box-shadow:0 0 4px #b3b3b3;
+	border-radius:3px;
+	background-color: #ffffff;
 }
 
 .school_list_inside li a{
-	text-decoration:underline;
-	color:#016ECB;
+	text-decoration:none;
+	color:#0ca4ff;
+	display:inline-block;
+
 }
 
-.school_list_inside li a:hover{
-	color:#2199FF;
+.school_list_inside li:hover a{
+	color:#ffffff;
+}
+
+.school_list_inside li:hover{
+	background-color:#4AABDD;
+	transition:all .5s;
 }
 
 .modal-content{
 	width:800px;
 	margin:0 auto;
 	top: 100px;
+}
+
+.inside_btn{
+	margin-left: 10px;
 }
 
 
@@ -330,6 +351,7 @@ article{
 		display: inline-block;
 		padding-top: 8px;
 	}
+
 }
 
 
