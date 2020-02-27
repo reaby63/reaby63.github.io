@@ -256,6 +256,15 @@ article{
 	margin-right: 5px;
 }
 
+.school_list_inside li a{
+	text-decoration:underline;
+	color:#016ECB;
+}
+
+.school_list_inside li a:hover{
+	color:#2199FF;
+}
+
 .modal-content{
 	width:800px;
 	margin:0 auto;
