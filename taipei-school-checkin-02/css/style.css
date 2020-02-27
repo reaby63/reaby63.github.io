@@ -213,11 +213,12 @@ article{
 .enter_box{
 	width:65%;
 	border-radius:29px;
-	border:1px solid #E5E5E5;
-	box-shadow:0 2px 4px #EBEBEB;
+	border:0px solid #E5E5E5;
+	box-shadow:0 0px 4px #bbbbbb;
 	padding:5px 10px;
 	font-size:14px;
 	font-weight:200;
+	outline:none;
 }
 
 ::-webkit-input-placeholder{
@@ -282,10 +283,9 @@ article{
 	background-color:rgba(255,255,255,.9);
 }
 
-
-
-
-
+.final_box .down_box_inside{
+	text-align:justify;
+}
 
 
 @media(max-width:768px){

@@ -242,18 +242,11 @@ article{
 .school_list_inside ul{
 	padding:10px;
 	font-size:16px;
+	display:inline-block;
 }
 
-.school_list_inside li:before{
-	content:"";
-	display:inline-block;
-	background-color:#567148;
-	border-radius: 50%;
-	width:6px;
-	height: 6px;
-	position:relative;
-	top:-3px;
-	margin-right: 5px;
+.school_list_inside li{
+	margin-bottom: 5px;
 }
 
 .school_list_inside li a{
