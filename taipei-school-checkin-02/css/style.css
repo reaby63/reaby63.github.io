@@ -180,12 +180,16 @@ article{
 }
 
 .enter_text{
-	color:#2B2B2B;
+	color:#567148;
 	font-size:15px;
 	margin-bottom:10px;
 }
 
-.enter_text:before{
+.big_space img,.sml_space img{
+	width:17px;
+}
+
+/* .enter_text:before{
 	content:"";
 	display:inline-block;
 	border-top:4px solid transparent;
@@ -194,7 +198,7 @@ article{
 	position:relative;
 	top:-1px;
 	margin-right: 5px;
-}
+} */
 
 .big_space{
 	letter-spacing:4px;
@@ -205,7 +209,7 @@ article{
 }
 
 .enter_box{
-	width:70%;
+	width:65%;
 	border-radius:29px;
 	border:1px solid #E5E5E5;
 	box-shadow:0 2px 4px #EBEBEB;
@@ -232,6 +236,7 @@ article{
 	display:block;
 	font-size:12px;
 	margin-left: 10em;
+    margin-top: 4px;
 }
 
 .red_words{
