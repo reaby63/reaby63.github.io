@@ -287,6 +287,29 @@ article{
 
 
 @media(max-width:768px){
+
+	article{
+		height:auto;
+	}
+
+	.my_btn{
+		width:45%;
+		text-align: center;
+		padding:10px 0;
+	}
+
+	.school_list_inside ul{
+		padding:0px;
+		margin-bottom:0px;
+	}
+
+	.school_list_inside li{
+		margin-bottom: 0;
+	}
+
+	.inside_btn{
+		margin-bottom: 10px;
+	}
 	
 	.enter_02{
 		margin:0 auto;

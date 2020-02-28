@@ -189,6 +189,8 @@ article{
 
 .big_space img,.sml_space img{
 	width:17px;
+    position: relative;
+    top: -3px;
 }
 
 /* .enter_text:before{
@@ -338,6 +340,7 @@ article{
 	.enter_box{
 		width:100%;
 		display:block;
+	    margin-top: 6px;
 	}
 
 	.inside_words{
