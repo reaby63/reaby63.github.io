@@ -251,7 +251,7 @@ article{
 }
 
 .school_list_inside li{
-	margin: 10px 0px;/* 
+	margin: 10px 10px 0 0px;/* 
 	border:1px solid #dddddd; */
 	padding:5px 10px;
 	box-shadow:0 0 4px #b3b3b3;
@@ -283,6 +283,10 @@ article{
 
 .inside_btn{
 	margin-left: 10px;
+}
+
+.inside_btn ul li{
+	display:inline-flex;
 }
 
 
