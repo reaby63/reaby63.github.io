@@ -319,7 +319,7 @@ article{
 	.my_content{
 		width:100%;
 		padding-bottom: 10px;
-		padding-top: 100px;
+/* 		padding-top: 100px; */
 	}
 
 	.my_content h1 span{
