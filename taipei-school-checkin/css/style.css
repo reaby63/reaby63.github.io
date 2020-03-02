@@ -239,6 +239,34 @@ article{
 	color:#ffffff;
 }
 
+.close_btn{
+	display:inline-block;
+	float:right;
+	cursor:pointer;
+	color:#ffffff;
+	outline:none;
+	font-size:15px;
+	font-weight:lighter;
+}
+
+button.close:hover{
+	background-color:#001d00;
+	color:#ffffff;
+	transition:all .3s;
+}
+
+.close{
+	text-shadow:none;
+	opacity:1;
+	line-height:1.7;
+}
+
+button.close{
+	background-color:#005600;
+	padding:3px 8px;
+	border-radius:5px;
+}
+
 .school_list_inside{
 	background-color:rgba(255,255,255,.9);
 }
