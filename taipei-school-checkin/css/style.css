@@ -7,6 +7,12 @@
 
 body{
 	font-family: 'Noto Sans TC', sans-serif;
+	background-image:url("../img/bg.jpg");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	height:auto;
+	background-position:center center;
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -57,14 +63,14 @@ header{
 	display:inline-block;
 }
 
-article{
+/* article{
 	background-image:url("../img/bg.jpg");
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	background-position:center;
 	background-size:cover;
 	height:100vh;
-}
+} */
 
 .my_content{
 	max-width:800px;
