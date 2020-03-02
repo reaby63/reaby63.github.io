@@ -209,6 +209,7 @@ header{
 	font-size:14px;
 	display:block;
 	padding:5px 0px 8px 10px;
+	text-align:justify;
 }
 
 /* 國小列表 */
@@ -321,6 +322,7 @@ button.close{
 
 .inside_btn ul li{
 	display:inline-flex;
+	width:11em;
 }
 
 
