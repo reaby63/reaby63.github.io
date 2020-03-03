@@ -172,6 +172,7 @@ header{
 	border-radius:5px;
 	background-color:rgba(255,255,255,.9);
 	margin-bottom: 15px;
+	box-shadow: 0 0px 5px #dbebec;
 }
 
 .down_box_inside{
@@ -357,7 +358,7 @@ button.close{
 .down_box_02{
 	border-radius:5px;
 	margin-bottom: 15px;
-	box-shadow:0 3px 7px #B9B9B9;
+	box-shadow: 0 0px 5px #dbebec;
 }
 
 .down_box_inside_02{
@@ -582,6 +583,7 @@ button.close{
 	
 	.enter_02{
 		margin:0 auto;
+		width:95%;
 	}
 
 	.my_top{
@@ -699,6 +701,15 @@ button.close{
 
 @media(max-width:467px){
 	.enter_box{
+		font-size:20px;
+	}
+
+	.enter_btn{
+		padding:8px;
+	}
+
+
+	.enter_box_02{
 		width:100%;
 		display:block;
 	    margin-top: 6px;
@@ -708,11 +719,13 @@ button.close{
 		margin-left: 0;
 	}
 
-/* 	.number_img{
+	.number_img{
 		margin:0 auto;
 		margin-top: 5px;
+		text-align:center;
+		display:block;
 	}
- */
+
 }
 
 
