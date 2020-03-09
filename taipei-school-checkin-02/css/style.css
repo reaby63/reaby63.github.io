@@ -344,6 +344,7 @@ button.close{
 .my_content_02 h2{
 	font-size: 18px;
 	margin-top: 10px;
+	margin-bottom: 25px;
 }
 
 /* 開始下面框框內容 */
@@ -359,10 +360,11 @@ button.close{
 	border-radius:5px;
 	margin-bottom: 15px;
 	box-shadow: 0 0px 5px #dbebec;
+	background-color:rgba(255,255,255,1);
 }
 
 .down_box_inside_02{
-	padding:15px;
+	padding:13px 15px;
 }
 
 .my_title_02{
@@ -393,8 +395,6 @@ button.close{
 .left_box{
 	width:40%;
 	margin-right:1.5%;
-	display:inline-block;
-	background-color:rgba(255,255,255,1);
 }
 
 .teacher_phone{
@@ -420,17 +420,15 @@ button.close{
 
 .blue_time{
 	color:#009fff;
-	background-color:#F0F0F0;
-	padding:10px;
-	border-radius:5px;
-	margin-top:15px;
-	margin-bottom: 10px;
+	font-size:15px;
 	font-weight: 500;
+	margin-bottom: 5px;
 }
 
 .green_words{
-	color:#567148;
-	font-size:14px;
+	color:#868686;
+	font-size:13px;
+	margin-bottom: 10px;
 }
 
 
@@ -553,6 +551,27 @@ button.close{
 
 .final_box .down_box_inside{
 	text-align:justify;
+}
+
+/* 新增新生入學日、報到期間 */
+.left_box_time{
+	margin-bottom: 10px;
+}
+
+.checkin_time{
+	font-size:16px;
+	margin-bottom:8px;
+	color:#6E6E6E;
+}
+
+.checkin_time span{
+	color:#009fff;
+	font-weight:bold;
+	margin-left: 4px;
+}
+
+.left_box_02{
+	min-height: 242px;
 }
 
 
