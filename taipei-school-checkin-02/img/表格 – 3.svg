@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="595" height="845" viewBox="0 0 595 845">
+  <defs>
+    <clipPath id="clip-表格_3">
+      <rect width="595" height="845"/>
+    </clipPath>
+  </defs>
+  <g id="表格_3" data-name="表格 – 3" clip-path="url(#clip-表格_3)">
+    <rect width="595" height="845" fill="#f2f2f2"/>
+    <rect id="Rectangle_322" data-name="Rectangle 322" width="594.009" height="842.41" transform="translate(0 -0.177)" fill="#fff"/>
+    <g id="Rectangle_323" data-name="Rectangle 323" transform="translate(32 103)" fill="#fff" stroke="#d8d8d8" stroke-width="4">
+      <rect width="531" height="123" stroke="none"/>
+      <rect x="2" y="2" width="527" height="119" fill="none"/>
+    </g>
+    <text id="東榮里026鄰民生東路5段69巷2弄15號2樓" transform="translate(67 133)" font-size="16" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">東榮里</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue">026</tspan><tspan y="0">鄰民生東路</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue">5</tspan><tspan y="0">段</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue">69</tspan><tspan y="0">巷</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue">2</tspan><tspan y="0">弄</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue">15</tspan><tspan y="0">號</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue">2</tspan><tspan y="0">樓</tspan></text>
+    <text id="莊小明" transform="translate(171 193)" font-size="34" font-family="PingFangTC-Medium, PingFang TC" font-weight="500"><tspan x="0" y="0">莊小明</tspan></text>
+    <text id="先生_女士_收" data-name="先生/女士 收" transform="translate(300 194)" font-size="23" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">先生</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue">/</tspan><tspan y="0">女士</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue"> </tspan><tspan y="0">收</tspan></text>
+    <line id="Line_9" data-name="Line 9" x2="594" transform="translate(0.5 286.5)" fill="rgba(0,0,0,0)" stroke="#b2b2b2" stroke-width="1" stroke-dasharray="2"/>
+    <text id="新北市測試國小_教務處_啟" data-name="新北市測試國小  教務處  啟" transform="translate(367 255)" font-size="16" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">新北市測試國小</tspan><tspan y="0" xml:space="preserve" font-family="HelveticaNeue, Helvetica Neue">  </tspan><tspan y="0">教務處</tspan><tspan y="0" xml:space="preserve" font-family="HelveticaNeue, Helvetica Neue">  </tspan><tspan y="0">啟</tspan></text>
+    <text id="新北市測試國小_通知單" data-name="新北市測試國小 通知單" transform="translate(174 72)" font-size="24" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">新北市測試國小</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue"> </tspan><tspan y="0">通知單</tspan></text>
+    <text id="家長您好_" data-name="家長您好：" transform="translate(78 353)" fill="#262626" font-size="14" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">家長您好：</tspan></text>
+    <text id="貴子弟_莊小明應於本學期至本校辦理報到入學_迄今尚未報到_特此通知_請盡速至本校辦理入學_" data-name="貴子弟  莊小明應於本學期至本校辦理報到入學，迄今尚未報到，特此通知，請盡速至本校辦理入學。" transform="translate(30 383)" fill="#434343" font-size="12" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">貴子弟</tspan><tspan y="0" xml:space="preserve" font-family="HelveticaNeue, Helvetica Neue">  </tspan><tspan y="0">莊小明應於本學期至本校辦理報到入學，迄今尚未報到，特此通知，請盡速至本校辦理入學。</tspan></text>
+    <text id="莊大名" transform="translate(30 353)" fill="#262626" font-size="14" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">莊大名</tspan></text>
+    <text id="備註_" data-name="備註～～～～～～" transform="translate(30 412)" fill="#434343" font-size="12" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">備註～～～～～～</tspan></text>
+    <text id="新北市測試國小_啟" data-name="新北市測試國小 啟" transform="translate(561 437)" fill="#434343" font-size="12" font-family="PingFangTC-Regular, PingFang TC"><tspan x="-99.336" y="0">新北市測試國小</tspan><tspan y="0" font-family="HelveticaNeue, Helvetica Neue"> </tspan><tspan y="0">啟</tspan></text>
+    <text id="新生尚未報到通知單" transform="translate(212 325)" font-size="19" font-family="PingFangTC-Medium, PingFang TC" font-weight="500"><tspan x="0" y="0">新生尚未報到通知單</tspan></text>
+  </g>
+</svg>
