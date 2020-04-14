@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&display=swap');
+
 
 *{
 	margin: 0;
@@ -514,7 +516,7 @@ button.close{
 
 .number_img{
 	max-width:200px;
-	height:70px;
+	height:55px;
 	margin-left:2px;
 }
 
@@ -571,7 +573,7 @@ button.close{
 }
 
 .left_box_02{
-	min-height: 242px;
+	min-height: 220px;
 }
 
 
@@ -716,6 +718,22 @@ button.close{
 		order:1;
 	}
 
+	.left_box_02{
+		min-height:auto;
+	}
+
+	.left_box{
+		margin-bottom:0px;
+	}
+
+	.my_content_02{
+		padding-bottom:0px;
+	}
+	
+	.down_content{
+		 margin-top: 0px;
+	}
+
 }
 
 @media(max-width:467px){
@@ -743,6 +761,7 @@ button.close{
 		margin-top: 5px;
 		text-align:center;
 		display:block;
+		height: 45px;
 	}
 
 }
