@@ -137,6 +137,7 @@ body{
 	color:#ffffff;
 	box-shadow:0 2px 4px #dcdcdc;
 	font-size:16px;
+	border: 0px;
 }
 
 .page1_enter button:hover{
