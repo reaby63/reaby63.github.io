@@ -1,10 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-  <defs>
-    <clipPath id="clip-path">
-      <rect id="Rectangle_321" data-name="Rectangle 321" width="24" height="24" transform="translate(262 259)" fill="#62c8cc" stroke="#707070" stroke-width="1"/>
-    </clipPath>
-  </defs>
-  <g id="Mask_Group_34" data-name="Mask Group 34" transform="translate(-262 -259)" clip-path="url(#clip-path)">
-    <path id="check-in" d="M23.3,10.781h-.281V9.141a4.457,4.457,0,0,0-2.329-3.913,3.047,3.047,0,1,0-4.249,0,4.457,4.457,0,0,0-2.329,3.913v1.641h-5.2V9.375h2.578A1.173,1.173,0,0,0,12.656,8.2V1.641A1.173,1.173,0,0,0,11.484.469H1.172A1.173,1.173,0,0,0,0,1.641V8.2A1.173,1.173,0,0,0,1.172,9.375H3.75v1.406H.7a.7.7,0,0,0-.7.7V21.891a.7.7,0,0,0,.7.7H23.3a.7.7,0,0,0,.7-.7V11.484A.7.7,0,0,0,23.3,10.781ZM16.922,3.047a1.641,1.641,0,1,1,1.641,1.641A1.642,1.642,0,0,1,16.922,3.047ZM15.516,9.141a3.047,3.047,0,0,1,6.094,0v1.641H15.516ZM1.406,1.875H11.25V7.969H1.406Zm3.75,7.5H7.5v1.406H5.156ZM22.594,21.188H1.406v-9H22.594Zm0,0" transform="translate(262 259.703)" fill="#62c8cc"/>
-  </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#567148;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" y="0" width="24" height="24"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="Mask_Group_34" transform="translate(-262 -259)" class="st0">
+		<path id="check-in" class="st1" d="M285.3,270.5H285v-1.6c0-1.6-0.9-3.1-2.3-3.9c1.2-1.2,1.2-3.1,0.1-4.3s-3.1-1.2-4.3-0.1
+			c-1.2,1.2-1.2,3.1-0.1,4.3c0,0,0,0,0.1,0.1c-1.4,0.8-2.3,2.3-2.3,3.9v1.6h-5.2v-1.4h2.6c0.6,0,1.2-0.5,1.2-1.2v-6.6
+			c0-0.6-0.5-1.2-1.2-1.2h-10.3c-0.6,0-1.2,0.5-1.2,1.2v6.6c0,0.6,0.5,1.2,1.2,1.2c0,0,0,0,0,0h2.6v1.4h-3c-0.4,0-0.7,0.3-0.7,0.7
+			v10.4c0,0.4,0.3,0.7,0.7,0.7c0,0,0,0,0,0h22.6c0.4,0,0.7-0.3,0.7-0.7l0,0v-10.4C286,270.8,285.7,270.5,285.3,270.5
+			C285.3,270.5,285.3,270.5,285.3,270.5z M278.9,262.8c0-0.9,0.7-1.6,1.6-1.6c0.9,0,1.6,0.7,1.6,1.6c0,0.9-0.7,1.6-1.6,1.6
+			C279.7,264.4,278.9,263.7,278.9,262.8z M277.5,268.8c0-1.7,1.4-3,3-3c1.7,0,3,1.4,3,3v1.6h-6.1V268.8z M263.4,261.6h9.8v6.1h-9.8
+			V261.6z M267.2,269.1h2.3v1.4h-2.3V269.1z M284.6,280.9h-21.2v-9h21.2V280.9z"/>
+	</g>
+</g>
 </svg>

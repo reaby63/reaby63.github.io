@@ -1,0 +1,428 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* 頂埔國小登入頁 */
+.page1_box{
+	background-color:rgba(255,255,255,.9);
+	margin:0 auto;
+	display: block;
+	text-align: center;
+	margin-top: 70px;
+	max-width:640px;
+	border-radius:15px;
+	padding:20px;
+	padding-top:30px;
+	margin-bottom:50px;
+}
+
+.page1_box img{
+	width:110px;
+	margin-bottom: 10px;
+}
+
+.page1_box h1,.page1_box h2{
+	margin:0px;
+	margin-bottom:15px;
+	color:#0371d0;
+}
+
+.page1_box h1{
+	font-size:35px;
+	font-weight:500;
+}
+
+.page1_box h2{
+	font-size:20px;
+	font-weight:500;
+}
+
+.enter_box{
+	text-align:center;
+	margin-top: 25px;
+}
+
+.select_class{
+	width:55%;
+	display:inline-block;
+}
+
+.select_number{
+	width:38%;
+	display:inline-block;
+}
+
+.select_name{
+	color:#1497f7;
+}
+
+.enter_id{
+	display:block;
+	margin-top:3px;
+}
+
+.enter_id input{
+	display:inline-block;
+	width:71%;
+}
+
+.each_enter_box1,.each_enter_box2,.each_enter_box3{
+	text-align:left;
+	display:inline-block;
+}
+
+.each_enter_box1{
+	width: 56%;
+    margin-right: -81px;
+}
+
+.each_enter_box2{
+	width:36%;
+	margin-right: -60px;
+}
+
+.each_enter_box3{
+	width:20%;
+}
+
+.each_enter_box1 span,.each_enter_box2 span,.each_enter_box3 span,.enter_id span{
+	font-size:18px;
+	font-weight:400;
+	margin-right: 5px;
+}
+
+.select-wrapper input.select-dropdown{
+	border:solid 1px #CCCCCC;
+	border-radius:3px;
+	height: 2em;
+    padding:0px 5px;
+    color: #808080;
+}
+
+.select-wrapper input.select-dropdown:focus{
+	border-bottom:1px solid #CCCCCC;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+	color:#808080;
+	font-size:15px;
+}
+
+.page1_enter{
+	margin:30px 0;
+}
+
+.page1_enter button{
+	background-color:#0fabff;
+	padding:12px 25px;
+	border-radius:5px;
+	color:#ffffff;
+	box-shadow:0 2px 4px #dcdcdc;
+	font-size:16px;
+}
+
+.page1_enter button:hover{
+	background-color: #00c4f9;
+	transition:.3s all ease;
+}
+
+@media(max-width: 650px){
+	.page1_box{
+		margin-left:5px;
+		margin-right:5px;
+	}
+}
+
+@media(max-width: 768px){
+	.each_enter_box1,.each_enter_box2,.each_enter_box3{
+		display:block;
+		width:100%;
+	}
+
+	.select_class,.select_number{
+		width:100%;
+	}
+
+	.enter_id{
+		text-align:left;
+	}
+
+	.enter_id input{
+		width:100%;
+		margin-top: 7px;
+	}
+
+	.enter_box .input-field{
+		margin:0;
+		margin-bottom:7px;
+		margin-top: 4px;
+	}
+
+	.each_enter_box3{
+		margin-bottom: 15px;
+	}
+
+	.enter_box{
+		margin-top:10px;
+	}
+
+}
+
+
+
+/* 第二頁 */
+
+header{
+	background-color: #333333;
+}
+
+.head_word{
+	max-width:1000px;
+	color:#ffffff;
+	margin:0 auto;
+	padding:10px 0;
+	font-size:18px;
+	font-weight:300;
+}
+
+article{
+	max-width:1000px;
+	margin:0 auto;
+}
+
+
+.student_photo{
+	border-radius:50%;
+}
+
+.student_name{
+	font-size:18px;
+
+}
+
+/* 按鈕設定 */
+.tabs{
+	height: 39px;
+}
+
+.tabs .tab{
+	line-height: 35px;
+	padding-top: 5px;
+}
+
+.tabs .tab a{
+	font-size:16px;
+    padding: 0px 18px;
+    color:#4652B2;
+    font-weight:400;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active{
+	color:#4652B2;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active{
+	background-color: #ffffff;
+}
+
+a:focus, a:hover{
+	text-decoration: none;
+}
+
+/* 按鈕底線顏色 */
+.tabs .indicator{
+	background-color: #4652B2;
+}
+
+/* 上方白底設定 */
+.top_box{
+	box-shadow:0 3px 6px #dcdcdc;
+	background-color: #ffffff;
+	padding:15px 25px;
+	padding-bottom: 8px;
+	margin-bottom:5px;
+}
+
+/* 下方白底設定 */
+.down_box{
+	box-shadow:0 3px 6px #dcdcdc;
+	background-color: #ffffff;
+	padding:15px 25px;
+}
+
+
+/*學生請假申請 按鈕下方內容*/
+.redtag_graywords{
+	font-size:14px;
+	color:#717171;
+	border-left:4px solid #DF7676;
+}
+
+.redtag_graywords span{
+	display:inline-block;
+	margin-left:3px;
+}
+
+/* .redtag_graywords:before{
+	content:"";
+	display:inline-block;
+	background-color:#DF7676;
+	width:4px;
+	position:relative;
+	top:4px;
+	margin-right:2px;
+} */
+
+.title_words{
+	font-size:15px;
+	color:#000000;
+	margin-top: 10px;
+	margin-bottom: 7px;
+}
+
+.yellow_number{
+	color:#FFC65A;
+	font-size:30px;
+	font-weight:400;
+	position:relative;
+	top:1.5px;
+}
+
+.right_btn{
+	display:inline-block;
+	float:right;
+	cursor:pointer;
+	color:#ffffff;
+	border-radius:2px;
+	padding:8px 15px;
+	font-size:14px;
+	box-shadow:0 2px 2px #dcdcdc;
+}
+
+.bgc_green{
+	background-color:#009688;
+}
+
+.bgc_green:hover{
+	background-color:#00b7a6;
+	transition:.2s all ease-in-out;
+}
+
+/* 請假類別按鈕 */
+.inside_words{
+	padding:0 20px;
+}
+
+.takeleave_btn button{
+	padding:5px 15px;
+	background-color: #ffffff;
+	color:#969696;
+	font-size:14px;
+	border:solid 1px #CECECE;
+	border-radius:3px;
+	display:inline-block;
+	margin-bottom:8px;
+	margin-right:5px;
+	cursor:pointer;
+}
+
+.takeleave_btn button:hover{
+	background-color: #1298B1;
+	color:#ffffff;
+	transition:.3s all ease;
+}
+
+/* .takeleave_btn button:active{
+	background-color: #1298B1;
+	color:#ffffff;
+} */
+
+.takeleave_btn button:focus{
+	background-color: #1298B1;
+	color:#ffffff;
+}
+
+/* 輸入匡 */
+input{
+	outline:none;
+}
+
+.bgc_blue{
+	background-color: #4652B2;
+}
+
+.bgc_blue:hover{
+	background-color:#5567f5;
+	transition: .2s all ease-in-out;
+}
+
+/* 請假日期 */
+.thrid_box h5{
+	color: #000000;
+	font-size:15px;
+	display:inline-block;
+	margin-right:5px;
+}
+
+.thrid_box .choose_day{
+	background-color:#818181;
+	box-shadow:0 2px 2px #dcdcdc;
+	color:#ffffff;
+	padding:5px 8px;
+	border-radius:2px;
+	font-weight:300;
+	margin-right:20px;
+}
+
+.thrid_box .choose_day:hover{
+	background-color: #9c9c9c;
+	transition: .2s all ease-in-out;
+}
+
+.switch{
+	display:inline-block;
+}
+
+.switch label .lever{
+	margin: 0 3px;
+}
+
+.thrid_box span{
+	color:#4E4E4E;
+	font-size:15px;
+	display:inline-block;
+}
+
+.thrid_box h6{
+	color:#000000;
+	font-size:14px;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+@media(max-width:768px){
+	.head_word{
+		text-align:center;
+	}
+
+	.down_box{
+		padding:15px;
+	}
+
+	.top_box{
+		padding:15px;
+		padding-bottom: 8px;
+	}
+
+	.graywords{
+		width: calc(100% - 118px);
+    	display: inline-block;
+	}
+
+	.bgc_blue{
+		margin-top: 9px;
+	}
+}
+
+

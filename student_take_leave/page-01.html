@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>學生線上請假 登入頁面</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	 <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+
+	<style>
+		body{
+			background-image:url("../img/bg.jpg");
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+			background-size:cover;
+			height:auto;
+			background-position:center center;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="page1_box">
+		<img src="img/school_logo.jpg" alt="">
+		<h1>頂埔國民小學</h1>
+		<h2>學生線上請假</h2>
+		<div class="enter_box">
+			<div class="each_enter_box1">
+				<span>班級</span>
+				<div class="input-field col s12 select_class">
+				    <select>
+				      <option value="" disabled selected>選擇班級</option>
+				      <option value="1">三年一班</option>
+				      <option value="2">三年二班</option>
+				      <option value="3">三年三班</option>
+				    </select>
+				</div>
+			</div>
+			
+			<div class="each_enter_box2">
+				<span>座號</span>
+				<div class="input-field col s12 select_number">
+				    <select>
+				      <option value="" disabled selected>選擇座號</option>
+				      <option value="1">01</option>
+				      <option value="2">02</option>
+				      <option value="3">03</option>
+				    </select>
+				</div>
+			</div>
+			
+			<div class="each_enter_box3">
+				<span>姓名</span>
+				<span class="select_name">王O明</span>
+			</div>
+			
+			<div class="enter_id">
+				<span>身分證後九碼</span>
+				<input type="gray_enter_box" class="form-control gray_enter_box" id="exampleInputEmail1" placeholder="ex.123456789">
+			</div>
+
+			<div class="page1_enter">
+				<button>登入</button>
+			</div>
+
+		</div>	
+	</div>
+
+	<script>
+		 document.addEventListener('DOMContentLoaded', function() {
+		    var elems = document.querySelectorAll('select');
+		    var instances = M.FormSelect.init(elems, options);
+		  });
+
+		  // Or with jQuery
+
+		  $(document).ready(function(){
+		    $('select').formSelect();
+		  });
+	</script>
+	
+</body>
+</html>

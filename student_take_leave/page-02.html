@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>學生線上請假</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	 <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+
+	<style>
+		body{
+			background-color: #EBEBEB;
+		}
+	</style>
+
+</head>
+<body>
+	<header>
+		<div class="head_word">
+			頂埔國民小學 學生線上請假
+		</div>
+	</header>
+
+	<article>
+
+		<div class="top_box">
+			<div class="student_name">
+				<span class="student_photo">
+					<img src="img/photo.jpg" alt="">
+				</span>
+				<span>
+					六年一班
+				</span>
+				<span>
+					01號
+				</span>
+				<span>
+					王小明
+				</span>
+			</div>
+
+		<!-- 換頁按鈕 -->
+			<ul id="tabs-swipe-demo" class="tabs">
+			    <li class="tab col s3"><a href="#test-swipe-1">學生請假紀錄</a></li>
+			    <li class="tab col s3"><a class="active" href="#test-swipe-2">學生請假申請</a></li>
+			    <!-- <li class="tab col s3"><a href="#test-swipe-3">Test 3</a></li> -->
+		  </ul>
+		</div>
+
+		<div class="down_box">
+
+
+		  <!-- 第一頁內容 -->
+		  <div id="test-swipe-1" class="col s12">學生請假紀錄</div>
+
+		 <!-- 第二頁內容 -->
+		  <div id="test-swipe-2" class="col s12">
+		  	<div class="redtag_graywords">
+		  		<span class="graywords">
+		  			假單送出後，系統會發送請假通知給老師，老師核准後，會回覆通知給您確認。
+		  		</span>
+		  		<span class="right_btn bgc_green">
+		  			<img src="img/send.svg" alt="">
+		  			送出假單
+		  		</span>
+		  	</div>
+		  	<div class="title_words">
+		  		<span class="yellow_number">
+		  			1</span>
+		  		請假類別
+		  	</div>
+		  	<div class="takeleave_btn inside_words">
+		  		<button>
+		  			事假
+		  		</button>
+		  		<button>
+		  			病假
+		  		</button>
+		  		<button>
+		  			公假
+		  		</button>
+		  		<button>
+		  			喪假
+		  		</button>
+		  		<button>
+		  			不可抗力
+		  		</button>
+		  		<button>
+		  			其它1-居家隔離
+		  		</button>
+		  		<button>
+		  			其它2-居家檢疫
+		  		</button>
+		  		<button>
+		  			其它3-自主健康管理
+		  		</button>
+		  		<button>
+		  			其它4-發燒或呼吸道症狀
+		  		</button>
+		  		<button>
+		  			其它5-非屬上述原因
+		  		</button>
+		  		<button>
+		  			其它6-到校發燒
+		  		</button> 		
+		  	</div>
+
+		  	<div class="title_words">
+		  		<span class="yellow_number">
+		  			2</span>
+		  		請假原因
+		  	</div>
+		  	<div class="inside_words">
+				<input type="gray_enter_box" class="form-control" id="exampleInputEmail1" placeholder="請輸入請假事由">
+			</div>
+
+			<div class="title_words">
+		  		<span class="yellow_number">
+		  			3</span>
+		  		請假日期
+				<span class="right_btn bgc_blue">
+		  			<img src="img/send.svg" alt="">
+		  			新增日期
+		  		</span>
+		  	</div>
+			<div class="redtag_graywords">
+				<span>
+					可複選，全天請假請務必勾選課後照顧班或課後社團
+				</span>
+			</div>
+			<div class="inside_words">
+				<div class="thrid_box">
+					<h5>
+						109-03-25(五)
+					</h5>
+					<a href="#" class="choose_day">
+						選擇日期
+					</a>
+					<span>
+						全部節次
+					 <!-- Switch -->
+					  <div class="switch">
+					    <label>
+					      <input type="checkbox">
+					      <span class="lever"></span>
+					    </label>
+					  </div>
+					 </span>
+
+					<h6>
+						起訖節次					
+					</h6>
+					
+					<div class="takeleave_btn">
+				  		<button>
+				  			導師時間
+				  		</button>
+				  		<button>
+				  			第一節
+				  		</button>
+						<button>
+				  			第二節
+				  		</button>
+				  		<button>
+				  			第三節
+				  		</button>
+				  		<button>
+				  			第四節
+				  		</button>
+				  		<button>
+				  			午休
+				  		</button>
+				  		<button>
+				  			第六節
+				  		</button>
+				  		<button>
+				  			第七節
+				  		</button>
+				  	</div>
+				</div>
+
+				<div class="thrid_box">
+					<h5>
+						109-03-28(一)
+					</h5>
+					<a href="#" class="choose_day">
+						選擇日期
+					</a>
+					<span>
+						全部節次
+					</span>
+					 <!-- Switch -->
+					  <div class="switch">
+					    <label>
+					      <input type="checkbox">
+					      <span class="lever"></span>
+					    </label>
+					  </div>
+
+					<h6>
+						起訖節次					
+					</h6>
+					
+					<div class="takeleave_btn">
+				  		<button>
+				  			導師時間
+				  		</button>
+				  		<button>
+				  			第一節
+				  		</button>
+						<button>
+				  			第二節
+				  		</button>
+				  		<button>
+				  			第三節
+				  		</button>
+				  		<button>
+				  			第四節
+				  		</button>
+				  		<button>
+				  			午休
+				  		</button>
+				  		<button>
+				  			第六節
+				  		</button>
+				  		<button>
+				  			第七節
+				  		</button>
+				  	</div>
+				</div>
+
+
+
+			</div>
+
+
+
+
+		  </div>
+
+
+		  <!-- 第三頁內容 -->
+<!-- 		  <div id="test-swipe-3" class="col s12">Test 3</div> -->
+		
+
+		</div>
+
+	</article>
+
+
+<!-- 換頁按鈕的JS (第一行不知為啥要加) -->
+	<script>
+		M.AutoInit(); 
+		// 下滑選單要多加這行，換頁也要加這行才會動
+
+		var instance = M.Tabs.init(el, options);
+
+		  // Or with jQuery
+
+		  $(document).ready(function(){
+		    $('.tabs').tabs();
+		  });
+	</script>
+
+
+</body>
+</html>

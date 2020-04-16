@@ -1,6 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Open+Sans&display=swap');
+/* Roboto regular */
 
+@font-face {
+    font-family: "Noto Sans TC";
+    src: url("/fonts/NotoSansTC-Regular.otf");
+    /* src: url("/fonts/Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Roboto-Regular.woff2") format('woff2'),
+         url("/fonts/Roboto-Regular.woff") format('woff'),
+         url("/fonts/Roboto-Regular.ttf") format('truetype'); */
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Roboto italic */
+
+@font-face {
+    font-family: "Noto Sans TC";
+    src: url("/fonts/NotoSansTC-Regular.otf");
+    /* src: url("/fonts/Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Roboto-Regular.woff2") format('woff2'),
+         url("/fonts/Roboto-Regular.woff") format('woff'),
+         url("/fonts/Roboto-Regular.ttf") format('truetype'); */
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Roboto bold */
+
+@font-face {
+    font-family: "Noto Sans TC";
+    src: url("/fonts/NotoSansTC-Regular.otf");
+    /* src: url("/fonts/Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Roboto-Regular.woff2") format('woff2'),
+         url("/fonts/Roboto-Regular.woff") format('woff'),
+         url("/fonts/Roboto-Regular.ttf") format('truetype'); */
+    font-weight: 400;
+    font-style: normal;
+}
 
 *{
 	margin: 0;
@@ -9,6 +44,8 @@
 
 body{
 	font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 	background-image:url("../img/bg.jpg");
 	background-repeat:no-repeat;
 	background-attachment:fixed;
@@ -88,15 +125,15 @@ header{
 }
 
 ::-webkit-input-placeholder{
-  color:#C4C4C4;
+  color:#b1b1b1;
   font-weight:300;
 }
 ::-moz-placeholder{
-  color:#C4C4C4;
+  color:#b1b1b1;
   font-weight:300;
 }
 ::-moz-placeholder{
-  color:#C4C4C4;
+  color:#b1b1b1;
   font-weight:300;
 }
 
@@ -378,10 +415,12 @@ button.close{
 	padding:7px 10px;
 }
 
-.my_title_02 img{
+.my_title_02 img,.checkin_time img{
 	position:relative;
 	top:-2.3px;
+	width:17px;
 }
+
 
 .enter_btn_02 img{
 	position:relative;
@@ -764,6 +803,24 @@ button.close{
 		height: 45px;
 	}
 
+}
+
+
+.school_btn_on:hover{
+	background-color:#4AABDD;
+	transition:all .5s;
+}
+
+.school_btn_on:hover a{
+	color:#ffffff;
+}
+
+.school_btn_off{
+	cursor:not-allowed;
+}
+
+.school_btn_off a{
+	cursor:not-allowed;
 }
 
 
