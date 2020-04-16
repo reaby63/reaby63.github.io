@@ -343,7 +343,7 @@ a:focus, a:hover{
 }
 
 .takeleave_btn button{
-	padding:12px 15px;
+	padding:8px 15px;
 	background-color: #ffffff;
 	color:#969696;
 	font-size:14px;
@@ -481,6 +481,10 @@ input{
 
 	.inside_words{
 		padding: 0px 5px;
+	}
+
+	.takeleave_btn button{
+		padding:15px;
 	}
 
 
