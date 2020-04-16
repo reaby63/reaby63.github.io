@@ -323,6 +323,11 @@ a:focus, a:hover{
 	box-shadow:0 2px 2px #dcdcdc;
 }
 
+.right_btn img{
+	position:relative;
+	top:-2px;
+}
+
 .bgc_green{
 	background-color:#009688;
 }
