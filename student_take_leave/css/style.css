@@ -411,7 +411,7 @@ input{
 	color: #000000;
 	font-size:15px;
 	display:inline-block;
-	margin-right:5px;
+	/* margin-right:5px; */
 }
 
 .thrid_box .choose_day{
@@ -421,7 +421,7 @@ input{
 	padding:5px 8px;
 	border-radius:2px;
 	font-weight:300;
-	margin-right:20px;
+	margin-right:10px;
 }
 
 .thrid_box .choose_day:hover{
@@ -456,7 +456,7 @@ input{
 	}
 
 	.down_box{
-		padding:15px;
+		padding:10px;
 	}
 
 	.top_box{
@@ -472,6 +472,12 @@ input{
 	.bgc_blue{
 		margin-top: 9px;
 	}
+
+	.inside_words{
+		padding: 0px 5px;
+	}
+
+
 }
 
 
