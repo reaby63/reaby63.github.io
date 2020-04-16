@@ -3,9 +3,26 @@
 	padding: 0;
 }
 
+@font-face {
+    font-family: "Noto Sans TC";
+    src: url("/fonts/NotoSansTC-Regular.otf");
+    /* src: url("/fonts/Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Roboto-Regular.woff2") format('woff2'),
+         url("/fonts/Roboto-Regular.woff") format('woff'),
+         url("/fonts/Roboto-Regular.ttf") format('truetype'); */
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+
 /* 頂埔國小登入頁 */
 .page1_box{
-	background-color:rgba(255,255,255,.9);
+	background-color:rgba(255,255,255,.8);
 	margin:0 auto;
 	display: block;
 	text-align: center;
@@ -125,6 +142,11 @@
 .page1_enter button:hover{
 	background-color: #00c4f9;
 	transition:.3s all ease;
+}
+
+.select-wrapper input.select-dropdown{
+	line-height: 1rem;
+	margin-bottom:0px;
 }
 
 @media(max-width: 650px){
@@ -333,15 +355,42 @@ a:focus, a:hover{
 	transition:.3s all ease;
 }
 
-/* .takeleave_btn button:active{
+.takeleave_btn button:active{
 	background-color: #1298B1;
 	color:#ffffff;
-} */
+}
 
 .takeleave_btn button:focus{
 	background-color: #1298B1;
 	color:#ffffff;
 }
+
+
+/* 下面節次列表按鈕 */
+.takeleave_btn a{
+	padding:5px 15px;
+	background-color: #ffffff;
+	color:#969696;
+	font-size:14px;
+	border:solid 1px #CECECE;
+	border-radius:3px;
+	display:inline-block;
+	margin-bottom:8px;
+	margin-right:5px;
+	cursor:pointer;
+}
+
+.takeleave_btn a:hover{
+	background-color: #1298B1;
+	color:#ffffff;
+	transition:.3s all ease;
+}
+
+.takeleave_btn .takeleave_btn_active{
+	background-color: #1298B1;
+	color:#ffffff;
+}
+
 
 /* 輸入匡 */
 input{
