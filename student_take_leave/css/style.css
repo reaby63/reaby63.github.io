@@ -61,12 +61,12 @@ body{
 }
 
 .select_class{
-	width:55%;
+	width:71%;
 	display:inline-block;
 }
 
 .select_number{
-	width:38%;
+	width:67%;
 	display:inline-block;
 }
 
@@ -90,7 +90,7 @@ body{
 }
 
 .each_enter_box1{
-	width: 56%;
+	width: 58%;
     margin-right: -81px;
 }
 
@@ -152,8 +152,8 @@ body{
 
 @media(max-width: 650px){
 	.page1_box{
-		margin-left:5px;
-		margin-right:5px;
+		margin-left:15px;
+		margin-right:15px;
 	}
 }
 
@@ -207,6 +207,7 @@ header{
 	padding:10px 0;
 	font-size:18px;
 	font-weight:300;
+	padding-left: 25px;
 }
 
 article{
@@ -483,9 +484,9 @@ input{
 		padding: 0px 5px;
 	}
 
-	.takeleave_btn button{
+	/* .takeleave_btn button{
 		padding:15px;
-	}
+	} */
 
 
 }
