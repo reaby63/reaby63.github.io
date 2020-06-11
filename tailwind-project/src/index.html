@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Empty project</title>
+        <meta charset="utf-8">
+        <style>
+            .btn-try span{
+                transition: transform .5s;
+            }
+            .btn-try:hover span{
+                transform:rotate(45deg);
+            }
+
+            .btn-try:focus span{
+                transform:rotate(45deg); 
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app" class=" text-hanColorrr">
+            <h1 class="text-4xl text-yellow-400">123</h1>
+        </div>
+        <div class="w-20 h-20 bg-blue-300 absolute top-0 right-0"></div>
+
+        <div class=" pt-12"></div>
+
+        <button class="ml-6 focus:outline-none btn-try">
+            <span class="h-btn w-20 h-2 bg-pink-400 hover:rotate-45 block"></span>
+            <span class="h-btn w-20 h-2 bg-pink-400 mt-3 block"></span>
+            <span class="h-btn w-20 h-2 bg-pink-400 mt-3 block"></span>
+        </button>
+
+        
+
+
+        
+        <script src="index.js"></script>
+    </body>
+</html>

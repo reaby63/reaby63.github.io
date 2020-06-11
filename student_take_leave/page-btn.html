@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>學生線上請假</title>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<style>
+		body{
+			background-color: #EBEBEB;
+		}
+		
+		/* 下方白底設定 */
+		.down_box{
+			box-shadow:0 3px 6px #dcdcdc;
+			background-color: #ffffff;
+			padding:15px 25px;
+		}	
+
+		/* 請假類別按鈕 */
+		.inside_words{
+			padding:0 20px;
+		}
+
+		.takeleave_btn button{
+			padding:8px 15px;
+			background-color: #ffffff;
+			color:#969696;
+			font-size:14px;
+			border:solid 1px #CECECE;
+			border-radius:3px;
+			display:inline-block;
+			margin-bottom:8px;
+			margin-right:5px;
+			cursor:pointer;
+		}
+
+		.takeleave_btn button:hover{
+			background-color: #1298B1;
+			color:#ffffff;
+			transition:.3s all ease;
+		}
+
+		.takeleave_btn button:active{
+			background-color: #1298B1;
+			color:#ffffff;
+		}
+
+		.takeleave_btn button:focus{
+			background-color: #1298B1;
+			color:#ffffff;
+		}
+		
+		/* 請假類別按鈕 */
+		.inside_words{
+			padding:0 20px;
+		}
+
+		@media(max-width:768px){
+			.down_box{
+				padding:10px;
+			}
+
+			.inside_words{
+				padding: 0px 5px;
+			}
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<article>
+
+		<div class="down_box">
+		  	<div class="takeleave_btn inside_words">
+		  		<button>
+		  			事假
+		  		</button>
+		  		<button>
+		  			病假
+		  		</button>
+		  		<button>
+		  			公假
+		  		</button>
+		  		<button>
+		  			喪假
+		  		</button>
+		  		<button>
+		  			不可抗力
+		  		</button>
+		  		<button>
+		  			其它1-居家隔離
+		  		</button>
+		  		<button>
+		  			其它2-居家檢疫
+		  		</button>
+		  		<button>
+		  			其它3-自主健康管理
+		  		</button>
+		  		<button>
+		  			其它4-發燒或呼吸道症狀
+		  		</button>
+		  		<button>
+		  			其它5-非屬上述原因
+		  		</button>
+		  		<button>
+		  			其它6-到校發燒
+		  		</button> 		
+		  	</div>
+
+		</div>
+
+	</article>
+
+
+</body>
+</html>
