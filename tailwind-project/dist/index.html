@@ -13,10 +13,59 @@
 
 .btn-try:focus span{
   transform:rotate(45deg);
+}
+
+.btn01 img{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width:344px;
+  z-index: -1;
+  transition: all .3s;
+}
+
+.box{
+  display: inline-block;
+  position: absolute;
+  top:160px;
+  left:160px;
+  font-size: 30px;
+}
+
+/* 下面兩行為放大地圖 淡入淡出 */
+
+.box::after,.box::before{
+  content: " ";
+  display: block;
+  background:url(/map-01-big.29b630dc.png) no-repeat;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 0px;
+  width: 0px;
+  opacity: 0;
+  z-index: 9999;
+  transition: all 1s ease 0s;
+}
+
+.box:hover:after{
+  display: block;
+  content: "";
+  position: absolute;
+  top: -160px;
+  left: -160px;
+  height: 250px;
+  width: 280px;
+  opacity: 100;
+  z-index: 9999;
+  background:url(/map-01-big.29b630dc.png) no-repeat;
 }</style>
+        <script>// function(){
+//     var box=document.getElementById("name");
+// }</script>
     <link rel="stylesheet" href="/src.e31bb0bc.css"></head>
     <body>
-        <div id="app" class=" text-hanColorrr">
+        <div id="app" class=" text-hanColorrr bg-h">
             <h1 class="text-4xl text-yellow-400">123</h1>
         </div>
         <div class="w-20 h-20 bg-blue-300 absolute top-0 right-0"></div>
@@ -29,10 +78,27 @@
             <span class="h-btn w-20 h-2 bg-pink-400 mt-3 block"></span>
         </button>
 
-        
+        <div class="btn01 container block">
+            <div class="box" id="name">南澳鄉</div>
+            <img src="/map-01.0ca75176.png" alt="">
+        </div>
 
+        <div class=" container block ">
+            <ul class="bg-green-200">
+                <li>111</li>
+                <li>22</li>
+                <li class="">333
+                    <a href="https://www.instagram.com/p/CBQQ8IalnCc/?utm_source=ig_web_copy_link" target="_blank" class="hover:text-pink-200 hover:text-5xl ">66</a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <a href="#" class=" text-6xl hover:text-xs">1456</a>
+        </div>
 
         
-        <script src="/src.e31bb0bc.js"></script>
+        <script src="/src.e31bb0bc.js">// tailwind的RWD 是從手機寫到電腦 先寫手機版的css 再設定md:--- (到了max-width:768px 之後 會---)
+//hover：可以讓字變色 但不能變大變小？</script>
     </body>
 </html>

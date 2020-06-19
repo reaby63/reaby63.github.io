@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_65" data-name="Rectangle 65" width="32" height="32" transform="translate(774 507)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_11" data-name="Mask Group 11" transform="translate(-774 -507)" clip-path="url(#clip-path)">
+    <g id="Layer_18" data-name="Layer 18" transform="translate(772.933 505.933)">
+      <path id="Path_30" data-name="Path 30" d="M33.067,11.733V26.667A2.133,2.133,0,0,1,30.933,28.8H3.2a2.133,2.133,0,0,1-2.133-2.133V9.6A2.133,2.133,0,0,1,3.2,7.467H17.6L19.733,9.6h11.2A2.133,2.133,0,0,1,33.067,11.733Z" fill="#78b75b"/>
+      <path id="Path_31" data-name="Path 31" d="M1.067,14.933h32v9.6h-32Z" fill="#f7d881"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="7.467" cy="7.467" r="7.467" transform="translate(9.6 11.733)" fill="#a0a8b2"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="5.333" cy="5.333" r="5.333" transform="translate(11.733 13.867)" fill="#c1c8d1"/>
+      <path id="Path_32" data-name="Path 32" d="M24.533,7.467h5.333V9.6H24.533Z" fill="#c1c8d1"/>
+      <path id="Path_33" data-name="Path 33" d="M25.6,5.333h3.2V7.467H25.6Z" fill="#a0a8b2"/>
+      <g id="Group_142" data-name="Group 142">
+        <path id="Path_34" data-name="Path 34" d="M3.2,9.6H7.467v3.2H3.2Z" fill="#fff"/>
+        <circle id="Ellipse_5" data-name="Ellipse 5" cx="1.067" cy="1.067" r="1.067" transform="translate(4.267 18.133)" fill="#fff"/>
+        <circle id="Ellipse_6" data-name="Ellipse 6" cx="1.067" cy="1.067" r="1.067" transform="translate(27.733 18.133)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

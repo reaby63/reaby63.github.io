@@ -1,0 +1,28 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+    header{
+        margin:0 auto;
+        max-width:1200px;
+        background-color:#ffffff;
+        height:44px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:10px;
+         .member{
+             display:none;
+             color:#673C42;
+         }
+     }
+
+@import 'tailwindcss/utilities';
+
+ @media(min-width:768px){
+     header{
+        .member{
+            display:block;
+        }
+    }
+ }
