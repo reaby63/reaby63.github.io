@@ -509,10 +509,13 @@ h1,h2,h3,h4,h5,h6,p{
 .page-03-info-title{
 	font-weight: 500;
 	padding-right: 8px;
-	display: block;
 	color: #969696;
 }
-
+.title-sm{
+	width: 5em;
+    display: inline-flex;
+    justify-content: space-between;
+}
 
 
 /* p.3按鈕 */
@@ -702,8 +705,9 @@ h1,h2,h3,h4,h5,h6,p{
 	}
 
 	.page-03-info {
-	    width: 100%;
+	    width: 42%;
 	    display: block;
+	    margin: 0 auto;
 	}
 
 	.page-04-parent{
