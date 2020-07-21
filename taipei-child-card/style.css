@@ -563,6 +563,7 @@ h1,h2,h3,h4,h5,h6,p{
 	color: #4a4a4a;
 	padding: 5px 8px;
 	margin-bottom: 15px;
+	box-sizing: border-box;
 }
 
 .info-title-big{
@@ -705,7 +706,7 @@ h1,h2,h3,h4,h5,h6,p{
 	}
 
 	.page-03-info {
-	    width: 42%;
+	    width: 12.5em;
 	    display: block;
 	    margin: 0 auto;
 	}
@@ -718,6 +719,13 @@ h1,h2,h3,h4,h5,h6,p{
 
 }
 
+@media (max-width: 360px){
+	.page-03 {
+	    padding: 0 10px;
+	    padding-top: 190px;
+	}
+
+}
 
 
 
