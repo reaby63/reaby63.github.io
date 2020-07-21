@@ -9,6 +9,11 @@ button{
 	border: 0px;
 }
 
+img{
+	position: relative;
+	top: 2px;
+}
+
 
 *{
 	margin: 0;
