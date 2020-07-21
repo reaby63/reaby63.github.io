@@ -1,0 +1,48 @@
+<header>
+
+    <span class="header-left">
+        <a href="#">
+            <img src="../assets/img/header-logo.png" alt="">
+        </a>
+
+        <span class="header-set">
+            <a href="#" class="header-set-btn">
+                <img src="../assets/img/header-set.svg" alt="">
+                前台呈現頁面
+            </a>
+
+            <a href="#" class="header-look-btn">
+                <img src="../assets/img/header-look.svg" alt="">
+                後台管理頁面
+            </a>
+        </span>
+
+    </span>
+
+    <span class="member inline-block">
+
+        <a href="#">
+            <img src="../assets/img/header-enter.svg" alt="">
+                加入會員/登入
+        </a>
+        
+        <a href="#" class="function-btn">
+            <img src="../assets/img/header-function-btn.svg" alt="">
+        </a>
+
+        <div class="function-list">
+            <a href="#">
+                <img src="../assets/img/function-self.svg" alt="">
+                個人資料
+            </a>
+            <a href="#">
+                <img src="../assets/img/function-collect.svg" alt="">
+                我的收藏
+            </a>
+        </div>
+
+    </span>
+
+    
+
+</header>
