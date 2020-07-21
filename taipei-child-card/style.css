@@ -1,8 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
 
-input , select{
+input , select , button{
 	outline: none;
+}
+
+button{
+	border: 0px;
 }
 
 
@@ -282,8 +286,8 @@ h1,h2,h3,h4,h5,h6,p{
 	box-shadow: 0 3px 5px #D5D5D5;
 	position: fixed;
     width: 100%;
+    margin-bottom: 30px;
 }
-
 
 .page-else-title-up{
 	width: 100%;
@@ -584,14 +588,6 @@ h1,h2,h3,h4,h5,h6,p{
 
 /* 第六頁 回傳簽名 */
 
-#canvasDiv{
-	border: solid 1px gray;
-	border-radius: 5px;
-}
-canvas#canvas {
-    width: 100%;
-    height: 250px;
-}
 
 
 /* 第七頁 完成 下載區 */
@@ -675,7 +671,7 @@ canvas#canvas {
 
 	.page-03{
 		padding: 0 10px;
-		padding-top: 150px;
+		padding-top: 165px;
 	}
 
 	.page-03-photo {
@@ -698,4 +694,35 @@ canvas#canvas {
 
 
 }
+
+
+
+#bb{
+	width: 100%;
+	overflow: hidden;
+}
+#canvas{  }
+#canvasDiv{
+	border: solid 1px gray;
+	border-radius: 5px;
+}
+
+.page-06{
+	display: block;
+	box-shadow: 0px 1px 4px #d4d4d4;
+	border-radius: 5px;
+	padding: 8px;
+	margin-bottom: 15px;
+}
+
+.page-06-list{
+	border-top: solid 1px gray;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+
+.page-06-list:first-child{
+	border-top: 0px;
+}
+
 
