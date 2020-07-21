@@ -241,6 +241,13 @@ h1,h2,h3,h4,h5,h6,p{
 		display: block;
 		text-align: left;
 	}
+	.enter-box-all{
+		width: 100%;
+	}
+
+	.enter-school, .enter-number-title, .enter-number-down, .enter-account-number-title{
+		 width: 100%;
+	}
 	.enter-account-number input[type="text"] {
    		width: 100%;
 	}
@@ -262,8 +269,13 @@ h1,h2,h3,h4,h5,h6,p{
 		display: block;
 		text-align: left
 	}
+	.enter-number{
+		margin-bottom: 10px;
+		display: block;
+	}
 	.enter-account-number .enter-number input[type="text"] {
-	    width: 50%;
+	    width: 100%;
+	    padding: 5px;
 	}
 	.page-02-stepbox .page-02-step{
 		display: block;
@@ -715,7 +727,7 @@ h1,h2,h3,h4,h5,h6,p{
 	margin-bottom: 15px;
 }
 
-.page-06-list{
+/* .page-06-list{
 	border-top: solid 1px gray;
 	margin-top: 15px;
 	padding-top: 15px;
@@ -723,6 +735,11 @@ h1,h2,h3,h4,h5,h6,p{
 
 .page-06-list:first-child{
 	border-top: 0px;
+} */
+
+
+.page-06-title{
+	margin-top: 30px;
 }
 
 
