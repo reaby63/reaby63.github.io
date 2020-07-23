@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_160" data-name="Rectangle 160" width="32" height="32" transform="translate(584 2205)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_59" data-name="Mask Group 59" transform="translate(-584 -2205)" clip-path="url(#clip-path)">
+    <g id="search_3_" data-name="search (3)" transform="translate(584 2205)">
+      <rect id="Rectangle_161" data-name="Rectangle 161" width="3.931" height="2.199" transform="translate(24.674 21.854) rotate(135)" fill="#acb3ba"/>
+      <path id="Path_273" data-name="Path 273" d="M31.06,31.048h0a3.268,3.268,0,0,1-4.8-.2l-4.8-5.8,3.6-3.6,5.8,4.8A3.32,3.32,0,0,1,31.06,31.048Z" fill="#ffd15c"/>
+      <path id="Path_274" data-name="Path 274" d="M26,22.12l-3.864,3.864a.889.889,0,0,1-1.333,0l-.133-.133a.889.889,0,0,1,0-1.333l3.864-3.864a.889.889,0,0,1,1.333,0l.133.133A.89.89,0,0,1,26,22.12Z" fill="#f8b64c"/>
+      <circle id="Ellipse_23" data-name="Ellipse 23" cx="12.926" cy="12.926" r="12.926" transform="translate(0.012 0)" fill="#40596b"/>
+      <circle id="Ellipse_24" data-name="Ellipse 24" cx="9.594" cy="9.594" r="9.594" transform="translate(3.343 3.331)" fill="#84dbff"/>
+      <path id="Path_275" data-name="Path 275" d="M5.942,13.925a1.025,1.025,0,0,1-1-1A7.9,7.9,0,0,1,12.871,5a1,1,0,1,1,0,2,5.943,5.943,0,0,0-5.93,5.93A.981.981,0,0,1,5.942,13.925Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

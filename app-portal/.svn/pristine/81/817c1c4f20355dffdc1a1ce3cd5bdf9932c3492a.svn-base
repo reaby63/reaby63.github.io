@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="65" height="65" viewBox="0 0 65 65">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2024" data-name="Rectangle 2024" width="65" height="65" transform="translate(189 473)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_692" data-name="Mask Group 692" transform="translate(-189 -473)" clip-path="url(#clip-path)">
+    <g id="send_1_" data-name="send (1)" transform="translate(189 473)">
+      <g id="Group_916" data-name="Group 916">
+        <g id="Group_915" data-name="Group 915">
+          <path id="Path_951" data-name="Path 951" d="M54.717,16.116V1.27H10.283V16.116L0,22.559V63.73H65V22.559Zm0,4.494,5.3,3.322-5.3,5.1ZM14.092,5.078H50.908V32.7L39.057,44.111a9.514,9.514,0,0,0-13.241-.122L14.092,32.7ZM10.283,20.611v8.425l-5.3-5.1ZM3.809,59.922V28.09l19.31,18.589L9.875,59.922Zm11.453,0L28.333,46.85a5.713,5.713,0,0,1,8.079,0L49.485,59.922Zm45.93,0H54.871L41.752,46.8,61.191,28.09Z" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_918" data-name="Group 918">
+        <g id="Group_917" data-name="Group 917">
+          <rect id="Rectangle_2050" data-name="Rectangle 2050" width="29.199" height="3.809" transform="translate(17.773 12.695)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_920" data-name="Group 920">
+        <g id="Group_919" data-name="Group 919">
+          <rect id="Rectangle_2051" data-name="Rectangle 2051" width="29.199" height="3.809" transform="translate(17.773 20.313)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_922" data-name="Group 922">
+        <g id="Group_921" data-name="Group 921">
+          <rect id="Rectangle_2052" data-name="Rectangle 2052" width="21.582" height="3.809" transform="translate(17.773 27.93)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

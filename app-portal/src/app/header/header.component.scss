@@ -38,9 +38,41 @@
             }
 
             .header-set{
+                vertical-align: bottom;
                 @apply block;
-                a{
-                    @apply py-2;
+                .header-set-btn , .header-look-btn{
+                    color:#B97F87;
+                    transition: all .2s;
+                    position: relative;
+                    text-decoration: none;
+                    @apply py-2 px-2 mx-0 text-base;
+                    &:hover , &:focus{
+                        background-color: #B97F87;
+                        color: #ffffff;
+                        &:after{
+                            content: "";
+                            display: block;
+                            width: 0px;
+                            height: 0px;
+                            border: solid 11px;
+                            border-color: #B97F87 transparent transparent transparent;
+                            position: absolute;
+                            top: 39px;
+                            left: 3.4em;
+                            z-index: 999;
+                        }
+                    }
+                    &:after{
+                        content: "";
+                        display: none;
+                        width: 0px;
+                        height: 0px;
+                        border: solid 11px;
+                        border-color: #ffffff transparent transparent transparent;
+                        position: absolute;
+                        top: 36px;
+                        left: 3.6em;
+                    }
                 }
             }
         }
@@ -50,6 +82,9 @@
              color:#673C42;
              img{
                  display:inline-block;
+             }
+             a{
+                 cursor: pointer;
              }
          }
      }
@@ -78,6 +113,7 @@
             }
 
             .function-btn{
+                cursor: pointer;
                 position:relative;
                 top:-2px;
                 @apply p-1 ml-2;
@@ -93,8 +129,8 @@
                 background-color:white;
                 z-index:99;
                 margin-top:9px;
-                @apply block;
-
+                display: none;
+                transition: all .5s;
                 a{  
                     color:#954D57;
                     background-color:white;
@@ -108,8 +144,38 @@
                 }
 
             }
+            .profile-list{
+                position:absolute;
+                right:20px;
+                box-shadow: 0 2px 3px #e2e2e2;
+                background-color:white;
+                z-index:99;
+                margin-top:9px;
+                display: none;
+                transition: all .5s;
+                a{  
+                    color:#954D57;
+                    background-color:white;
+                    transition:all .4s;
+                    @apply block py-3 px-6;
+
+                    &:hover{
+                        background-color:#FFF2F4;
+                        text-decoration:none;
+                    }
+                }
+
+            }
+            .show-function-list{
+                display: block;
+            }
+            .show-profile-list{
+                display: block;
+            }
 
         }
             
     }
+
+    
 }
