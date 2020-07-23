@@ -1,5 +1,11 @@
+/* @import url("../font/NotoSansTC-Regular.otf");
+ */
 
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+@font-face {
+  font-family: Noto Sans TC;
+  src: url("../font/NotoSansTC-Regular.otf");
+}
+
 
 input , select , button{
 	outline: none;
