@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>宜蘭縣 My Data系統</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+
+		*{
+			margin:0;
+			padding:0;
+		}
+		h1{
+			font-size:45px;
+			color:#2C4989;
+			font-weight:300;
+		}
+		b{
+			font-weight:500;
+		}
+		h2{
+			font-size:45px;
+			color:#313131;
+		}
+		body{
+			font-family:  'Noto Sans TC', 'Poppins', sans-serif;
+			background:url('yilan-bg.jpg');
+			background-repeat:no-repeat;
+			background-size:cover;
+			background-attachment:fixed;
+		}
+		.button{
+			font-size:20px;
+			color:#ffffff;
+			background-color:#7C86FF;
+			border-radius:40px;
+			padding:10px 65px;
+			margin-top:30px;
+			outline:none; /* 去掉點擊時的藍框 */
+			cursor:pointer;
+			box-shadow: 0px 2px 4px grey;
+    		border: 0px;
+		}
+		.button:hover{
+			background-color:#76C13F;
+			padding:9px 65px 11px 65px;
+		}
+		.content{
+			position:absolute;
+			top:250px;
+			left:150px;
+		}
+		h1:before{
+			content:"";
+			display:block;
+			background:linear-gradient(135deg,#B5E5ED,#F2FBFC,#F9FDFE,#ffffff);
+			height:133px;
+			width:133px;
+			border-radius:50%;
+			position:absolute;
+			top:-40px; 
+			left:-50px;
+			z-index:-999;
+		}
+
+
+		@media(max-width: 767px){
+
+			body{
+				background:url('yilan-bg-sm.jpg');
+				background-repeat:no-repeat;
+				background-size:cover;
+				background-attachment:fixed;
+				max-height: 100vh;
+			}
+
+			.content {
+			    position: absolute;
+			    top: 123px;
+			    left: 37px;
+			    max-width: 57%;
+			}
+
+			h1:before{
+				height: 80px;
+    			width: 80px;
+   			    top: -22px;
+   			    left: -24px;
+			}
+
+			h1{
+				font-size: 34px;
+			}
+
+			.button{
+			    border: 1px solid #ffffff;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h1><b>宜蘭縣</b></h1>
+		<h1>My Data系統</h1>
+		<input type="button" value="登入" class="button" onclick="#">
+	</div>
+</body>
+</html>
