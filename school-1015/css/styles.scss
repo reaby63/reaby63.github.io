@@ -1,0 +1,844 @@
+
+.w-full{
+	width: 100%;
+	.s-leave-leftbox{
+		display: inline-block;
+		width:49%;
+		margin-right:10px;
+	}
+	.s-leave-rightbox{
+		display: inline-block;
+		width: calc(50% - 10px);
+		vertical-align: top;
+	}
+}
+
+button{
+	outline: none;
+	&:focus{
+		outline: none;
+	}
+}
+
+button::-moz-focus-inner{
+	outline: none;
+}
+
+
+
+// 第一頁！！！！！----------------
+
+.s-content{
+	box-shadow: 1px 2px 3px #cccccc;
+	width: 100%;
+	padding:10px 0px;
+	max-width: 1000px;
+	margin:0 auto;
+}
+
+
+.s-title{
+	display: flex;
+	justify-content: space-between;
+	margin:0 10px;
+	align-items: center;
+	margin-bottom: 18px;
+}
+
+.s-title-02{
+	margin-bottom: 0px;
+}
+
+
+.mb-1{
+	margin-bottom:5px !important;
+}
+
+.mb-2{
+	margin-bottom:10px !important;
+}
+
+.mb-3{
+	margin-bottom:15px !important;
+}
+
+.mr-2{
+	margin-right:10px !important;
+}
+
+.p-1{
+	padding:1px 0px !important;
+}
+
+
+.s-title-left{
+	font-weight: 500;
+	color:#3E3E3E;
+	font-size: 18px;
+	span{
+		font-weight:400;
+		margin-left: 20px;
+		color:#5D5D5D;
+		border-bottom: 1px solid #cccccc;
+		cursor: pointer;
+		img{
+			width: 17px;
+		}
+	}
+}
+
+.s-down-list-img{
+	margin-right:5px;
+	img{
+		width: 45px;
+		border-radius:50%;
+	}
+}
+
+
+.s-title-right{
+	display: inline-flex;
+}
+
+
+.s-title-right a{
+	padding:7px 12px;
+	box-shadow:1px 2px 5px #cccccc;
+	color: #ffffff;
+	border:0px;
+	background-color: #F06292;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.2s;
+	display: flex;
+    align-items: center;
+	&:hover{
+		border:0px;
+		background-color: #FF83AD;
+	}
+	img{
+		width: 20px;
+		margin-right:2px;
+	}
+}
+
+.bg-save a{
+	background-color: #FF7E39;
+	&:hover{
+		background-color: #FFA06E;
+	}
+}
+
+.bg-all a{
+	background-color: #5D5DBF;
+	&:hover{
+		background-color: #7979D9;
+	}
+}
+
+.bg-clear a{
+	background-color: #868686;
+	&:hover{
+		background-color: #ACACAC;
+	}
+}
+
+
+.s-down-list-img span img{
+	vertical-align: middle;
+}
+
+
+// 下方列表
+
+.s-down .s-down-list{
+	cursor: pointer;
+	transition:all 0.2s;
+	&:nth-child(2n){
+		background-color: #ffffff;
+		&:hover{
+			background-color: #FFFCF4;
+		}
+	}
+	&:nth-child(2n+1){
+		background-color: #FAFAFA;
+		&:hover{
+			background-color: #FFFCF4;
+		}
+	}
+}
+
+
+.s-down-list{
+	padding:5px 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.s-down-list-arrow{
+		cursor:pointer;
+		padding:3px 5px;
+		img{
+			width: 18px;
+			&:hover{
+				opacity: 0.8;
+			}
+		}
+	}
+
+	.s-down-list-down{
+		font-size: 15px;
+		.leave{
+			padding:0px 5px;
+			margin-right:3px;
+		}
+	}
+}
+
+.s-down-list-top{
+		color:#484848;
+		font-weight: 500;
+		font-size: 17px;
+		display: flex;
+		align-items: center;
+		width: 7em;
+		span{
+			margin-right: 8px;
+			&:nth-child(2){
+				overflow : hidden;  //多餘的隱藏
+				text-overflow : ellipsis;  //結尾點點點...
+				white-space : nowrap;  //不換行
+				width: 5em;
+			}
+			&:nth-child(3){
+				margin-right:13px;
+			}
+
+			img{
+				width: 45px;
+				height:45px;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+		}
+		.calendar{
+			display: inline-flex;
+			align-items: center;
+			margin-left:10px;
+			img{
+				border-radius: 0%;
+				width: 20px;
+				margin-right:5px;
+			}
+			span{
+				border-bottom:1px solid #cccccc;
+			}
+		}
+	}
+
+.leave{
+	display: inline-block;
+	&:before{
+		content:"";
+		display: inline-block;
+		width: 6px;
+		height:6px;
+		border-radius: 50%;
+		position:relative;
+		top:-3px;
+	}
+}
+
+
+
+// 電腦版 手機版需調整部分
+.s-down-list-in{
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+// .s-down-list-top{
+// 	width: 11em;
+// }
+.s-down-list-top-02{
+	width:auto;
+	span:nth-child(2){
+		width: auto;
+	}
+}
+.s-down-list-down{
+	width: calc(100% - 8em);
+}
+
+
+// 顏色
+
+.text-male{
+	color:#0076D3;
+}
+
+.text-female{
+	color:#F55398;
+}
+
+.leave-gray{
+	// border-left:4px solid #7B7B7B;
+	color:#88b266;
+	&:before{
+		background-color: #88b266;
+	}
+}
+
+.leave-deepblue{
+	// border-left:4px solid #474b90;
+	color:#474b90;
+	&:before{
+		background-color: #474b90;
+	}
+}
+
+
+.leave-green{
+	// border-left:4px solid #88b266;
+	color:#88b266;
+	&:before{
+		background-color: #88b266;
+	}
+}
+
+
+.leave-lightblue{
+	// border-left:4px solid #72bdff;
+	color:#72bdff;
+	&:before{
+		background-color: #72bdff;
+	}
+}
+
+
+.leave-deepgreen{
+	// border-left:4px solid #6ea3a3;
+	color:#6ea3a3;
+	&:before{
+		background-color: #6ea3a3;
+	}
+}
+
+
+.leave-brown{
+	// border-left:4px solid #ce867f;
+	color:#ce867f;
+	&:before{
+		background-color: #ce867f;
+	}
+}
+
+
+.leave-bluegreen{
+	// border-left:4px solid #13cacd;
+	color:#13cacd;
+	&:before{
+		background-color: #13cacd;
+	}
+}
+
+
+.leave-bluegray{
+	// border-left:4px solid #63719d;
+	color:#63719d;
+	&:before{
+		background-color: #63719d;
+	}
+}
+
+
+.leave-orange{
+	// border-left:4px solid #ff7827;
+	color:#ff7827;
+	&:before{
+		background-color: #ff7827;
+	}
+}
+
+
+.leave-seablue{
+	// border-left:4px solid #4188d9;
+	color:#4188d9;
+	&:before{
+		background-color: #4188d9;
+	}
+}
+
+
+.leave-purple{
+	// border-left:4px solid #7e68c6;
+	color:#7e68c6;
+	&:before{
+		background-color: #7e68c6;
+	}
+}
+
+
+.leave-greengray{
+	// border-left:4px solid #4ab0b4;
+	color:#4ab0b4;
+	&:before{
+		background-color: #4ab0b4;
+	}
+}
+
+
+.leave-yellow{
+	// border-left:4px solid #db9b43;
+	color:#db9b43;
+	&:before{
+		background-color: #db9b43;
+	}
+}
+
+
+.leave-mochagreen{
+	// border-left:4px solid #458822;
+	color:#458822;
+	&:before{
+		background-color: #458822;
+	}
+}
+
+
+
+
+
+// 第二頁！！！！！----------------
+
+.s-down-02{
+	padding:0px 10px;
+}
+
+.s-down-02-title{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom:5px;
+	.s-down-02-title-left{
+		color:#00AFAF;
+		width: calc(100% - 11em);
+		span{
+			display: inline-flex;
+			&:nth-child(1){
+			}
+			&:nth-child(2){
+				font-size: 20px;
+				font-weight:500;
+			}
+		}
+	}
+	.s-down-02-title-right{
+		width: 11em;
+	}
+}
+
+
+// 第二頁-步驟一
+.s-down-02-step1{
+	button{
+		font-size: 16px;
+		border:solid 1px #848484;
+		border-radius: 3px;
+		background-color: #ffffff;
+		color:#848484;
+		padding:5px 10px;
+		cursor: pointer;
+		transition:all 0.2s;
+		box-sizing: border-box;
+		margin-bottom:7px;
+	}
+}
+
+
+
+
+// 第二頁-第一步驟-按鈕
+
+.step01-gray{
+	&:focus{
+		background-color: #7B7B7B;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-red{
+	&:focus{
+		background-color: #ed1c24;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-deepblue{
+	&:focus{
+		background-color: #474b90;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-green{
+	&:focus{
+		background-color: #88b266;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-lightblue{
+	&:focus{
+		background-color: #72bdff;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-deepgreen{
+	&:focus{
+		background-color: #6ea3a3;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-brown{
+	&:focus{
+		background-color: #ce867f;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-bluegreen{
+	&:focus{
+		background-color: #13cacd;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-bluegray{
+	&:focus{
+		background-color: #63719d;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-orange{
+	&:focus{
+		background-color: #ff7827;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+
+.step01-seablue{
+	&:focus{
+		background-color: #4188d9;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+
+.step01-purple{
+	&:focus{
+		background-color: #7e68c6;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-greengray{
+	&:focus{
+		background-color: #4ab0b4;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-yellow{
+	&:focus{
+		background-color: #db9b43;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+.step01-mochagreen{
+	&:focus{
+		background-color: #458822;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
+
+// .step01-lightorange{
+// 	&:focus{
+// 		background-color: #ff5f41;
+// 		color:#ffffff;
+// 		border-color: #ffffff;
+// 	}
+// }
+
+
+
+
+
+
+
+
+// 第二頁-步驟二
+.s-down-02-step2{
+	button{
+		padding: 10px 14px;
+		border-radius:3px;
+		color:#a2a2a2;
+		background-color: #ffffff;
+		border:solid 1px #a2a2a2;
+		margin-right:5px;
+		cursor: pointer;
+		margin-bottom:5px;
+		span{
+			display: block;
+			&:first-child{
+				font-size: 20px;
+				margin-bottom:2px;
+				font-weight:500;
+			}
+		}
+	}
+}
+
+
+
+
+// 第二頁-第二步驟-按鈕
+.step02-gray{
+	button{
+			&:focus{
+			background-color: #7B7B7B;
+			color:#ffffff;
+			border-color:#ffffff;
+		}
+	}
+}
+
+.step02-red{
+	button{
+			&:focus{
+			background-color: #ed1c24;
+			color:#ffffff;
+			border-color:#ffffff;
+		}
+	}
+}
+
+.step02-deepblue{
+	button{
+			&:focus{
+			background-color: #474b90;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-green{
+	button{
+			&:focus{
+			background-color: #88b266;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-lightblue{
+	button{
+			&:focus{
+			background-color: #72bdff;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-deepgreen{
+	button{
+			&:focus{
+			background-color: #6ea3a3;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-brown{
+	button{
+			&:focus{
+			background-color: #ce867f;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-bluegreen{
+	button{
+			&:focus{
+			background-color: #13cacd;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-bluegray{
+	button{
+			&:focus{
+			background-color:#63719d;
+			color:#ffffff;
+		}
+	}
+}
+
+
+.step02-orange{
+	button{
+			&:focus{
+			background-color: #ff7827;
+			color:#ffffff;
+		}
+	}
+}
+
+
+.step02-seablue{
+	button{
+			&:focus{
+			background-color: #4188d9;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-purple{
+	button{
+			&:focus{
+			background-color: #7e68c6;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-yellow{
+	button{
+			&:focus{
+			background-color: #db9b43;
+			color:#ffffff;
+		}
+	}
+}
+
+.step02-mochagreen{
+	button{
+			&:focus{
+			background-color: #458822;
+			color:#ffffff;
+		}
+	}
+}
+
+// 其他5-到校發燒
+.step02-greengray{
+	button{
+			&:focus{
+			background-color: #4ab0b4;
+			color:#ffffff;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+// 手機版
+@media (max-width: 768px) {
+
+	// 最外層，左右外框
+	.w-full {
+		.s-leave-leftbox{
+			width: 100%;
+			display: block;
+			margin-right:0px;
+		}
+		.s-leave-rightbox{
+			width: 100%;
+			display: block;
+		}
+	}
+	
+	
+
+	// 左半部
+	.s-down-list-in{
+		flex-wrap: wrap;
+		margin:5px 0px;
+	}
+	// .s-down-list-top{
+	// 	width: 11em;
+	// }
+	.s-down-list-top-02{
+		width:auto;
+	}
+	.s-down-list-top{
+		margin-bottom:3px;
+	}
+	.s-down-list-down{
+		width: 100%;
+	}
+
+
+	.s-title-left{
+		span{
+			display: block;
+			margin-left: 0px;
+			margin-top: 5px;
+		}
+	}
+
+	.s-down-02-title{
+		flex-wrap:wrap;
+		.s-down-02-title-left{
+			width: 100%;
+		}
+		.s-down-02-title-right{
+			margin-top:5px;
+			margin-bottom:5px;
+			display: flex;
+			width: 100%;
+			justify-content: flex-end;
+			span:first-child{
+				margin-right:8px;
+			}
+		}
+	}
+
+	.s-title-right a{
+		padding: 7px 14px;
+	}
+
+}
+
+
+
+
+
+
