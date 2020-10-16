@@ -105,6 +105,14 @@ button::-moz-focus-inner {
     width: 20px;
     margin-right: 2px; }
 
+.bg-back {
+  display: none; }
+
+.bg-back a {
+  background-color: #b5b5b5; }
+  .bg-back a:hover {
+    background-color: #d0d0d0; }
+
 .bg-save a {
   background-color: #FF7E39; }
   .bg-save a:hover {
@@ -237,9 +245,9 @@ button::-moz-focus-inner {
   color: #F55398; }
 
 .leave-gray {
-  color: #88b266; }
+  color: #7B7B7B; }
   .leave-gray:before {
-    background-color: #88b266; }
+    background-color: #7B7B7B; }
 
 .leave-deepblue {
   color: #474b90; }
@@ -331,7 +339,8 @@ button::-moz-focus-inner {
         font-size: 20px;
         font-weight: 500; }
   .s-down-02-title .s-down-02-title-right {
-    width: 11em; }
+    width: 11em;
+    text-align: right; }
 
 .s-down-02-step1 button {
   font-size: 16px;
@@ -431,9 +440,12 @@ button::-moz-focus-inner {
   border: solid 1px #a2a2a2;
   margin-right: 5px;
   cursor: pointer;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  height: 6.5em;
+  vertical-align: top; }
   .s-down-02-step2 button span {
-    display: block; }
+    display: block;
+    font-size: 14px; }
     .s-down-02-step2 button span:first-child {
       font-size: 20px;
       margin-bottom: 2px;
@@ -502,6 +514,8 @@ button::-moz-focus-inner {
   color: #ffffff; }
 
 @media (max-width: 768px) {
+  .bg-back {
+    display: inline-block; }
   .w-full .s-leave-leftbox {
     width: 100%;
     display: block;

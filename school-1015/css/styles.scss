@@ -122,6 +122,17 @@ button::-moz-focus-inner{
 	}
 }
 
+.bg-back{
+	display: none;
+}
+
+.bg-back a{
+	background-color: #b5b5b5;
+	&:hover{
+		background-color: #d0d0d0;
+	}
+}
+
 .bg-save a{
 	background-color: #FF7E39;
 	&:hover{
@@ -282,9 +293,9 @@ button::-moz-focus-inner{
 
 .leave-gray{
 	// border-left:4px solid #7B7B7B;
-	color:#88b266;
+	color:#7B7B7B;
 	&:before{
-		background-color: #88b266;
+		background-color: #7B7B7B;
 	}
 }
 
@@ -434,6 +445,7 @@ button::-moz-focus-inner{
 	}
 	.s-down-02-title-right{
 		width: 11em;
+		text-align: right;
 	}
 }
 
@@ -607,8 +619,11 @@ button::-moz-focus-inner{
 		margin-right:5px;
 		cursor: pointer;
 		margin-bottom:5px;
+		height: 6.5em;
+    	vertical-align: top;
 		span{
 			display: block;
+			font-size: 14px;
 			&:first-child{
 				font-size: 20px;
 				margin-bottom:2px;
@@ -771,6 +786,10 @@ button::-moz-focus-inner{
 
 // 手機版
 @media (max-width: 768px) {
+
+	.bg-back{
+		display: inline-block;
+	}
 
 	// 最外層，左右外框
 	.w-full {
