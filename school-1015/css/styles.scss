@@ -469,6 +469,47 @@ button::-moz-focus-inner{
 
 
 
+
+
+
+// 第二頁-步驟二
+.s-down-02-step2{
+	button{
+		padding: 0px 14px;
+		border-radius:3px;
+		color:#a2a2a2;
+		background-color: #ffffff;
+		border:solid 1px #a2a2a2;
+		margin-right:5px;
+		cursor: pointer;
+		margin-bottom:5px;
+		// height: 6.5em;
+    	vertical-align: top;
+
+    	// 換成一行一行的
+    	display: flex;
+    	width: 100%;
+    	align-items: center;
+    	justify-content: space-between;
+    	height:4.5em;
+    	 >span{
+    	 	text-align: left;
+    	 }
+		span span{
+			display: block;
+			font-size: 14px;
+			&:first-child{
+				font-size: 20px;
+				margin-bottom:2px;
+				font-weight:500;
+			}
+		}
+	}
+}
+
+
+
+
 // 第二頁-第一步驟-按鈕
 
 .step01-gray{
@@ -593,6 +634,112 @@ button::-moz-focus-inner{
 	}
 }
 
+
+
+
+
+
+// 第二頁-第一步驟-按鈕
+
+button.step02-gray{
+		background-color: #7B7B7B;
+		color:#ffffff;
+		border-color: #ffffff;
+}
+
+button.step02-red{
+		background-color: #ed1c24;
+		color:#ffffff;
+		border-color: #ffffff;
+
+}
+
+button.step02-deepblue{
+		background-color: #474b90;
+		color:#ffffff;
+		border-color: #ffffff;
+
+}
+
+button.step02-green{
+		background-color: #88b266;
+		color:#ffffff;
+		border-color: #ffffff;
+
+}
+
+button.step02-lightblue{
+		background-color: #72bdff;
+		color:#ffffff;
+		border-color: #ffffff;
+
+}
+
+button.step02-deepgreen{
+		background-color: #6ea3a3;
+		color:#ffffff;
+		border-color: #ffffff;
+
+}
+
+button.step02-brown{
+		background-color: #ce867f;
+		color:#ffffff;
+		border-color: #ffffff;
+
+}
+
+button.step02-bluegreen{
+		background-color: #13cacd;
+		color:#ffffff;
+		border-color: #ffffff;
+
+}
+
+button.step02-bluegray{
+		background-color: #63719d;
+		color:#ffffff;
+		border-color: #ffffff;
+}
+
+button.step02-orange{
+		background-color: #ff7827;
+		color:#ffffff;
+		border-color: #ffffff;
+}
+
+
+button.step02-seablue{
+		background-color: #4188d9;
+		color:#ffffff;
+		border-color: #ffffff;
+}
+
+
+button.step02-purple{
+		background-color: #7e68c6;
+		color:#ffffff;
+		border-color: #ffffff;
+}
+
+button.step02-greengray{
+		background-color: #4ab0b4;
+		color:#ffffff;
+		border-color: #ffffff;
+}
+
+button.step02-yellow{
+		background-color: #db9b43;
+		color:#ffffff;
+		border-color: #ffffff;
+}
+
+button.step02-mochagreen{
+		background-color: #458822;
+		color:#ffffff;
+		border-color: #ffffff;
+}
+
 // .step01-lightorange{
 // 	&:focus{
 // 		background-color: #ff5f41;
@@ -600,183 +747,6 @@ button::-moz-focus-inner{
 // 		border-color: #ffffff;
 // 	}
 // }
-
-
-
-
-
-
-
-
-// 第二頁-步驟二
-.s-down-02-step2{
-	button{
-		padding: 10px 14px;
-		border-radius:3px;
-		color:#a2a2a2;
-		background-color: #ffffff;
-		border:solid 1px #a2a2a2;
-		margin-right:5px;
-		cursor: pointer;
-		margin-bottom:5px;
-		height: 6.5em;
-    	vertical-align: top;
-		span{
-			display: block;
-			font-size: 14px;
-			&:first-child{
-				font-size: 20px;
-				margin-bottom:2px;
-				font-weight:500;
-			}
-		}
-	}
-}
-
-
-
-
-// 第二頁-第二步驟-按鈕
-.step02-gray{
-	button{
-			&:focus{
-			background-color: #7B7B7B;
-			color:#ffffff;
-			border-color:#ffffff;
-		}
-	}
-}
-
-.step02-red{
-	button{
-			&:focus{
-			background-color: #ed1c24;
-			color:#ffffff;
-			border-color:#ffffff;
-		}
-	}
-}
-
-.step02-deepblue{
-	button{
-			&:focus{
-			background-color: #474b90;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-green{
-	button{
-			&:focus{
-			background-color: #88b266;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-lightblue{
-	button{
-			&:focus{
-			background-color: #72bdff;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-deepgreen{
-	button{
-			&:focus{
-			background-color: #6ea3a3;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-brown{
-	button{
-			&:focus{
-			background-color: #ce867f;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-bluegreen{
-	button{
-			&:focus{
-			background-color: #13cacd;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-bluegray{
-	button{
-			&:focus{
-			background-color:#63719d;
-			color:#ffffff;
-		}
-	}
-}
-
-
-.step02-orange{
-	button{
-			&:focus{
-			background-color: #ff7827;
-			color:#ffffff;
-		}
-	}
-}
-
-
-.step02-seablue{
-	button{
-			&:focus{
-			background-color: #4188d9;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-purple{
-	button{
-			&:focus{
-			background-color: #7e68c6;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-yellow{
-	button{
-			&:focus{
-			background-color: #db9b43;
-			color:#ffffff;
-		}
-	}
-}
-
-.step02-mochagreen{
-	button{
-			&:focus{
-			background-color: #458822;
-			color:#ffffff;
-		}
-	}
-}
-
-// 其他5-到校發燒
-.step02-greengray{
-	button{
-			&:focus{
-			background-color: #4ab0b4;
-			color:#ffffff;
-		}
-	}
-}
-
 
 
 

@@ -357,6 +357,37 @@ button::-moz-focus-inner {
   box-sizing: border-box;
   margin-bottom: 7px; }
 
+.s-down-02-step2 button {
+  padding: 0px 14px;
+  border-radius: 3px;
+  color: #a2a2a2;
+  background-color: #ffffff;
+  border: solid 1px #a2a2a2;
+  margin-right: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 4.5em; }
+  .s-down-02-step2 button > span {
+    text-align: left; }
+  .s-down-02-step2 button span span {
+    display: block;
+    font-size: 14px; }
+    .s-down-02-step2 button span span:first-child {
+      font-size: 20px;
+      margin-bottom: 2px;
+      font-weight: 500; }
+
 .step01-gray:focus {
   background-color: #7B7B7B;
   color: #ffffff;
@@ -432,86 +463,80 @@ button::-moz-focus-inner {
   color: #ffffff;
   border-color: #ffffff; }
 
-.s-down-02-step2 button {
-  padding: 10px 14px;
-  border-radius: 3px;
-  color: #a2a2a2;
-  background-color: #ffffff;
-  border: solid 1px #a2a2a2;
-  margin-right: 5px;
-  cursor: pointer;
-  margin-bottom: 5px;
-  height: 6.5em;
-  vertical-align: top; }
-  .s-down-02-step2 button span {
-    display: block;
-    font-size: 14px; }
-    .s-down-02-step2 button span:first-child {
-      font-size: 20px;
-      margin-bottom: 2px;
-      font-weight: 500; }
-
-.step02-gray button:focus {
+button.step02-gray {
   background-color: #7B7B7B;
   color: #ffffff;
   border-color: #ffffff; }
 
-.step02-red button:focus {
+button.step02-red {
   background-color: #ed1c24;
   color: #ffffff;
   border-color: #ffffff; }
 
-.step02-deepblue button:focus {
+button.step02-deepblue {
   background-color: #474b90;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-green button:focus {
+button.step02-green {
   background-color: #88b266;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-lightblue button:focus {
+button.step02-lightblue {
   background-color: #72bdff;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-deepgreen button:focus {
+button.step02-deepgreen {
   background-color: #6ea3a3;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-brown button:focus {
+button.step02-brown {
   background-color: #ce867f;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-bluegreen button:focus {
+button.step02-bluegreen {
   background-color: #13cacd;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-bluegray button:focus {
+button.step02-bluegray {
   background-color: #63719d;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-orange button:focus {
+button.step02-orange {
   background-color: #ff7827;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-seablue button:focus {
+button.step02-seablue {
   background-color: #4188d9;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-purple button:focus {
+button.step02-purple {
   background-color: #7e68c6;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
 
-.step02-yellow button:focus {
-  background-color: #db9b43;
-  color: #ffffff; }
-
-.step02-mochagreen button:focus {
-  background-color: #458822;
-  color: #ffffff; }
-
-.step02-greengray button:focus {
+button.step02-greengray {
   background-color: #4ab0b4;
-  color: #ffffff; }
+  color: #ffffff;
+  border-color: #ffffff; }
+
+button.step02-yellow {
+  background-color: #db9b43;
+  color: #ffffff;
+  border-color: #ffffff; }
+
+button.step02-mochagreen {
+  background-color: #458822;
+  color: #ffffff;
+  border-color: #ffffff; }
 
 @media (max-width: 768px) {
   .bg-back {
