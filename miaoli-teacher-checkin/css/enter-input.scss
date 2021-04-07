@@ -1,0 +1,134 @@
+
+// input設定
+input , select{
+	height:2.4em;
+	border:0px;
+	box-shadow: 0px 0px 3px #cccccc;
+	padding:0px 6px;
+	font-size: $font-sm;
+	border-radius:3px;
+	color:#757575;
+	display: inline-block;
+	width:100%;
+	outline-color: #B4E2FF;
+	box-sizing: border-box;
+}
+
+button{
+	border:0px;
+	outline:none;
+	background-color:rgba(0,0,0,0);
+	cursor: pointer;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+
+.select-arrow{
+    position: relative;
+    box-sizing: border-box;
+    &:before{
+    	content: '';
+	    display: block;
+	    width: 0px;
+	    height: 0px;
+	    border-top: 0.5em solid #C6C6C6;
+	    border-right: 0.3em solid transparent;
+	    border-bottom: 0 solid transparent;
+	    border-left: 0.3em solid transparent;
+	    position: absolute;
+	    right: 5px;
+	    top: calc(50% - 0.25em);
+	    z-index: 999;
+    }
+    select{
+    	appearance:none;
+		-moz-appearance:none;
+		-webkit-appearance:none;
+    }
+}
+
+.select-arrow select{
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+    background-color: rgba(0,0,0,0);
+}
+
+
+.width-80{
+	width:80%;
+}
+
+.mr-8px{
+	margin-right:8px;
+}
+
+.center{
+	text-align: center;
+}
+
+.enter-input{
+	display: flex;
+	align-items: center;
+	margin-bottom:16px;
+	.enter-input-title{
+		width:5.5em;
+		margin-right:4px;
+		font-size: $font-lg;
+		color:#257CA2;
+		font-weight:500;
+		text-align:left;
+	}
+}
+
+
+// 客製化寬度
+.select-town{
+	width:6em;
+	margin-right:8px;
+}
+
+.select-school{
+	width:calc( 100% - 6em - 12px - 5.5em);
+}
+
+.input-id{
+	width:calc( 100% - 5.5em - 4px );
+}
+
+.enter-checknumber{
+	display: flex;
+	align-items: center;
+	.input-checknumber{
+		margin-right:8px;
+		width:8em;
+	}
+	.checknumber-img{
+		height:2.2em;
+		border-radius:4px;
+		background-color:#cccccc;
+		margin-right:8px;
+		img{
+			height:2.2em;
+			max-width: calc( 100% - 3em - 20px - 8em - 5.5em )
+		}
+	}
+	.checknumber-btn{
+		img{
+			height:2.1em;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

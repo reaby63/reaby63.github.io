@@ -26,6 +26,10 @@ button::-moz-focus-inner{
 
 
 
+
+
+
+
 // 第一頁！！！！！----------------
 
 .s-content{
@@ -76,6 +80,7 @@ button::-moz-focus-inner{
 	color:#3E3E3E;
 	font-size: 18px;
 	span{
+		display: inline-block;
 		font-weight:400;
 		margin-left: 20px;
 		color:#5D5D5D;
@@ -90,6 +95,7 @@ button::-moz-focus-inner{
 .s-down-list-img{
 	margin-right:5px;
 	img{
+		height:45px;
 		width: 45px;
 		border-radius:50%;
 	}
@@ -307,6 +313,14 @@ button::-moz-focus-inner{
 	}
 }
 
+// 曠課
+.leave-red{
+	// border-left:4px solid #474b90;
+	color:#ed1c24;
+	&:before{
+		background-color: #ed1c24;
+	}
+}
 
 .leave-green{
 	// border-left:4px solid #88b266;
@@ -415,6 +429,15 @@ button::-moz-focus-inner{
 	}
 }
 
+
+
+.leave-depporange{
+	// border-left:4px solid #458822;
+	color:#ff5f41;
+	&:before{
+		background-color: #ff5f41;
+	}
+}
 
 
 
@@ -635,6 +658,13 @@ button::-moz-focus-inner{
 }
 
 
+.step01-deeporange{
+	&:focus{
+		background-color: #ff5f41;
+		color:#ffffff;
+		border-color: #ffffff;
+	}
+}
 
 
 
@@ -740,13 +770,11 @@ button.step02-mochagreen{
 		border-color: #ffffff;
 }
 
-// .step01-lightorange{
-// 	&:focus{
-// 		background-color: #ff5f41;
-// 		color:#ffffff;
-// 		border-color: #ffffff;
-// 	}
-// }
+button.step02-deeporange{
+		background-color: #ff5f41;
+		color:#ffffff;
+		border-color: #ffffff;
+}
 
 
 
@@ -756,6 +784,10 @@ button.step02-mochagreen{
 
 // 手機版
 @media (max-width: 768px) {
+
+	.none{
+		display: none;
+	}
 
 	.bg-back{
 		display: inline-block;
@@ -767,6 +799,15 @@ button.step02-mochagreen{
 			width: 100%;
 			display: block;
 			margin-right:0px;
+		}
+		.s-leave-rightbox{
+			display: none;
+		}
+	}
+
+	.phone-none{
+		.s-leave-leftbox{
+			display: none;
 		}
 		.s-leave-rightbox{
 			width: 100%;
@@ -826,6 +867,18 @@ button.step02-mochagreen{
 
 }
 
+
+
+// 按鈕被擠壓到的部分
+.s-leave-leftbox .s-title-left{
+	width: calc( 100% - 7.2em);
+}
+
+
+.s-leave-leftbox .s-title-right {
+    width: 7.2em;
+    text-align: right;
+}
 
 
 

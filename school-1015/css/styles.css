@@ -1,3 +1,188 @@
+
+
+.s-page-btn button{
+  background-color: rgba(0,0,0,0);
+  border-color: rgba(0,0,0,0);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* 全部 */
+.s-all{
+  color:#189F7A;
+}
+
+.s-all:focus , button.s-all-focus{
+  border-bottom:solid 2px #189F7A;
+}
+
+/* 出席 */
+.s-blue{
+  color: #2E7EB9;
+}
+
+.s-blue:focus , button.s-blue-focus{
+  border-bottom:solid 2px #2E7EB9;
+}
+
+/* 曠課 */
+.s-red{
+  color: #C10B35;
+}
+
+.s-red:focus , button.s-red-focus{
+  border-bottom:solid 2px #C10B35;
+}
+
+/* 病假 */
+.s-green{
+  color: #88B266;
+}
+
+.s-green:focus , button.s-green-focus{
+  border-bottom:solid 2px #88B266;
+}
+
+/* 事假 */
+.s-deepblue{
+  color:#474b90; 
+}
+
+.s-deepblue:focus , button.s-deepblue-focus{
+  border-bottom:solid 2px #474b90;
+}
+
+/* 公假 */
+.s-lightblue{
+  color: #72bdff;
+}
+
+.s-lightblue:focus , button.s-lightblue-focus{
+  border-bottom:solid 2px #72bdff;
+}
+
+/* 喪假 */
+.s-deepgreen{
+  color:#6ea3a3;
+}
+
+.s-deepgreen:focus , button.s-deepgreen-focus{
+  border-bottom:solid 2px #6ea3a3;
+}
+
+/* 不可抗力 */
+.s-brown{
+  color:#ce867f;
+}
+
+.s-brown:focus , button.s-brown-focus{
+  border-bottom:solid 2px #ce867f;
+}
+
+/* 遲到 */
+.s-bluegreen{
+  color:#13cacd;
+}
+
+.s-bluegreen:focus , button.s-bluegreen-focus{
+  border-bottom:solid 2px #13cacd;
+}
+
+/* 早退 */
+.s-bluegray{
+  color:#63719d;
+}
+
+.s-bluegray:focus , button.s-bluegray-focus{
+  border-bottom:solid 2px #63719d;
+}
+
+/* 缺席 */
+.s-orange{
+  color:#ff7827;
+}
+
+.s-orange:focus , button.s-orange-focus{
+  border-bottom:solid 2px #ff7827;
+}
+
+/* 其他1 居家隔離*/
+.s-seablue{
+  color:#4188d9;
+}
+
+.s-seablue:focus , button.s-seablue-focus{
+  border-bottom:solid 2px #4188d9;
+}
+
+/* 其他2 居家檢疫 */
+.s-purple{
+  color:#7e68c6;
+}
+
+.s-purple:focus , button.s-purple-focus{
+  border-bottom:solid 2px #7e68c6;
+}
+
+/* 其他3 自主健康管理 */
+.s-yellow{
+  color:#db9b43;
+}
+
+.s-yellow:focus , button.s-yellow-focus{
+  border-bottom:solid 2px #db9b43;
+}
+
+
+/* 其他4 發燒或呼吸道症狀 */
+.s-mochagreen{
+  color:#458822;
+}
+
+.s-mochagreen:focus , button.s-mochagreen-focus{
+  border-bottom:solid 2px #458822;
+}
+
+/* 其他5 到校發燒 */
+.s-greengray{
+  color: #4ab0b4;
+}
+
+.s-greengray:focus , button.s-greengray-focus{
+  border-bottom:solid 2px #4ab0b4;
+}
+
+
+/* 其他6 非上述原因 */
+.s-deeporange{
+  color: #ff5f41;
+}
+
+.s-deeporange:focus , button.s-deeporange-focus{
+  border-bottom:solid 2px #ff5f41;
+}
+
+
+
+
+@media(max-width: 769px){
+  .s-page-btn {
+    display: flex;
+    justify-content: space-around;
+  }
+  .s-page-btn button{
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+/* ---------------------- */
+
 .w-full {
   width: 100%; }
   .w-full .s-leave-leftbox {
@@ -61,6 +246,7 @@ button::-moz-focus-inner {
   color: #3E3E3E;
   font-size: 18px; }
   .s-title-left span {
+    display: inline-block;
     font-weight: 400;
     margin-left: 20px;
     color: #5D5D5D;
@@ -72,6 +258,7 @@ button::-moz-focus-inner {
 .s-down-list-img {
   margin-right: 5px; }
   .s-down-list-img img {
+    height: 45px;
     width: 45px;
     border-radius: 50%; }
 
@@ -254,6 +441,11 @@ button::-moz-focus-inner {
   .leave-deepblue:before {
     background-color: #474b90; }
 
+.leave-red {
+  color: #ed1c24; }
+  .leave-red:before {
+    background-color: #ed1c24; }
+
 .leave-green {
   color: #88b266; }
   .leave-green:before {
@@ -313,6 +505,11 @@ button::-moz-focus-inner {
   color: #458822; }
   .leave-mochagreen:before {
     background-color: #458822; }
+
+.leave-depporange {
+  color: #ff5f41; }
+  .leave-depporange:before {
+    background-color: #ff5f41; }
 
 .s-down-02 {
   padding: 0px 10px; }
@@ -463,6 +660,11 @@ button::-moz-focus-inner {
   color: #ffffff;
   border-color: #ffffff; }
 
+.step01-deeporange:focus {
+  background-color: #ff5f41;
+  color: #ffffff;
+  border-color: #ffffff; }
+
 button.step02-gray {
   background-color: #7B7B7B;
   color: #ffffff;
@@ -538,7 +740,14 @@ button.step02-mochagreen {
   color: #ffffff;
   border-color: #ffffff; }
 
+button.step02-deeporange {
+  background-color: #ff5f41;
+  color: #ffffff;
+  border-color: #ffffff; }
+
 @media (max-width: 768px) {
+  .none {
+    display: none; }
   .bg-back {
     display: inline-block; }
   .w-full .s-leave-leftbox {
@@ -546,6 +755,10 @@ button.step02-mochagreen {
     display: block;
     margin-right: 0px; }
   .w-full .s-leave-rightbox {
+    display: none; }
+  .phone-none .s-leave-leftbox {
+    display: none; }
+  .phone-none .s-leave-rightbox {
     width: 100%;
     display: block; }
   .s-down-list-in {
@@ -581,3 +794,10 @@ button.step02-mochagreen {
         margin-right: 8px; }
   .s-title-right a {
     padding: 7px 14px; } }
+
+.s-leave-leftbox .s-title-left {
+  width: calc( 100% - 7.2em); }
+
+.s-leave-leftbox .s-title-right {
+  width: 7.2em;
+  text-align: right; }

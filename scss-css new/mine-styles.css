@@ -1,0 +1,29 @@
+
+
+/* 字型 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+
+/* 習慣使用的東西們 */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+ul, li, ol{
+	list-style:none;
+}
+
+.clear{
+	clear:both;
+}

@@ -1,0 +1,29 @@
+
+
+// 登入時按鈕
+.btn-enter{
+	border-radius:3px;
+	padding:10px 32px;
+	box-shadow: 0px 2px 2px #cccccc;
+	color:#ffffff;
+	font-size: $font-sm;
+	box-sizing: border-box;
+	&:hover{
+		opacity:0.8;
+	}
+	img{
+		margin-right:2px;
+		position: relative;
+		top:1px;
+	}
+}
+
+
+// 按鈕顏色
+.btn-green{
+	background-color: #00B1B1;
+}
+
+.btn-gray{
+	background-color: #A5A5A5;
+}

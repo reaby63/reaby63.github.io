@@ -1,0 +1,62 @@
+.loading-to-other-scss {
+  background-color: yellow; }
+
+body {
+  background-color: black; }
+  body header {
+    background-color: yellow;
+    color: blue;
+    opacity: 0.4; }
+  body p {
+    display: block;
+    color: green;
+    background-color: black; }
+    body p .active {
+      background-color: gray; }
+      body p .active:hover {
+        opacity: 0.9; }
+  body h1 {
+    color: yellow; }
+
+header {
+  background-image: url(../img/aaa.jpeg); }
+
+.box-bg-pink {
+  background-color: pink; }
+
+.article {
+  width: 150px;
+  font-size: 28px; }
+
+.mixin {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: pink; }
+
+.mixin-other {
+  background-color: #000000;
+  font-size: 14px; }
+
+.mixin-other02 {
+  background-color: #fff;
+  width: 500px; }
+
+.extend-dad, .extend-son01, .extend-son02 {
+  display: block;
+  background-color: pink;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; }
+
+.extend-son01 {
+  background-color: yellow; }
+
+.extend-son02 {
+  background-color: blue; }
+
+.content {
+  color: #fff; }
+
+ul li {
+  font-size: 20px; }

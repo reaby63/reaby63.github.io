@@ -1,0 +1,53 @@
+
+
+.gray-inforbox{
+	background-color: #F4F4F4;
+	border-radius:10px;
+	padding:10px 8px;
+	box-sizing: border-box;
+	margin-bottom: 12px;
+	.gray-infor{
+		display: flex;
+		font-weight:500;
+		margin-bottom:12px;
+		div{
+			text-align: left;
+			&:first-child{
+				font-size: $font-sm;
+				width:4.5em;
+				margin-right:8px;
+				color:#A5A5A5;
+			}
+			&:last-child{
+				font-size: $font-md;
+				width: calc( 100% - 4.5em - 8px );
+			}
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+.enter-input-name{
+	letter-spacing:1.7em;
+}
+
+
+.warning-text{
+	font-size: $font-sm;
+	color:#BE2139;
+	>div{
+		margin:0 auto;
+		>div{
+			text-align:left;
+			margin-bottom:8px;
+			&:last-child{
+				margin-bottom:0px;
+			}
+		}
+	}
+}
+
+
