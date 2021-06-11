@@ -123,7 +123,7 @@ input{
 
 
 .title{
-    color:#ffffff;
+    color:#583414;
     text-align: center;
     margin:0px auto;
     margin-top: 20px;
@@ -131,7 +131,7 @@ input{
     margin-bottom: 20px;
     h4{
         font-size: 40px;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 12px;
     }
     div{
@@ -140,7 +140,7 @@ input{
 }
 
 .content{
-    background-color: rgba( 255,255,255,0.8 );
+    background-color: rgba( 255,255,255,0.95 );
     border-radius: 26px;
     max-width: 1000px;
     margin:0px auto;
@@ -160,13 +160,15 @@ input{
         .red-tag{
             color:#FF3838;
             font-size: 14px;
+            position: relative;
+            top: -5px;
         }
         .radio-text{
             color:#5C5C5C;
         }
     }
     .question-tag{
-        margin-left: 2em;
+        margin-left: 2.3em;
         color:#717171;
         font-size: 16px;
         margin-bottom: 8px;
@@ -240,6 +242,14 @@ label.alle-control.alle-control--radio input{
     min-width: auto;
 }
 
+.blue-words-width-04{
+    width:6.8em;
+    display: inline-block;
+    span{
+        letter-spacing: 5.3px;
+    }
+}
+
 @media(max-width:768px){
     body{
         padding:16px 10px;
@@ -252,7 +262,7 @@ label.alle-control.alle-control--radio input{
         display: block;
         margin-left: 2em;
         min-width: auto;
-        width:calc(100% - 2em);
+        width:calc(100% - 2em - 20px);
         &.input-s{
             min-width: auto;
             display: inline-block;
@@ -265,13 +275,18 @@ label.alle-control.alle-control--radio input{
             width: 100%;
         }
     }
-    .question .question-title .radio-text{
-        display: block;
-        margin-left: 2em;
-        .alle-control{
-            margin-bottom: 8px;
+    .question .question-title{
+        .red-tag{
+            top: -3px;
         }
-    }
+        .radio-text{
+            display: block;
+            margin-left: 2em;
+            .alle-control{
+                margin-bottom: 8px;
+            }
+        }
+    } 
     .img-upload{
         margin-left: 2em;
         .img{
@@ -285,6 +300,13 @@ label.alle-control.alle-control--radio input{
     .img-step02{
         img{
             width: 80%;
+        }
+    }
+    .blue-words-width-04{
+        width:auto;
+        display: inline-block;
+        span{
+            letter-spacing: 0px;
         }
     }
     
