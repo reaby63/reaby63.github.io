@@ -1,0 +1,315 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Roboto regular */
+
+@font-face {
+    font-family: "Noto Sans TC";
+    src: url("/fonts/NotoSansTC-Regular.otf");
+    /* src: url("/fonts/Roboto-Regular.eot?#iefix") format('embedded-opentype'),
+         url("/fonts/Roboto-Regular.woff2") format('woff2'),
+         url("/fonts/Roboto-Regular.woff") format('woff'),
+         url("/fonts/Roboto-Regular.ttf") format('truetype'); */
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Checkbox
+.alle-control {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+  }
+  .alle-control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  .alle-control__indicator {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    height: 20px;
+    width: 20px;
+    background: #ffffff;
+    border:1px solid #BFBFBF;
+  }
+  .alle-control--radio .alle-control__indicator {
+    border-radius: 50%;
+  }
+  .alle-control:hover input ~ .alle-control__indicator,
+  .alle-control input:focus ~ .alle-control__indicator {
+    background: #EDEDED;
+  }
+  .alle-control input:checked ~ .alle-control__indicator {
+    background: #11A9AF;
+  }
+  .alle-control:hover input:not([disabled]):checked ~ .alle-control__indicator,
+  .alle-control input:checked:focus ~ .alle-control__indicator {
+    background: #11A9AF;
+  }
+  .alle-control input:disabled ~ .alle-control__indicator {
+    background: #cccccc;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  .alle-control__indicator:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  .alle-control input:checked ~ .alle-control__indicator:after {
+    display: block;
+  }
+  .alle-control--checkbox .alle-control__indicator:after {
+    left: 7px;
+    top: 3px;
+    width: 7px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  .alle-control--checkbox input:disabled ~ .alle-control__indicator:after {
+    border-color: #707070;
+  }
+  .alle-control--radio .alle-control__indicator:after {
+    left: 7px;
+    top: 7px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .alle-control--radio input:disabled ~ .alle-control__indicator:after {
+    background: #707070;
+  }
+  
+
+//   開寫嚕～
+body{
+	font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	background-image:url("./img/bg.png");
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-size:cover;
+	height:auto;
+    background-position:top center;
+    padding-bottom: 16px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+input{
+    font-size: 16px;
+    padding:4px 6px;
+    border-radius: 4px;
+    border:solid 1px #BFBFBF;
+    min-width: 20em;
+    &.input-s{
+        min-width: 8em;
+    }
+}
+
+
+.title{
+    color:#ffffff;
+    text-align: center;
+    margin:0px auto;
+    margin-top: 20px;
+    max-width: 1000px;
+    margin-bottom: 20px;
+    h4{
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+    div{
+        font-size: 18px;
+    }
+}
+
+.content{
+    background-color: rgba( 255,255,255,0.8 );
+    border-radius: 26px;
+    max-width: 1000px;
+    margin:0px auto;
+    padding:16px 50px;
+}
+
+.question{
+    margin-bottom: 8px;
+    .question-title{
+        font-weight: 600;
+        color:#1844A7;
+        font-size: 18px;
+        margin-bottom: 6px;
+        .num{
+            font-size:26px;
+        }
+        .red-tag{
+            color:#FF3838;
+            font-size: 14px;
+        }
+        .radio-text{
+            color:#5C5C5C;
+        }
+    }
+    .question-tag{
+        margin-left: 2em;
+        color:#717171;
+        font-size: 16px;
+        margin-bottom: 8px;
+        a{
+            color:#0084F5;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.8;
+            }
+        } 
+        span{
+            color:#CE7711;
+        }
+    }
+}
+
+.img-center{
+    margin:0 auto;
+    text-align: center;
+}
+
+.radio-other{
+    position: relative;
+    top: -2px;
+    left: -10px;
+}
+
+.btn{
+    font-size: 16px;
+    color:#ffffff;
+    border:0px;
+    border-radius: 4px;
+    padding:2px 8px;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.file-btn{
+    background-color: #84B23A;
+}
+
+.img-upload{
+    margin-left: 10.5em;
+    .img{
+        width: 100%;
+        max-height: 340px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // border:1px solid #EDEDED;
+        img{
+            width:100%;
+        }
+    }
+}
+
+.footer-btn{
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    .enter-btn{
+        background-color: #11A9AF;
+        font-size: 16px;
+        padding:8px 28px;
+    }
+}
+label.alle-control.alle-control--radio input{
+    min-width: auto;
+}
+
+@media(max-width:768px){
+    body{
+        padding:16px 10px;
+        margin:0px auto;
+    }
+    .content{
+        padding:16px 20px;
+    }
+    input{
+        display: block;
+        margin-left: 2em;
+        min-width: auto;
+        width:calc(100% - 2em);
+        &.input-s{
+            min-width: auto;
+            display: inline-block;
+            width: 7em;
+            margin-left: 0px;
+        }
+    }
+    .img-center{
+        img{
+            width: 100%;
+        }
+    }
+    .question .question-title .radio-text{
+        display: block;
+        margin-left: 2em;
+        .alle-control{
+            margin-bottom: 8px;
+        }
+    }
+    .img-upload{
+        margin-left: 2em;
+        .img{
+            width: 100%;
+            max-height: 153px;
+        }
+    }
+    .radio-other{
+        top: 0px;
+    }
+    .img-step02{
+        img{
+            width: 80%;
+        }
+    }
+    
+    // 字體大小
+    .title{
+        h4{
+            font-size: 30px;
+        }
+        div{
+            font-size: 16px;
+        }
+    }
+    .question{
+        .question-title{
+            font-size: 16px;
+            .num{
+                font-size: 20px;
+            }
+            .red-tag{
+                font-size: 13px;
+            }
+        }
+        .question-tag{
+            font-size: 14px;
+            margin-left: 2.2em;
+        }
+    }
+}

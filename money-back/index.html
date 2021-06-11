@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="title">
+        <h4>
+            <span style="display: inline-block;">
+                新北市
+            </span><span style="display: inline-block;">
+                教甄退費網
+            </span>
+        </h4>
+        <div>
+            親愛的家長您好，因疫情關係停課，各項溢收款將以電匯方式進行，故請家長填寫相關資料，以利退費作業（一個家庭只需填寫一次即可）。
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="question">
+            <div class="question-title">
+                <span class="num">
+                    1
+                </span>
+                <span class="red-tag">
+                    ＊
+                </span>
+                <span class="blue-words">
+                    輸入金融機構代號(共7碼)：
+                </span>
+                <span>
+                    <input type="text" placeholder="請輸入金融機構代號">
+                </span>
+            </div>
+            <div class="question-tag">
+                若不知道金融機構代號，請至<a href="#">財金資訊股份有限公司網站</a>，照著下圖紅框進行查詢。<span>(郵局統一為7000021)</span>
+            </div>
+            <div class="img-center">
+                <img src="./img/step01.png" alt="">
+            </div>
+        </div>
+        <div class="question">
+            <div class="question-title">
+                <span class="num">
+                    2
+                </span>
+                <span class="red-tag">
+                    ＊
+                </span>
+                <span class="blue-words">
+                    輸入匯款帳戶：
+                </span>
+                <span>
+                    <input type="text" placeholder="請輸入匯款帳戶">
+                </span>
+            </div>
+            <div class="question-tag">
+                帳號在存摺簿後方，如下圖所示。<span>(郵局為局號＋帳戶)</span>
+            </div>
+            <div class="img-center img-step02">
+                <img src="./img/step02.png" alt="">
+            </div>
+        </div>
+        <div class="question">
+            <div class="question-title">
+                <span class="num">
+                    3
+                </span>
+                <span class="red-tag">
+                    ＊
+                </span>
+                <span class="blue-words">
+                    匯款帳戶戶名：
+                </span>
+                <span>
+                    <input type="text" placeholder="請輸入匯款帳戶戶名">
+                </span>
+            </div>
+        </div>
+        <div class="question">
+            <div class="question-title">
+                <span class="num">
+                    4
+                </span>
+                <span class="red-tag">
+                    ＊
+                </span>
+                <span class="blue-words">
+                    此帳戶歸屬為：
+                </span>
+                <span class="radio-text">
+                    <label class="alle-control alle-control--radio">
+                        <span>考生本人</span>
+                        <input type="radio" id="r1" name="rr"/>
+                        <div class="alle-control__indicator"></div>
+                    </label>
+                    <label class="alle-control alle-control--radio">
+                        <span>父或母</span>
+                        <input type="radio" id="r2" name="rr"/>
+                        <div class="alle-control__indicator"></div>
+                    </label>
+                    <label class="alle-control alle-control--radio">
+                        <span>監護人</span>
+                        <input type="radio" id="r3" name="rr"/>
+                        <div class="alle-control__indicator"></div>
+                    </label>
+                    <span style="display: inline-block;">
+                        <label class="alle-control alle-control--radio">
+                            <span>
+                                其他：
+                            </span>
+                            <input type="radio" id="r4" name="rr"/>
+                            <div class="alle-control__indicator"></div>
+                        </label>
+                        <span class="radio-other" style="display: inline-block;">
+                            <input type="text" placeholder="請輸入身份" class="input-s">
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div class="question">
+            <div class="question-title">
+                <span class="num">
+                    5
+                </span>
+                <span class="red-tag">
+                    ＊
+                </span>
+                <span class="blue-words">
+                    上傳存摺封面：
+                </span>
+                <button class="btn file-btn">
+                    <img src="./img/photo-icon.svg" alt="">
+                    選擇檔案
+                </button>
+            </div>
+            <div class="img-upload">
+                <div class="img">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-btn">
+            <button class="btn enter-btn">
+                送出資料
+            </button>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+<!-- <label class="alle-control alle-control--radio">
+    <span>123</span>
+    <input type="radio" checked="checked" />
+    <div class="alle-control__indicator"></div>
+</label> -->
