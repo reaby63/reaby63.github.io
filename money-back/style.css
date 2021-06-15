@@ -160,7 +160,7 @@ input.input-s {
 }
 
 .question {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .question .question-title {
@@ -278,7 +278,7 @@ label.alle-control.alle-control--radio input {
 }
 
 .blue-words-width-04 span {
-  letter-spacing: 5.3px;
+  letter-spacing: 5.2px;
 }
 
 @media (max-width: 768px) {
@@ -303,6 +303,9 @@ label.alle-control.alle-control--radio input {
   }
   .img-center img {
     width: 100%;
+  }
+  .question {
+    margin-bottom: 20px;
   }
   .question .question-title .red-tag {
     top: -3px;
