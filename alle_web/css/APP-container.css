@@ -1,0 +1,2817 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC|Poppins&display=swap');
+*{
+	padding:0;
+	margin:0;
+}
+body{
+  	font-family: 'Poppins', 'Noto Sans TC',sans-serif;
+}
+.clear{
+	clear:both;
+}
+.contact_form{
+	padding: 15px 0;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.modal-footer {
+    padding: 0px 15px 0;
+    border-top:0px;
+}
+
+
+
+/* 0324 修改按鈕 */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.open>a{
+	box-shadow:#ffffff;
+}
+
+/* 0324修改產品上面大圖部分 */
+.slide_index {
+    max-height: 58vh;
+}
+.slide_index_big{
+	width:100%;
+	max-height:88vh;
+}
+.slide_index_sml{
+	display:none;
+}
+
+.navbar-default{
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.0), 0 1px 5px rgba(0,0,0,.0); 
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.0), 0 1px 5px rgba(0,0,0,.0);
+}
+
+@media(max-width:760px){
+	.slide_index_big{
+		min-height:50vh;
+		width:100%;
+	}
+
+	.back-to-top{
+		right: 30px;
+	}
+
+	.carousel-caption{
+		top:25%;
+	}
+}
+
+@media(max-width:414px){
+	.carousel-caption{
+		/* top:19%; */
+	}
+	
+	.slide_index_big{
+		display:none;
+	}
+
+	.slide_index_sml{
+		display:block;
+	}
+}
+
+
+/* 微調預約＋產品介紹按鈕！ */
+.carousel-caption button{
+	display:inline-block;
+}
+
+/* 設計理念 */
+.product_banner_img{
+	margin-bottom:40px;
+}
+.product_banner_img img{
+	max-width:100%;
+}
+.product_designconcept{
+	color:#797979;
+	font-size:15px;
+	margin-bottom:30px;
+}
+.product_designconcept_APP{
+	color:#797979;
+	font-size:15px;
+	margin-top:15px;
+	margin-bottom: 5px;
+}
+.APP_application_introduce{
+	margin-bottom:50px;
+}
+.APP_container{
+	color:#293E53;
+}
+/* 大標題 */
+.section_title{
+	margin:10px 0;
+	margin-top:30px;
+	border-bottom: 1px solid #E3E3E3;
+}
+.section_title_bg{
+	font-size:25px;
+	color:#293E53;
+	font-weight:500;
+	display: inline-block;
+	padding: 15px 0;
+}
+.section_title_sm{
+	font-size:14px;
+	color:#909090;
+	font-weight:300;
+}
+/* 使用介面 */
+.APP_introduction{
+	display:inline-block;
+	vertical-align:top;
+	width:33%;
+}
+.APP_interface_introduction h6{
+	font-size:18px;
+	font-weight:400;
+	color:#3A495C;
+	margin-top:20px;
+}
+.APP_interface_introduction p{
+	font-size:14px;
+	font-weight:400;
+	color:#797979;
+}
+.APP_interface_introduction p i{
+	color:#797979;
+	font-size:14px;
+}
+.APP_interface_introduction p:before{
+	content:"";
+	display:inline-block;
+	background-color:#797979;
+	height: 4px;
+	width: 4px;
+	border-radius:50%;
+	position:relative;
+	top:-4px;
+	margin-right:5px;
+}
+.APP_introduction_img , .APP_introduction_box{
+	width:266px;
+	height:473px;
+}
+.APP_introduction_box{
+	text-align: center;
+	padding-top: 95px;
+}
+.br-0 img{
+	border:0px !important;
+}
+.APP_interface_introduction img{
+	max-width:100%;
+}
+
+/* 2021 3月新增 登入頁面  */
+.APP_download_btn{
+	cursor: pointer;
+	transition: all 0.2s;
+	border: 0px;
+	background-color: #ffffff;
+}
+.APP_download_btn:hover{
+	opacity: 0.8;
+}
+.APP_download_btn img{ 
+	width:180px;
+}
+
+.APP_download_btn , .APP_qrcode_img{
+	margin-bottom: 10px;
+	display: block;
+}
+
+.mb-10{
+	margin-bottom: 30px;
+}
+
+.APP_qrcode_img img{
+	width:180px;
+}
+
+.APP_introduction_box{
+	font-weight: 500;
+	font-size: 20px;
+}
+
+
+/* 登入註冊按鈕＋內容 */
+.APP_signin{
+	margin-bottom: 40px;
+}
+.APP_signin_list{
+	display:block;
+}
+/* 大按鈕～ */		
+.APP_signin_button,.APP_signin .btn,.APP_signin .btn-primary,.APP_login_btn{
+	display:block;
+	color:#307FCE;
+	font-size:16px;
+	font-weight:400;
+	background-color:#fdfdfd;
+	width:100%;
+	box-shadow:0 2px 6px #efefef;
+	padding:20px;
+	text-align:center;
+	cursor:pointer;
+	margin-bottom:20px;
+	text-decoration:none;
+	border:0px;
+}
+.APP_signin_button:hover{
+	background-color:#ffffff;
+	transition:all 0.2s ease 0.1s;
+	color:#3EC1D5;
+}
+.APP_signin .btn:hover{
+	background-color:#ffffff;
+	transition:all 0.2s ease 0.1s;
+	color:#3EC1D5;
+}
+.APP_signin .btn-primary:hover{
+	background-color:#ffffff;
+	transition:all 0.2s ease 0.1s;
+	color:#3EC1D5;
+}
+/* 內容～ */
+.APP_signin_box{
+	background-color:#ffffff;
+	border:solid 1px #E5E5E5;
+	box-shadow:0 3px 6px #EDEDED;
+	width:31%;
+	text-align:center;
+	display:inline-block;
+	padding-top:10px;
+	padding-bottom:25px;
+}
+.APP_signin_margin{
+	margin-right:3%;
+}
+.APP_signin_box h6{
+	font-size:18px;
+	font-weight:400;
+	color:#293E53;
+}
+.APP_signin_box p{
+	font-size:14px;
+	color:#797979;
+}
+.APP_signin_img{
+	width: 165px;
+	height: 297px;
+	text-align:center;
+	display:inline-block;
+}
+.APP_signin_img img{
+	max-width:100%;
+}
+
+.APP_youtube{
+	display:block;/* 
+	background-color:#ffffff;
+	border:solid 1px #E5E5E5;
+	box-shadow:0 3px 6px #EDEDED; */
+	float: right;
+	margin-top: 15px;
+	text-align:center;
+	width:16em;
+	text-decoration:underline;
+	font-size:15px;
+}
+
+.APP_youtube i{
+	margin-right: 2px;
+}
+
+/* 應用功能 */
+.APP_application_list_up{
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin:0 auto;
+	padding-bottom:30px;
+}
+.APP_application_list_up a{
+	display:inline-flex;
+	width:19%;
+	color:#363636;
+	border:solid 1px #d9d9dc;
+	padding:12px 0px;
+	margin:15px 0px;
+	background-color:#ffffff;
+	text-align:center;
+	border-radius:0px;
+	position: relative;
+	font-size: 16px;
+	font-weight: 400;
+	justify-content: center;
+	align-items: center;
+	cursor:pointer;
+}
+.APP_application_list_up a:not(:nth-child(5n)){
+	margin-right: calc(5% / 4);
+}
+.APP_application_list_up a i{
+	display:inline-block;
+	font-size:32px;
+	margin-right:5px;
+}
+.APP_application_list_up a:nth-child(3n+1) i{
+	color:#84cace;
+}
+.APP_application_list_up a:nth-child(3n+2) i{
+	color:#84cace;
+}
+.APP_application_list_up a:nth-child(3n+3) i{
+	color:#84cace;
+}
+.APP_application_list_up a:after{
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 15px 15px 0;
+	border-color: transparent #0069C3 transparent transparent;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.APP_application_list_up a:hover{
+    background-color: #2ea5e7;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.5s;
+    border: 0;
+}
+.APP_application_list_up a:hover i{
+	color:#ffffff;
+}
+.APP_application_list_up a:hover:after{
+	border-color: transparent orange transparent transparent;
+}
+.APP_application_list_up a:active{
+	background-color:#293E53;
+	color:#ffffff;
+}
+ /* 應用功能彈出視窗 */
+.APP_application_list_class{
+	width:90%;
+	margin:0 auto;
+}
+.APP_application_list_title{
+	border-bottom: 2px solid #307FCE;
+	/* padding:10px; */
+	margin:0 auto 20px
+}
+.APP_application_list_title_left{
+	float:left;
+}
+.APP_application_list_title_left h4{
+	font-size: 22px;
+    font-weight: 400;
+    padding-top: 5px;
+    margin: 3px 0;
+}
+.APP_application_list_title_right{
+	float:right;
+}
+.APP_application_list_pic{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.APP_list_user{
+    display: inline-block;
+    padding: 3px 7px;
+    border-radius: 3px;
+    margin-left: 3px;
+    color: #ffffff;
+    font-size: 15px;
+}
+.APP_user_orange{
+	background-color:#5bb2dc;
+}
+.APP_user_green{
+	background-color:#ffaa46;
+}
+.APP_user_red{
+	background-color:#9c7dcc;
+}
+
+.APP_application_list_words{
+	color: #656565;
+	display: inline-block;
+	margin-bottom: 20px;
+	font-size: 16px;
+	line-height: 1.8em;
+}
+.APP_list_pic_margin{
+	/* margin-right:80px; */
+	width: 24%;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.APP_list_pic_margin img{
+	max-width: 100%;
+	max-height:475px;
+	overflow: hidden;
+	box-shadow: 0px 0px 3px #f1f1f1;
+}
+/* .APP_list_pic_margin img{
+	width:268px;
+	height:475px;
+} */
+
+
+.APP_introduction_img img{
+	max-width:100%;
+	border-radius: 10px;
+	border: 0.5px solid #efefef;
+}
+
+.APP_login_btn{
+	margin-top:20px;
+}
+
+.APP_enter_page{
+	margin-bottom:70px;
+}
+
+/* 客戶實例 */
+.APP_customer_picture{
+	background-repeat:no-repeat;
+	padding:50px 0;
+}
+.APP_customer_picture_bg{
+	background-image:url('../img/APP_customer.jpg');
+}
+.APP_customer_picture_bgc{
+	background-color:rgba(0,0,0,.3);
+	text-align:center;
+	padding:30px 0;
+}
+.APP_customer_picture_bgc span{
+	color:#ffffff;
+	font-size:32px;
+	font-weight:300;
+}
+.APP_customer_container span{
+	color:#333333;
+	font-size:15px;
+	/* font-weight:300; */
+	display:inline-block;
+	margin-bottom:10px;
+    width: 24%;
+}
+.APP_customer_container span:before{
+	content:"";
+	width:4px;
+	height: 4px;
+	background-color:#707070;
+	display:inline-block;
+	position:relative;
+	top:-3px;
+	margin-right:5px;
+}
+
+
+/* 下載安裝 */
+.APP_download_img{
+	background:url("../img/APP_download.jpg") no-repeat;
+	width:100%;
+	padding:40px 0;
+}
+.APP_customer_container span:after{
+	content: "";
+	margin-right:93px;
+}
+.APP_customer_bottom{
+	background-color:#F4F4F4;
+	width:100%;
+	padding:20px;
+	margin-top: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.APP_customer_word{
+	color:#504C4C;
+	font-size:29px;
+	font-weight:bold;
+}
+.APP_customer_word:after{
+	content:"所學校正在使用";
+	color:#504C4C;
+	font-size:16px;
+	display:inline-block;
+	padding:0 10px;
+	font-weight: 400;
+}
+.APP_customer_word:before{
+	content:"共";
+	color:#504C4C;
+	font-size:15px;
+	display:inline-block;
+	padding:0 16px;
+	font-weight: 400;
+}
+
+
+.newStudent_customer > .APP_customer_bottom span{
+	color:#504C4C;
+	font-size:29px;
+	font-weight:bold;
+}
+
+/* 聯繫我們 */
+.APP_contact_down{
+	color:#5A5A5A;
+	font-size:16px;
+	text-align:center;
+	background-color:#EDF8FF;
+	padding:10px 0;
+	font-weight:300;
+	margin: 20px 0;
+	display:inline-block;
+	width:100%;
+}
+
+
+@media(max-width:768px){
+/* body{
+	margin:-297px;
+} */
+
+	.APP_application_list_up a {
+		width: calc(50% - 8px);
+	}
+	.APP_application_list_up{
+		width:auto;
+		text-align: center;
+	}
+	.APP_list_pic_margin{
+		width: 40%;
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+	.APP_list_pic_margin img{
+		max-width: 100%;
+		max-height:475px;
+		overflow: hidden;
+	}
+
+	/* 介面說明rwd */
+	.APP_introduction{
+		width:100%;
+		display:block;
+		text-align:center;
+		margin-bottom:30px;
+	}
+	.APP_introduction_img , .APP_introduction_box{
+		display:inline-block;
+		text-align:center;
+	}
+	.APP_signin_box{
+		display:block;
+		width:100%;
+	}
+	.APP_signin_margin{
+		margin-right:0;
+	}
+	.APP_signin{
+		margin-bottom:30px;
+	}
+	
+	.APP_customer_container span:after {
+    	content: "";
+    	margin-right: 29px;
+	}
+
+	.APP_customer_container span{
+		width:auto;
+	}
+
+}
+
+/* 圖書管理 */
+/* 設計理念 */
+.library_banner_img{
+	color:#ffffff;
+	font-size:15px;
+}
+.library_banner_img{
+	position:relative;
+}
+.library_banner_img img{
+	width: 100%;
+}
+.library_banner_words{
+	position:absolute;
+	left:10px;
+	bottom:10px;
+}
+.library_banner_words p{
+	margin:0;
+}
+
+/* 系統特色 */
+.product_triangle{
+	flex-wrap:wrap;
+	border:solid 1px #DBDBDB;
+	padding:12px 20px;
+    padding-bottom: 30px;
+	margin:15px 0px;
+	margin-right:20px;
+	background-color:#ffffff;
+	text-align:center;
+	position: relative;
+	font-size: 16px;
+	font-weight: 400;
+	width:203px;
+	vertical-align:top;
+	justify-content: center;
+}
+.product_triangle:last-child{
+	margin-right:0px;
+}
+.product_triangle:after{
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 15px 15px 0;
+	border-color: transparent #0069C3 transparent transparent;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.product_triangle_6{
+	width: 181px;
+    padding: 9px;
+    margin-right: 9px;
+}
+
+.Library_system_words{
+	text-align:left;
+	display:inline-block;
+	color:#707070;
+	font-size:16px;
+	text-align:justify;
+}
+.Library_system_words span{
+	margin-bottom:3px;
+	text-align: left;
+	color:#707070;
+	font-size:14px;
+}
+.Library_system_container{
+	display: flex;
+    flex-wrap: wrap;
+}
+.Library_system_container h4{
+	font-size:20px;
+}
+.Library_system_container .bookday{
+	text-decoration:underline;
+}
+/* 系統特色-下半部圖片與文字 */
+.Library_system_down_words p:before{
+	content:"";
+	background-image:url('../img/library/system_checkbox.svg');
+	display:inline-block;
+	width:21px;
+	height:21px;
+	position:relative;
+	top:4px;
+	margin-right: 5px;
+}
+.Library_system_down_words,.Library_system_down_img{
+	max-width:50%;
+	display:inline-block;
+    vertical-align: top;
+}
+.Library_system_down_words h4{
+	font-size:20px;
+	color:#363636;
+	margin-bottom:2px;
+}
+.Library_system_down_words p{
+	color:#686d73;
+	font-size:16px;
+	margin-top: 9px;
+}
+.Library_system_down_words{
+	padding:42px;
+}
+.Library_system_down{
+	background-color:#F3F4F5;
+	margin-bottom:40px;
+	width:100%;
+}
+.Library_screen_picture{
+	text-align:center;
+}
+.Library_screen_picture img{
+	margin-bottom: 30px;
+	max-width: 100%;
+}
+.Library_screen_picture span{
+	color:#293E53;
+	font-size:16px;
+	margin:10px 0;
+	display:block;
+}
+
+/* 租賃方案 */
+.Library_money_box{
+	display:inline-block;
+	border:solid 1px #DBDBDB;
+	margin-right:2%;
+	width:30%;
+	text-align:center;
+	padding-bottom:15px;
+}
+.Library_money_box:last-child{
+	margin-right:0px;
+}
+.Library_money_box_top{
+	color:#617298;
+	padding:15px;
+}
+.Library_money_box_top img{
+	max-width:100%;
+}
+.Library_money_box_top h4{
+	font-size:30px;
+}
+.Library_money_box_top h4:after{
+	content:" 本以下館藏";
+	display:inline;
+	font-size:16px;
+	font-weight:300;
+}
+.Library_money_box_down{
+	display:inline-block;
+}
+.Library_money_box_down h5,.Library_money_box_down h6,.Library_money_box_down p{
+	text-align:left;
+}
+.Library_money_box_down h5,.Library_money_box_down h6{
+	margin:0px;
+	text-align:center;
+}
+.Library_money_box_down h5{
+	font-size:28px;
+	color:#2085EB;
+	line-height:51px;
+}
+.Library_money_box_down h5:before{
+	content: "一年";
+    display: block;
+    font-size: 15px;
+    color: #2085EB;
+    position: relative;
+    left: -34px;
+    line-height:0px;
+}
+.Library_money_box_down h6:before{
+	content: "三年";
+    display: block;
+    font-size: 15px;
+    color: #FFAA46;
+    position: relative;
+    left: -34px;
+    line-height:0px;
+	margin: 15px 0;
+}
+.Library_money_box_down h6{
+	font-size:26px;
+	color:#FFAA46;
+    line-height: 25px;
+    margin-bottom: 22px;
+}
+.Library_money_box_down p{
+	font-size:15px;
+	line-height:20px;
+    color: #000000;
+    font-weight: 300;
+}
+.Library_money_p{
+	display:inline;
+}
+.Library_money_outside a{
+	border-bottom:solid 1px #828282;
+	color:#828282;
+	font-size:18px;
+}
+.Library_money_outside{
+	width:94%;
+	text-align:right;
+	margin-top: 15px;
+}
+.Library_money_outside a:hover{
+	color:#152035;
+	border-bottom:solid 1px #152035;
+}
+
+@media(max-width:768px){
+	.main.container{
+		padding-top:0px;
+	}
+	.library_banner_img img{
+		height: 113px;
+	}
+	.product_triangle{
+		margin: 5px 0;
+    	width: 45%;
+    	padding: 5px 9px;
+    	margin-right: 10px;
+    	/* height: 225px; */
+	}
+	.Library_system_words span{
+		text-align:left;
+		display:inline-block;
+	}
+	.Library_system_down_img{
+		display:none;
+	}
+	.Library_system_down_words{
+		width:auto;
+		max-width: 100%;
+	}
+	.Library_bookday a{
+		text-align:right;
+	}
+
+	.Library_money_box_top h4{
+		font-size:20px;
+		margin-bottom: 0;
+	}
+	.Library_money_box_top h4:after{
+		content:" 本以下館藏";
+		display:block;
+		font-size:14px;
+		font-weight:300;
+	}
+	.Library_money_box{
+		box-sizing:border-box;
+		margin-bottom:20px;
+		padding:0 3px;
+		padding-bottom: 20px;
+		margin-right: 0;
+		width:32%;
+	}
+	.Library_money_box_down h5{
+		font-size:17px;
+		line-height:12px;
+		margin-bottom: 12px;
+	}
+	.Library_money_box_down h5:before{
+	    margin-bottom: 9px;
+	    left: -18px;
+	}
+	.Library_money_box_down h6:before{
+		margin-top:25px;
+		left: -20px;
+	}
+	.Library_money_box_down h6{
+		font-size:17px;
+		line-height:17px;
+		margin-bottom: 22px;
+	}
+	.Library_money_box_down p{
+		font-size:14px;
+		line-height:15px;
+	}
+	.Library_money_p{
+		display:block;
+	}
+	.Library_money_outside{
+		text-align:center;
+		margin-top: 0;
+	}
+	.Library_money_outside a{
+		font-size:16px;
+	}
+	/* 客戶服務頁 */
+
+	.APP_application_list_up a{
+		width: 48%;
+	}
+	.APP_application_list_up a:not(:nth-child(4n)){
+		margin-right: 0;
+	}
+	.APP_application_list_up a:not(:nth-child(2n)){
+		margin-right: 1%
+	}
+	.APP_application_list_up{
+		width:auto;
+		text-align: center;
+	}
+}
+
+
+
+/* 數位門禁 */
+/* 功能應用 */
+.accesscontrol_piclist_big{
+	text-align:center;
+}
+.accesscontrol_piclist_sml{
+	display:none;
+}
+.accesscontrol_piclist_words{
+	text-align:center;
+	display:block;
+	margin:25px;
+	font-size:15px;
+	color:#5B6A79;
+	font-weight:300;
+}
+/* 軟體供能 */
+.access_software_pic{
+	display:inline-block;
+	width:48%;
+	margin-top:60px;
+}
+.access_software_pic_words{
+	display:block;
+	margin:10px;
+	text-align:center;
+	font-size:14px;
+	color:#293E53;
+}
+.access_software_right{
+	display:inline-block;
+	width:38%;
+	vertical-align:top;
+    margin-left: 63px;
+}
+.access_software_list_title{
+	font-size:18px;
+	color:#3A495C;
+	margin-top: 30px;
+}
+.access_software_words li:before {
+    content: "";
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    background-color:#525050;
+    border-radius: 5px;
+    position: relative;
+    top: -2px;
+}
+.access_software_words li{
+	color:#525050;
+	font-size:14px;
+	margin:3px 0;
+}
+.access_software_list_words{
+	color:#707070;
+	font-weight:300;
+	margin-left:3px;
+}
+.access_software{
+	margin-bottom: 30px;
+}
+
+/* 硬體設備 */
+/* .access_hardware{
+	text-align:center;
+} */
+.access_hardware_product{
+	background-color:#ffffff;
+	box-shadow:0 0 5px #E2E2E2;
+	border:solid 1px #E2E2E2;
+	display:inline-block;
+	padding:9px;
+	width: 217px;
+/* 	height: 476px; */
+	margin: 8px 0;
+    margin-right:8px;
+	vertical-align: top;
+	text-align:left;
+}
+.access_hardware_product_img img{
+	/* max-width:100%; */
+	height:132px;
+}
+.access_hardware_product_img{
+	text-align:center;
+/* 	border-bottom:solid 1px #E3E3E3; */
+}
+.access_hardware_product_img h4{
+	font-size:15px;
+	color:#293E53;
+}
+.access_hardware_product_p{
+	padding:5px 0;
+	border-bottom:solid 1px #E2E2E2;
+}
+.access_hardware_product_p p{
+	font-size:14px;
+	color:#436588;
+	margin:3px 0;
+}
+/* .access_hardware_p roduct_p p span{
+	display:inline-block;
+	width:144px;
+	vertical-align: text-top;
+} */
+.access_hardware_product li{
+	font-size:14px;
+	color:#707070;
+	font-weight:300;
+	margin-top: 5px;
+}
+.access_hardware_product li:before{
+	content:"";
+	display:inline-block;
+	width:4px;
+	height: 4px;
+	background-color:#707070;
+	border-radius:5px;
+	position:relative;
+	top:-3px;
+	margin-right:4px;
+}
+/* 施工期程 */
+.access_during_pic{
+	display:inline-block;
+	text-align:center;
+	width:24%;
+	margin:20px 0;
+}
+.access_during_pic div{
+	margin-top:10px;
+}
+.access_during_words{
+	text-align: center;
+	margin:20px 0;
+}
+.access_during_words h5{
+	font-size:16px;
+	color:#043E79;
+}
+.access_during_words p{
+	font-size:14px;
+	color:#043E79;
+}
+
+/* 客戶實例 */
+.access_customer_pic{
+	padding:50px 0;
+	background-image:url('../img/access_control/access_control_customer.jpg');
+	background-repeat: no-repeat;
+	width:100%;
+}
+@media(max-width:768px){
+	.accesscontrol_piclist_big{
+		display:none;
+	}
+	.accesscontrol_piclist_sml{
+		display:block;
+		text-align:center;
+	}
+	.accesscontrol_piclist_sml img{
+		max-width:100%;
+	}
+	.access_software_right{
+		width:100%;
+		margin-left:0;
+	}
+	.access_software_pic{
+		width:100%;
+		margin-top: 10px;
+		text-align:center;
+	}
+	.access_software_pic img{
+		max-width:100%;
+	}
+	.access_during_pic img{
+		max-width:100%;
+	}
+	.access_hardware_product{
+		width:100%;
+		height:auto;
+	}
+	.access_during_pic{
+		width:49%;
+	}
+
+}
+
+ 
+
+/* 客戶專區 */
+*{
+	padding:0;
+	margin:0;
+}
+.clear{
+	clear:both;
+}
+.client_content{
+	margin-top:80px;
+}
+.client_banner{
+	width: 100%;
+  	height: 250px;
+  	background-image: url('../img/client_banner.jpg');
+  	background-position: center;
+  	background-size: cover;
+  	display: flex;
+ 	align-items: center;
+ 	justify-content: center;
+  	color: #FFF;
+  	font-size: 2.4em;
+  	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  	font-weight: 600;
+  	margin-bottom: 20px;
+}
+.client_inside{
+	max-width:1280px;
+	text-align:center;
+}
+.client_inside span{
+	display:inline-block;
+	vertical-align:top;
+	text-align:left;
+}
+.client_left{
+	margin-right:18px;
+	width: calc(30% - 20px);
+}
+.client_left h3{
+	color:#043E79;
+	font-size:23px;
+	font-weight:400;
+	margin-bottom:10px;
+	margin-top: 0;
+}
+.client_left p{
+	font-size:16px;
+	font-weight:400;
+	padding:9px 0px;
+	margin:0;
+}
+.client_left p span{
+	color: #656565;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+.client_left .client_left_last_p{
+	border-bottom:solid 1px #e4e4e4;
+}
+.client_right{
+	width: calc(70% - 20px);
+	margin-left:18px;
+}
+.client_right_title{
+	color:#293E53;
+	font-size:16px;
+	font-weight:600;
+	position:relative;
+	top:7px;
+	margin-right:6px
+}
+.client_right_box .client_input{
+	width: calc(100% - 4.5em);
+	outline: none;
+    border: solid 1px #d4d4d4;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    resize: none;
+}
+.client_right_box textarea{
+	margin-bottom:5px;
+	height: 6em;
+}
+.client_right_box label{
+	margin-right: 10px;
+}
+/* 控制輸入格裡字的顏色粗細 */
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+	color:#999;
+	font-weight:400;
+	font-size:14px;
+}
+input::-moz-placeholder,textarea::-moz-placeholder{
+	color:#999;
+	font-weight:400;
+	font-size:14px
+}
+input:-ms-input-placeholder,textarea:-ms-input-placeholder{
+	color:#999;
+	font-weight:400;
+	font-size:14px
+}
+/* 送出按鈕 */
+.client_submit{
+	background-color:#20b3d4;
+	color:#ffffff;
+	border: 0;
+	border-radius:3px;
+	padding:1em 6em;
+	font-weight:400;
+	outline:none; /* 去掉點擊會出現的藍框 */
+	width: calc(100% - 4em);
+	float: right;
+	margin-bottom: 2em;
+	font-size: 16px;
+}
+.client_submit_box{
+	text-align:center;
+	margin-bottom:15px;
+}
+.client_submit:hover{
+	background-color:#043E79;
+	transition:all .3s
+}
+.client_submit:active{
+	background-color:#043E79;
+}
+.client_left img{
+	width:15px
+}
+.client_right img{
+	width:13px;
+	position:relative;
+	bottom:2px;
+}
+@media(max-width:768px){
+	.client_banner h4{
+		margin-bottom:15px;
+	}
+	.client_right{
+		width: 100%;
+		margin-top:15px;
+		margin-left:0px;
+	}
+	.client_left{
+		margin-right:18px;
+		width: 100%;
+	}
+}
+
+/* 全誼新知科技分享 */
+.news_header{
+  width: 100%;
+  height: 250px;
+  background-image: url('../img/news_header.jpg');
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 2.4em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+/* 修改上面按鈕列表bootstrap */
+.nav-tabs{
+	border-bottom:0px;
+    display: block;
+    text-align: center;
+}
+.news_container .nav-tabs>li.active>a, .news_container .nav-tabs>li.active>a:focus, .news_container .nav-tabs>li.active>a:hover{
+	border:0px;
+	color:#ffffff;
+	background-color:#307FCE;
+	border-radius:5px;
+	padding:5px 8px;
+}
+.news_container .nav>li>a{
+	padding:5px 8px;
+	margin:0 15px;
+	cursor:pointer;
+	border:0px;
+}
+.news_container .nav>li>a:hover{
+	background-color:#ffffff;
+	color:#1AA4BE;
+	border:0px;
+}
+.nav-tabs>li>a{
+	border:0px;
+	border-radius:0px;
+	font-size:15px;
+}
+.tab-content{
+	border:0px;
+	padding:0px;
+}
+.nav-tabs>li{
+	float:none;
+	display:inline-block;
+}
+.news_container a{
+	color:#293E53;
+}
+/* 新知資訊列表 */
+.news_list_btn{
+	display:block;
+	padding:12px 20px;
+	width:100%;
+	margin-top:13px;
+}
+.news_list_02 button{
+	background-color:#ffffff;
+	border:solid 1px #DEDEDE;
+	border-left:solid 10px #62A5F4;
+	outline:none;
+	transition:all 0.2s ease 0s;
+	text-align:left;
+	box-shadow:0 0 2px #F0F0F0;
+}
+.news_title_02{
+	font-weight:600;
+	vertical-align:bottom;
+	font-size:18px;
+	color:#293E53;
+}
+.news_date_02{
+	font-size:14px;
+	color:#a9a9a9;
+	font-weight:100;
+}
+.news_list_02 button:hover{
+	background-color:#F0F0F0;
+}/* 
+.news_list_02 button:hover .news_date_02{
+	color:#ffffff;
+}
+.news_list_02 button:hover .news_title_02{
+	color:#ffffff;
+}
+.news_list_02 button:visited{
+	background-color:#ffffff;
+	color:#293E53;
+} */
+.news_date_02{
+	float:right;
+	display:inline-block;
+}
+.news_title_02{
+	display:inline-block;
+	width:90%;
+}
+.news_title_02_oneline{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.modal-dialog{
+	margin-top: 20px;
+	width:75%;
+}
+
+/* 新知資訊 下面頁數按鈕 */
+.news_02_page{
+	text-align:center;
+}
+.pagination>li>a:hover{
+	color:#ffffff;
+	background-color:#36a5da;
+}
+.pagination>li>a:focus{
+	color:#ffffff;
+	background-color:#36a5da;
+}
+.pagination>li>a, .pagination>li>span{
+	border: 1px solid #eceaea;
+}
+
+/* 新知資訊 內頁內容 */
+.modal-content{
+	padding:20px 23px;
+}
+.news_02_in_top{
+	border-left:solid 10px #62A5F4;
+	padding:10px 15px;
+	/* border-bottom:solid 2px #EDEDED; */
+}
+.news_02_in_down{
+	padding:15px 10px;
+	padding-left:25px;
+	border-top:solid 2px #EDEDED;
+}
+
+/* 新知科技rwd */
+	@media(max-width:768px){
+		.modal-dialog{
+			margin:0 auto;
+			margin-top:130px;
+			width:90%;
+			margin-bottom:50px;
+		}
+		.news_title_02{
+			width:65%;
+			overflow:hidden;
+		}
+	}
+	@media(max-width:320px){
+		.news_title_02{
+			width:58%;
+			overflow:hidden;
+		}
+	}
+
+/* 0317-調整 */
+
+.item{
+	max-height:540px;
+
+}
+
+@media(max-width:768px){
+	.item{
+		height:auto;
+	}
+}
+
+/* 0320- 健康掛號系統 */
+
+/* 設計理念 */
+.health_product_img{
+	text-align:center;
+	margin:20px 0;
+}
+
+.health_product_sml_img{
+	display:none;
+}
+
+.health_product_img img{
+	max-width:800px;
+}
+
+
+/* 系統特色 */
+.health_system_words{
+	letter-spacing:0.7px;
+}
+
+/* 手機APP介面*/
+.health_p{
+	font-size:16px;
+	color:#797979;
+}
+
+.health_APP h5{
+	color:#0062C4;
+	font-size:23px;/* 
+	text-align:left; */
+}
+
+.health_APP span{
+	font-size:14px;
+	color:#797979;/* 
+	text-align:left; */
+	display:block;
+}
+
+.health_APP span:before{
+	content:"";
+	width:5px;
+	height:5px;
+	border-radius:50%;
+	border:solid 1px #797979;
+	position:relative;
+	top:-1px;
+	background-color: #797979;
+	display:inline-block;
+	margin-right:3px;
+}
+
+/* .health_APP div#quote-carousel{
+	z-index:-1;
+} */
+
+/* 手機APP套的1 */
+
+.health_APP .img-responsive{
+	max-width:auto;
+}
+/* #quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+} */
+.health_APP #quote-carousel .carousel-indicators {
+    position: relative;
+    /* right: 50%;
+    top: auto; */
+    bottom: 0px;
+/*     margin-top: 20px; *//* 
+    margin-right: 100px; */
+    max-width:1000px;
+}
+.health_APP #quote-carousel .carousel-indicators li {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;/* 
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+   /*  border-radius: 50%; */
+    opacity: 0.3;
+    overflow: hidden;
+    transition: all .4s ease-in;
+    vertical-align: middle;
+    z-index:-1;/* 
+    margin:0 15px;  */
+}
+.health_APP #quote-carousel .carousel-indicators img{
+	width:100%;
+}
+.health_APP #quote-carousel .carousel-indicators .active {
+    width: 445px;
+    height: 377px;
+    opacity: 1;
+    transition: all .2s;
+   /*  margin:0 20px;
+ */
+}
+
+.health_APP #quote-carousel .carousel-indicators .active img{
+	width:100%;
+}
+
+.health_APP .item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.health_APP .item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+.health_APP .carousel-indicators{
+	left:0%;
+	width:100%;
+	margin-left:0%;
+	margin-bottom: 0%;
+}
+
+.health_APP  .carousel-control{
+	opacity:1;
+	background-color: #ffffff;
+	cursor:none;
+	width:0px;
+}
+
+.health_APP  .carousel-control:hover{
+	opacity:1;
+}	
+
+.health_APP  .carousel-control:active{
+	opacity:1;
+}
+
+/* 手機APP套的2 */
+.health_APP_mobile{
+	display:none;
+}
+
+.health_APP_mobile_box{
+	text-align:center;
+	margin-bottom: 50px;
+}
+
+.health_APP_mobile_box h5{
+	color:#0062C4;
+	font-size:23px;
+	margin-top: 20px;
+}
+
+.health_APP_mobile_box p{
+	font-size:14px;
+	color:#797979;
+	display:block;
+}
+
+.health_APP_mobile_box p:before{
+	content:"";
+	width:5px;
+	height:5px;
+	border-radius:50%;
+	border:solid 1px #797979;
+	position:relative;
+	top:-1px;
+	background-color: #797979;
+	display:inline-block;
+	margin-right:3px;
+}
+
+.health_APP_mobile_box img {
+    width: 49%;
+    border: solid .3px #d2d2d2;
+    border-radius: 5px;
+}
+
+/* 健康掛號機介面 */
+.health_tablet_top {
+    vertical-align: top;
+}
+
+.health_tablet_top div{
+	display:inline-block;
+	width: 48%;
+    margin-right: 1%;
+    vertical-align: top;
+}
+
+.health_tablet_top h5{
+	color: #0062C4;
+	font-size:18px;
+	margin-bottom: 15px;
+	font-weight:bold;
+	margin-top:44px;
+}
+
+.health_tablet_top p{
+	color:#797979;
+	font-size:15px;
+}
+
+.health_tablet_top p:before{
+	content:"";
+	display:inline-block;
+	width:5px;
+	height:5px;
+	color:#797979;
+	border:solid 1px #797979;
+	position:relative;
+	top:-1px;
+	background-color: #797979;
+	border-radius:50%;
+	margin-right:5px;
+}
+
+.health_tablet_down{
+	background-color: #F7F7F7;
+	margin: 30px 0;
+	box-shadow:0 0 6px #E3E3E3;
+	padding:5px;
+	padding-bottom:20px
+}
+
+.health_tablet_down h5{
+	color:#0062C4;
+	font-size:20px;
+	text-align:center;
+	margin:8px 0;
+	font-weight:bold;
+}
+
+.health_tablet_top div img{
+	border-radius: 5px;
+	width:100%;
+}
+
+
+/* 掛號機套件 只用css 不完全 */
+
+.health_me a:link,
+.health_me a:hover,
+.health_me a:active,
+.health_me a:visited {
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  color: #95a5a6;
+  text-decoration: none;
+}
+.health_me a:hover {
+  color: #7f8c8d;
+  text-decoration: underline;
+}
+.health_me .contain {
+  width: 100%;
+}
+.health_me .row {
+  width: 100%;
+  margin-right:0px;
+  margin-left:0px;
+}
+.health_me .row__inner {
+  -webkit-transition: 450ms -webkit-transform;
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 70.3125px 0;
+  padding-bottom: 10px;
+}
+.health_me .tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-transition: 450ms all;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+.health_me .tile__img {
+  width: 250px;
+  height: 140.625px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0,0,0,0.9)), to(rgba(0,0,0,0)));
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  -webkit-transition: 450ms opacity;
+  transition: 450ms opacity;
+}
+.tile__details:after,
+.tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
+}
+/* .tile__details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+} */
+/* .tile__details:before {
+  content: '▶';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+} */
+.tile:hover .tile__details {
+  opacity: 1;
+}
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+.health_me .row__inner:hover {
+  -webkit-transform: translate3d(-62.5px, 0, 0);
+          transform: translate3d(-62.5px, 0, 0);
+}
+.health_me .row__inner:hover .tile {
+  opacity: 0.3;
+}
+.health_me .row__inner:hover .tile:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 1;
+}
+.health_me .tile:hover ~ .health_me .tile {
+  -webkit-transform: translate3d(125px, 0, 0);
+          transform: translate3d(125px, 0, 0);
+}
+
+/* 靜態掛號機 */
+.health_tablet_down{
+	margin:0 auto;
+	text-align:center;
+	margin-top: 20px;
+}
+.health_tablet_down_box{
+	width:30%;
+	display:inline-block;
+	padding:10px;
+	text-align:left;
+}
+.health_tablet_down_box img{
+	width:100%;
+	border-radius:5px;
+}
+.health_tablet_down_box p{
+	font-size:16px;
+	color:#293E53;
+	font-weight:400;
+}
+
+/* 0330列表 */
+.health_table_in,.health_tablet_box_in{
+	display:none;
+}
+
+/* @-webkit-keyframes round {
+    3% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+      
+    }
+    16% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+     
+    }
+    20% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+   
+    }
+
+}
+	@keyframes round {
+    3% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+     
+    }
+    16% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+  
+    }
+    20% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+ 
+    }
+
+}
+ */
+
+/* 客戶實例 */
+.health_customer .health_left,.health_customer .health_right{
+	display:inline-block;
+	/* width:49%; */
+	vertical-align:top;
+	margin-top:12px;
+}
+
+.health_customer .health_left{
+	width:39%;
+}
+
+.health_customer .health_right{
+	width:60%;
+}
+
+.health_customer .health_left img{
+	margin-right:10px;
+	width:45%;
+	border-radius:5px;
+}
+
+.health_customer .health_left p{
+	font-size:16px;
+	color:#7C7C7C;
+	margin-top:8px;
+}
+
+.health_customer .health_right h5{
+	color:#383838;
+	font-size:25px;
+	font-weight:bold;
+}
+
+.health_customer .health_right p{
+	color:#7C7C7C;
+	font-size:15px;
+	margin:18px 0;
+}
+
+.health_customer .health_right strong{
+	color:#293E53;
+	font-size:17px;
+}
+
+.health_customer .health_right strong span{
+	color:#0062C4;
+	font-size:25px;
+	display:inline-block;
+	margin-top:10px;
+	line-height:32px;
+}
+
+.health_customer .health_right h5{
+	line-height:30px;
+}
+
+
+
+
+/* 實例新聞 */
+.health_newlists{
+	margin:15px 0;
+}
+.health_newlists_box div{
+	background-color: #ffffff;
+	padding:8px 12px;
+	border-radius:5px;
+	box-shadow:0 2px 5px #d0d0d0;
+	width:22%;
+	display:inline-block;
+	margin:1%;
+}
+
+.health_newlists_box div img{
+	width:100%;
+	border-radius:5px;
+	max-height: 153.75px;
+}
+
+.health_newlists_box h6{
+	color:#383838;
+	font-size:16px;
+	font-weight:700;
+}
+
+.health_newlists_box p{
+	color:#A2A2A2;
+	font-size:14px;
+}
+
+.health_newlists_box div:hover{
+	position:relative;
+	top:-5px;
+	left:-5px;
+	box-shadow:0 2px 5px #E0E0E0;
+	transition:all .3s ease;
+	background-color: #fbfbfb;
+}
+
+.health_APP_sml_words{
+	display:none;
+}
+
+@media(max-width: 768px){
+	.health_product_sml_img{
+		display:block;
+		max-width:700px;
+	}
+
+	.health_product_sml_img img{
+		width:100%;
+		margin-top: 30px;
+	}
+
+	.health_product_img{
+		display:none;
+	}
+
+	/* #quote-carousel .carousel-indicators .item{
+		width: 440px;
+	    height: 377px;
+	    opacity: 1;
+	} */
+	
+/* 	health_APP */
+	.health_APP .carousel-inner{
+		display:none;
+	}
+
+	.health_APP{
+		display:none;
+	}
+
+	.health_APP_mobile{
+		display:block;
+	}
+	
+
+/* 	健康掛號機 原本的但入但出變換圖*/
+
+	/* .health_tablet_top div{
+		display: block;
+		width:100%;
+	}
+
+	.health_tablet_top div{
+		margin-right:0;
+	}
+
+	.health_tablet_top h5{
+		margin-top:20px;
+	}
+
+	
+	.health_tablet_down{
+		position:relative;
+		padding-bottom:441px;
+	}
+	.health_tablet_down_box{
+		position:absolute;
+		top:40px;
+		left:0;
+		opacity:0;
+		width:100%;
+		background-color:#F7F7F7;
+	}
+	.health_tablet_down_box img{
+		width:100%;
+	}
+	.health_tablet_down_box{
+		-webkit-animation: round 30s linear infinite;
+            animation: round 30s linear infinite;
+	}
+
+	
+	.health_tablet_down_box:nth-child(1){
+		-webkit-animation-delay: 0s;
+            animation-delay: 0s;
+	}
+
+	.health_tablet_down_box:nth-child(2){
+		-webkit-animation-delay: 5s;
+            animation-delay: 5s;
+	}
+
+	.health_tablet_down_box:nth-child(3){
+		-webkit-animation-delay: 10s;
+            animation-delay: 10s;
+	}
+
+	.health_tablet_down_box:nth-child(4){
+		-webkit-animation-delay: 15s;
+            animation-delay: 15s;
+	}
+
+	.health_tablet_down_box:nth-child(5){
+		-webkit-animation-delay: 20s;
+            animation-delay: 20s;
+	}
+
+	.health_tablet_down_box:nth-child(6){
+		-webkit-animation-delay: 25s;
+            animation-delay: 25s;
+	} */
+	/* .health_tablet_down_box:nth-child(7){
+		-webkit-animation-delay: 30s;
+            animation-delay: 30s;
+            display:none;
+	} */
+
+
+	/* 健康掛號機 0330列表 下面拿掉的是淡入淡出的哦*/
+	.health_tablet_top{
+		display:none;
+	}
+	
+	.health_tablet_down h5,.health_tablet_down p,.health_tablet_off{
+		display:none;
+	}
+	.health_tablet_down{
+		background-color: #ffffff;
+		box-shadow:0 0 0 #ffffff;
+		margin-top:0px;
+	}
+	.health_tablet_down_box{
+		width:100%;
+		margin-bottom: 30px;
+	}
+
+	.health_table_in,.health_tablet_box_in{
+		text-align:center;
+		display:block;
+	}
+	.health_table_in h4{
+		color: #0062C4;
+    	font-size: 23px;
+    	margin-top: 20px;
+	}
+	.health_table_in h6{
+		font-size: 14px;
+    	color: #797979;
+   		display: block;
+   		font-weight:300;
+	}
+
+
+
+/* 客戶實例 */
+	.health_customer .health_left{
+		width:100%;
+		display:block;
+	}
+	.health_customer .health_left img{
+		display:inline-block;
+	}
+	.health_customer .health_right{
+		display:block;
+		width:100%;
+	}
+	.health_customer .health_left p{
+		font-size:14px;
+		margin:0px;
+	}
+	.health_customer .health_right p{
+		margin:0;
+	}
+	.health_customer .health_left, .health_customer .health_right{
+		margin-top:15px;
+	}
+
+/* 新聞稿 */
+	/* .health_newlists_box div{
+		width:100%;
+	} */
+
+
+	.health_newlists_box div{
+		width:45%;
+		display:inline-flex;
+		flex-wrap:wrap;
+	}
+	.health_newlists_box h6{
+		font-size:19px;
+		height: 4.1em;
+		overflow:hidden;
+	}
+	.health_newlists_box p{
+		font-size:16px;
+	}
+
+	
+}
+
+@media(max-width:550px){
+	/* .health_tablet_down {
+    	padding-bottom: 270px;
+	} */
+	.health_newlists_box div img{
+		max-height: 140px;
+	}
+}
+
+@media(max-width:375px){
+	/* .health_tablet_down {
+    	padding-bottom: 200px;
+	} */
+	.health_newlists_box div img{
+		max-height: 81px;
+	}
+}
+
+
+
+
+
+/* 新生線上報到 */
+
+/* 設計理念的報到三步驟 */
+.newStudent_product_designconcept{
+	display:flex;
+	justify-content:center;
+}
+
+.newStudent_product_designconcept span{
+	display:inline-block;
+	text-align:center;
+}
+
+.newStudent_product_designconcept span h5{
+	color:#ffffff;
+	font-size:20px;
+	font-weight:bold;
+}
+
+.newStudent_product_designconcept span p{
+	color:#ffffff;
+	font-size: 14px;
+	font-weight:bold;
+}
+
+.newStudent_product_onebox,.newStudent_product_twobox,.newStudent_product_threebox{
+	border-radius:5px;
+	box-shadow:0 3px 6px #B4B4B4;
+	width:200px;
+}
+
+.newStudent_product_onebox{
+	background-color:#48C6A0;
+	position:relative;
+	padding: 8px 5px;
+}
+
+.newStudent_product_onebox small{
+	color:#339A7B;
+}
+
+.newStudent_product_twobox{
+	background-color:#036ECB;
+	position:relative;
+	padding: 8px 5px;
+}
+
+.newStudent_product_twobox small{
+	color:#0E4E86;
+}
+
+.newStudent_product_threebox{
+	background-color:#FF984D;
+	position:relative;
+	padding: 4px 5px;
+}
+
+.newStudent_product_threebox small{
+	color:#BA5B16;
+}
+
+.newStudent_product_onebox small,.newStudent_product_twobox small,.newStudent_product_threebox small{
+	position:absolute;
+	font-size:60px;
+	left:-5px;
+	top:-5px;
+}
+
+
+.newStudent_greenarrow i,.newStudent_bluearrow i{
+	display:inline-flex;
+	align-items:center;
+	height: 135px;
+	font-size:38px;
+	padding:0 30px;
+}
+
+.newStudent_greenarrow i{
+	color:#48C6A0;
+}
+
+.newStudent_bluearrow i{
+	color:#036ECB
+}
+
+.newStudent_product_p{
+	display:block;
+	text-align:center;
+	margin:20px 0;
+	font-size:16px;
+	color:#293E53;
+}
+
+/* 線上報到畫面 */
+.newStudent_report_online_up{
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.newStudent_report_online_up img{
+	width:60%;
+}
+.newStudent_report_online_up p{
+	color:#797979;
+	font-size:15px;
+	padding-left:60px;
+	margin-top: 20px;
+}
+
+.newStudent_report_online_down {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.newStudent_report_online_left{
+	display:inline-block;
+	width:55%;
+	vertical-align: top;
+}
+
+.newStudent_report_online_left img{
+	width:100%;
+}
+
+.newStudent_report_online_right{
+	display:inline-block;
+	margin-left:40px;
+	width:40%;
+}
+
+.newStudent_report_online_right p{
+	color:#797979;
+}
+
+.newStudent_report_online_right div:nth-child(1),.newStudent_report_online_right h5{
+	margin-top:50px;
+}
+
+.newStudent_report_online_right div{
+	margin-top:25px;
+}
+
+.newStudent_report_online_right h6{
+	color:#0062C4;
+	font-size:17px;
+	font-weight:bold;
+	margin-bottom: 6px;
+	margin-top:0px;
+}
+
+
+/* 學校設定畫面 */
+.newStudent_setting_screen h5{
+	color:#0062C4;
+	font-size:21px;
+	font-weight:bold;
+}
+
+.newStudent_setting_screen h6{
+	color:#043E79;
+	font-weight:bold;
+	font-size:17px;
+}
+
+.newStudent_setting_screen_down h6,.newStudent_setting_screen_down p{
+	margin-left: 15px;
+}
+
+.newStudent_setting_screen_down h6{
+	margin-bottom: 6px;
+}
+
+
+/* 學校設定畫面 */
+.newStudent_setting_screen_down{
+	width:49%;
+	display:inline-block;
+}
+
+.newStudent_setting_screen_down p{
+	color:#797979;
+}
+
+.newStudent_setting_screen_down img{
+	width:100%;
+}
+
+/* 客戶實例 */
+.newStudent_customer_in{
+	margin-top: 40px;
+}
+
+.newStudent_customer_left{
+	width:48%;
+	display:inline-block;
+	vertical-align:top;
+}
+
+.newStudent_customer_left img{
+	width:95%;
+}
+
+.newStudent_customer_right{
+	width:48%;
+	display:inline-block;
+}
+
+.newStudent_customer_right h5{
+	color:#0062C4;
+	font-size:37px;
+	font-weight:bold;
+	padding-bottom: 20px;
+}
+
+.newStudent_customer_right_in span{
+	display:inline-block;
+	width:7em;
+	margin:8px 0;
+	color:#707070;
+	font-size:15px;
+}
+
+.newStudent_customer_right_in span:before{
+	content:"";
+	display:inline-block;
+	width:5px;
+	height:5px;
+	background-color:gray;
+	position:relative;
+	top:-2px;
+	margin-right:5px;
+}
+
+.newStudent_customer_in h6{
+	color:#707070;
+	font-size: 34px;
+	font-weight:bold;
+	margin-top: 40px;
+}
+
+.newStudent_customer_in h6 span{
+	color:#293E53;
+	font-size:51px;
+	padding:0 5px;
+}
+
+/* 新版客戶實例 */
+
+.newstu_city_out{
+	max-width:100%;
+}
+
+.newstu_city{
+	width:calc(25% - 15px);
+	background-repeat: no-repeat;
+	padding:40px 0;
+	margin-right:10px;
+	display:inline-block;
+}
+
+.newstu_city_in{
+	background-color:rgba(0,0,0,0.3);
+	margin:20px 0;
+	padding:15px 0;
+	color:#ffffff;
+	font-size:30px;
+	text-align:center;
+	font-weight:300;
+}
+
+.newstu_city_sml{
+	font-size:18px;
+	display:block;
+	padding-top:8px;
+}
+
+.newstu_city01{
+	background-image: url("../img/newStudent/customer-01.jpg");
+	opacity:95%;
+}
+
+.newstu_city02{
+	background-image: url("../img/newStudent/customer-02.jpg");
+	opacity:95%;
+}
+
+.newstu_city03{
+	background-image: url("../img/newStudent/customer-03.jpg");
+	opacity:95%;
+}
+
+.newstu_city04{
+	background-image: url("../img/newStudent/customer-04.jpg");
+	opacity:95%;
+}
+
+.newstu_cus_bottom{
+	background-color: #F4F4F4;
+    width: 100%;
+    padding: 20px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:18px;
+    color:#565656;
+}
+
+.newstu_cus_bottom span{
+	font-size:25px;
+	margin:0 3px;
+	color:#353535;
+}
+
+
+/* .APP_customer_picture_bgc .newStudent_customer_words{
+	font-size:18px;
+	color:#f1f1f1;
+	display:inline-block;
+	margin:0 5px;
+	margin-bottom:18px;
+}
+
+.APP_customer_picture_bgc .newStudent_customer_words::before{
+	content:"";
+	display:inline-block;
+	background-color:#f1f1f1;
+	width:4px;
+	height:4px;
+	border-radius:50%;
+	position:relative;
+	top:-4px;
+	margin-right:5px;
+}
+
+.newStudent_customer_bgc{
+	background-color: rgba(0,0,0,.3);
+}
+
+.newStudent_customer_bg{
+	background-image: url("../img/customer-0615.jpg");
+	width: 100%;
+	background-repeat: no-repeat;
+} */
+
+
+@media(max-width:768px){
+	.newStudent_product_designconcept{
+		display:block;
+		text-align:center;
+	}
+
+	.newStudent_product_designconcept span{
+		display: block;
+		margin:0 auto;
+	}
+
+	.newStudent_greenarrow,.newStudent_bluearrow{
+		transform: rotate(90deg);
+		height:auto;
+		display:block;
+	}
+
+	.newStudent_greenarrow i, .newStudent_bluearrow i{
+		height:60px;
+	}
+
+	.newStudent_report_online_up img{
+		width:100%;
+	}
+
+	.newStudent_report_online_up p{
+		padding-left: 0;
+	}
+
+	.newStudent_report_online_down{
+		display:flex;
+		flex-wrap:wrap;
+		margin-top:0px;
+	}
+
+	.newStudent_report_online_up{
+		margin-bottom: 0;
+	}
+
+	.newStudent_report_online_left{
+		order:2;
+		width:100%;
+	}
+
+	.newStudent_report_online_right{
+		width:100%;
+		margin-left: 8px;
+	}
+
+	.newStudent_report_online_right div:nth-child(1),.newStudent_setting_screen h5{
+		margin-top: 20px;
+	}
+
+	.newStudent_report_online > .newStudent_report_online_right div:nth-child(1){
+		margin-top:0px;
+	}
+
+	.newStudent_report_online_right div{
+		margin-top:15px;
+	}
+
+	.newStudent_setting_screen_down{
+		display:block;
+		width:100%;
+		margin-bottom: 40px;
+	}
+
+	.newStudent_customer_in{
+		margin-top: 0px;
+	}
+
+	.newStudent_customer_left,.newStudent_customer_right{
+		display:block;
+		width:100%;
+		margin-top: 30px;
+		text-align:center;
+	}
+
+	.newStudent_customer_right_in span{
+		margin:4px 0;
+
+	}
+
+	.newStudent_customer_in h6{
+		margin-top: 30px;
+	}
+
+	.newStudent_customer_right h5{
+		padding-bottom: 0;
+		line-height:48px;
+	}
+}
+
+/* APP學生請假 產品頁 */
+
+.sLeave_designconcept{
+	text-align:center;
+}
+
+.sLeave_designconcept img{
+	width:40%;
+}
+
+/* 學生請假介面 */
+
+.sLeave_student{
+	margin-bottom: 60px;
+}
+
+.sLeave_student_first{
+	font-size:16px;
+	color:#797979;
+	margin-bottom: 15px;
+}
+
+.sLeave_student_left,.sLeave_student_right{
+	display:inline-block;
+}
+
+.sLeave_student_left span{
+	margin-right: 20px;
+}
+
+.sLeave_student_right{
+	padding-left:50px;
+	width:38%;
+}
+
+.sLeave_student_right p:before{
+	content:"";
+	display:inline-block;
+	width:4px;
+	height:4px;
+	background-color: #797979;
+	border-radius:50%;
+	position:relative;
+	top:-2px;
+	margin-right: 2px;
+}
+
+.sLeave_lightblue{
+	color:#0062C4;
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom: 15px;
+}
+
+.sLeave_gray{
+	color:#797979;
+	font-size:14px;
+	font-weight:300;
+	margin-bottom: 8px;
+}
+
+.sLeave_deepblue{
+	font-size:20px;
+	font-weight:bold;
+	margin-bottom: 15px;
+	color:#043E79;
+}
+
+
+/* 校端請假介面 */
+
+.sLeave_teacher{
+	margin-top: 30px;
+}
+
+.sLeave_teacher_down{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.sLeave_teacher_downbox{
+	display:inline-block;
+	margin-right:9%;
+	width:40%;
+}
+
+.sLeave_teacher_downbox img{
+	width:80%;
+}
+
+
+/* 流程影片 */
+
+.sLeave_moviebox{
+	background-color:#FAFAFA;
+	box-shadow:0 1px 5px #dedede;
+	margin-top: 20px;
+}
+
+.sLeave_moviebox .sLeave_student_right,.sLeave_moviebox .sLeave_student_left{
+	vertical-align:top;
+}
+
+.sLeave_moviebox .sLeave_student_right{
+	margin-top:50px;
+}
+
+.sLeave_moviebox h6{
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.sLeave_movie{
+	width:500px;
+	display: inline-block;
+	height: 300px;
+}
+
+.sLeave_gray strong{
+	font-weight:400;
+	display:inline-block;
+	padding-bottom:8px;
+}
+
+
+
+
+@media(max-width:768px){
+	.sLeave_designconcept img{
+		width:80%;
+	}
+
+	.sLeave_student_left span{
+		margin-right: 2%;
+	}
+
+	.sLeave_student_left img{
+		width:47%;
+	}
+
+	.sLeave_student,.sLeave_teacher{
+		display:flex;
+		flex-wrap:wrap;
+	}
+
+	.sLeave_teacher{
+		margin-top:0px;
+	}
+
+	.sLeave_student_right{
+		width:100%;
+		padding-left: 5px;
+		margin-top:10px;
+		order:1;
+	}
+
+	.sLeave_student_left{
+		order:2;
+	}
+
+	.sLeave_gray{
+		margin-bottom: 5px;
+	}
+
+	.sLeave_teacher_downbox{
+		margin-right:0;
+		display:block;
+		margin-top:10px;
+		margin-bottom: 80px;
+		width:90%;
+	}
+
+	.sLeave_moviebox .sLeave_student_right{
+		margin-top:0px;
+	}
+
+	.sLeave_moviebox{
+    	position: relative;
+    	padding-bottom: 56.25%;  /* 16:9 */
+    	overflow: hidden;
+	}
+	.sLeave_moviebox iframe{
+    	position: absolute;
+   		top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+	}
+}
+

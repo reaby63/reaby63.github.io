@@ -1,0 +1,610 @@
+<!-- Start Slider Area -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="slide_index">
+      <img src="img/slider/slider_health_index.jpg" alt="..." class="slide_index_big">
+      <img src="img/slider/slider_health_index_mobile.jpg" alt="..." class="slide_index_sml">
+      <div class="carousel-caption">
+        <h2 class="title1">健康掛號系統</h2>
+        <button class="btn-lg btn-white" onclick="changePage('contact')">預約聯繫</button>
+        <!-- <button class="btn-lg btn-darkblue"  onclick="changePage('library')">型錄下載</button> -->
+        <a href="download/health.pdf" class="btn-lg btn-darkblue" download="全誼健康掛號系統型錄"><span class="glyphicon glyphicon-download-alt"></span> 型錄下載</a>
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
+<!-- 第二層MENU -->
+<div id="sticker" class="menu">
+  <div class="wrap">
+    <nav class="navbar navbar-default">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <div class="pull-right visible-xs-block menu_status" id="navbarMenuTitle">設計理念</div>
+        <!-- Brand -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="glyphicon glyphicon-menu-down" style="color:white;"></span>
+        </button>
+        <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+          <div class="product_Name">健康掛號系統</div>
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-2 bs-example-js-navbar-scrollspy" id="navbar-example">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="#one" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">設計理念</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#two" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">系統特色</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#three" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">客戶實例</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#four" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">型錄下載</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#five" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">與我聯繫</a>
+          </li>
+        </ul>
+      </div>
+      <!-- navbar-collapse -->
+    </nav>
+  </div>
+</div>
+<!-- header-area start -->
+<div class="main container">
+  <div class="Library_container">
+    <div class="library_designconcept" id="one">
+      <div class="library_banner_img">
+        <img src="img/health/health_banner.jpg" alt="">
+      </div>
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>設計理念</span>
+        </span>
+        <span class="section_title_sm">
+          <span>Design Concept</span>
+        </span>
+      </div>
+      <div class="product_designconcept">
+        <span>
+          提供給校護的保健室解決方案—健康掛號系統，擁有手機APP與健康掛號機兩種使用介面，可以清楚瀏覽日掛號人次、歷次掛號紀錄。學生透過系統完成掛號，校護完成處理後，快速紀錄於系統，並發送推播通知，讓導師、家長皆能第一時間掌握學生傷病情形。此外，還可透過大數據分析許多面向，例如：受傷地點，了解校內哪些設施讓孩子容易受傷，儘快改善便得以提升校園安全。
+        </span>
+        <div class="health_product_img">
+          <img src="img/health/health-design-concept.jpg" alt="">
+        </div>
+        <div class="health_product_sml_img">
+          <img src="img/health/health-design-concept_sml.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
+    
+    <!-- ------系統特色------ -->
+    <div class="Library_system" id="two">
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>系統特色</span>
+        </span>
+        <span class="section_title_sm">
+          <span>System Features</span>
+        </span>
+      </div>
+      <div class="Library_system_container">
+        <div class="product_triangle product_triangle_6">
+          <div class="library_system_title">
+            <img src="img/health/health-list.svg" alt="">
+            <h4>歷次掛號紀錄</h4>
+          </div>
+          <div class="Library_system_words health_system_words">
+            記錄學生歷次傷病紀錄與處理方式。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_6">
+          <div class="library_system_title">
+            <img src="img/health/health-pen.svg" alt="">
+            <h4>填寫醫囑</h4>
+          </div>
+          <div class="Library_system_words health_system_words">
+            掛號資料自動導入，校護僅需填寫醫囑即可發送。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_6">
+          <div class="library_system_title">
+            <img src="img/health/health-statistics.svg" alt="">
+            <h4>統計人數</h4>
+          </div>
+          <div class="Library_system_words health_system_words">
+            顯示當日掛號人次、休息觀察人數，校護輕鬆掌握保健室情形，導師清楚得知班級狀況。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_6">
+          <div class="library_system_title">
+            <img src="img/health/health-3C.svg" alt="">
+            <h4>兩種介面選擇</h4>
+          </div>
+          <div class="Library_system_words health_system_words">
+            提供手機APP版與掛號機兩種裝置版本。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_6">
+          <div class="library_system_title">
+            <img src="img/health/health-ringing.svg" alt="">
+            <h4>選擇通知對象</h4>
+          </div>
+          <div class="Library_system_words health_system_words">
+            校護可選擇是否發送推播通知給導師、主任、校長、家長，對方APP內將立即收到通知。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_6">
+          <div class="library_system_title">
+            <img src="img/health/health-deliver.svg" alt="">
+            <h4>傳送至教育部系統</h4>
+          </div>
+          <div class="Library_system_words health_system_words">
+            學生的傷病紀錄將同步傳送至教育部學生健康資訊系統。
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 手機APP介面 版面一-->
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>手機APP介面</span>
+        </span>
+        <span class="section_title_sm">
+          <span>APP Interface</span>
+        </span>
+      </div>
+  <p class="health_p">智慧型手機就可安裝。</p>
+      <div class="health_APP">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel" >
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators col-md-12"data-ride="carousel">
+                        <li data-target="#quote-carousel" data-slide-to="0" class="active">
+                          <img class="img-responsive " src="img/health/health-APP-01.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="1">
+                          <img class="img-responsive " src="img/health/health-APP-02.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="2">
+                          <img class="img-responsive " src="img/health/health-APP-04.jpg" alt="">
+                        </li>
+                        <li data-target="#quote-carousel" data-slide-to="3">
+                          <img class="img-responsive " src="img/health/health-APP-03.jpg" alt="">
+                        </li>
+                    </ol>
+
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner text-center">
+                        <!-- Quote 1 -->
+                        <div class="item active">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <h5>掛號畫面</h5>
+                                        <span>首頁統計等待、就診、休息觀察人數。</span>
+                                        <span>點選式介面，校護可快速紀錄學生傷病情形。</span>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 2 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <h5>填寫醫囑</h5>
+                                        <span>校護可填寫醫護叮嚀，提醒家長注意。</span>
+                                        <span>校護可選擇是否推播通知至導師、主任、校長或家長。</span>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 3 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <h5>推播通知列表</h5>
+                                        <span>傷病通知會即時顯示在推播對象手機。</span>
+                                        <span>推播對象點選訊息可跳至健康掛號APP查看紀錄。</span>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 4 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2">
+                                        <h5>掛號紀錄</h5>
+                                        <span>導師觀看班級掛號紀錄。</span>
+                                        <span>
+                                          家長觀看孩子的歷次掛號紀錄。
+                                        </span>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Buttons Next/Prev -->
+                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><!-- <i class="fa fa-chevron-left"></i> --></a>
+                    <a data-slide="next" href="#quote-carousel" class="right carousel-control"><!-- <i class="fa fa-chevron-right"></i> --></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 手機APP介面 版面二(手機版)-->
+    <div class="health_APP_mobile">
+      <div class="health_APP_mobile_box">
+        <h5>掛號畫面</h5>
+        <p>首頁統計等待、就診、休息觀察人數。</p>
+        <p>點選式介面，校護可快速紀錄學生傷病情形。</p>
+        <img src="img/health/health-APP-M01.jpg" alt="">
+        <img src="img/health/health-APP-M02.jpg" alt="">
+      </div>
+
+      <div class="health_APP_mobile_box">
+        <h5>填寫醫囑</h5>
+        <p>校護可填寫醫護叮嚀，提醒家長注意。</p>
+        <p>校護可選擇是否推播通知至導師、主任、校長或家長。</p>
+        <img src="img/health/health-APP-M03.jpg" alt="">
+        <img src="img/health/health-APP-M04.jpg" alt="">
+      </div>
+
+      <div class="health_APP_mobile_box">
+        <h5>推播通知列表</h5>
+        <p>傷病通知會即時顯示在推播對象手機。</p>
+        <p>推播對象點選訊息可跳至健康掛號APP查看紀錄。</p>
+        <img src="img/health/health-APP-M05.jpg" alt="">
+        <img src="img/health/health-APP-M06.jpg" alt="">
+      </div>
+
+      <div class="health_APP_mobile_box">
+        <h5>掛號紀錄</h5>
+        <p>導師觀看班級掛號紀錄。</p>
+        <p>家長觀看孩子的歷次掛號紀錄。</p>
+        <img src="img/health/health-APP-M07.jpg" alt="">
+        <img src="img/health/health-APP-M08.jpg" alt="">
+      </div>
+    </div>
+    
+
+    <!-- 健康掛號機介面 -->
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>健康掛號機介面</span>
+        </span>
+        <span class="section_title_sm">
+          <span>Registration Machine</span>
+        </span>
+      </div>
+      <p class="health_p">需另購健康掛號機。</p>
+
+<!--       只需要css的套件 不完全-/- -->
+<!-- <div class="health_me">
+<div class="contain">
+    <div class="row">
+    <div class="row__inner">
+
+      <div class="tile">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-2.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-3.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile__media">
+          <img class="tile__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-4.jpg" alt=""  />
+        </div>
+        <div class="tile__details">
+          <div class="tile__title">
+            Top Gear
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> -->
+
+<!-- 健康掛號機 原本淡入淡出的qq -->
+      <div class="health_tablet">
+        <div class="health_tablet_top">
+          <div>
+            <img src="img/health/health-tablet-00.jpg" alt="">
+          </div>
+          <div>
+            <h5>校護端畫面</h5>
+            <p>當日就診紀錄及待診名單統計。</p>
+            <p>可立即聯繫學生緊急聯絡人。</p>
+            <p>傷病通知可選擇是否推播至家長、導師、主任或校長的手機APP。</p> 
+          </div>
+        </div>
+          
+        <div class="health_tablet_down">
+
+          <h5>掛號流程</h5> 
+          <div class="health_tablet_down_box">
+            <p>1.點擊「我要掛號」</p>
+            <span class="health_table_in">
+            <h4>掛號機首頁</h4>
+            <h6>點擊“我要掛號”進入掛號畫面</h6>
+            </span>
+            <img src="img/health/health-tablet-01.jpg" alt="">
+          </div>
+          
+          <div class="health_tablet_down_box health_tablet_off">
+            <p>2.選擇班級座號或感應數位學生證</p>
+            <img src="img/health/health-tablet-02.jpg" alt="">
+          </div>
+
+          <div class="health_tablet_down_box">
+            <p>3.選擇內外科</p>
+            <span class="health_table_in">
+            <h4>選擇內外科</h4>
+            <h6>擇受傷內外科，並選取相似傷病</h6>
+            </span>
+            <img src="img/health/health-tablet-03.jpg" alt="">
+          </div>
+
+          <div class="health_tablet_down_box health_tablet_off">
+            <p>4.填寫受傷登記</p>
+            <img src="img/health/health-tablet-04.jpg" alt="">
+          </div>
+
+          <div class="health_tablet_down_box">
+            <p>5.選擇受傷部位</p>
+            <span class="health_table_in">
+            <h4>選擇受傷部位</h4>
+            <h6>選擇外科後，將會進入選擇受傷部位</h6>
+            </span>
+            <img src="img/health/health-tablet-05.jpg" alt="">
+          </div>
+
+          <div class="health_tablet_down_box health_tablet_off">
+            <p>6.確認資料並送出掛號</p>
+            <img src="img/health/health-tablet-06.jpg" alt="">
+          </div>
+
+          <div class="health_tablet_down_box health_tablet_box_in">
+            <span class="health_table_in">
+            <h4>校護畫面</h4>
+            <h6>校護在該畫面填寫醫囑，並可選擇是否推播至家長、導師、主任或校長。</h6>
+            </span>
+            <img src="img/health/health-tablet-00.jpg" alt="">
+          </div>
+
+
+          <div class="clear"></div>
+        </div> 
+</div>
+
+
+
+
+
+
+    <!-- 客戶實例 -->
+    <div class="health_customer" id="three">
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>客戶實例</span>
+        </span>
+        <span class="section_title_sm">
+          <span>Customer Experience</span>
+        </span>
+      </div>
+      <div class="health_left">
+        <span>
+          <img src="img/health/health-customer01.jpg" alt="">
+        </span>
+        <span>
+          <img src="img/health/health-customer02.jpg" alt="">
+        </span>
+        <p>
+          （圖為實際使用照片，出處自中時電子報）
+        </p>
+      </div>
+
+     <!--  <div class="clear"></div>
+      -->
+      <div class="health_right">
+        <h5>
+          嘉義市嘉北國民小學 使用實例
+        </h5>
+        <p>
+          自2019年12月協助上線後，嘉北國小持續使用健康掛號系統，並實際應用發布推播通知。
+        </p>
+        <strong>
+          12月至1月，單月共計
+          <span>
+            傷病紀錄 507 筆、推播通知 215 筆
+          </span>
+        </strong> 
+      </div>
+    </div>
+
+
+    <!-- 實例新聞 -->
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>實例新聞</span>
+        </span>
+        <span class="section_title_sm">
+          <span>News Lists</span>
+        </span>
+      </div>
+    <div class="health_newlists">
+      <a class="health_newlists_box" href="https://www.chinatimes.com/realtimenews/20200226002090-260405?chdtv" target="_blank">
+        <div>
+        <img src="img/health/health-newlists-01.jpg" alt="">
+        <h6>嘉北國小健康掛號系統 嗶一下防疫即時通</h6>
+        <p>中時電子報</p>
+        </div>
+      </a>
+
+      <a class="health_newlists_box" href="https://news.ltn.com.tw/news/life/breakingnews/3080302" target="_blank">
+        <div>
+        <img src="img/health/health-newlists-02.jpg" alt="">
+        <h6>學童健康即時通報 嘉義市推健康掛號系統助防疫</h6>
+        <p>自由時報</p>
+        </div>
+      </a>
+
+      <a class="health_newlists_box" href="https://udn.com/news/story/6898/4373629" target="_blank">
+        <div>
+        <img src="img/health/health-newlists-03.jpg" alt="">
+        <h6>嘉北國小推App 隨時掌握學生健康</h6>
+        <p>聯合新聞網</p>
+        </div>
+      </a>
+
+      <a class="health_newlists_box" href="https://www.setn.com/News.aspx?NewsID=696935" target="_blank">
+        <div>
+        <img src="img/health/health-newlists-04.jpg" alt="">
+        <h6>嘉市嘉北國小推APP 即時掌握學生健康</h6>
+        <p>三立新聞網</p>
+        </div>
+      </a>
+
+      <a class="health_newlists_box" href="http://www.secjie.com.tw/newsview_4147.html" target="_blank">
+        <div>
+        <img src="img/health/health-newlists-05.jpg" alt="">
+        <h6>黃敏惠市長前往嘉北國小 巡視校園防疫狀況</h6>
+        <p>秒捷新聞</p>
+        </div>
+      </a>
+
+      <a class="health_newlists_box" href="https://m.ctee.com.tw/livenews/ch/20200226002090-260405" target="_blank">
+        <div>
+        <img src="img/health/health-newlists-01.jpg" alt="">
+        <h6>嘉北國小健康掛號系統 嗶一下防疫即時通</h6>
+        <p>工商時報</p>
+        </div>
+      </a>
+
+      <a class="health_newlists_box" href="https://www.cna.com.tw/news/aloc/202002260223.aspx" target="_blank">
+        <div>
+        <img src="img/health/health-newlists-04.jpg" alt="">
+        <h6>嘉市嘉北國小推APP 即時掌握學生健康</h6>
+        <p>中央通訊社</p>
+        </div>
+      </a>
+
+    </div>
+
+
+  <!-- 型錄下載 -->
+    <div class="row">
+      <div class="download_section" id="four">
+        <div class="col-sm-12">
+          <div class="section_title">
+            <span class="section_title_bg">型錄下載</span>
+            <span class="section_title_sm">Download</span>
+          </div>
+          <div class="row center">
+            <a href="download/health.pdf" class="download_btn" download="全誼健康掛號系統型錄"><span class="glyphicon glyphicon-download-alt"></span> 健康掛號系統型錄下載</a>
+            <div style="padding:15px 0">
+              <a onclick="changePage('contact')">> 點我瀏覽更多型錄</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 聯繫我們 -->
+    <div class="row" id="five">
+      <div class="col-sm-12">
+        <div class="section_title">
+          <span class="section_title_bg">與我聯繫</span>
+          <span class="section_title_sm">Contact us</span>
+        </div>
+        <div class="row contact_form">
+          <div class="col-sm-4 col-xs-12">
+            <span class="glyphicon glyphicon-earphone"></span>
+            <span> 0903-194-303</span>
+            <small>陳盈民</small>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <span class="glyphicon glyphicon-phone-alt"></span>
+            <span> (04)3707-3909 #601</span>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <span class="glyphicon glyphicon-envelope"></span>
+            <span><a href="mailto:steve@schoolsoft.com.tw">steve@schoolsoft.com.tw</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="APP_contact_down">
+      歡迎與我們聯繫，我們將提供最適合您的服務方案
+    </span>
+  </div>
+
+</div>
+
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  / tracker methods like "setCustomDimension" should be called before "trackPageView" /
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//172.16.9.189/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->

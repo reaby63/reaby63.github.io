@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="38" viewBox="0 0 48 38">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_783" data-name="Rectangle 783" width="48" height="38" transform="translate(386 1288)" fill="#ccc" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_75" data-name="Mask Group 75" transform="translate(-386 -1288)" clip-path="url(#clip-path)">
+    <g id="calendar_1_" data-name="calendar (1)" transform="translate(390.276 1287.276)">
+      <path id="Path_493" data-name="Path 493" d="M32.509,3.036V.724H30.2V3.036H9.251V.724H6.938V3.036H0V38.724H39.447V3.036ZM6.938,5.349V7.662H9.251V5.349H30.2V7.662h2.313V5.349h4.625V9.974H2.313V5.349ZM2.313,36.411V12.287H37.135V36.411Z" fill="#ccc"/>
+      <rect id="Rectangle_787" data-name="Rectangle 787" width="4.081" height="4.081" transform="translate(6.12 15.371)" fill="#ccc"/>
+      <rect id="Rectangle_788" data-name="Rectangle 788" width="4.081" height="4.081" transform="translate(13.829 15.371)" fill="#ccc"/>
+      <rect id="Rectangle_789" data-name="Rectangle 789" width="4.081" height="4.081" transform="translate(21.538 15.371)" fill="#ccc"/>
+      <rect id="Rectangle_790" data-name="Rectangle 790" width="4.081" height="4.081" transform="translate(29.246 15.371)" fill="#ccc"/>
+      <rect id="Rectangle_791" data-name="Rectangle 791" width="4.081" height="4.081" transform="translate(6.12 22.309)" fill="#ccc"/>
+      <rect id="Rectangle_792" data-name="Rectangle 792" width="4.081" height="4.081" transform="translate(13.829 22.309)" fill="#ccc"/>
+      <rect id="Rectangle_793" data-name="Rectangle 793" width="4.081" height="4.081" transform="translate(21.538 22.309)" fill="#ccc"/>
+      <rect id="Rectangle_794" data-name="Rectangle 794" width="4.081" height="4.081" transform="translate(29.246 22.309)" fill="#ccc"/>
+      <rect id="Rectangle_795" data-name="Rectangle 795" width="4.081" height="4.081" transform="translate(6.12 29.247)" fill="#ccc"/>
+      <rect id="Rectangle_796" data-name="Rectangle 796" width="4.081" height="4.081" transform="translate(13.829 29.247)" fill="#ccc"/>
+      <rect id="Rectangle_797" data-name="Rectangle 797" width="4.081" height="4.081" transform="translate(21.538 29.247)" fill="#ccc"/>
+      <rect id="Rectangle_798" data-name="Rectangle 798" width="4.081" height="4.081" transform="translate(29.246 29.247)" fill="#ccc"/>
+    </g>
+  </g>
+</svg>

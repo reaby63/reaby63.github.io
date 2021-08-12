@@ -1,0 +1,340 @@
+Start Slider Area -->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+  </ol>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="slide_index">
+      <img src="img/slider/slider_library_index.jpg" alt="..." class="slide_index_big">
+      <img src="img/slider/slider_library_index_mobile.jpg" alt="..." class="slide_index_sml">
+      <div class="carousel-caption">
+        <h2 class="title1">圖書管理系統</h2>
+        <button class="btn-lg btn-white" onclick="changePage('contact')">預約聯繫</button>
+        <!-- <button class="btn-lg btn-darkblue"  onclick="changePage('library')">型錄下載</button> -->
+        <a href="download/library.pdf" class="btn-lg btn-darkblue" download="全誼圖書系統型錄"><span class="glyphicon glyphicon-download-alt"></span> 型錄下載</a>
+      </div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div> -->
+<!-- 第二層MENU -->
+<div id="sticker" class="menu">
+  <div class="wrap">
+    <nav class="navbar navbar-default">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <div class="pull-right visible-xs-block menu_status" id="navbarMenuTitle">設計說明</div>
+        <!-- Brand -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="glyphicon glyphicon-menu-down" style="color:white;"></span>
+        </button>
+        <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+          <div class="product_Name">圖書管理系統</div>
+        </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-2 bs-example-js-navbar-scrollspy" id="navbar-example">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="#one" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">設計說明</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#two" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">功能特色</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#three" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">租賃方案</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#four" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">型錄下載</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#five" data-toggle="collapse" data-target=".bs-example-navbar-collapse-2">與我聯繫</a>
+          </li>
+        </ul>
+      </div>
+      <!-- navbar-collapse -->
+    </nav>
+  </div>
+</div>
+<!-- header-area start -->
+<div class="main container">
+  <div class="Library_container">
+    <div class="library_designconcept" id="one">
+      <div class="library_banner_img">
+        <img src="img/library/library_banner.jpg" alt="">
+        <div class="library_banner_words">
+          <p>學校、中小型圖書館的好幫手</p>
+          <p>YOUR GOOD PARTNER</p>
+        </div>
+      </div>
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>設計說明</span>
+        </span>
+        <span class="section_title_sm">
+          <span>Design Concept</span>
+        </span>
+      </div>
+      <div class="product_designconcept">
+        <span>
+          圖書館管理系統，適用於中小型圖書館、圖書室，系統提供讀者自助借還書的功能，讓單位更能方便且快速管理書籍去向。我們亦提供了快速編目服務，掃描ISBN 系統即會帶出書目資料、館藏登錄號自動取號，讓您快速建立館藏。
+        </span>
+      </div>
+    </div>
+    
+    <!-- ------系統特色------ -->
+    <div class="Library_system" id="two">
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>功能特色</span>
+        </span>
+        <span class="section_title_sm">
+          <span>System Features</span>
+        </span>
+      </div>
+      <div class="Library_system_container">
+        <!-- <div class="product_triangle product_triangle_6">
+          <div class="library_system_title">
+            <img src="img/library/system_buy.svg" alt="">
+            <h4>線上購書</h4>
+          </div>
+          <div class="Library_system_words">
+            配合bookday書目平台購買書籍，為您送貨到府。
+          </div>
+          <div class="Library_bookday">
+            <a href="https://www.bookday.com.tw/" target="_blank">
+              <span class="bookday">
+                bookday
+              </span>
+              >
+            </a>
+          </div>
+        </div> -->
+        <div class="product_triangle product_triangle_5">
+          <div class="library_system_title">
+            <img src="img/library/system_catalog.svg" alt="">
+            <h4>快速編目</h4>
+          </div>
+          <div class="Library_system_words">
+            掃描ISBN 即會帶出書目資料、館藏登錄號自動取號，快速建立館藏。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_5">
+          <div class="library_system_title">
+            <img src="img/library/system_cloud.svg" alt="">
+            <h4>雲端服務</h4>
+          </div>
+          <div class="Library_system_words">
+            借閱紀錄將會儲存在雲端資料庫內，不用擔心資料遺失。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_5">
+          <div class="library_system_title">
+            <img src="img/library/system_webbrowser.svg" alt="">
+            <h4>支援所有瀏覽器</h4>
+          </div>
+          <div class="Library_system_words">
+            此系統裝置適用於目前所有網頁瀏覽器，包括IE、Chrome、FireFox等。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_5">
+          <div class="library_system_title">
+            <img src="img/health/health-list.svg" alt="">
+            <h4>環保無紙管理</h4>
+          </div>
+          <div class="Library_system_words">
+            僅需系統管理，免用紙張，友善環境。
+          </div>
+        </div>
+        <div class="product_triangle product_triangle_5">
+          <div class="library_system_title">
+            <img src="img/library/system_book.svg" alt="">
+            <h4>借閱設備擴充</h4>
+          </div>
+          <div class="Library_system_words">
+            可加購自助借還書機，讀者可自行借還書。
+          </div>
+        </div>
+        <div class="Library_system_down">
+          <span class="Library_system_down_img">
+            <img src="img/library/system_img.jpg" alt="">
+          </span>
+          <span class="Library_system_down_words">
+            <h4>提供學校、擁有小型圖書館的公司團體，</h4>
+            <h4>簡單方便好上手的圖書管理系統。</h4>
+            <p>自助借閱無需人力</p>
+            <p>購書即可自動編目</p>
+            <p>免用紙張，友善環境</p>
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- 畫面展示 -->
+    <div class="Library_screen">
+      <div class="section_title">
+        <span class="section_title_bg">
+          <span>畫面展示</span>
+        </span>
+        <span class="section_title_sm">
+          <span>Preview Screen</span>
+        </span>
+      </div>
+      <div class="newStudent_setting_screen">
+        <div class="newStudent_report_online_down">
+          <div class="newStudent_report_online_left">
+            <img src="img/library/library_screen_01.png" alt="">
+          </div>
+          <div class="newStudent_report_online_right">
+            <h5>圖書館首頁</h5>
+            <div>
+              <h6>好書推薦</h6>
+              <p>學校設定推薦書籍，書籍於首頁輪播增加曝光率。</p>
+            </div>
+            <div>
+              <h6>熱門書籍</h6>
+              <p>依照借閱次數排序書籍，列出最熱門書籍。</p>
+            </div>
+            <div>
+              <h6>借閱統計</h6>
+              <p>顯示圖書館當日及當月，借閱人次與冊次統計。</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="newStudent_setting_screen_down">
+          <h6>學校館藏</h6>
+          <p>可由書籍分類、關鍵字快速查詢書籍。</p>
+          <img src="img/library/library_screen_02.png" alt="">
+        </div>
+
+        <div class="newStudent_setting_screen_down">
+          <h6>借閱統計</h6>
+          <p>統整全校各類借閱數據，並提供日期區間查詢。</p>
+          <img src="img/library/library_screen_03.png" alt="">
+        </div>
+
+      </div>
+    </div>
+    <!-- 租賃方案 -->
+    <div class="Library_money" id="three">
+      <div class="section_title">
+        <span class="section_title_bg">租賃方案</span>
+        <span class="section_title_sm">Lease Program</span>
+      </div>
+      <div class="Library_money_box">
+        <div class="Library_money_box_top">
+          <img src="img/library/money_box_3.png" alt="">
+          <h4>3000</h4>
+        </div>
+        <div class="Library_money_box_down">
+          <h5>3,600元</h5>
+          <h6>10,800元</h6>
+         <!--  <p>一次簽約三年</p> -->
+        <!--   <p class="Library_money_p">再送1000元</p>
+          <p class="Library_money_p">BookDay購書金</p> -->
+        </div>
+      </div>
+      <div class="Library_money_box">
+        <div class="Library_money_box_top">
+          <img src="img/library/money_box_6.png" alt="">
+          <h4>6000</h4>
+        </div>
+        <div class="Library_money_box_down">
+          <h5>7,200元</h5>
+          <h6>21,600元</h6>
+         <!--  <p>一次簽約三年</p> -->
+<!--           <p class="Library_money_p">再送2000元</p>
+          <p class="Library_money_p">BookDay購書金</p> -->
+        </div>
+      </div>
+      <div class="Library_money_box">
+        <div class="Library_money_box_top">
+          <img src="img/library/money_box_9.png" alt="">
+          <h4>9000</h4>
+        </div>
+        <div class="Library_money_box_down">
+          <h5>10,800元</h5>
+          <h6>32,400元</h6>
+         <!--  <p>一次簽約三年</p> -->
+<!--           <p class="Library_money_p">再送3000元</p>
+          <p class="Library_money_p">BookDay購書金</p> -->
+        </div>
+      </div>
+      <div class="Library_money_outside">
+        <span>
+          <img src="img/library/money_book.svg" alt="">
+          <a href="mailto:steve@schoolsoft.com.tw">萬本以上館藏，請洽專人服務</a>
+        </span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="download_section" id="four">
+        <div class="col-sm-12">
+          <div class="section_title">
+            <span class="section_title_bg">型錄下載</span>
+            <span class="section_title_sm">Download</span>
+          </div>
+          <div class="row center">
+            <a href="download/library.pdf" class="download_btn" download="全誼圖書系統型錄"><span class="glyphicon glyphicon-download-alt"></span> 圖書系統型錄下載</a>
+            <div style="padding:15px 0">
+              <a onclick="changePage('contact')">> 點我瀏覽更多型錄</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 聯繫我們 -->
+    <div class="row" id="five">
+      <div class="col-sm-12">
+        <div class="section_title">
+          <span class="section_title_bg">與我聯繫</span>
+          <span class="section_title_sm">Contact us</span>
+        </div>
+        <div class="row contact_form">
+          <div class="col-sm-4 col-xs-12">
+            <span class="glyphicon glyphicon-earphone"></span>
+            <span> 0903-194-303</span>
+            <small>陳盈民</small>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <span class="glyphicon glyphicon-phone-alt"></span>
+            <span> (04)3707-3909 #601</span>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <span class="glyphicon glyphicon-envelope"></span>
+            <span><a href="mailto:steve@schoolsoft.com.tw">steve@schoolsoft.com.tw</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span class="APP_contact_down">
+      歡迎與我們聯繫，我們將提供最適合您的服務方案
+    </span>
+  </div>
+</div>
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  / tracker methods like "setCustomDimension" should be called before "trackPageView" /
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//172.16.9.189/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code

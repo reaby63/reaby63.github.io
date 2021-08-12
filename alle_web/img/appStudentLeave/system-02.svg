@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="38" viewBox="0 0 48 38">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_805" data-name="Rectangle 805" width="48" height="38" transform="translate(387 1303)" fill="#ccc" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_81" data-name="Mask Group 81" transform="translate(-387 -1303)" clip-path="url(#clip-path)">
+    <g id="file_1_" data-name="file (1)" transform="translate(392 1303)">
+      <g id="Group_434" data-name="Group 434">
+        <g id="Group_433" data-name="Group 433">
+          <path id="Path_506" data-name="Path 506" d="M28.436,7.964,20.306.347A1.283,1.283,0,0,0,19.428,0H4.194a2.142,2.142,0,0,0-2.14,2.14v29.57a2.142,2.142,0,0,0,2.14,2.14H18.187V31.281H4.622V2.568h14.3l7.354,6.89v9.971h2.568V8.9A1.284,1.284,0,0,0,28.436,7.964Z" fill="#ccc"/>
+        </g>
+      </g>
+      <g id="Group_436" data-name="Group 436">
+        <g id="Group_435" data-name="Group 435">
+          <path id="Path_507" data-name="Path 507" d="M25.89,17.887A10.056,10.056,0,1,0,35.946,27.944,10.068,10.068,0,0,0,25.89,17.887Zm0,17.545a7.489,7.489,0,1,1,7.489-7.489A7.5,7.5,0,0,1,25.89,35.432Z" fill="#ccc"/>
+        </g>
+      </g>
+      <g id="Group_438" data-name="Group 438">
+        <g id="Group_437" data-name="Group 437">
+          <path id="Path_508" data-name="Path 508" d="M25.89,22.766a1.284,1.284,0,0,0-1.284,1.284v7.831a1.284,1.284,0,1,0,2.568,0V24.05A1.284,1.284,0,0,0,25.89,22.766Z" fill="#ccc"/>
+        </g>
+      </g>
+      <g id="Group_440" data-name="Group 440">
+        <g id="Group_439" data-name="Group 439">
+          <path id="Path_509" data-name="Path 509" d="M29.827,26.66H22a1.284,1.284,0,1,0,0,2.568h7.831a1.284,1.284,0,1,0,0-2.568Z" fill="#ccc"/>
+        </g>
+      </g>
+      <g id="Group_442" data-name="Group 442">
+        <g id="Group_441" data-name="Group 441">
+          <path id="Path_510" data-name="Path 510" d="M20.711,7.617V1.284H18.144V8.9a1.284,1.284,0,0,0,1.284,1.284h8.131V7.617H20.711Z" fill="#ccc"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

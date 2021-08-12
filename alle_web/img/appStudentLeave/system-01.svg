@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="38" viewBox="0 0 48 38">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_782" data-name="Rectangle 782" width="48" height="38" transform="translate(234 1281)" fill="#ccc" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_74" data-name="Mask Group 74" transform="translate(-234 -1281)" clip-path="url(#clip-path)">
+    <g id="vibrate" transform="translate(239 1281)">
+      <g id="Group_427" data-name="Group 427">
+        <g id="Group_426" data-name="Group 426">
+          <path id="Path_486" data-name="Path 486" d="M37.24,22.349,15.651.76a2.59,2.59,0,0,0-3.665,0L.76,11.985a2.59,2.59,0,0,0,0,3.665l21.59,21.59a2.59,2.59,0,0,0,3.665,0L37.24,26.015a2.59,2.59,0,0,0,0-3.665ZM1.979,14.428a.863.863,0,0,1,0-1.22L13.208,1.979a.863.863,0,0,1,1.22,0L33.25,20.8,20.8,33.25ZM36.02,24.792,24.792,36.021a.883.883,0,0,1-1.22,0l-1.548-1.548L34.471,22.023l1.548,1.548h0a.863.863,0,0,1,0,1.22Z" fill="#ccc"/>
+          <path id="Path_487" data-name="Path 487" d="M29.617,27.889l-1.727,1.727a.864.864,0,1,0,1.221,1.221l1.727-1.727a.864.864,0,1,0-1.221-1.221Z" fill="#ccc"/>
+          <path id="Path_488" data-name="Path 488" d="M8.889,7.162,7.162,8.889a.864.864,0,1,0,1.221,1.221l1.727-1.727A.864.864,0,0,0,8.889,7.162Z" fill="#ccc"/>
+          <circle id="Ellipse_136" data-name="Ellipse 136" cx="0.864" cy="0.864" r="0.864" transform="translate(12.955 2.591)" fill="#ccc"/>
+          <path id="Path_489" data-name="Path 489" d="M11.827,32.736a14.539,14.539,0,0,1-6.562-6.562.864.864,0,1,0-1.545.773,16.274,16.274,0,0,0,7.335,7.335.864.864,0,0,0,.773-1.545Z" fill="#ccc"/>
+          <path id="Path_490" data-name="Path 490" d="M10.283,35.823a17.936,17.936,0,0,1-8.106-8.106.864.864,0,1,0-1.545.773A19.671,19.671,0,0,0,9.51,37.368a.864.864,0,0,0,.773-1.545Z" fill="#ccc"/>
+          <path id="Path_491" data-name="Path 491" d="M27.717,2.177a17.936,17.936,0,0,1,8.106,8.106.864.864,0,1,0,1.545-.773A19.67,19.67,0,0,0,28.49.632a.864.864,0,1,0-.772,1.545Z" fill="#ccc"/>
+          <path id="Path_492" data-name="Path 492" d="M26.173,5.264a14.539,14.539,0,0,1,6.562,6.562.864.864,0,1,0,1.545-.773,16.274,16.274,0,0,0-7.335-7.335.864.864,0,1,0-.773,1.545Z" fill="#ccc"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
