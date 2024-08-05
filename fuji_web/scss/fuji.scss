@@ -1,8 +1,8 @@
 /* reset */
-* {
-    margin: 0;
-    padding: 0;
-  }
+*{
+	padding: 0;
+	margin: 0;
+} 
 
 ul {
   list-style: none;
@@ -16,6 +16,10 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+img{
+  width: auto;
 }
 
 // setting
@@ -145,10 +149,8 @@ $font_size_S: 14px;
       }
     }
   }
-  .about_img_l{
-    position: absolute;
-    top: 2vh;
-    left: 3vw;
+  img{
+    display: block;
   }
 }
 
