@@ -1,101 +1,154 @@
 @charset "UTF-8";
 /* reset */
-body, h1, ul, li {
-  margin: 0;
-}
-
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
   list-style: none;
-  padding-left: 0;
 }
 
 a {
   text-decoration: none;
 }
 
-/* NavBar */
-nav {
-  background: #eee;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5333333333);
+.all_width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
-nav::after {
+
+.header {
+  background: url("../img/header_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  font-size: 18px;
+  position: relative;
+}
+.header .nav {
+  color: #ffffff;
+  padding: 16px 0px;
+}
+.header .nav .nav_bar .menu {
+  background-color: transparent;
+}
+.header .discript {
+  color: #ffffff;
+  position: absolute;
+  bottom: 10vh;
+  letter-spacing: 0.5em;
+}
+
+/* NavBar */
+.nav::after {
   content: "";
   display: block;
   clear: both;
 }
-nav h1 {
-  float: left;
-  padding-left: 50px;
-  line-height: 50px;
+.nav h1 {
+  display: inline-block;
 }
-
-/* 隱藏 checkbox */
-input {
+.nav .nav_bar {
+  /* 隱藏 checkbox */
+  /* 漢堡按鈕 */
+  /* menu*/
+  /* 下拉選單效果 */
+}
+.nav .nav_bar input {
   display: none;
 }
-
-/* 漢堡按鈕 */
-label {
+.nav .nav_bar label {
   float: right;
   padding-right: 50px;
   line-height: 50px;
   cursor: pointer;
 }
-label img {
+.nav .nav_bar label img {
   width: 30px;
   vertical-align: middle;
 }
-
-/* menu*/
-.menu {
+.nav .nav_bar .menu {
   clear: both;
-  background: #fff;
 }
-.menu li {
+.nav .nav_bar .menu li {
   text-align: center;
-  border-bottom: 1px solid #efefef;
+  display: inline-block;
 }
-.menu li a {
+.nav .nav_bar .menu li a {
   display: block;
-  line-height: 50px;
+  line-height: 1.1em;
   font-size: 18px;
-  color: #5d5d5d;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 0.4em;
 }
-.menu li a:hover {
-  background: #5d5d5d;
+.nav .nav_bar .menu li a:hover {
   color: #fff;
 }
-
-/* 下拉選單效果 */
-.menu {
+.nav .nav_bar .menu li a .menu_top {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.nav .nav_bar .menu li a .menu_down {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+.nav .nav_bar .menu {
   max-height: 0;
   overflow: hidden;
   transition: 0.2s; /* 動畫秒數 */
 }
-
-input:checked ~ .menu {
+.nav .nav_bar input:checked ~ .menu {
   max-height: 300px;
+}
+
+.about {
+  background: url("../img/descript_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 60vh;
+  position: relative;
+  padding-top: 8vh;
+}
+.about .about_title {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 5vh;
+}
+.about .about_in {
+  text-align: center;
+  font-size: 16px;
+}
+.about .about_in .about_in_box {
+  display: block;
+  padding-bottom: 2em;
+}
+.about .about_in .about_in_box span {
+  line-height: 1.5em;
+  display: block;
+}
+.about .about_img_l {
+  position: absolute;
+  top: 2vh;
+  left: 3vw;
 }
 
 /* mediaquery */
 @media screen and (min-width: 768px) {
-  label {
+  .nav .nav_bar label {
     display: none;
   }
-  .menu {
+  .nav .nav_bar .menu {
     float: right;
     clear: none;
     max-height: 50px;
     background: #eee;
   }
-  .menu li {
-    display: inline-block;
-  }
-  .menu li a {
+  .nav .nav_bar .menu a {
     padding: 0 15px;
   }
 }/*# sourceMappingURL=fuji.css.map */

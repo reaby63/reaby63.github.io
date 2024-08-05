@@ -1,99 +1,173 @@
 /* reset */
-body, h1, ul, li {
-  margin: 0;
-}
-
 * {
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+  }
 
 ul {
-  list-style: none; 
-  padding-left: 0; 
+  list-style: none;
 }
 
 a {
   text-decoration: none;
 }
 
+.all_width{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+// setting
+$font_size_L: 18px;
+$font_size_M: 16px;
+$font_size_S: 14px;
+
+// header
+.header{
+  background: url("../img/header_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 55vh;
+  font-size: $font_size_L;
+  position: relative;
+  .nav{
+    color: #ffffff;
+    padding: 16px 0px;
+    .nav_bar{
+      .menu{
+        background-color: transparent;
+      }
+    }
+  }
+  .discript{
+    color: #ffffff;
+    position: absolute;
+    bottom: 10vh;
+    letter-spacing: 0.5em;
+  }
+}
+
 /* NavBar */
-nav {
-  background: #eee;
-  box-shadow: 0px 1px 3px #00000088;
+.nav {
   &::after {
     content: "";
     display: block;
     clear: both;
   }
   h1 {
-    float: left;
-    padding-left: 50px;
-    line-height: 50px;
+    display: inline-block;
   }
-}
-/* 隱藏 checkbox */
-input {
-  display: none;
-}
+  .nav_bar{
+    /* 隱藏 checkbox */
+    input {
+      display: none;
+    }
 
-/* 漢堡按鈕 */
-label {
-  float: right;
-  padding-right: 50px;
-  line-height: 50px;
-  cursor: pointer;
-  img {
-    width: 30px;   
-    vertical-align: middle;
-  }
-}
-
-/* menu*/
-.menu {
-  clear: both;
-  background: #fff;
-  li {
-    text-align: center;
-    border-bottom: 1px solid #efefef;
-    a {
-      display: block;
+    /* 漢堡按鈕 */
+    label {
+      float: right;
+      padding-right: 50px;
       line-height: 50px;
-      font-size: 18px;
-      color: #5d5d5d;
-      &:hover {
-        background: #5d5d5d;
-        color: #fff;
+      cursor: pointer;
+      img {
+        width: 30px;   
+        vertical-align: middle;
       }
+    }
+
+    /* menu*/
+    .menu {
+      clear: both;
+      li {
+        text-align: center;
+        display: inline-block;
+        a {
+          display: block;
+          line-height: 1.1em;
+          font-size: 18px;
+          color: #ffffff;
+          text-align: center;
+          padding-top: 0.4em;
+          &:hover {
+            color: #fff;
+          }
+          .menu_top{
+            display: block;
+            font-size: $font_size_M;
+            letter-spacing: 2px;
+          }
+          .menu_down{
+            display: block;
+            font-size: $font_size_S;
+            letter-spacing: 3px;
+          }
+        }
+      }
+    }
+
+    /* 下拉選單效果 */
+    .menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: .2s; /* 動畫秒數 */
+    }
+
+    input:checked ~ .menu {
+      max-height: 300px;
     }
   }
 }
 
-/* 下拉選單效果 */
-.menu {
-  max-height: 0;
-  overflow: hidden;
-  transition: .2s; /* 動畫秒數 */
+
+// about
+.about{
+  background: url("../img/descript_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  min-height: 60vh;
+  position: relative;
+  padding-top: 8vh;
+  .about_title{
+    text-align: center;
+    font-size: $font_size_L;
+    padding-bottom: 5vh;
+  }
+  .about_in{
+    text-align: center;
+    font-size: $font_size_M;
+    .about_in_box{
+      display: block;
+      padding-bottom: 2em;
+      span{
+        line-height: 1.5em;
+        display: block;
+      }
+    }
+  }
+  .about_img_l{
+    position: absolute;
+    top: 2vh;
+    left: 3vw;
+  }
 }
 
-input:checked ~ .menu {
-  max-height: 300px;
-}
 
 /* mediaquery */
 @media screen and (min-width: 768px) {
-  label {
-    display: none;
-  }
-  .menu {
-    float: right;
-    clear: none;
-    max-height: 50px;
-    background: #eee;
-    li {
-      display: inline-block;
+  .nav .nav_bar{
+    label {
+      display: none;
+    }
+    .menu {
+      float: right;
+      clear: none;
+      max-height: 50px;
+      background: #eee;
       a {
         padding: 0 15px;  
       }
     }
   }
+  
 }
