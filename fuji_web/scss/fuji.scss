@@ -13,31 +13,31 @@ a {
 }
 
 .all_width{
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 img{
-  width: auto;
+  width: 100%;
 }
 
 // setting
-$font_size_L: 18px;
-$font_size_M: 16px;
-$font_size_S: 14px;
+$font_size_L: 24px;
+$font_size_M: 20px;
+$font_size_S: 16px;
 
 // header
 .header{
   background: url("../img/header_bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 55vh;
-  font-size: $font_size_L;
+  min-height: 70vh;
+  font-size: $font_size_M;
   position: relative;
   .nav{
     color: #ffffff;
-    padding: 16px 0px;
+    padding: 24px 0px;
     .nav_bar{
       .menu{
         background-color: transparent;
@@ -49,6 +49,7 @@ $font_size_S: 14px;
     position: absolute;
     bottom: 10vh;
     letter-spacing: 0.5em;
+    font-size: $font_size_M;
   }
 }
 
@@ -89,7 +90,6 @@ $font_size_S: 14px;
         a {
           display: block;
           line-height: 1.1em;
-          font-size: 18px;
           color: #ffffff;
           text-align: center;
           padding-top: 0.4em;
@@ -124,22 +124,26 @@ $font_size_S: 14px;
 }
 
 
-// about
+// 關於福吉
 .about{
   background: url("../img/descript_bg.jpg") no-repeat;
   background-size: cover;
   background-position: center bottom;
-  min-height: 60vh;
-  position: relative;
-  padding-top: 8vh;
+  min-height: 85vh;
+  padding-top: 12vh;
+  margin-bottom: 8vh;
+  font-weight: 600;
   .about_title{
     text-align: center;
     font-size: $font_size_L;
     padding-bottom: 5vh;
+    color: #7F6101;
   }
   .about_in{
     text-align: center;
     font-size: $font_size_M;
+    position: relative;
+    color: #503A26;
     .about_in_box{
       display: block;
       padding-bottom: 2em;
@@ -148,9 +152,94 @@ $font_size_S: 14px;
         display: block;
       }
     }
+    img{
+      position: absolute;
+      width: 240px;
+      display: block;
+      &.about_img_l{
+        top: -57px;
+        left: 75px;
+      }
+      &.about_img_r{
+        bottom: 7px;
+        right: 90px;
+      }
+    }
+    }
   }
-  img{
-    display: block;
+
+// 產品介紹
+.product{
+  position: relative;
+  .product_in{
+    text-align: center;
+    .product_title{
+      color: #865F32;
+      border-bottom: solid 4px #FED8B5;
+      padding-bottom: 20px;
+      font-size: $font_size_L;
+      font-weight: bold;
+    }
+    .product_item{
+      padding: 40px 0px;
+      border-bottom: solid 4px #FED8B5;
+      li{
+        width: calc((100% - 40px)/3);
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-right: 16px;
+        &:nth-child(3n){
+          margin-right: 0px;
+        }
+        span{
+          display: block;
+          margin-bottom: 8px;
+          font-size: $font_size_S;
+        }
+        .product_photo img{
+          border-radius: 32px;
+          margin-bottom: 16px;
+        }
+        .product_item_title{
+          font-size: $font_size_M;
+          color: #5B4433;
+          font-weight: bold;
+        }
+        .product_item_dec{
+          color: #8C8C8C;
+        }
+        .product_item_pay{
+          color: #AB7B00;
+          span{
+            display: inline-block;
+            border: solid 1px #AB7B00;
+            border-radius: 50px;
+            padding: 4px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 門市據點
+.store{
+  padding-top: 40px;
+  .store_title{
+    color: #7F6101;
+    padding-bottom: 40px;
+    font-size: $font_size_L;
+    font-weight: bold;
+    text-align: center;
+  }
+  .store_in{
+    display: flex;
+    .store_in_img{
+
+    }
+    .store_in_dec{
+
+    }
   }
 }
 
