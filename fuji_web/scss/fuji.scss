@@ -432,6 +432,9 @@ footer{
 @media(max-width:768px){
   .nav{
     position: relative;
+    h1{
+      width: calc(100% - 50px);
+    }
     .nav_bar{
       input:checked ~ .menu {
         max-height: fit-content;

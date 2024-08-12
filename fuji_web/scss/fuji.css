@@ -406,6 +406,9 @@ footer {
   .nav {
     position: relative;
   }
+  .nav h1 {
+    width: calc(100% - 50px);
+  }
   .nav .nav_bar input:checked ~ .menu {
     max-height: -moz-fit-content;
     max-height: fit-content;
