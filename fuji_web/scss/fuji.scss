@@ -1,7 +1,12 @@
 /* reset */
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
 *{
 	padding: 0;
 	margin: 0;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
 } 
 
 ul {
@@ -23,6 +28,7 @@ img{
 }
 
 // setting
+$font_size_XL: 32px;
 $font_size_L: 24px;
 $font_size_M: 20px;
 $font_size_S: 16px;
@@ -38,6 +44,16 @@ $font_size_S: 16px;
   .nav{
     color: #ffffff;
     padding: 24px 0px;
+    h1{
+      display: inline-flex;
+      align-items: center;
+      font-size: $font_size_XL;
+      img{
+        display: inline-block;
+        width: 2em;
+        margin-right: 12px;
+      }
+    }
     .nav_bar{
       .menu{
         background-color: transparent;
@@ -50,11 +66,20 @@ $font_size_S: 16px;
     bottom: 10vh;
     letter-spacing: 0.5em;
     font-size: $font_size_M;
+    span{
+      display: flex;
+      align-items: center;
+    }
+    img{
+      width: 0.5em;
+      margin-right: 9px;
+    }
   }
 }
 
 /* NavBar */
 .nav {
+  position: relative;
   &::after {
     content: "";
     display: block;
@@ -71,13 +96,18 @@ $font_size_S: 16px;
 
     /* 漢堡按鈕 */
     label {
-      float: right;
-      padding-right: 50px;
-      line-height: 50px;
       cursor: pointer;
-      img {
-        width: 30px;   
-        vertical-align: middle;
+      position: absolute;
+      right: 8px;
+      top: 53px;
+      cursor: pointer;
+      span{
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: #ffffff;
+        margin-bottom: 6px;
+        border-radius: 8px;
       }
     }
 
@@ -118,7 +148,15 @@ $font_size_S: 16px;
     }
 
     input:checked ~ .menu {
-      max-height: 300px;
+      max-height: fit-content;
+      background-color: transparent;
+      li{
+        display: inline-block;
+        padding: 0px;
+        a{
+          color: #ffffff;
+        }
+      }
     }
   }
 }
@@ -135,6 +173,7 @@ $font_size_S: 16px;
   font-weight: 600;
   .about_title{
     text-align: center;
+    padding-left: 25px;
     font-size: $font_size_L;
     padding-bottom: 5vh;
     color: #7F6101;
@@ -225,6 +264,9 @@ $font_size_S: 16px;
 // 門市據點
 .store{
   padding-top: 40px;
+  background: url("../img/store_bg.png") no-repeat;
+  background-size: auto;
+  background-position: right bottom;
   .store_title{
     color: #7F6101;
     padding-bottom: 40px;
@@ -234,18 +276,140 @@ $font_size_S: 16px;
   }
   .store_in{
     display: flex;
+    margin-bottom: 80px;
+    align-items: center;
     .store_in_img{
-
+      width: 350px;
+      height: 340px;
+      overflow: hidden;
+      border-radius: 50% 50% 16px 16px;
+      margin-right: 60px;
+      img{
+        height: 100%;
+        width: auto;
+      }
     }
     .store_in_dec{
-
+      color: #7C6351;
+      font-weight: 500;
+      font-size: $font_size_S;
+      width: calc(100% - 350px - 60px);
+      div{
+        margin-bottom: 16px;
+        a{
+          color: #3EB88C;
+          border-bottom: 1px solid #3EB88C;
+          transition: opacity 0.5s;
+          margin-left: 4px;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+        span{
+          display: inline-block;
+          color: #5FA1DE;
+          padding: 3px 12px;
+          border-radius: 20px;
+          border: solid 1px #5FA1DE;
+          margin-left: 4px;
+          background-color: #ffffff;
+        }
+        img{
+          display: inline-block;
+          width: 1em;
+          position: relative;
+          top: 2px;
+          margin-right: 4px;
+        }
+      }
+      .store_in_dec_title{
+        color: #5B4433;
+        font-weight: bold;
+        margin-bottom: 32px;
+        font-size: $font_size_M;
+      }
     }
   }
 }
 
+// 聯繫
+.connect{
+  background: url("../img/footer_bg.png") no-repeat;
+  background-size: auto;
+  background-position: center;
+  padding: 70px 0px;
+  .connect_in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .connect_logo{
+      width: 14em;
+      text-align: center;
+      margin-right: 12px;
+      .connect_logo_top{
+        width: 8em;
+        margin: 0 auto;
+      }
+      .connect_logo_des{
+        display: flex;
+        align-items: center;
+        font-size: $font_size_M;
+        color: #5B4433;
+        font-weight: bold;
+        justify-content: center;
+        img{
+          width: 0.8em;
+          padding: 0px 6px;
+        }
+      }
+    }
+    .connect_des{
+      max-width:calc(100% - 14em - 12px) ;
+      a{
+        display: flex;
+        color: #5B4433;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #ffffff;
+        padding: 0px 28px;
+        border-radius: 37px;
+        align-items: center;
+        padding-left: 0px;
+        margin-bottom: 20px;
+        transition: color 0.5s;
+        img{
+          width: 2em;
+          padding-right: 12px;
+        }
+        &:last-child{
+          margin-bottom: 0px;
+        }
+        &:first-child:hover{
+          color: #4676ED;
+        }
+        &:last-child:hover{
+          color: #B13B00;
+        }
+      }
+    }
+  }
+}
+
+// 頁尾
+footer{
+  background-color: #FFEBCA;
+  color: #7F6101;
+  font-size: $font_size_S;
+  padding: 12px 0px;
+  text-align: center;
+}
+
+
 
 /* mediaquery */
 @media screen and (min-width: 768px) {
+  // 下拉選單
   .nav .nav_bar{
     label {
       display: none;
@@ -254,11 +418,164 @@ $font_size_S: 16px;
       float: right;
       clear: none;
       max-height: 50px;
-      background: #eee;
+      background-color: #ffffff;
       a {
         padding: 0 15px;  
       }
     }
   }
-  
+
+}
+
+
+// RWD  
+@media(max-width:768px){
+  .nav{
+    position: relative;
+    .nav_bar{
+      input:checked ~ .menu {
+        max-height: fit-content;
+        background-color: #ffffff;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        padding: 12px 0px;
+        li{
+          display: block;
+          padding: 0px 20px;
+          a{
+            color: #503A26;
+            padding: 24px 0px;
+            border-bottom: solid 1px #FFDDBB;
+            display: block;
+            transition: .2s;
+            &:hover{
+              background-color: #7C6351;
+              color: #ffffff;
+            }
+          }
+          &:last-child{
+            a{
+              border-bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  } 
+  .about{
+    .about_in{
+      img{
+        display: none;
+      }
+    } 
+  }
+  .product{
+    .product_in{
+      .product_item{
+        li{
+          margin-right: 12px;
+          width: calc((100% - 40px) / 2);
+          vertical-align: top;
+          &:nth-child(2n){
+            margin-right: 0px;
+          }
+          &:nth-child(3n){
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+  .store{
+    background-size: 270px;
+    .store_in {
+      .store_in_img{
+        width: 260px;
+        height: 280px;
+        margin-right: 40px;
+      }
+      .store_in_dec{
+        width: calc(100% - 260px - 40px);
+      }
+    }
+  }
+}
+
+
+
+@media(max-width:600px){
+  // setting
+  $font_size_XL: 28px;
+  $font_size_L: 20px;
+  $font_size_M: 18px;
+  $font_size_S: 14px;
+
+  .product{
+    .product_in{
+      .product_item{
+        li{
+          margin-right: 12px;
+          width: 100%;
+          vertical-align: top;
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+  .store{
+    .store_title{
+      padding-bottom: 16px;
+    }
+    .store_in {
+      display: block;
+      .store_in_img{
+        width: 100%;
+        height: 30vh;
+        margin-right: 0;
+        border-radius: 16px;
+        img{
+          height: auto;
+          width: 100%;
+        }
+      }
+      .store_in_dec{
+        width: 100%;
+        text-align: center;
+        .store_in_dec_title{
+          margin-bottom: 14px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  .connect{
+    padding: 12px 0px;
+    .connect_in{
+      display: block;
+      padding-top: 40px;
+      .connect_logo{
+        width: 100%;
+        margin-right: 0px;
+        padding-bottom: 20px;
+        .connect_logo_des{
+          display: none;
+        }
+      }
+      .connect_des{
+        max-width: none;
+        width: auto;
+        text-align: center;
+        a{
+          display: inline-flex;
+          img{
+            width: 1.5em;
+          }
+          &:last-child {
+            margin-bottom: 12px;
+          }
+        }
+      }
+    }
+  }
 }
