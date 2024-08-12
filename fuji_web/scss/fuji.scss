@@ -123,8 +123,9 @@ $font_size_S: 16px;
           color: #ffffff;
           text-align: center;
           padding-top: 0.4em;
+          transition: all 0.5s;
           &:hover {
-            color: #fff;
+            color: #FFE696;
           }
           .menu_top{
             display: block;
@@ -433,7 +434,7 @@ footer{
   .nav{
     position: relative;
     h1{
-      width: calc(100% - 50px);
+      width: calc(100% - 40px);
     }
     .nav_bar{
       input:checked ~ .menu {
@@ -503,6 +504,10 @@ footer{
       }
     }
   }
+  .connect{
+    background: url("../img/footer_bg_02.png") no-repeat;
+    background-position: center center;
+  }
 }
 
 
@@ -554,6 +559,8 @@ footer{
   }
   .connect{
     padding: 12px 0px;
+    background: url("../img/footer_bg_02.png") no-repeat;
+    background-position: center center;
     .connect_in{
       display: block;
       padding-top: 40px;

@@ -117,9 +117,10 @@ img {
   color: #ffffff;
   text-align: center;
   padding-top: 0.4em;
+  transition: all 0.5s;
 }
 .nav .nav_bar .menu li a:hover {
-  color: #fff;
+  color: #FFE696;
 }
 .nav .nav_bar .menu li a .menu_top {
   display: block;
@@ -407,7 +408,7 @@ footer {
     position: relative;
   }
   .nav h1 {
-    width: calc(100% - 50px);
+    width: calc(100% - 40px);
   }
   .nav .nav_bar input:checked ~ .menu {
     max-height: -moz-fit-content;
@@ -461,6 +462,10 @@ footer {
   .store .store_in .store_in_dec {
     width: calc(100% - 260px - 40px);
   }
+  .connect {
+    background: url("../img/footer_bg_02.png") no-repeat;
+    background-position: center center;
+  }
 }
 @media (max-width: 600px) {
   .product .product_in .product_item li {
@@ -495,6 +500,8 @@ footer {
   }
   .connect {
     padding: 12px 0px;
+    background: url("../img/footer_bg_02.png") no-repeat;
+    background-position: center center;
   }
   .connect .connect_in {
     display: block;
