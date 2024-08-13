@@ -9,6 +9,11 @@
   font-style: normal;
 } 
 
+// 點擊後滑動到特定div 滑順
+html{
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }
