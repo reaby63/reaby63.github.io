@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
+*{
+	padding: 0;
+	margin: 0;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
+} 
+
+// 點擊後滑動到特定div 滑順
+html{
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all_width{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+}
+
+// setting
+$font_size_XL: 32px;
+$font_size_L: 24px;
+$font_size_M: 20px;
+$font_size_S: 16px;
+
+$main_color: #8B4B2D;
+$sec_color: #AF4B1E;
+$deep_color:#361100;
+
+// 選單
+.nav {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  h1 {
+    display: inline-block;
+  }
+  .nav_bar{
+    /* 隱藏 checkbox */
+    input {
+      display: none;
+    }
+
+    /* 漢堡按鈕 */
+    .line{
+      right: 8px;
+      top: 53px;
+      width: 24px;
+      height: 24px;
+      background: #7d2f2f;
+      cursor: pointer;
+      display: block;
+      padding: 16px;
+      position: fixed;
+      z-index: 2;
+      .switch , .switch::before , .switch::after{
+        background-color: #222;
+        content: '';
+        display: block;
+        height: 3px;
+        position: absolute;
+        transition: background-color ease .3s, top ease .3s .3s, transform ease .3s;
+        width: 20px;
+      }
+      .switch {
+        left: 18px;
+        top: 27px;
+        &::before {
+          top: -6px;
+        }
+        &::after {
+          top: 6px;
+        }
+      }
+    }
+
+    /* menu*/
+    .menu {
+      clear: both;
+      li {
+        text-align: center;
+        display: inline-block;
+        a {
+          display: block;
+          text-align: center;
+          color: $main_color;
+          font-size: $font_size_S;
+          letter-spacing: 3px;
+          span{
+            display: block;
+          }
+          .menu_top{
+            max-height: 2em;
+            padding-bottom: 4px;
+            img{
+              max-height: 2em;
+              display: inline-block;
+              &.nav_uc{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* 下拉選單效果 */
+    .menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: .2s; /* 動畫秒數 */
+    }
+
+    input:checked ~ .menu {
+      max-height: fit-content;
+      background-color: transparent;
+      li{
+        display: inline-block;
+        padding: 0px;
+        a{
+          color: #1a1a1a;
+        }
+      }
+    }
+  }
+}
+
+/* 點選選單變叉叉 */
+#switch:checked + .line .switch {
+  background: transparent !important;
+}
+#switch:checked + .line .switch::before {
+  transform: rotate(45deg) !important;
+}
+
+#switch:checked + .line .switch::after {
+    transform: rotate(-45deg) !important;
+}
+
+#switch:checked + .line .switch::before,
+#switch:checked + .line .switch::after {
+    top: 0 !important;
+    transition: top ease .3s, transform ease .3s .3s !important;
+}
+
+
+@media screen and (min-width: 768px) {
+  // 下拉選單
+  .nav .nav_bar{
+    .line {
+      display: none;
+    }
+    .menu {
+      clear: none;
+      max-height: calc(4em + 4px + 32px);
+      background-color: #ffffff;
+      div{
+        text-align: center;
+        li{
+          width: calc(100% / 5 );
+          a{
+            padding: 16px 0px;
+            transition: all 0.5s;
+            &:hover , &:focus{
+              background-color: $main_color;
+              color: #ffffff;
+              .nav_c{
+                display: none;
+              }
+              .nav_uc{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+ /* RWD */ 
+@media(max-width:768px){
+  .nav{
+    position: relative;
+    .nav_bar{
+      input:checked ~ .menu {
+        max-height: fit-content;
+        background-color: #ffffff;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        padding: 12px 0px;
+        height: 100vh;
+      }
+    }
+  }
+}
+
+
+/* -----------以下為主要頁面css------------ */
+
+header{
+  background: url("../img/header_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+}
+
+.about{
+  background: url("../img/about_bg.jpg") no-repeat;
+  background-size: 80vw;
+  background-position: right;
+  height: 287px;
+  background-color: $deep_color;
+  font-size: $font_size_S;
+  > div{
+      > div{
+        display: inline-block;
+        vertical-align: top;
+        color: #ffffff;
+        margin-top: 60px;
+        &.about_title{
+          color: #ffffff;
+          border: solid 1px #ffffff;
+          border-radius: 50%;
+          padding: 24px calc(24px + 1em);
+          font-size: $font_size_L;
+          margin-right: 24px;
+          span{
+            display: block;
+          }
+        }
+        &.about_cont{
+          width: calc( 100% - 5em - 50px - 24px );
+          span{
+            display: block;
+            margin-bottom: 8px;
+          }
+          .about_france{
+            margin-top: 20px;
+          }
+        }
+      }
+  }
+}
+
+.menudes{
+  padding-top: 88px;
+  .menudes_title{
+    text-align: center;
+    > div{
+      font-size: $font_size_M;
+      color: #D6A290;
+      border: solid 1px #D6A290;
+      padding: 12px 20px;
+      display: inline-block;
+    }
+  }
+  .menudes_list{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 44px;
+      width: calc((100% - 120px) / 4);
+      margin-right: 40px;
+      &:nth-child(4n){
+        margin-right: 0px;
+      }
+      .menudes_img{
+        height: 150px;
+        margin-bottom: 20px;
+        img{
+          width: auto;
+          height: 100%;
+          text-align: center;
+        }
+      }
+      .menudes_list_top{
+        color: $sec_color;
+        font-size: $font_size_M;
+        margin-bottom: 12px;
+        span{
+          display: inline-block;
+          img{
+            width: 1em;
+            position: relative;
+            top: 2px;
+          }
+        }
+      }
+      .menudes_list_in{
+        color: #AEAEAE;
+        font-size: $font_size_S;
+      }
+    }
+  }
+}
+
+.costumer{
+  margin-top: 88px;
+  background-color: #FFF3ED;
+  display: flex;
+  padding-right: 30px;
+  .costumer_left{
+    width: 20vw;
+    background-color: $main_color;
+    color: #ffffff;
+    text-align: right;
+    padding-top: 12px;
+    display: inline-block;
+    .costumer_title{
+      // position: absolute;
+      // right: 20px;
+      // top: 20px;
+      background: url("../img/customer_title.png") no-repeat;
+      background-size: 5em;
+      background-position: right top;
+      padding: 25px 20px;
+      padding-left: 80px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      font-size: $font_size_M;
+    }
+    .costumer_more{
+      width: 1em;
+      display: inline-block;
+      color: #ffffff;
+      padding: 20px;
+      transition: all .2s;
+      span{
+        display: block;
+        width: 1em;
+      }
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+  }
+  .costumer_right{
+    width: calc(1200px - 20vw - 0px);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: flex-start;
+    padding-right: 0px;
+    .costumer_list{
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 12px 20px;
+      margin-right: 25px;
+      display: inline-block;
+      width: calc((100% - 50px) / 3);
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
