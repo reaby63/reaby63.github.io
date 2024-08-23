@@ -35,6 +35,7 @@ $font_size_XL: 32px;
 $font_size_L: 24px;
 $font_size_M: 20px;
 $font_size_S: 16px;
+$font_size_XS:14px;
 
 $main_color: #8B4B2D;
 $sec_color: #AF4B1E;
@@ -364,12 +365,41 @@ header{
     .costumer_list{
       background-color: #ffffff;
       border-radius: 8px;
-      padding: 12px 20px;
+      padding: 36px 36px;
       margin-right: 25px;
       display: inline-block;
       width: calc((100% - 50px) / 3);
+      font-size: $font_size_XS;
       &:last-child{
         margin-right: 0;
+      }
+      .costumer_list_title{
+        display: flex;
+        align-items: center;
+        color: #525252;
+        font-size: $font_size_S;
+        margin-bottom: 8px;
+        .costumer_head{
+          display: inline-block;
+          width: 40px;
+          margin-right: 12px;
+        }
+        span:last-child{
+          position: relative;
+          top: -2px;
+        }
+      }
+      .costumer_list_star{
+        display: flex;
+        justify-content: space-between;
+        .costumer_starsss{
+          margin-bottom: 8px;
+          img{
+            width: 1.5em;
+            display: inline-block;
+            margin-right: 2px;
+          }
+        }
       }
     }
   }

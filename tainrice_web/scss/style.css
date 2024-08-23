@@ -338,11 +338,40 @@ header {
 .costumer .costumer_right .costumer_list {
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 12px 20px;
+  padding: 36px 36px;
   margin-right: 25px;
   display: inline-block;
   width: calc((100% - 50px) / 3);
+  font-size: 14px;
 }
 .costumer .costumer_right .costumer_list:last-child {
   margin-right: 0;
+}
+.costumer .costumer_right .costumer_list .costumer_list_title {
+  display: flex;
+  align-items: center;
+  color: #525252;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.costumer .costumer_right .costumer_list .costumer_list_title .costumer_head {
+  display: inline-block;
+  width: 40px;
+  margin-right: 12px;
+}
+.costumer .costumer_right .costumer_list .costumer_list_title span:last-child {
+  position: relative;
+  top: -2px;
+}
+.costumer .costumer_right .costumer_list .costumer_list_star {
+  display: flex;
+  justify-content: space-between;
+}
+.costumer .costumer_right .costumer_list .costumer_list_star .costumer_starsss {
+  margin-bottom: 8px;
+}
+.costumer .costumer_right .costumer_list .costumer_list_star .costumer_starsss img {
+  width: 1.5em;
+  display: inline-block;
+  margin-right: 2px;
 }/*# sourceMappingURL=style.css.map */
