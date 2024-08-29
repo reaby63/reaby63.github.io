@@ -44,6 +44,8 @@ $deep_color:#361100;
 // 選單
 .nav {
   position: relative;
+  animation-name: nav;
+  animation-duration: 2s;
   &::after {
     content: "";
     display: block;
@@ -61,32 +63,34 @@ $deep_color:#361100;
     /* 漢堡按鈕 */
     .line{
       right: 8px;
-      top: 53px;
-      width: 24px;
-      height: 24px;
-      background: #7d2f2f;
+      top: 24px;
+      width: 20px;
+      height: 20px;
+      background: #775343;
       cursor: pointer;
       display: block;
       padding: 16px;
       position: fixed;
       z-index: 2;
+      border: solid 1.5px #ffffff;
+      border-radius: 8px;
       .switch , .switch::before , .switch::after{
-        background-color: #222;
+        background-color: #ffffff;
         content: '';
         display: block;
         height: 3px;
         position: absolute;
         transition: background-color ease .3s, top ease .3s .3s, transform ease .3s;
-        width: 20px;
+        width: 23px;
       }
       .switch {
-        left: 18px;
-        top: 27px;
+        left: 15px;
+        top: 24px;
         &::before {
-          top: -6px;
+          top: -9px;
         }
         &::after {
-          top: 6px;
+          top: 9px;
         }
       }
     }
@@ -94,6 +98,9 @@ $deep_color:#361100;
     /* menu*/
     .menu {
       clear: both;
+      .menu_title_phone , .menu_phone_button{
+        display: none;
+      }
       li {
         text-align: center;
         display: inline-block;
@@ -134,9 +141,6 @@ $deep_color:#361100;
       li{
         display: inline-block;
         padding: 0px;
-        a{
-          color: #1a1a1a;
-        }
       }
     }
   }
@@ -158,6 +162,11 @@ $deep_color:#361100;
 #switch:checked + .line .switch::after {
     top: 0 !important;
     transition: top ease .3s, transform ease .3s .3s !important;
+}
+
+#switch:checked + .line{
+  border-color: rgba(255, 255, 255, 0);
+  transition: all .5s;
 }
 
 
@@ -195,24 +204,27 @@ $deep_color:#361100;
   }
 }
 
- /* RWD */ 
-@media(max-width:768px){
-  .nav{
-    position: relative;
-    .nav_bar{
-      input:checked ~ .menu {
-        max-height: fit-content;
-        background-color: #ffffff;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-        padding: 12px 0px;
-        height: 100vh;
-      }
+// 網頁載入特效
+@keyframes header{
+    0%  {
+      opacity: 0;
     }
-  }
+    100%{
+      opacity: 100;
+    }
 }
 
+@keyframes nav{
+  0%  {
+    opacity: 0;
+  }
+  30%  {
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
 
 /* -----------以下為主要頁面css------------ */
 
@@ -220,7 +232,59 @@ header{
   background: url("../img/header_bg.jpg") no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 70vh;
+  animation-name: header;
+  animation-duration: 2s;
+  .all_width{
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header_text , .header_text_02{
+    color: #ffffff;
+    position: absolute;
+    writing-mode: vertical-lr;
+    letter-spacing: 0.8em;
+    font-size: $font_size_S;
+  }
+  .header_text{
+    top: 40px;
+    left: 0px;
+  }
+  .header_text_02{
+    top: calc(40px + 1.8em);
+    left: 1.8em;
+  }
+  .header_title{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 36px;
+    border-radius: 50%;
+    border:solid 4px #ffffff;
+    padding: 12px calc(12px + 1em);
+  }
+  button{
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    border: solid 1px #ffffff;
+    border-radius: 8px;
+    font-size: $font_size_S;
+    padding: 8px 16px;
+    color: #ffffff;
+    background-color: rgba(139 , 75 , 45 ,0.4);
+    cursor: pointer;
+    transition: all .5s;
+    img{
+      display: inline-block;
+      width: 1em;
+      margin-right: 4px;
+    }
+    &:hover{
+      opacity: 0.8;
+    }
+  }
 }
 
 .about{
@@ -358,7 +422,7 @@ header{
   }
   .costumer_right{
     width: calc(1200px - 20vw - 0px);
-    padding: 20px 30px;
+    padding: 50px 30px;
     display: flex;
     justify-content: flex-start;
     padding-right: 0px;
@@ -392,6 +456,7 @@ header{
       .costumer_list_star{
         display: flex;
         justify-content: space-between;
+        color: #909090;
         .costumer_starsss{
           margin-bottom: 8px;
           img{
@@ -400,6 +465,243 @@ header{
             margin-right: 2px;
           }
         }
+      }
+      .costumer_commont_img{
+        margin-bottom: 4px;
+      }
+      .costumer_commont_text{
+        color: #909090;
+      }
+    }
+  }
+}
+
+// 田飯店面
+footer{
+  background: url("../img/footer_bg.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(45, 43, 43, 0.7);
+  background-blend-mode: multiply;
+  padding-bottom: 60px;
+  .footer_title{
+    color: #ffffff;
+    text-align: center;
+    font-size: 32px;
+    padding: 40px;
+    >div{
+      display: inline-block;
+      border: solid 4px #ffffff;
+      border-radius: 50%;
+      padding: 16px calc(1em + 12px);
+      span{
+        display: block;
+      }
+    }
+  }
+
+  .footer_in{
+    .footer_left{
+      display: inline-block;
+      width: 450px;
+      margin-right: 28px;
+      img{
+        border-radius: 8px;
+      }
+    }
+    .footer_right{
+      display: inline-block;
+      width: calc( 100% - 454px - 28px );
+      vertical-align: top;
+      color: #ffffff;
+      .footer_list{
+        margin-bottom: 18px;
+        .footer_list_img{
+          display: inline-block;
+          margin-right: 6px;
+          img{
+            width: 0.8em;
+          }
+        }
+      }
+      .footer_list_title{
+        color: #FFE6DB;
+        width: 4em;
+        display: inline-flex;
+        justify-content: space-between;
+        margin-right: 10px;
+      }
+      .footer_list_info{
+        display: inline-block;
+        width: calc( 100% - 4em - 1px - 2em - 6px );
+        vertical-align: top;
+        span{
+          display: block;
+          margin-bottom: 12px;
+          .footer_rest{
+            display: inline-block;
+            color: #FFEAC7;
+            border: solid 1px #FFEAC7;
+            border-radius: 8px;
+            padding: 6px 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.copyright{
+  text-align: center;
+  color: #ffffff;
+  background-color: #361100;
+  padding: 12px 0px;
+  font-size: $font_size_XS;
+  letter-spacing: 0.2em;
+}
+
+ /* RWD */ 
+ @media(max-width:768px){
+  .all_width{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  // 選單
+  .nav{
+    position: static;
+    .nav_bar{
+      .menu{
+        height: 0px;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        transition: all .5s;
+        padding-top: 0px !important;
+        .all_width{
+          padding: 0px;
+        }
+        .menu_title_phone{
+          display: block;
+          padding: 20px 16px;
+          background-color: #775343;
+          color: #FFDFD0;
+          div{
+            display: inline-block;
+            border: solid 1px #FFDFD0;
+            border-radius: 50%;
+            padding: 8px calc(1em + 8px);
+            span{
+              display: block;
+            }
+          }
+        }
+        .menu_phone_button{
+          padding: 24px 0px !important;
+          button{
+            color: #ffffff;
+            background-color: #d68862;
+            padding: 8px 20px;
+            border-radius: 8px;
+            border: 0px;
+            font-size: $font_size_S;
+            img{
+              display: inline-block;
+              width: 1em;
+            }
+          }
+        }
+        li{
+          background-color: #ffffff;
+          padding: 0px 24px !important;
+          a{
+            padding: 24px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: solid 1px #FFE9DF;
+            .menu_top{
+              margin-right: 12px;
+              padding-bottom: 0px;
+            }
+          }
+        }
+      }
+      input:checked ~ .menu {
+        display: block;
+        max-height: fit-content;
+        background-color: rgba(41 , 15 , 3 , .5);
+        z-index: 1;
+        padding: 12px 0px;
+        height: 100vh;
+        li{
+          display: block;
+        }
+      }
+    }
+  }
+  // 標題區
+  header{
+    .header_text{
+      left: 12px;
+    }
+    .header_text_02{
+      left: calc(1.5em + 12px);
+    }
+    button{
+      display: none;
+    }
+  }
+  .about{
+    background-size: auto;
+    background-position: left;
+    > div > div{
+      &.about_title{
+        display: none;
+      }
+      &.about_cont{
+        width:calc(100% - 20px);
+        margin-left: 20px;
+      }
+    }
+  }
+  .menudes{
+    .menudes_list{
+      li{
+        width: calc((100% - 40px) / 2);
+        margin-right: 20px;
+        &:nth-child(2n){
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+  .costumer{
+    .costumer_left {
+      width: 4em;
+      .costumer_title{
+        background-size: 0em;
+        padding: 25px 0px;
+        padding-left: 0px;
+        text-align: center;
+      }
+    }
+    .costumer_right{
+      width: calc(100% - 4em);
+      display: inline-block;
+      .costumer_list{
+        width: auto;
+        margin-right: 0px;
+        display: block;
+      }
+    }
+  }
+  footer{
+    .footer_in{
+      .footer_left{
+        display: none;
+      }
+      .footer_right{
+        width: 100%;
       }
     }
   }
