@@ -706,3 +706,26 @@ footer{
     }
   }
 }
+
+
+// 滑動動畫測試
+.gs{  
+  position:relative;  
+  top:800px;   
+  background-color:#099;   
+  left:150px; width:80px;   
+  }  
+  .xz{  
+  animation:roate 2s;  
+  animation-fill-mode:forwards;  
+  animation-direction:alternate;  
+      }  
+  @keyframes roate{  
+      from { transform:rotate(0deg);  
+      width:100px;  
+      height:100px; }  
+      to{transform:rotate(360deg);  
+      width:200px;  
+      height:200px;  
+      }}  
+  .xs{ width:50px; float: left; height:30px; background-color: #F90; position:fixed; left:700px; top:0px;} 
