@@ -5,7 +5,7 @@ $(document).ready(function(){
 });
 
 
-function gdjz(div,cssname,offset){  
+function fadein_setting(div,cssname,offset){  
     var a,b,c,d;  
     d=$(div).offset().top;  
     a=eval(d + offset);  
@@ -17,7 +17,9 @@ function gdjz(div,cssname,offset){
     }  
 $(document).ready(function(e) {  
 $(window).scroll(function(){  
-    gdjz("#dh",'xz',100);  
+    fadein_setting("#menudes",'fade_in',400); 
+    fadein_setting("#costumer",'fadein_up',300); 
+    fadein_setting("#footer",'fadein_up',300); 
     }  
 /*var a,b,c;  
 a=$("#dh").offset().top;//元素相對於視窗的距離  

@@ -209,6 +209,9 @@ $deep_color:#361100;
     0%  {
       opacity: 0;
     }
+    80%{
+      opacity: 100;
+    }
     100%{
       opacity: 100;
     }
@@ -218,7 +221,19 @@ $deep_color:#361100;
   0%  {
     opacity: 0;
   }
-  30%  {
+  20%  {
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
+
+@keyframes about{
+  0%  {
+    opacity: 0;
+  }
+  40%  {
     opacity: 0;
   }
   100%{
@@ -294,6 +309,8 @@ header{
   height: 287px;
   background-color: $deep_color;
   font-size: $font_size_S;
+  animation-name: about;
+  animation-duration: 3s;
   > div{
       > div{
         display: inline-block;
@@ -326,6 +343,7 @@ header{
 }
 
 .menudes{
+  opacity: 0;
   padding-top: 88px;
   .menudes_title{
     text-align: center;
@@ -381,6 +399,9 @@ header{
 }
 
 .costumer{
+  position: relative;
+  top: 50px;
+  opacity: 0;
   margin-top: 88px;
   background-color: #FFF3ED;
   display: flex;
@@ -392,6 +413,7 @@ header{
     text-align: right;
     padding-top: 12px;
     display: inline-block;
+    height: inherit;
     .costumer_title{
       // position: absolute;
       // right: 20px;
@@ -484,6 +506,11 @@ footer{
   background-color: rgba(45, 43, 43, 0.7);
   background-blend-mode: multiply;
   padding-bottom: 60px;
+  >div{
+    opacity: 0;
+    position: relative;
+    top: 50px;
+  }
   .footer_title{
     color: #ffffff;
     text-align: center;
@@ -604,15 +631,20 @@ footer{
             border-radius: 8px;
             border: 0px;
             font-size: $font_size_S;
+            cursor: pointer;
             img{
               display: inline-block;
               width: 1em;
+            }
+            &:hover{
+              opacity: 0.8;
             }
           }
         }
         li{
           background-color: #ffffff;
           padding: 0px 24px !important;
+          transition: all .2s;
           a{
             padding: 24px 0px;
             display: flex;
@@ -623,6 +655,23 @@ footer{
               margin-right: 12px;
               padding-bottom: 0px;
             }
+          }
+          &:hover{
+            background-color:#8B4B2D;
+            .menu_top{
+              .nav_c{
+                display: none;
+              }
+              .nav_uc{
+                display: inline-block;
+              }
+            }
+            a{
+              color: #ffffff;
+            }
+          }
+          &:last-child:hover{
+            background-color: #ffffff;
           }
         }
       }
@@ -709,23 +758,33 @@ footer{
 
 
 // 滑動動畫測試
-.gs{  
-  position:relative;  
-  top:800px;   
-  background-color:#099;   
-  left:150px; width:80px;   
-  }  
-  .xz{  
-  animation:roate 2s;  
+.fade_in{  
+  animation:fadein 2s;  
+  animation-fill-mode:forwards;  
+  animation-direction:alternate;  
+      } 
+.fadein_up{  
+  animation:fadein_up 2s;  
   animation-fill-mode:forwards;  
   animation-direction:alternate;  
       }  
-  @keyframes roate{  
-      from { transform:rotate(0deg);  
-      width:100px;  
-      height:100px; }  
-      to{transform:rotate(360deg);  
-      width:200px;  
-      height:200px;  
-      }}  
-  .xs{ width:50px; float: left; height:30px; background-color: #F90; position:fixed; left:700px; top:0px;} 
+@keyframes fadein{  
+    from { 
+      opacity: 0;
+    }  
+    to{
+      opacity: 1;
+}}  
+  
+@keyframes fadein_up{  
+  from { 
+    opacity: 0;
+    position: relative;
+    top: 50px;
+  }  
+  to{
+    opacity: 1; 
+    top: 0px;
+    position: relative;
+}}  
+  
