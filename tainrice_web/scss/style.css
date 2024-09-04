@@ -679,12 +679,18 @@ footer .footer_in .footer_right .footer_list_info span .footer_rest {
   }
   .costumer .costumer_left {
     width: 4em;
+    position: relative;
   }
   .costumer .costumer_left .costumer_title {
     background-size: 0em;
     padding: 25px 0px;
     padding-left: 0px;
     text-align: center;
+  }
+  .costumer .costumer_left .costumer_more {
+    position: absolute;
+    bottom: 45px;
+    left: 0px;
   }
   .costumer .costumer_right {
     width: calc(100% - 4em);
@@ -694,12 +700,22 @@ footer .footer_in .footer_right .footer_list_info span .footer_rest {
     width: auto;
     margin-right: 0px;
     display: block;
+    margin-bottom: 20px;
   }
   footer .footer_in .footer_left {
     display: none;
   }
   footer .footer_in .footer_right {
     width: 100%;
+  }
+}
+@media (max-width: 350px) {
+  .menudes .menudes_list {
+    display: block;
+  }
+  .menudes .menudes_list li {
+    width: 100%;
+    margin-right: 0px;
   }
 }
 .fade_in {

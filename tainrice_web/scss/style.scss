@@ -727,11 +727,17 @@ footer{
   .costumer{
     .costumer_left {
       width: 4em;
+      position: relative;
       .costumer_title{
         background-size: 0em;
         padding: 25px 0px;
         padding-left: 0px;
         text-align: center;
+      }
+      .costumer_more{
+        position: absolute;
+        bottom: 45px;
+        left: 0px;
       }
     }
     .costumer_right{
@@ -741,6 +747,7 @@ footer{
         width: auto;
         margin-right: 0px;
         display: block;
+        margin-bottom: 20px;
       }
     }
   }
@@ -754,6 +761,16 @@ footer{
       }
     }
   }
+}
+
+@media(max-width:350px){
+  .menudes .menudes_list{
+    display: block;
+    li{
+      width: 100%;
+      margin-right: 0px;
+    }
+  } 
 }
 
 
