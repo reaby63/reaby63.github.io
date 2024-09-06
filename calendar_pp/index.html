@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add evo-calendar.css (default theme included) in the <head> tag -->
+    <link rel="stylesheet" type="text/css" href="css/evo-calendar.css"/>
+    <!-- Themes? Add them right after the main css -->
+    <link rel="stylesheet" type="text/css" href="css/evo-calendar.midnight-blue.css"/>
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Add the evo-calendar.js for.. obviously, functionality! -->
+    <script src="https://cdn.jsdelivr.net/npm/evo-calendar@1.1.2/evo-calendar/js/evo-calendar.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <!--   表格區 -->
+        <form class="form">
+          <div>
+            <label for="name">活動標題</label>
+            <input type="text" placeholder="活動標題" class="event-input">
+          </div>
+          <div>
+            <label for="startDate">開始時間</label>
+            <input type="date" class="event-input">
+          </div>
+          <div>
+            <label for="endDate">結束時間</label>
+            <input type="date" class="event-input">
+          </div>
+          <div>
+            <label for="type">活動類型</label>
+            <select name="type" id="type" class="event-input">
+              <option value="">--Please choose an option--</option>
+              <option value="event">event</option>
+              <option value="holiday">holiday</option>
+            </select>
+          </div>
+          <div>
+            <label for="everyYear">是否每年重覆</label>
+            <select name="everyYear" id="everyYear" class="event-input">
+              <option value="">--Please choose an option--</option>
+              <option value="yes">yes</option>
+              <option value="no">no</option>
+            </select>
+          </div>
+          <div>
+            <label for="describe">敘述</label>
+            <textarea name="describe" id="describe" cols="20" rows="10" class="event-input"></textarea>
+          </div>
+          <button type="button" class="addEvent">送出</button>
+        </form>
+        <!-- 月曆渲染區 -->
+        <div id="calendar" style="width:700px"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/evo-calendar.js"></script>
+        <script src="js/calendar.js"></script>
+        <script>
+            // initialize your calendar, once the page's DOM is ready
+            $(document).ready(function() {
+                $('#calendar').evoCalendar({
+                    settingName: settingValue
+                })
+            })
+        </script>
+        
+      </div>
+</body>
+
+</html>

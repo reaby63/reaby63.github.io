@@ -1,1 +1,57 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all_width {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+ellipse#eV07UZBWYct6 {
+  rx: 10 !important;
+  ry: 10 !important;
+}
+
+header {
+  padding: 40px 0px;
+  overflow: hidden;
+}
+header::before {
+  content: "";
+  background: url("../img/header_bg.png") no-repeat;
+  background-size: 100vh;
+  background-position: left top;
+  border-radius: 0px 0px 72px 0px;
+  width: 50vw;
+  height: 70vh;
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+header .header_photo {
+  display: inline-block;
+  width: 334px;
+  position: relative;
+}
+header .header_photo .my_photo {
+  position: absolute;
+  width: 207px;
+  top: 63px;
+  left: 60px;
+  border: solid 3px #ffffff;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.css.map */
