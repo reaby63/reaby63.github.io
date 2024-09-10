@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 *{
     padding: 0;
     margin: 0;
-    font-family: "Kiwi Maru", serif;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
@@ -209,7 +211,7 @@ header{
                 position: absolute;
                 opacity: 0;
                 // background-color: rgba(63,63,63,0.85);
-                background-color: rgba($color: #456067, $alpha: 0.8);
+                background-color: rgb(52 59 61 / 80%);
                 top: 0px;
                 left: 0px;
                 height: -webkit-fill-available;
@@ -373,11 +375,38 @@ footer{
                 transition: all .2s;
                 padding: 12px 20px;
                 background-color: rgba($color: #ffffff, $alpha: 0);
+                .footer_ig{
+                    margin-right: 4px;
+                    position: relative;
+                    width: 1em;
+                    display: inline-block;
+                    img{
+                        width: 1em;
+                        position: absolute;
+                        top: -13px;
+                        left: 0;
+                    }
+                    .ig_w{
+                        opacity: 100;
+                    }
+                    .ig_y{
+                        opacity: 0;
+                    }
+                }
                 &:hover{
                     color: #FFEBBB;
                     border-color: #FFEBBB;
                     background-color: rgba($color: #ffffff, $alpha: 0.1);
+                    .footer_ig{
+                        .ig_w{
+                            opacity: 0;
+                        }
+                        .ig_y{
+                            opacity: 100;
+                        }
+                    }
                 }
+                
             }
         }
     }
@@ -403,4 +432,10 @@ footer{
         position: relative;
         right: 0.3em;
     }
+}
+
+
+// -----RWD-----
+@media(max-width:768px){
+    
 }
