@@ -109,12 +109,15 @@ header{
             }
         }
         .header_title{
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
             font-size: 25px;
             letter-spacing: 1em;
             color: #ffffff;
+            &::before{
+                content: "PORTFOLIO";
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+            }
         }
         
     }
@@ -129,12 +132,14 @@ header{
             font-weight: 600;
             letter-spacing: 0.5em;
             margin-bottom: 12px;
+            text-indent: 0.5em;
         }
         .h_birth{
             font-size: 16px;
             color: #82A9B3;
             letter-spacing: 0.5em;
             margin-bottom: 24px;
+            text-indent: 0.5em;
         }
         .h_history{
             color: #959595;
@@ -267,7 +272,7 @@ header{
                 font-size: 32px;
                 letter-spacing: 1em;
                 margin-bottom: 14px;
-                margin-right: -1em;
+                text-indent: 1em;
                 &::before , &::after{
                     content: "";
                     display: inline-block;
@@ -334,11 +339,15 @@ footer{
     background-size: auto;
     min-height: 335px;
     color: #ffffff;
+    .footer_bg_rwd{
+        display: none;
+    }
     .footer_title{
         padding-top: 170px;
         font-size: 32px;
         margin-bottom: 28px;
         letter-spacing: 0.8em;
+        text-indent: 0.8em;
     }
     .footer_in{
         display: flex;
@@ -437,5 +446,150 @@ footer{
 
 // -----RWD-----
 @media(max-width:768px){
-    
+    .all_width{
+        margin: 0 24px;
+    }
+    header{
+        display: block;
+        .h_left{
+            display: block;
+            margin-right: 0px;
+            background: url("../img/header_bg.png") no-repeat;
+            background-position: top center;
+            background-size: 100%;
+            height: 30vh;
+            margin-bottom: 125px;
+            position: relative;
+            .header_bg{
+                border-radius: 0px;
+                height: auto;
+                display: none;
+            }
+            .h_photo_box{
+                top: 8vh;
+                right: calc(50vw - 129px);
+                .header_photo {
+                    object{
+                        transform: rotate(100deg);
+                    }
+                    .my_photo{
+                        z-index: 2;
+                    }
+                }
+            }
+            .header_title{
+                position: static;
+                color: rgba($color: #000000, $alpha: 0);
+                opacity: 0.7;
+                &::before{
+                    content: "PORT";
+                    display: inline-block;
+                    color: #ffffff;
+                    font-size: 16px;
+                    position: absolute;
+                    bottom: 20px;
+                    left: 1.5em;
+                }
+                &::after{
+                    content: "FOLIO";
+                    display: inline-block;
+                    color: #ffffff;
+                    font-size: 16px;
+                    position: absolute;
+                    bottom: 20px;
+                    right: 0px;
+                }
+            }
+        }
+        .h_right{
+            display: block;
+            width: 100%;
+            margin-top: 0px;
+            text-align: center;
+            .h_history{
+                text-align: left;
+                width: 20em;
+                margin: 0 auto;
+                font-size: 14px;
+                margin-bottom: 32px;
+            }
+            .h_skill{
+                margin-left: 24px;
+                margin-right: 12px;
+                span{
+                    font-size: 12px;
+                    width: 4.4em;
+                    height: 4.4em;
+                }
+            }
+        }
+    }
+    .work{
+        .work_title{
+            font-size: 20px;
+        }
+    }
+    .illus{
+        .illus_title{
+            >div{
+                &:first-child{
+                    font-size: 20px;
+                    letter-spacing: 0.6em;
+                    margin-right: -0.6em;
+                    &::after , &::before{
+                        width: 12px;
+                        height: 12px;
+                        top: 0px;
+                    }
+                }
+                &:last-child{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    footer{
+        // background: url("../img/connect_bg.svg") no-repeat;
+        // background-position: bottom center;
+        // background-size: 100%;
+        background-image: none;
+        // background-color: #A7CBD5;
+        // min-height: 335px;
+        .footer_bg_rwd{
+            display: block;
+            width: 100%;
+            position: relative;
+            top: 1px;
+        }
+        .all_width{
+            background-color: #A7CBD5;
+            margin: 0px;
+            padding: 0px 24px;
+        }
+        .footer_title{
+            padding-top: 0px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .footer_in{
+            display: block;
+            text-align: center;
+            padding-bottom: 24px;
+            .footer_in_p{
+                margin-right: 0px;
+                margin-bottom: 16px;
+            }
+            .footer_in_c{
+                margin-right: 0px;
+                margin-bottom: 20px;
+                >div{
+                    font-size: 14px;
+                    justify-content: center;
+                    img{
+                        width: 1.2em;
+                    }
+                }
+            }
+        }
+    }
 }
