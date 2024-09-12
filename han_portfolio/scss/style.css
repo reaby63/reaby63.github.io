@@ -229,7 +229,7 @@ header .h_right .h_skill span:last-child {
   color: #B6B6B6;
   font-size: 16px;
   letter-spacing: 0.8em;
-  margin-right: -0.8em;
+  text-indent: 0.8em;
 }
 .illus .illus_in {
   display: flex;
@@ -449,13 +449,25 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     width: 4.4em;
     height: 4.4em;
   }
+  .work {
+    background-size: 300%;
+    margin-bottom: 20px;
+  }
   .work .work_title {
     font-size: 20px;
+  }
+  .work .work_in {
+    display: block;
+  }
+  .work .work_in .work_item {
+    display: flex;
+    margin-right: 0px;
+    margin-bottom: 24px;
   }
   .illus .illus_title > div:first-child {
     font-size: 20px;
     letter-spacing: 0.6em;
-    margin-right: -0.6em;
+    text-indent: 0.6em;
   }
   .illus .illus_title > div:first-child::after, .illus .illus_title > div:first-child::before {
     width: 12px;
@@ -464,6 +476,21 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   }
   .illus .illus_title > div:last-child {
     font-size: 14px;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+  }
+  .illus .illus_in {
+    display: block;
+  }
+  .illus .illus_in .illus_in_item {
+    width: 100%;
+  }
+  .illus .illus_in .illus_in_item:nth-child(2) {
+    display: block;
+  }
+  .illus .illus_in .illus_in_item:nth-child(2) .illus_in_text {
+    margin-top: 0px;
+    margin-bottom: 3em;
   }
   footer {
     background-image: none;
@@ -503,5 +530,19 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   }
   footer .footer_in .footer_in_c > div img {
     width: 1.2em;
+  }
+}
+@media (max-width: 768px) {
+  .illus .illus_title > div:first-child {
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+  }
+  .illus .illus_title > div:first-child::after, .illus .illus_title > div:first-child::before {
+    width: 8px;
+    height: 8px;
+    top: -2px;
+  }
+  .illus .illus_title > div:first-child::after {
+    right: 12px;
   }
 }/*# sourceMappingURL=style.css.map */

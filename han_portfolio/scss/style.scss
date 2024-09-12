@@ -292,7 +292,7 @@ header{
                 color: #B6B6B6;
                 font-size: 16px;
                 letter-spacing: 0.8em;
-                margin-right: -0.8em;
+                text-indent: 0.8em;
             }
         }
     }
@@ -525,8 +525,18 @@ footer{
         }
     }
     .work{
+        background-size: 300%;
+        margin-bottom: 20px;
         .work_title{
             font-size: 20px;
+        }
+        .work_in{
+            display: block;
+            .work_item{
+                display: flex;
+                margin-right: 0px;
+                margin-bottom: 24px;
+            }
         }
     }
     .illus{
@@ -535,7 +545,7 @@ footer{
                 &:first-child{
                     font-size: 20px;
                     letter-spacing: 0.6em;
-                    margin-right: -0.6em;
+                    text-indent: 0.6em;
                     &::after , &::before{
                         width: 12px;
                         height: 12px;
@@ -544,6 +554,21 @@ footer{
                 }
                 &:last-child{
                     font-size: 14px;
+                    letter-spacing: 0.4em;
+                    text-indent: 0.4em;
+                }
+            }
+        }
+        .illus_in{
+            display: block;
+            .illus_in_item{
+                width: 100%;
+                &:nth-child(2){
+                    display: block;
+                    .illus_in_text{
+                        margin-top: 0px;
+                        margin-bottom: 3em;
+                    }
                 }
             }
         }
@@ -587,6 +612,27 @@ footer{
                     justify-content: center;
                     img{
                         width: 1.2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px){
+    .illus{
+        .illus_title{
+            >div{
+                &:first-child{
+                    letter-spacing: 0.4em;
+                    text-indent: 0.4em;
+                    &::after , &::before{
+                        width: 8px;
+                        height: 8px;
+                        top: -2px;
+                    }
+                    &::after{
+                        right: 12px;
                     }
                 }
             }
