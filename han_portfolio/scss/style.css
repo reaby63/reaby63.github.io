@@ -385,8 +385,8 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     background: url("../img/header_bg.png") no-repeat;
     background-position: top center;
     background-size: 100%;
-    height: 30vh;
-    margin-bottom: 125px;
+    height: 180px;
+    margin-bottom: 100px;
     position: relative;
   }
   header .h_left .header_bg {
@@ -433,11 +433,17 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     margin-top: 0px;
     text-align: center;
   }
+  header .h_right .h_name {
+    font-size: 20px;
+  }
+  header .h_right .h_birth {
+    font-size: 18px;
+  }
   header .h_right .h_history {
     text-align: left;
-    width: 20em;
+    width: 19em;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 32px;
   }
   header .h_right .h_skill {
@@ -445,16 +451,16 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     margin-right: 12px;
   }
   header .h_right .h_skill span {
-    font-size: 12px;
+    font-size: 14px;
     width: 4.4em;
     height: 4.4em;
   }
   .work {
     background-size: 300%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
   .work .work_title {
-    font-size: 20px;
+    font-size: 25px;
   }
   .work .work_in {
     display: block;
@@ -464,8 +470,11 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     margin-right: 0px;
     margin-bottom: 24px;
   }
+  .illus .illus_title {
+    margin-bottom: 30px;
+  }
   .illus .illus_title > div:first-child {
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 0.6em;
     text-indent: 0.6em;
   }
@@ -473,6 +482,7 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     width: 12px;
     height: 12px;
     top: 0px;
+    display: none;
   }
   .illus .illus_title > div:last-child {
     font-size: 14px;
@@ -484,6 +494,9 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   }
   .illus .illus_in .illus_in_item {
     width: 100%;
+  }
+  .illus .illus_in .illus_in_item .illus_in_text {
+    font-size: 16px;
   }
   .illus .illus_in .illus_in_item:nth-child(2) {
     display: block;
@@ -508,31 +521,43 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   }
   footer .footer_title {
     padding-top: 0px;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
+    line-height: 1.6em;
+    margin-bottom: 20px;
   }
   footer .footer_in {
     display: block;
     text-align: center;
     padding-bottom: 24px;
+    font-size: 16px;
   }
   footer .footer_in .footer_in_p {
     margin-right: 0px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
   footer .footer_in .footer_in_c {
     margin-right: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
   footer .footer_in .footer_in_c > div {
-    font-size: 14px;
+    font-size: 16px;
     justify-content: center;
+    margin-bottom: 20px;
   }
   footer .footer_in .footer_in_c > div img {
     width: 1.2em;
   }
+  .copyright {
+    padding: 8px 0px;
+  }
 }
-@media (max-width: 768px) {
+@media (max-width: 360px) {
+  header .h_right .h_history {
+    width: auto;
+    margin: 0 24px;
+    margin-bottom: 32px;
+  }
   .illus .illus_title > div:first-child {
     letter-spacing: 0.4em;
     text-indent: 0.4em;
