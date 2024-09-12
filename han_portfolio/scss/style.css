@@ -67,7 +67,7 @@ header .h_left .header_title::before {
 }
 header .h_right {
   display: inline-block;
-  width: calc(28em + 72px);
+  width: calc(32em + 72px);
   vertical-align: top;
   margin-top: calc(20vh - 2em);
 }
