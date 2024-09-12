@@ -17,9 +17,8 @@ function fadein_setting(div,cssname,offset){
     }  
 $(document).ready(function(e) {  
 $(window).scroll(function(){  
-    fadein_setting("#menudes",'fade_in',400); 
-    fadein_setting("#costumer",'fadein_up',300); 
-    fadein_setting("#footer",'fadein_up',300); 
+    fadein_setting("#work_title",'fadein_r_l',100);
+    fadein_setting("#illus",'fadein_bot_top',200);
     }  
 /*var a,b,c;  
 a=$("#dh").offset().top;//元素相對於視窗的距離  

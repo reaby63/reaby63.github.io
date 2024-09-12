@@ -178,6 +178,7 @@ header{
     background-position: bottom center;
     background-size: 100%;
     margin-bottom: 60px;
+    opacity: 0;
     .work_title{
         color: #A7CBD5;
         font-size: 36px;
@@ -263,6 +264,7 @@ header{
 
 .illus{
     margin-bottom: 40px;
+    opacity: 0.2;
     .illus_title{
         text-align: center;
         margin-bottom: 40px;
@@ -452,6 +454,9 @@ footer{
     header{
         display: block;
         .h_left{
+            animation:fadein_top_bot 2s;  
+            animation-fill-mode:forwards;  
+            animation-direction:alternate;
             display: block;
             margin-right: 0px;
             background: url("../img/header_bg.png") no-repeat;
@@ -666,3 +671,78 @@ footer{
         }
     }
 }
+
+// 動畫
+
+.fadein{
+    animation:fadein 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;    
+}
+
+@keyframes fadein{  
+    from { 
+      opacity: 0;
+    }  
+    to{
+      opacity: 1;
+}
+}  
+
+.fadein_top_bot{  
+    animation:fadein_top_bot 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;  
+} 
+
+@keyframes fadein_top_bot{  
+    from { 
+      opacity: 0;
+      position: relative;
+      top: -50px;
+    }  
+    to{
+      opacity: 1;
+      position: relative;
+      top: 0px;
+}
+}  
+
+.fadein_bot_top{  
+    animation:fadein_bot_top 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;  
+} 
+
+@keyframes fadein_bot_top{  
+    from { 
+      opacity: 0.2;
+      position: relative;
+      top: 50px;
+    }  
+    to{
+      opacity: 1;
+      position: relative;
+      top: 0px;
+}
+}  
+
+
+.fadein_r_l{  
+    animation:fadein_r_l 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;  
+} 
+
+@keyframes fadein_r_l{  
+    from { 
+      opacity: 0;
+      position: relative;
+      left: 50px;
+    }  
+    to{
+      opacity: 1;
+      position: relative;
+      left: 0px;
+    }
+}  
