@@ -23,60 +23,6 @@ a {
     margin: 0 auto;
 }
 
-// svg animate
-
-// ellipse#eV07UZBWYct6{
-//     rx:10 !important;
-//     ry: 10 !important;
-// }
-
-// start
-// header{
-//     padding:40px 0px;
-//     overflow: hidden;
-//     &::before{
-//         content: "";
-//         background: url("../img/header_bg.png") no-repeat;
-//         background-size: 100vh;
-//         background-position: left top;
-//         border-radius: 0px 0px 72px 0px;
-//         width: 40vw;
-//         max-width: 500px;
-//         height: 70vh;
-//         z-index: -1;
-//         position: absolute;
-//         top: 0px;
-//         left: 0px;
-    
-//     }
-//     >div{
-//         display: flex;
-//         align-items: center;
-//     }
-//     .header_photo{
-//         // background: url("../img/circle.svg") no-repeat;
-//         // background-position: center center;
-//         // background-size: 100%;
-//         display: inline-block;
-//         width: 258px;
-//         position: relative;
-//         margin-left: 20vw;
-//         .my_photo{
-//             position: absolute;
-//             width: 186px;
-//             top: 33px;
-//             left: 33px;
-//             border: solid 3px #ffffff;
-//             border-radius: 50%;
-//         }   
-//     }
-//     .header_text{
-//         width: calc( 100% - 20vw - 262px );
-//         display: inline-block;
-//     }
-// }
-
-
 header{
     margin-bottom: 48px;
     display: flex;
@@ -368,6 +314,7 @@ footer{
                 margin-bottom: 12px;
                 font-size: 16px;
                 letter-spacing: 0.2em;
+                align-items: center;
                 &:last-child{
                     margin-bottom: 0;
                 }

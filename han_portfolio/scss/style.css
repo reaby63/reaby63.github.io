@@ -305,6 +305,7 @@ footer .footer_in .footer_in_c div {
   margin-bottom: 12px;
   font-size: 16px;
   letter-spacing: 0.2em;
+  align-items: center;
 }
 footer .footer_in .footer_in_c div:last-child {
   margin-bottom: 0;
