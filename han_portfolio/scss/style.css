@@ -275,6 +275,29 @@ footer {
   background-size: auto;
   min-height: 335px;
   color: #ffffff;
+  opacity: 0;
+}
+footer .all_width {
+  position: relative;
+}
+footer .all_width .f_blue_ball, footer .all_width .f_yell_ball {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+footer .all_width .f_blue_ball {
+  background-color: #B4DDE9;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  top: 80px;
+}
+footer .all_width .f_yell_ball {
+  background-color: #FFEBC1;
+  width: 30px;
+  height: 30px;
+  right: 134px;
+  top: 162px;
 }
 footer .footer_bg_rwd {
   display: none;
@@ -476,6 +499,9 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     margin-right: 0px;
     margin-bottom: 24px;
   }
+  .illus {
+    opacity: 0;
+  }
   .illus .illus_title {
     margin-bottom: 30px;
   }
@@ -614,12 +640,49 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   animation-fill-mode: forwards;
   animation-direction: alternate;
 }
+.fadein_bot_top .illus_in .illus_in_item {
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+}
+.fadein_bot_top .illus_in .illus_in_item:nth-child(1) {
+  animation: fadein_bot_top_in 2s;
+}
+.fadein_bot_top .illus_in .illus_in_item:nth-child(2) {
+  animation: fadein_top_bot_in 2s;
+}
+.fadein_bot_top .illus_in .illus_in_item:nth-child(3) {
+  animation: fadein_bot_top_in 2s;
+}
 
 @keyframes fadein_bot_top {
   from {
     opacity: 0.2;
     position: relative;
     top: 50px;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+  }
+}
+@keyframes fadein_bot_top_in {
+  20% {
+    opacity: 0;
+    position: relative;
+    top: 50px;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+  }
+}
+@keyframes fadein_top_bot_in {
+  30% {
+    opacity: 0;
+    position: relative;
+    top: -50px;
   }
   to {
     opacity: 1;
@@ -643,5 +706,39 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     opacity: 1;
     position: relative;
     left: 0px;
+  }
+}
+.f_blue_ball {
+  animation: f_blue_ball 5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.f_yell_ball {
+  animation: f_yell_ball 8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes f_blue_ball {
+  0% {
+    top: 120px;
+  }
+  50% {
+    top: 80px;
+  }
+  100% {
+    top: 120px;
+  }
+}
+@keyframes f_yell_ball {
+  0% {
+    top: 150px;
+  }
+  50% {
+    top: 100px;
+  }
+  100% {
+    top: 150px;
   }
 }/*# sourceMappingURL=style.css.map */
