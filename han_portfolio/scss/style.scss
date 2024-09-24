@@ -485,6 +485,7 @@ footer{
             .h_photo_box{
                 top: 8vh;
                 right: calc(50vw - 129px);
+                z-index: 1;
                 .header_photo {
                     object{
                         transform: rotate(100deg);
@@ -506,6 +507,7 @@ footer{
                     position: absolute;
                     bottom: 20px;
                     left: 1.5em;
+                    z-index: -1;
                 }
                 &::after{
                     content: "FOLIO";
@@ -515,6 +517,7 @@ footer{
                     position: absolute;
                     bottom: 20px;
                     right: 0px;
+                    z-index: -1;
                 }
             }
         }
@@ -654,7 +657,8 @@ footer{
         }
     }
     .copyright{
-        padding: 8px 0px;
+        padding: 12px 0px;
+        font-size: 14px;
     }
 }
 
