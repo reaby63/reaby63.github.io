@@ -220,13 +220,13 @@ header .h_right .h_skill span:last-child {
   margin-bottom: 20px;
   font-size: 36px;
   letter-spacing: 1em;
-  position: relative;
 }
 .app .app_left .app_title span {
   display: block;
   margin-bottom: 12px;
+  position: relative;
 }
-.app .app_left .app_title::after {
+.app .app_left .app_title span:first-child::after {
   content: "";
   display: block;
   background-color: #E9FAFF;
@@ -234,8 +234,8 @@ header .h_right .h_skill span:last-child {
   width: 50px;
   height: 50px;
   position: absolute;
-  top: -20px;
-  left: -20px;
+  top: -16px;
+  left: -28px;
   z-index: -1;
 }
 .app .app_left .app_dec {
@@ -353,7 +353,10 @@ header .h_right .h_skill span:last-child {
   margin-bottom: 14px;
   text-indent: 1em;
 }
-.illus .illus_title div:first-child::before, .illus .illus_title div:first-child::after {
+.illus .illus_title div:first-child span {
+  display: inline-block;
+}
+.illus .illus_title div:first-child span::before, .illus .illus_title div:first-child span::after {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -363,8 +366,11 @@ header .h_right .h_skill span:last-child {
   position: relative;
   top: 4px;
 }
-.illus .illus_title div:first-child::after {
-  right: 1em;
+.illus .illus_title div:first-child span::after {
+  right: 0px;
+}
+.illus .illus_title div:first-child span::before {
+  left: -30px;
 }
 .illus .illus_title div:last-child {
   color: #B6B6B6;
@@ -531,9 +537,10 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   height: 6px;
   background-color: #ffffff;
   opacity: 0.5;
+  position: relative;
+  top: -2px;
 }
 .copyright::after {
-  position: relative;
   right: 0.3em;
 }
 
@@ -659,10 +666,6 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     text-align: center;
     letter-spacing: 0.3em;
   }
-  .app .app_left .app_title::after {
-    top: -17px;
-    left: 24vw;
-  }
   .app .app_left .app_title span {
     display: inline-block;
   }
@@ -688,6 +691,7 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   .app .app_right .app_btn {
     height: 522px;
     background-position: bottom;
+    background-size: cover;
   }
   .app .app_right .app_btn::after {
     content: "點此看稿";
@@ -728,15 +732,17 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     margin-bottom: 30px;
   }
   .illus .illus_title > div:first-child {
-    font-size: 25px;
-    letter-spacing: 0.6em;
-    text-indent: 0.6em;
+    font-size: 30px;
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
   }
-  .illus .illus_title > div:first-child::after, .illus .illus_title > div:first-child::before {
+  .illus .illus_title > div:first-child span::after, .illus .illus_title > div:first-child span::before {
     width: 12px;
     height: 12px;
-    top: 0px;
-    display: none;
+    top: -3px;
+  }
+  .illus .illus_title > div:first-child span::before {
+    left: -10px;
   }
   .illus .illus_title > div:last-child {
     font-size: 14px;
@@ -815,18 +821,6 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     width: auto;
     margin: 0 24px;
     margin-bottom: 32px;
-  }
-  .illus .illus_title > div:first-child {
-    letter-spacing: 0.4em;
-    text-indent: 0.4em;
-  }
-  .illus .illus_title > div:first-child::after, .illus .illus_title > div:first-child::before {
-    width: 8px;
-    height: 8px;
-    top: -2px;
-  }
-  .illus .illus_title > div:first-child::after {
-    right: 12px;
   }
 }
 .fadein {
