@@ -17,6 +17,9 @@ function fadein_setting(div,cssname,offset){
     }  
 $(document).ready(function(e) {  
 $(window).scroll(function(){  
+    fadein_setting("#main",'fadein_bot_top',200);
+    fadein_setting("#section_one",'fadein_bot_top',200);
+    fadein_setting("#section_two",'fadein_bot_top',200);
     fadein_setting("#footer",'fadein_bot_top',200);
     }  
 /*var a,b,c;  

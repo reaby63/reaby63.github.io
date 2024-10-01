@@ -34,6 +34,9 @@ header {
   border-bottom: solid 12px #FFF4DD;
   border-radius: 0px 0px 100% 100%;
   margin-bottom: 40px;
+  animation: fadein_top_bot 2s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
 }
 header h1 {
   font-size: 33px;
@@ -250,6 +253,12 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   right: 0.3em;
 }
 
+#main, #section_one, #section_two {
+  opacity: 0;
+  position: relative;
+  top: 50px;
+}
+
 @media (max-width: 1200px) {
   footer {
     background-size: auto;
@@ -347,7 +356,7 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     font-size: 14px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   .img {
     display: block;
   }
@@ -381,9 +390,21 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
 
 @keyframes fadein_bot_top {
   from {
-    opacity: 0.2;
+    opacity: 0;
     position: relative;
     top: 50px;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    top: 0px;
+  }
+}
+@keyframes fadein_top_bot {
+  from {
+    opacity: 0;
+    position: relative;
+    top: -50px;
   }
   to {
     opacity: 1;
