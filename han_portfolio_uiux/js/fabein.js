@@ -17,10 +17,6 @@ function fadein_setting(div,cssname,offset){
     }  
 $(document).ready(function(e) {  
 $(window).scroll(function(){  
-    fadein_setting("#work_title",'fadein_r_l',100);
-    fadein_setting("#app_left",'fadein_bot_top',200);
-    fadein_setting("#app_right",'fadein_bot_top',500);
-    fadein_setting("#illus",'fadein_bot_top',200);
     fadein_setting("#footer",'fadein_bot_top',200);
     }  
 /*var a,b,c;  

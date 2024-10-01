@@ -63,7 +63,7 @@ header .h_left .header_title {
 header .h_left .header_title::before {
   content: "PORTFOLIO";
   position: absolute;
-  bottom: 20px;
+  bottom: 40px;
   right: 20px;
 }
 header .h_right {
@@ -200,39 +200,142 @@ header .h_right .h_skill span:last-child {
   opacity: 100;
 }
 
+.app {
+  margin-top: 110px;
+  margin-bottom: 120px;
+}
+.app .all_width {
+  display: flex;
+}
+.app .app_left {
+  width: calc(100% - 700px - 20px);
+  margin-right: 20px;
+  opacity: 0.2;
+  position: relative;
+  top: 50px;
+}
+.app .app_left .app_title {
+  color: #A7CBD5;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 36px;
+  letter-spacing: 1em;
+  position: relative;
+}
+.app .app_left .app_title span {
+  display: block;
+  margin-bottom: 12px;
+}
+.app .app_left .app_title::after {
+  content: "";
+  display: block;
+  background-color: #E9FAFF;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+}
+.app .app_left .app_dec {
+  color: #909090;
+  letter-spacing: 0.5em;
+  font-size: 16px;
+  line-height: 2em;
+}
+.app .app_left .app_dec span {
+  display: block;
+}
+.app .app_right {
+  width: 700px;
+  position: relative;
+  opacity: 0;
+  top: 50px;
+}
+.app .app_right::before, .app .app_right::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+}
+.app .app_right::before {
+  background-color: #BFDFE8;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: -65px;
+  top: -70px;
+}
+.app .app_right::after {
+  background-color: #FFF4DD;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: -110px;
+  bottom: -40px;
+}
 .app .app_right .app_btn {
+  display: block;
   width: 100%;
-  background-color: #ffffff;
   border: 0px;
-  box-shadow: 0px 4px 4px #AFAFAF;
+  box-shadow: 0px 4px 4px #e1e1e1;
   background: url("../img/app.png") no-repeat;
-  background-position: bottom right;
-  background-size: contain;
+  background-position: right;
+  background-size: 100%;
   text-align: left;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #ffffff;
+  position: relative;
+  top: 0px;
+  transition: all 0.5s;
 }
 .app .app_right .app_btn .app_btn_in {
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 2.5em 2em;
   background-color: #93CAD9;
   position: relative;
   color: #ffffff;
-  width: 20em;
-  height: 20em;
+  width: 10em;
+  height: auto;
   z-index: 2;
 }
-.app .app_right .app_btn .app_btn_in::after {
-  content: "";
+.app .app_right .app_btn .app_btn_in .app_btn_title {
+  display: block;
+  font-weight: 800;
+  font-size: 25px;
+  margin-bottom: 24px;
+  letter-spacing: 0.2em;
+}
+.app .app_right .app_btn .app_btn_in .app_btn_dec {
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  margin-bottom: 32px;
+  line-height: 1.7em;
+}
+.app .app_right .app_btn .app_btn_in .app_btn_tag {
+  display: block;
+  text-align: center;
+}
+.app .app_right .app_btn .app_btn_in .app_btn_tag span {
   display: inline-block;
-  position: absolute;
-  top: 0px;
-  right: -33px;
-  bottom: 0px;
-  background-color: transparent;
-  border-bottom: 0px solid #acacac;
-  border-right: 35px solid transparent;
-  border-top: 21em solid #93CAD9; /* 高度+padding */
-  border-left: 0px solid #acacac;
-  z-index: 1;
+  border-radius: 16px;
+  padding: 12px 20px;
+  font-size: 14px;
+  border: solid 1px #ffffff;
+}
+.app .app_right .app_btn .app_btn_in .app_btn_tag span img {
+  display: inline-block;
+  margin-left: 4px;
+  position: relative;
+  top: 1px;
+}
+.app .app_right .app_btn:hover {
+  top: -8px;
+  box-shadow: 0px 0px 8px #FFDD94;
 }
 
 .illus {
@@ -308,7 +411,7 @@ header .h_right .h_skill span:last-child {
 footer {
   background: url("../img/connect_bg.png") no-repeat;
   background-position: top center;
-  background-size: auto;
+  background-size: cover;
   min-height: 335px;
   color: #ffffff;
   opacity: 0;
@@ -537,6 +640,81 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     display: flex;
     margin-right: 0px;
     margin-bottom: 24px;
+  }
+  .app .all_width {
+    display: block;
+  }
+  .app .app_left {
+    width: 100%;
+    margin-right: 0px;
+    z-index: 1;
+  }
+  .app .app_left .app_title {
+    font-size: 30px;
+    text-align: center;
+    letter-spacing: 0.3em;
+  }
+  .app .app_left .app_title::after {
+    top: -17px;
+    left: 24vw;
+  }
+  .app .app_left .app_title span {
+    display: inline-block;
+  }
+  .app .app_left .app_title span:first-child {
+    margin-right: 12px;
+  }
+  .app .app_left .app_dec {
+    text-align: center;
+    font-size: 16px;
+    z-index: 1;
+    margin-bottom: 28px;
+  }
+  .app .app_right {
+    width: 100%;
+  }
+  .app .app_right::before {
+    right: calc(50vw - 124px);
+    background-color: #FFF4DD;
+  }
+  .app .app_right::after {
+    display: none;
+  }
+  .app .app_right .app_btn {
+    height: 522px;
+    background-position: bottom;
+  }
+  .app .app_right .app_btn::after {
+    content: "點此看稿";
+    display: block;
+    background-color: #93CAD9;
+    padding: 1.2em 1em;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0.3em;
+    text-decoration: underline;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    width: -webkit-fill-available;
+    text-indent: 0.3em;
+  }
+  .app .app_right .app_btn .app_btn_in {
+    width: auto;
+    display: block;
+    text-align: center;
+    padding: 1.7em 1.2em;
+  }
+  .app .app_right .app_btn .app_btn_in .app_btn_title {
+    font-size: 23px;
+    margin-bottom: 16px;
+  }
+  .app .app_right .app_btn .app_btn_in .app_btn_dec {
+    margin-bottom: 0px;
+  }
+  .app .app_right .app_btn .app_btn_in .app_btn_tag {
+    display: none;
   }
   .illus {
     opacity: 0;
