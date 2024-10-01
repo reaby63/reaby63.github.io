@@ -537,6 +537,11 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   right: 0.3em;
 }
 
+@media (max-width: 1200px) {
+  footer {
+    background-size: auto;
+  }
+}
 @media (max-width: 768px) {
   .all_width {
     margin: 0 24px;

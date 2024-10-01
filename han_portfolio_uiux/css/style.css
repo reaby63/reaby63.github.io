@@ -28,7 +28,7 @@ a {
 
 header {
   background-color: #A7CBD5;
-  padding: 10px 0px;
+  padding: 24px 0px;
   text-align: center;
   color: #ffffff;
   border-bottom: solid 12px #FFF4DD;
@@ -36,7 +36,7 @@ header {
   margin-bottom: 40px;
 }
 header h1 {
-  font-size: 24px;
+  font-size: 33px;
   padding-bottom: 8px;
   font-weight: 500;
   letter-spacing: 0.4em;
@@ -44,27 +44,29 @@ header h1 {
 }
 header p {
   letter-spacing: 0.4em;
-  font-size: 16px;
+  font-size: 24px;
   text-indent: 0.4em;
 }
 
 .text {
   display: inline-block;
   margin-right: 40px;
-  width: calc(100% - 41vw - 70px);
+  width: calc(100% - 285px - 285px - 75px);
+  margin-top: 40px;
 }
 .text img {
-  width: 60px;
+  width: 80px;
   margin: 0 auto;
   display: block;
+  margin-bottom: 12px;
 }
 .text .title {
   color: #976B3F;
   text-align: center;
-  font-size: 18px;
+  font-size: 25px;
   letter-spacing: 0.4em;
   text-indent: 0.4em;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 .text .title span {
   display: block;
@@ -73,7 +75,7 @@ header p {
 .text .contain {
   color: #605959;
   letter-spacing: 0.3em;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.9em;
 }
 
@@ -83,7 +85,7 @@ header p {
   padding-bottom: 30px;
 }
 .img img {
-  width: 20vw;
+  width: 285px;
   border-radius: 20px;
   box-shadow: 0px 2px 4px rgba(120, 120, 120, 0.25);
 }
@@ -123,7 +125,7 @@ section .content:last-child {
 footer {
   background: url("../img/connect_bg.png") no-repeat;
   background-position: top center;
-  background-size: auto;
+  background-size: 100%;
   min-height: 335px;
   color: #ffffff;
   opacity: 0;
@@ -248,7 +250,12 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   right: 0.3em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  footer {
+    background-size: auto;
+  }
+}
+@media (max-width: 890px) {
   .all_width {
     padding: 0 24px;
   }
@@ -257,6 +264,10 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     margin-right: 0px;
     width: 100%;
     margin-bottom: 20px;
+    text-align: center;
+  }
+  .text img {
+    margin-bottom: 0px;
   }
   .img {
     display: flex;
@@ -276,6 +287,14 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   }
   section .content:first-child .all_width .text {
     margin-left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 30px;
+  }
+  header p {
+    font-size: 20px;
   }
   footer {
     background-image: none;

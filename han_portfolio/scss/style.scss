@@ -569,6 +569,11 @@ footer{
 
 
 // -----RWD-----
+@media(max-width:1200px){
+    footer{
+        background-size: auto;
+    }
+}
 @media(max-width:768px){
     .all_width{
         margin: 0 24px;
