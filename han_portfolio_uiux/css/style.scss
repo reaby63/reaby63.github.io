@@ -104,6 +104,9 @@ main{
     background-size: 100%;
     background-position: bottom center;
     margin-bottom: 40px;
+    animation:fadein_bot_top 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;
     .all_width{
         display: flex;
     }
@@ -264,7 +267,7 @@ footer{
     }
 }
 
-#main , #section_one , #section_two{
+#section_one , #section_two{
     opacity: 0;
     position: relative;
     top: 50px;
