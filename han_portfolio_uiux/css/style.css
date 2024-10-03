@@ -128,6 +128,13 @@ section .content:last-child {
   margin-bottom: 0px;
 }
 
+.prototype {
+  text-align: center;
+}
+.prototype iframe {
+  height: 800px;
+}
+
 footer {
   background: url("../img/connect_bg.png") no-repeat;
   background-position: top center;
