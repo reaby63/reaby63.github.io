@@ -133,6 +133,12 @@ section .content{
     }
 }
 
+header{
+    position: relative;
+}
+dotlottie-player{
+    position: absolute;
+}
 
 footer{
     background: url("../img/connect_bg.png") no-repeat;
