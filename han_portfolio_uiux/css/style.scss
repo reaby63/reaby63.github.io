@@ -113,7 +113,7 @@ main{
 }
 
 section .content{
-    margin-bottom: 40px;
+    margin-bottom: 60px;
     .all_width{
         display: flex;
     }
@@ -133,11 +133,40 @@ section .content{
     }
 }
 
-header{
-    position: relative;
-}
-dotlottie-player{
-    position: absolute;
+// header{
+//     position: relative;
+// }
+// dotlottie-player{
+//     position: absolute;
+// } 嘗試個囉踢
+
+.prototype{
+    text-align: center;
+    margin: 40px 20px;
+    opacity: 0;
+    a{ 
+        display: inline-flex;
+        border: solid 1px #F1BD4C;
+        border-radius: 30px;
+        padding: 20px 60px;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s;
+        img{
+            display: inline-block;
+            margin-right: 20px;
+            width: 80px;
+        }
+        span{
+            color: #F1BD4C;
+            font-weight: 600;
+            font-size: 25px;
+            letter-spacing: 0.3em;
+        }
+        &:hover{
+            opacity: 0.8;
+        }
+    }
 }
 
 footer{
@@ -342,6 +371,19 @@ footer{
         .title{
         }
     }
+    .prototype{
+        a{
+            padding: 20px 35px;
+            img{
+                width: 60px;
+                margin-right: 12px;
+            }
+            span{
+                font-size: 20px;
+                letter-spacing: 0.2em;
+            }
+        }
+    }
     footer{
         background-image: none;
         .footer_bg_rwd{
@@ -395,6 +437,20 @@ footer{
 }
 
 @media(max-width:500px){
+    .prototype{
+        a{
+            display: block;
+            img{
+                display: block;
+                margin: 0 auto;
+                width: 80px;
+            }
+            span{
+                display: block;
+                font-size: 25px;
+            }
+        }
+    }
     .img{
         display: block;
         img{

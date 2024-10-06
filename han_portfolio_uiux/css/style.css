@@ -110,7 +110,7 @@ main .all_width {
 }
 
 section .content {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 section .content .all_width {
   display: flex;
@@ -128,12 +128,33 @@ section .content:last-child {
   margin-bottom: 0px;
 }
 
-header {
-  position: relative;
+.prototype {
+  text-align: center;
+  margin: 40px 20px;
+  opacity: 0;
 }
-
-dotlottie-player {
-  position: absolute;
+.prototype a {
+  display: inline-flex;
+  border: solid 1px #F1BD4C;
+  border-radius: 30px;
+  padding: 20px 60px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+.prototype a img {
+  display: inline-block;
+  margin-right: 20px;
+  width: 80px;
+}
+.prototype a span {
+  color: #F1BD4C;
+  font-weight: 600;
+  font-size: 25px;
+  letter-spacing: 0.3em;
+}
+.prototype a:hover {
+  opacity: 0.8;
 }
 
 footer {
@@ -316,6 +337,17 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   header p {
     font-size: 20px;
   }
+  .prototype a {
+    padding: 20px 35px;
+  }
+  .prototype a img {
+    width: 60px;
+    margin-right: 12px;
+  }
+  .prototype a span {
+    font-size: 20px;
+    letter-spacing: 0.2em;
+  }
   footer {
     background-image: none;
   }
@@ -368,6 +400,18 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   }
 }
 @media (max-width: 500px) {
+  .prototype a {
+    display: block;
+  }
+  .prototype a img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+  }
+  .prototype a span {
+    display: block;
+    font-size: 25px;
+  }
   .img {
     display: block;
   }
