@@ -119,12 +119,50 @@ header{
     }
 }
 
+@keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1692px, 0, 0); /* The image width */
+    }
+}
+
+@keyframes slide_b {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-1012px, 0, 0); /* The image width */
+    }
+}
+
 .work{
-    background: url("../img/work_bg.png") no-repeat;
-    background-position: bottom center;
+    /* background: url("../img/work_bg.png") no-repeat;
+    background-position: bottom center; */
     background-size: 100%;
     margin-bottom: 60px;
     opacity: 0;
+    overflow: hidden;
+    position: relative;
+    .work_bg_f , .work_bg_b{
+        width: 5076px;
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+    }
+    .work_bg_f{
+        height: 171px;
+        background-position: bottom left;
+        background: url("../img/work_bg_f.png") repeat-x;
+        animation: slide 180s linear infinite;
+    }
+    .work_bg_b{
+        height: 250px;
+        background-position: bottom left;
+        background: url("../img/work_bg_b.png") repeat-x;
+        animation: slide_b 180s linear infinite;
+    }
     .work_title{
         color: #A7CBD5;
         font-size: 36px;
@@ -418,9 +456,20 @@ header{
             width: calc( ( 100% - 80px) / 3 );
             .illus_in_pic{
                 margin-bottom: 12px;
+                border-radius: 24px;
+                overflow: hidden;
+                max-height: 306.66px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 img{
                     width: 100%;
-                    border-radius: 24px;
+                    transition: all .5s;
+                }
+                &:hover{
+                    img{
+                        width: 110%;
+                    }
                 }
             }
             .illus_in_text{

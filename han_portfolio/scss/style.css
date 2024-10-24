@@ -115,12 +115,48 @@ header .h_right .h_skill span:last-child {
   margin-right: 0px;
 }
 
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1692px, 0, 0); /* The image width */
+  }
+}
+@keyframes slide_b {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1012px, 0, 0); /* The image width */
+  }
+}
 .work {
-  background: url("../img/work_bg.png") no-repeat;
-  background-position: bottom center;
+  /* background: url("../img/work_bg.png") no-repeat;
+  background-position: bottom center; */
   background-size: 100%;
   margin-bottom: 60px;
   opacity: 0;
+  overflow: hidden;
+  position: relative;
+}
+.work .work_bg_f, .work .work_bg_b {
+  width: 5076px;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+}
+.work .work_bg_f {
+  height: 171px;
+  background-position: bottom left;
+  background: url("../img/work_bg_f.png") repeat-x;
+  animation: slide 180s linear infinite;
+}
+.work .work_bg_b {
+  height: 250px;
+  background-position: bottom left;
+  background: url("../img/work_bg_b.png") repeat-x;
+  animation: slide_b 180s linear infinite;
 }
 .work .work_title {
   color: #A7CBD5;
@@ -393,10 +429,19 @@ header .h_right .h_skill span:last-child {
 }
 .illus .illus_in .illus_in_item .illus_in_pic {
   margin-bottom: 12px;
+  border-radius: 24px;
+  overflow: hidden;
+  max-height: 306.66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .illus .illus_in .illus_in_item .illus_in_pic img {
   width: 100%;
-  border-radius: 24px;
+  transition: all 0.5s;
+}
+.illus .illus_in .illus_in_item .illus_in_pic:hover img {
+  width: 110%;
 }
 .illus .illus_in .illus_in_item .illus_in_text {
   text-align: right;
