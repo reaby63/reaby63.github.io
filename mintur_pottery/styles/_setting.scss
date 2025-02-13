@@ -449,6 +449,11 @@ body{
               align-items: center;
               justify-content: center;
               border-bottom: solid 1px #FFE9DF;
+              &.a_decoration{
+                &::before , &::after{
+                  display: none;
+                }
+              }
             }
           }
         }
