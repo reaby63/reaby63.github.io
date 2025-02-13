@@ -1,0 +1,517 @@
+@import '_setting.scss';
+
+/* -----------以下為主要頁面css------------ */
+
+.index{
+  .main_bg_point_01{
+    display: flex;
+    align-items: center;
+    .col-4{
+      padding-right: 67px;
+    }
+    .col-6{
+      display: flex;
+      justify-content: flex-end;
+    }
+    .main_title{
+      margin-bottom: 50px;
+      font-size: $font_size_ML;
+    }
+    .main_contain{
+      height: 217px;
+    }
+    .index_img01{
+      max-height:500px;
+      position: relative;
+      overflow: hidden;
+      img{
+        border-radius: 80px 80px 0px 80px;
+      }
+      span{
+        position: absolute;
+        color: #ffffff;
+        letter-spacing: 2px;
+        font-size: $font_size_S;
+        bottom: 23px;
+        right: 40px;
+      }
+    }
+  }
+  // 第二區
+  .index_02{
+    background-image: url('/img/index/home_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 170px;
+    padding-bottom: 280px;
+    position: relative;
+    .home_bg_bottom{
+      position: absolute;
+      bottom: 0px;
+    }
+    .col-10{
+      display: flex;
+      justify-content: space-between;
+    }
+    .index_home{
+      position: relative;
+      width: 18%;
+      z-index: 2;
+      img{
+        overflow: hidden;
+        border-radius: 40px;
+        min-height: 25em;
+      }
+      .home_text , .home_dec{
+        position: absolute;
+        border-radius:initial;
+      }
+      .home_text{
+          display: inline-block;
+          width: 1em;
+          color: #ffffff;
+          font-size: $font_size_S;
+          font-weight: 400;
+          right: 15px;
+          span{
+            display: inline-block;
+            height: 20px;
+            width: 1em;
+          }
+      }
+    }
+    .home_01{
+      .home_text{
+        bottom: 35px;
+      }
+      .home_dec{
+        bottom: -184px;
+        right: 36px;
+        width: 99px;
+      }
+    }
+    .home_02{
+      .home_text{
+        top: 130px;
+      }
+      .home_dec{
+        top: -131px;
+        right: -22px;
+        width: 104px;
+      }
+    }
+    .home_03{
+      .home_text{
+        top: 80px;
+      }
+      .home_dec{
+        bottom: -175px;
+        left: 10px;
+        width: 144px;
+      }
+    }
+    .home_04{
+      .home_text{
+        top: 38px;
+      }
+      .home_dec{
+        top: -157px;
+        left: -12px;
+        width: 99px;
+      }
+    }
+    .home_02 , .home_04{
+      top: 109px;
+    }
+  }
+  // 第三區
+  .index_03{
+    padding-top: 43px;
+    .home_05{
+      padding-right: 50px;
+      img{
+        border-radius: 40px;
+        overflow: hidden;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// 三四混和區
+.index_03 , .index_04{
+  .main_title{
+    font-size: $font_size_M;
+    margin-bottom: 34px;
+    img{
+      width: 33px;
+    }
+  }
+  .main_contain{
+    span{
+      display: inline-block;
+      margin-bottom: 12px;
+      &:last-child{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+// 第四區
+.index_04{
+  padding-top: 110px;
+  position: relative;
+  margin-bottom: 155px;
+  .index_04_l{
+    padding-right: 50px;
+  }
+  .index_04_r{
+    img{
+      border-radius: 40px;
+      overflow: hidden;
+    }
+    .index_04_rtop{
+      margin-bottom: 38px;
+    }
+    .index_04_rbot{
+      display: flex;
+      justify-content: space-between;
+      span{
+        width: calc( (100% - 80px) /3 );
+      }
+    }
+  }
+  .index_04bg_r,.index_04bg_l{
+    position: absolute;
+    z-index: -999;
+    width: 267px;
+  }
+  .index_04bg_r{
+    top: -90px;
+    right: 0px;
+  }
+  .index_04bg_l{
+    bottom: -12px;
+    left: 0px;
+  }
+}
+
+// 茗陶藝品
+.product_title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font_size_M;
+  color: $main_color;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  .product_title_l , .product_title_r{
+    display: inline-block;
+    img{
+      width: 33px;
+    }
+  }
+  .product_title_l{
+    transform: scaleX(-1);
+    margin-right: 10px;
+  }
+  .product_title_r{
+    margin-left: 10px;
+  }
+}
+.product{
+  background-image: url('/img/product/pro_bg.jpg');
+  padding-top: 100px;
+  padding-bottom: 90px;
+  .product_content{
+    text-align: center;
+    margin-bottom: 40px;
+    color: $font_color;
+    span{
+      display: block;
+      margin-bottom: 12px;
+    }
+  }
+  .product_list{
+    box-sizing: border-box;
+    display: inline-table;
+    a{
+      display: inline-block;
+      width: calc( (100% - 108px) / 4 );
+      margin-right: 36px;
+      text-align: center;
+      font-weight: 500;
+      margin-bottom: 46px;
+      &:nth-child(4n){
+        margin-right: 0px;
+      }
+      .pro_img{
+        margin-bottom: 16px;
+      }
+      .pro_title{
+        font-size: $font_size_S;
+        color: $font_color;
+        margin-bottom: 4px;
+      }
+      .pro_money{
+        font-size: $font_size_XS;
+        color: $main_color;
+      }
+    }
+  }
+  .main_button{
+    justify-content: center;
+  }
+}
+
+// 交通資訊
+.traffic{
+  margin-top: 100px;
+  padding-bottom: 122px;
+  .main_title{
+    margin-bottom: 45px;
+    font-size: $font_size_M;
+    img{
+      width: 33px;
+    }
+  }
+  .traffic_list{
+    font-size: $font_size_S;
+    color: $font_color;
+    margin-bottom: 20px;
+    .traffic_list_title{
+      font-weight: 600;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      letter-spacing: 2px;
+      &::before{
+        content: "";
+        display: inline-block;
+        position: relative;
+        background-color: $font_color;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        top: -4px;
+        margin-right: 8px;
+
+      }
+    }
+    .traffic_list_con{
+      display: inline-block;
+      width: calc(100% - 7em - 67px);
+      span{
+        color: $main_color;
+      }
+      img{
+        display: inline-block;
+        width: 6px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+// RWD開始
+@media(max-width:768px){
+  header{
+    overflow: hidden;
+    .all_width .index_header_title{
+      left: 0px;
+      h6{
+        font-size: 28px;
+      }
+      p{
+        font-size: 18px;
+      }
+    }
+    .header-img{
+      width: auto;
+      max-width: initial;
+      height: 360px;
+    }
+    .col-10{
+      width: calc(100% - 28px - 28px);
+    }
+  }
+  // 茗陶故事
+  .index{
+    .main_bg_point_01{
+      .col-1{
+        display: none;
+      }
+      .main_bg_01 , .main_bg_02{
+        width: 220px;
+      }
+      .col-4{
+        width: 100%;
+        padding-right: $rwd_padding;
+        padding-left: $rwd_padding;
+        margin-bottom: 40px;
+      }
+      .index_img01{
+        display: none;
+      }
+    }
+    // 裝飾格
+    .index_02{
+      display: block;
+      padding-left: $rwd_padding;
+      padding-right: $rwd_padding;
+      .col-1{
+        display: none;
+      }
+      .col-10{
+        display: block;
+        width: 100%;
+        padding: 0px;
+        .index_home{
+          display: inline-block;
+          width: calc((100% - 37px)/2);
+          margin-right: 32px;
+          &:nth-child(2n){
+            margin-right: 0;
+          }
+          &:first-child{
+            margin-bottom: 48px;
+          }
+          img{
+            min-height: auto;
+          }
+        }
+      }
+      .home_02 .home_text{
+        top: 85px;
+      }
+      .home_02, .home_04{
+        top: 58px;
+      }
+      .home_01 .home_dec{
+        bottom: -11px;
+      }
+      .home_02 .home_dec{
+        top: 0px;
+      }
+      .home_03 .home_dec{
+        bottom: -14px;
+        left: -14px;
+      }
+      .home_04 .home_dec{
+        top: 20px;
+        left: -15px;
+      }
+    }
+    // 體驗陶藝
+    .index_03{
+      display: block;
+      .row{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+      }
+      .col-1{
+        display: none;
+      }
+      .col-5{
+        width: 100%;
+        padding-left: $rwd_padding;
+        padding-right: $rwd_padding;
+      }
+      .home_05{
+        text-align: center;
+        padding-right: $rwd_padding;
+        order: 1;
+        margin-top: 40px;
+      }
+    }
+  // 茗陶美食
+  .index_04{
+    display: block;
+    margin-bottom: 100px;
+    .col-1{
+      display: none;
+    }
+    .index_04_l{
+      padding-left: $rwd_padding;
+      padding-right: $rwd_padding;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    .index_04_r{
+      padding-left: $rwd_padding;
+      padding-right: $rwd_padding;
+      width: 100%;
+      .index_04_rtop{
+        max-height: 180px;
+        overflow: hidden;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        img{
+          height: 100%;
+        }
+      }
+      .index_04_rbot{
+        span{
+          width: calc((100% - 40px) / 3);
+        }
+      }
+    }
+    .index_04bg_l{
+      bottom: -87px;
+    }
+    .index_04bg_r , .index_04bg_l{
+      width: 220px;
+    }
+  }
+  // 名陶藝品
+  .product_title , .product_content{
+    padding-left: $rwd_padding;
+    padding-right: $rwd_padding;
+  }
+  .product{
+    .row{
+      display: block;
+      .col-1{
+        display: none;
+      }
+      .product_list{
+        width: 100%;
+        padding-left: $rwd_padding;
+        padding-right: $rwd_padding;
+        a{
+          width: calc( (100% - 36px) / 2 );
+          &:nth-child(2n)
+          {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+  // 交通資訊
+  .row.traffic{
+    display: block;
+    .col-1{
+      display: none;
+    }
+    .col-6 , .col-4{
+      display: block;
+      width: 100%;
+      padding-left: $rwd_padding;
+      padding-right: $rwd_padding;
+    }
+    .traffic_list{
+      .traffic_list_con{
+        width: calc(100% - 7em - 3px);
+      }
+    }
+  }
+  }
+  
+}

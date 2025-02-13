@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茗陶 ．窯</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"
+        onerror="this.onerror=null;this.href='styles/bootstrap.bundle.min.js';">
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <link rel="icon" href="img/icon.svg">
+</head>
+
+<body>
+
+    <!-- 選單 -->
+    <div class="nav row">
+        <div class="col-1"></div>
+        <span class="nav_bar all_width col-10">
+            <input type="checkbox" id="switch">
+            <label for="switch" class="line" onclick="toggleClasses()">
+                <div class="switch"></div>
+            </label>
+            <ul class="menu" id="targetDiv">
+                <a href="index.html" onclick="toggleClasses(); loadPage(event, 'index.html')" class="nav_index">
+                    茗陶．熬
+                </a>
+                <div> 
+                    <li>
+                        <a href="about.html" onclick="toggleClasses(); loadPage(event, 'about.html')">
+                            茗陶故事
+                        </a>
+                    </li>
+                    <li>
+                        <a href="food.html" onclick="toggleClasses(); loadPage(event, 'food.html')">
+                            茗陶美食
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reserve.html" onclick="toggleClasses(); loadPage(event, 'reserve.html')">
+                            陶藝預約
+                        </a>
+                    </li>
+                    <li>
+                        <a href="new.html" onclick="toggleClasses(); loadPage(event, 'new.html')">
+                            最新消息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html" onclick="toggleClasses(); loadPage(event, 'product.html')">
+                            名陶藝品
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </span>
+        <div class="col-1"></div>
+    </div>
+
+    <header id="header ">
+        <img id="header-img" src="img/banner05.png" alt="茗陶 ．窯">
+        <div class="all_width ">
+            <div class="header_title">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="header_title_img">
+                            <img src="./img/header_title.svg" alt="">
+                        </div>
+                        <div>
+                            <h6>
+                                各式活動 · 豐富體驗
+                            </h6>
+                            <p>
+                                最新消息
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 內容區域 -->
+    <div class="container" id="content">
+        <main>
+            <h2 class="text-center">歡迎來到首頁</h2>
+            <p class="text-center">這是首頁的內容。</p>
+        </main>
+    </div>
+
+    <footer>
+        我世夫特
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        onerror="this.onerror=null;this.src='js/bootstrap.bundle.min.js';" defer></script>
+    <script src="js/index.js"></script>
+    <script src="js/body.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>最新消息</title>
+</head>
+<body>
+    <div id="content">
+        <main>
+            <h2>關於我們</h2>
+            <p>這是關於我們的內容222。</p>
+            <a href="index.html" onclick="history.back(); return false;">🔙 返回列表</a>
+        </main>
+    </div>
+    
+</body>
+</html>
+
+ -->

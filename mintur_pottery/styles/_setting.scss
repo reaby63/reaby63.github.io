@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif+TC:wght@200..900&display=swap');
+
+// 字體大小
+$font_size_XL: 32px;
+$font_size_L: 24px;
+$font_size_ML: 22px;
+$font_size_M: 20px;
+$font_size_S: 16px;
+$font_size_XS:14px;
+
+$main_color: #CC8869;
+$sec_color: #6B915A;
+$font_color:#524D4B;
+
+$rwd_padding: 48px;
+
+// header
+header{
+    position: relative;
+    .all_width{
+      position: relative;
+      .header_title{
+        display: block;
+        position: absolute;
+        top: calc(-103px - 34px);
+        color: #ffffff;
+        width: 100%;
+        .col-10{
+            display: flex;
+            .header_title_img{
+                margin-right: 17px;
+                margin-top: 2px;
+                img{
+                    height: 76px;
+                }
+            }
+        }
+        h6{
+          font-size: $font_size_XL;
+          padding-bottom: 12px;
+          line-height: 1;
+        }
+        p{
+            font-size: $font_size_M;
+        }
+      }
+      .index_header_title{
+        top: calc(-103px - 108px);
+      }
+    }
+}
+  
+
+
+// 選單與基本設定
+
+*{
+    padding: 0;
+	  margin: 0;
+    font-family: "Noto Serif TC", serif;
+    font-style: normal;
+    line-height: 28.8px;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+ul,li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.a_decoration{
+    position: relative;
+    &::after , &::before{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        border-radius: 20px;
+        top: calc(1.5em + 6px);
+        height: 2px;
+        background-color: $main_color;
+        z-index: 99;
+    }
+    &::before{
+        width: 65px;
+        left: 0px;
+    }
+    &::after{
+        width: 2px;
+        right: 2px;
+    }
+}
+
+.all_width_p{
+  padding: 0px 20px;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+.container{
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.main_title{
+    display: flex;
+    align-items: center;
+    color: $main_color;
+    font-size: $font_size_L;
+    font-weight: bold;
+    letter-spacing: 1px;
+    span{
+        display: inline-flex;
+    }
+    img{
+        width: 42px;
+        margin-left: 16px;
+    }
+}
+
+.main_contain{
+    color: $font_color;
+    font-size: $font_size_S;
+    letter-spacing: 1px;
+}
+
+.main_button{
+    display: flex;
+    justify-content: flex-end;
+    a{
+        display: inline-block;
+        color: $main_color;
+        font-size: $font_size_S;
+        letter-spacing: 2px;
+    }
+}
+
+.space{
+  display: inline-block;
+  width: 1em;
+}
+
+.flex_a_center{
+  align-items: center;
+}
+
+.pr-0{
+  padding-right: 0px;
+}
+
+// 背景圖
+.main_bg_point_01{
+  position: relative;
+  padding-top: 154px;
+  .main_bg_01{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -999;
+    width: 267px;
+  }
+  .main_bg_02{
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    z-index: -999;
+    width: 267px;
+  }
+}
+        
+/* 導覽列 */
+.nav {
+    z-index: 9999;
+    position: fixed;
+    width: 100vw;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease-in-out;
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .nav_index{
+      display: inline-block;
+    }
+    .nav_bar{
+      display: block;
+      // width: 100%;
+      /* 隱藏 checkbox */
+      input {
+        display: none;
+      }
+  
+      /* 漢堡按鈕 */
+      .line{
+        right: 34px;
+        top: 24px;
+        width: 20px;
+        height: 20px;
+        background: #775343;
+        cursor: pointer;
+        display: block;
+        padding: 16px;
+        position: fixed;
+        z-index: 9999;
+        border: solid 1.5px #ffffff;
+        border-radius: 8px;
+        .switch , .switch::before , .switch::after{
+          background-color: #ffffff;
+          content: '';
+          display: block;
+          height: 3px;
+          position: absolute;
+          transition: background-color ease .3s, top ease .3s .3s, transform ease .3s;
+          width: 23px;
+        }
+        .switch {
+          left: 5px;
+          top: 15px;
+          &::before {
+            top: -9px;
+          }
+          &::after {
+            top: 9px;
+          }
+        }
+      }
+  
+      /* menu*/
+      .menu {
+        clear: both;
+        li {
+          text-align: center;
+          display: inline-block;
+          a {
+            display: block;
+            text-align: center;
+            color: brown;
+            font-size: 14px;
+            letter-spacing: 3px;
+            position: relative;
+              &::after , &::before{
+                content: "";
+                display: inline-block;
+                position: absolute;
+                border-radius: 20px;
+                top: 44px;
+                height: 2px;
+                background-color: transparent;
+                z-index: 99;
+                opacity: 0;
+                transition: all 0.5s;
+              }
+              &::before{
+                width: 59px;
+                left: 19px;
+              }
+              &::after{
+                  width: 2px;
+                  right: 23px;
+              }
+            span{
+              display: block;
+            }
+            &:hover , &:focus{
+              position: relative;
+                &::after , &::before{
+                    background-color: #ffffff;
+                    opacity: 1;
+                }
+              .nav_c{
+                display: none;
+              }
+              .nav_uc{
+                display: block;
+              }
+            }
+            &.a_decoration{
+              &::after , &::before{
+                background-color: #ffffff;
+                top: 44px;
+                opacity: 1;
+              }
+              &::before{
+                width: 59px;
+                left: 19px;
+              }
+              &::after{
+                width: 2px;
+                right: 23px;
+              }
+            }
+          }
+        }
+      }
+  
+      /* 下拉選單效果 */
+      .menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: .2s; /* 動畫秒數 */
+      }
+  
+      input:checked ~ .menu {
+        max-height: fit-content;
+        background-color: transparent;
+        li{
+          // display: inline-block;
+          padding: 0px;
+        }
+      }
+    }
+  }
+  
+  /* 點選選單變叉叉 */
+  #switch:checked + .line .switch {
+    background: transparent !important;
+  }
+  #switch:checked + .line .switch::before {
+    transform: rotate(45deg) !important;
+  }
+  
+  #switch:checked + .line .switch::after {
+      transform: rotate(-45deg) !important;
+  }
+  
+  #switch:checked + .line .switch::before,
+  #switch:checked + .line .switch::after {
+      top: 0 !important;
+      transition: top ease .3s, transform ease .3s .3s !important;
+  }
+  
+  #switch:checked + .line{
+    border-color: rgba(255, 255, 255, 0);
+    transition: all .5s;
+  }
+
+// 滑動後加入底色
+.nav.scrolled{
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px #ececec;
+  .nav_bar .menu div li a , .nav_bar .menu .nav_index{
+    color: #945B41;
+  }
+  .nav_bar .menu div li a:hover, .nav_bar .menu div li a:focus{
+    color: $main_color;
+  }
+  .nav_bar .menu li a:hover::after, .nav_bar .menu li a:hover::before, .nav_bar .menu li a:focus::after, .nav_bar .menu li a:focus::before{
+    background-color: $main_color;
+  }
+  .nav_bar .menu li a.a_decoration::before, .nav_bar .menu li a.a_decoration::after{
+    background-color: #945B41;
+  }
+  .nav_bar .menu li a.a_decoration:hover{
+    &::before , &::after{
+      background-color: $main_color;
+    }
+  }
+}
+  
+  
+@media screen and (min-width: 768px) {
+    // 下拉選單
+    .nav .nav_bar{
+      .line {
+        display: none;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        clear: none;
+        max-height: calc(4em + 4px + 32px);
+        background-color: rgba(255, 255, 255, 0);
+        .nav_index{
+          // padding-left: 20px;
+          color: #ffffff;
+        }
+        div{
+          text-align: center;
+          li{
+            a{
+              padding: 16px 20px;
+              color: #ffffff;
+            }
+            &:last-child{
+              a{
+                // padding-right: 0px;
+              }
+            }
+            
+          }
+        }
+      }
+    }
+}
+
+@media(max-width:768px){
+    .all_width{
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    // 選單
+    .nav{
+      position: static;
+      width: 100%;
+      .col-1{
+        display: none;
+      }
+      .col-10{
+        width: 100%;
+      }
+      .nav_bar{
+        .menu{
+          height: 0px;
+          position: fixed;
+          top: 0px;
+          left: 0;
+          width: 100%;
+          transition: all .5s;
+          padding-top: 0px !important;
+          .all_width{
+            padding: 0px;
+          }
+          li{
+            background-color: #ffffff;
+            padding: 0px 24px !important;
+            transition: all .2s;
+            a{
+              padding: 24px 0px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-bottom: solid 1px #FFE9DF;
+            }
+          }
+        }
+        // input:checked ~ .menu {
+        //   display: block;
+        //   max-height: fit-content;
+        //   background-color: rgba(41 , 15 , 3 , .5);
+        //   z-index: 1;
+        //   padding: 12px 0px;
+        //   height: 100vh;
+        //   li{
+        //     display: block;
+        //   }
+        // }
+        .menu_active  , .menu_active_over{
+            display: block;
+            max-height: fit-content;
+            background-color: rgba(41 , 15 , 3 , .5);
+            z-index: 1;
+            padding: 0px;
+            height: 100vh;
+            li{
+              display: block;
+            }
+        }
+        .menu_active_over{
+            height: 0vh;
+        }
+      }
+    }
+}
+
+// 網頁載入特效
+@keyframes fadeIn{
+  0%  {
+    opacity: 0;
+  }
+  20%  {
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
+
+.fade-in{
+  animation: fadeIn 1s ease-in-out;
+}
+
+// RWD共同效果
+@media(max-width:768px){
+  .col-1{
+    width: 28px;
+  }
+}

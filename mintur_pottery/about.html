@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茗陶 ．窯</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"
+        onerror="this.onerror=null;this.href='styles/bootstrap.bundle.min.js';">
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <link rel="icon" href="img/icon.svg">
+</head>
+
+<body>
+
+    <!-- 選單 -->
+    <div class="nav row">
+        <div class="col-1"></div>
+        <span class="nav_bar all_width col-10">
+            <input type="checkbox" id="switch">
+            <label for="switch" class="line" onclick="toggleClasses()">
+                <div class="switch"></div>
+            </label>
+            <ul class="menu" id="targetDiv">
+                <a href="index.html" onclick="toggleClasses(); loadPage(event, 'index.html')" class="nav_index">
+                    茗陶．熬
+                </a>
+                <div> 
+                    <li>
+                        <a href="about.html" onclick="toggleClasses(); loadPage(event, 'about.html')" class="a_decoration">
+                            茗陶故事
+                        </a>
+                    </li>
+                    <li>
+                        <a href="food.html" onclick="toggleClasses(); loadPage(event, 'food.html')">
+                            茗陶美食
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reserve.html" onclick="toggleClasses(); loadPage(event, 'reserve.html')">
+                            陶藝預約
+                        </a>
+                    </li>
+                    <li>
+                        <a href="new.html" onclick="toggleClasses(); loadPage(event, 'new.html')">
+                            最新消息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html" onclick="toggleClasses(); loadPage(event, 'product.html')">
+                            名陶藝品
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </span>
+        <div class="col-1"></div>
+    </div>
+
+    <header id="header ">
+        <img id="header-img" src="img/banner02.png" alt="茗陶 ．窯">
+        <div class="all_width ">
+            <div class="header_title">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="header_title_img">
+                            <img src="./img/header_title.svg" alt="">
+                        </div>
+                        <div>
+                            <h6>
+                                以陶傳承 · 療癒心靈
+                            </h6>
+                            <p>
+                                茗陶故事
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 內容區域 -->
+    <div class="container" id="content">
+        <main class="same_top about">
+            <div class="index">
+                <div class="row main_bg_point_01">
+                    <div class="main_bg_01">
+                        <img src="/img/bg_decora_01_r.png" alt="">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <div class="main_title">
+                            <span>
+                                茗陶・匠心之作
+                            </span>
+                            <span>
+                                <img src="./img/brown_cloud.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="main_contain">
+                            我們將傳統陶窯技藝與現代藝術美感結合，讓每一件作品都訴說著自己的故事。在雙手塑形的過程中，陶土不僅成型，更凝聚了文化與情感，與你共度每一刻寧靜時光。
+                        </div>
+                    </div>
+                    <div class="col-6 index_img01">
+                        <img src="./img/index/home.png" alt="">
+                        <span>茗陶．吉祥陶貓</span>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="main_bg_02">
+                        <img src="/img/bg_decora_01_l.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="about_02">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-6 index_img01">
+                        <img src="./img/about/about_02.jpg" alt="">
+                        <span>茗陶．鎮門陶龍</span>
+                    </div>
+                    <div class="col-4">
+                        <div class="main_title">
+                            <span>
+                                古韻陶窯・時間淬鍊的美學
+                            </span>
+                            <span>
+                                <img src="./img/brown_cloud.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="main_contain">
+                            每一次燒製，都是與自然的對話，每一件作品，都蘊含著時間沉澱後的質感與生命力。我們在這裡，延續傳統的溫度，也為每一位來訪者提供一場關於陶藝的深度體驗。
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+            <div class="index about_03_b">
+                <div class="row main_bg_point_01">
+                    <div class="main_bg_01">
+                        <img src="/img/bg_decora_01_r.png" alt="">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <div class="main_title">
+                            <span>
+                                匠藝之美・生活的藝術
+                            </span>
+                            <span>
+                                <img src="./img/brown_cloud.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="main_contain">
+                            陶藝，不只是工藝品，更是能融入生活的藝術。無論是一個樸實的杯碗，或是一座細膩的裝飾雕刻，都是職人心血與匠心的展現。<br> 讓陶器成為日常的一部分，在一杯茶、一頓飯、一個靜謐的午後，感受來自大地與雙手的溫潤質感。
+                        </div>
+                    </div>
+                    <div class="col-6 index_img01">
+                        <img src="./img/about/about_03.jpg" alt="">
+                        <span>燒陶熬</span>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <img src="./img/footer_bg_top.png" alt="" class="footer_bg_top">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-2 footer_title">
+                <div>
+                    茗陶．熬
+                </div>
+                <div>
+                    陶藝 · 創作 · 心靈
+                </div>
+            </div>
+            <div class="col-6 footer_con">
+                <div class="footer_con_l">
+                    <div>
+                        <img src="./img/footer_phone.svg" alt="">
+                        (04) 2277 - 388266
+                    </div>
+                    <div>
+                        <img src="./img/footer_map.svg" alt="">
+                        台中市林森區里世北路3段888號
+                    </div>
+                    <div>
+                        <img src="./img/footer_time.svg" alt="">
+                        上午 08 : 00 ~ 下午 18 : 00 (每週三、四公休)
+                    </div>
+                </div>
+                <div class="footer_con_r">
+                    <a href="reserve.html" target="_blank">
+                        預約服務
+                    </a>
+                    <a href="product.html" target="_blank">
+                        訂購陶藝
+                    </a>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <img src="./img/footer_bg_down.png" alt="" class="footer_bg_down">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        onerror="this.onerror=null;this.src='js/bootstrap.bundle.min.js';" defer></script>
+    <script src="js/index.js"></script>
+    <script src="js/body.js"></script>
+</body>
+
+</html>

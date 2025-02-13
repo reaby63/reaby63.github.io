@@ -1,0 +1,8 @@
+// @use 'setting' as *; //加入as*使用變數時才不用 setting.$font-size
+// @use 'index';
+
+@import '_setting.scss';
+@import '_footer.scss';
+@import '_index.scss';
+@import '_about.scss';
+@import '_food.scss';

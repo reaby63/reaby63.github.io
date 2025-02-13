@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>茗陶 ．窯</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"
+        onerror="this.onerror=null;this.href='styles/bootstrap.bundle.min.js';">
+    <link rel="stylesheet" href="styles/css/styles.css">
+    <link rel="icon" href="img/icon.svg">
+</head>
+
+<body>
+    <!-- 選單 -->
+    <div class="nav row">
+        <div class="col-1"></div>
+        <span class="nav_bar all_width col-10">
+            <input type="checkbox" id="switch">
+            <label for="switch" class="line" onclick="toggleClasses()">
+                <div class="switch"></div>
+            </label>
+            <ul class="menu" id="targetDiv">
+                <a href="index.html" onclick="toggleClasses(); loadPage(event, 'index.html')" class="nav_index">
+                    茗陶 ．熬
+                </a>
+                <div> 
+                    <li>
+                        <a href="about.html" onclick="toggleClasses(); loadPage(event, 'about.html')">
+                            茗陶故事
+                        </a>
+                    </li>
+                    <li>
+                        <a href="food.html" onclick="toggleClasses(); loadPage(event, 'food.html')">
+                            茗陶美食
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reserve.html" onclick="toggleClasses(); loadPage(event, 'reserve.html')">
+                            陶藝預約
+                        </a>
+                    </li>
+                    <li>
+                        <a href="new.html" onclick="toggleClasses(); loadPage(event, 'new.html')">
+                            最新消息
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html" onclick="toggleClasses(); loadPage(event, 'product.html')">
+                            名陶藝品
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </span>
+        <div class="col-1 pr-0"></div>
+    </div>
+
+    <header id="header ">
+        <img id="header-img" src="img/banner01.png" alt="茗陶 ．窯" class="header-img">
+        <div class="all_width ">
+            <div class="header_title index_header_title">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="header_title_img">
+                            <img src="./img/header_title.svg" alt="">
+                        </div>
+                        <div>
+                            <h6>
+                                陶藝 · 創作 · 心靈
+                            </h6>
+                            <p>
+                                茗陶．窯
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 內容區域 -->
+    <div class="container" id="content">
+        <main>
+            <div class="index">
+                <div class="row main_bg_point_01">
+                    <div class="main_bg_01">
+                        <img src="/img/bg_decora_01_r.png" alt="">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <div class="main_title">
+                            <span>
+                                茗陶．窯
+                            </span>
+                            <span>
+                                <img src="./img/brown_cloud.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="main_contain">
+                            在這裡，每一件陶藝作品都是獨一無二的藝術創作，將古老的手工藝與現代設計完美結合。無論是精緻的陶瓷器皿，還是富有創意的雕塑，我們都致力於將陶藝的溫暖與美感帶入您的生活。 
+                        </div>
+                        <div class="main_button">
+                            <a href="about.html" class="a_decoration">
+                                更多故事
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 index_img01">
+                        <img src="./img/index/home.png" alt="">
+                        <span>茗陶．吉祥陶貓</span>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="main_bg_02">
+                        <img src="/img/bg_decora_01_l.png" alt="">
+                    </div>
+                </div>
+
+                
+                <div class="row index_02">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div class="index_home home_01">
+                            <img src="./img/index/home_01.png" alt="">
+                            <span class="home_text">
+                                依山傍水<span></span>山靈悠悠
+                            </span>
+                            <img src="./img/index/home_01_r.svg" alt="" class="home_dec">
+                        </div>
+                        <div class="index_home home_02">
+                            <img src="./img/index/home_02.png" alt="">
+                            <span class="home_text">
+                                掬土化藝<span></span>陶冶心靈
+                            </span>
+                            <img src="./img/index/home_02_r.svg" alt="" class="home_dec">
+                        </div>
+                        <div class="index_home home_03">
+                            <img src="./img/index/home_03.png" alt="">
+                            <span class="home_text">
+                                自然恩惠<span></span>化作食俸
+                            </span>
+                            <img src="./img/index/home_03_r.svg" alt="" class="home_dec">
+                        </div>
+                        <div class="index_home home_04">
+                            <img src="./img/index/home_04.png" alt="">
+                            <span class="home_text">
+                                與陶結緣<span></span>發現自我
+                            </span>
+                            <img src="./img/index/home_01_r.svg" alt="" class="home_dec">
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <img src="./img/index/home_bg_bottom.png" alt="" class="home_bg_bottom">
+                </div>
+
+                <div class="row index_03">
+                    <div class="row flex_a_center">
+                        <div class="col-1"></div>
+                        <div class="col-5 home_05">
+                            <img src="./img/index/home_05.jpg" alt="">
+                        </div>
+                        <div class="col-5">
+                            <div class="main_title">
+                                <span>
+                                    手工陶藝
+                                    <span class="space"></span>
+                                    獨特之選
+                                </span>
+                                <span>
+                                    <img src="./img/brown_cloud.svg" alt="">
+                                </span>
+                            </div>
+                            <div class="main_contain">
+                                <span>
+                                    我們邀請您親身體驗手工陶藝的魅力，無論您是初學者還是有經驗的陶藝愛好者，都能在這裡找到屬於自己的創作空間。
+                                </span>
+                                <span>
+                                    從揉泥、拉坯到雕刻、上釉的每一個步驟，體驗陶藝的每一個細節與樂趣。
+                                </span>
+                            </div>
+                            <div class="main_button">
+                                <a href="about.html" class="a_decoration">
+                                    體驗詳情
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="row index_04 flex_a_center">
+                    <div class="index_04bg_r">
+                        <img src="./img/bg_decora_01_r.png" alt="">
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-5 index_04_l">
+                        <div class="main_title">
+                            <span>
+                                回歸自然
+                                <span class="space"></span>
+                                品味原味
+                            </span>
+                            <span>
+                                <img src="./img/brown_cloud.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="main_contain">
+                            <span>
+                                並秉持著簡單而精緻的烹飪方式，讓每一道料理都能充分保留食材的鮮美和營養價值。
+                            </span>
+                            <span>
+                                茗陶自然美食的菜單可能會根據季節和當地的食材變化而調整，力求為顧客提供最佳的飲食體驗。
+                            </span>
+                        </div>
+                        <div class="main_button">
+                            <a href="about.html" class="a_decoration">
+                                美食介紹
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-5 index_04_r">
+                        <div class="index_04_rtop">
+                            <img src="./img/food/food_01.jpg" alt="">
+                        </div>
+                        <div class="index_04_rbot">
+                            <span>
+                                <img src="./img/food/food_03.jpg" alt="">
+                            </span>
+                            <span>
+                                <img src="./img/food/food_04.jpg" alt="">
+                            </span>
+                            <span>
+                                <img src="./img/food/food_02.jpg" alt="">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="index_04bg_l">
+                        <img src="./img/bg_decora_01_l.png" alt="">
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product_title">
+                        <span class="product_title_l">
+                            <img src="./img/brown_cloud.svg" alt="">
+                        </span>
+                        茗陶藝品
+                        <span class="product_title_r">
+                            <img src="./img/brown_cloud.svg" alt="">
+                        </span>
+                    </div>
+                    <div class="product_content">
+                        <span>
+                            陶藝不僅是一種藝術，它是生活的一部分。
+                        </span>
+                        <span>
+                            茗陶提供各式各樣的陶藝作品，陪伴您享受美好生活。
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-10 product_list">
+                            <a href="" target="_blank">
+                                <div class="pro_img">
+                                    <img src="./img/product/pro_01.jpg" alt="">
+                                </div>
+                                <div class="pro_title">
+                                    陶藝茗品
+                                </div>
+                                <div class="pro_money">
+                                    50元
+                                    /
+                                    1入
+                                </div>
+                            </a>
+                            <a href="" target="_blank">
+                                <div class="pro_img">
+                                    <img src="./img/product/pro_02.jpg" alt="">
+                                </div>
+                                <div class="pro_title">
+                                    陶藝茗品
+                                </div>
+                                <div class="pro_money">
+                                    50元
+                                    /
+                                    1入
+                                </div>
+                            </a>
+                            <a href="" target="_blank">
+                                <div class="pro_img">
+                                    <img src="./img/product/pro_03.jpg" alt="">
+                                </div>
+                                <div class="pro_title">
+                                    陶藝茗品
+                                </div>
+                                <div class="pro_money">
+                                    50元
+                                    /
+                                    1入
+                                </div>
+                            </a>
+                            <a href="" target="_blank">
+                                <div class="pro_img">
+                                    <img src="./img/product/pro_04.jpg" alt="">
+                                </div>
+                                <div class="pro_title">
+                                    陶藝茗品
+                                </div>
+                                <div class="pro_money">
+                                    50元
+                                    /
+                                    1入
+                                </div>
+                            </a>
+                            <a href="" target="_blank">
+                                <div class="pro_img">
+                                    <img src="./img/product/pro_05.jpg" alt="">
+                                </div>
+                                <div class="pro_title">
+                                    陶藝茗品
+                                </div>
+                                <div class="pro_money">
+                                    50元
+                                    /
+                                    1入
+                                </div>
+                            </a>
+                            <a href="" target="_blank">
+                                <div class="pro_img">
+                                    <img src="./img/product/pro_06.jpg" alt="">
+                                </div>
+                                <div class="pro_title">
+                                    陶藝茗品
+                                </div>
+                                <div class="pro_money">
+                                    50元
+                                    /
+                                    1入
+                                </div>
+                            </a>
+                            <a href="" target="_blank">
+                                <div class="pro_img">
+                                    <img src="./img/product/pro_07.jpg" alt="">
+                                </div>
+                                <div class="pro_title">
+                                    陶藝茗品
+                                </div>
+                                <div class="pro_money">
+                                    50元
+                                    /
+                                    1入
+                                </div>
+                            </a>
+                            <a href="" target="_blank">
+                                <div class="pro_img">
+                                    <img src="./img/product/pro_08.jpg" alt="">
+                                </div>
+                                <div class="pro_title">
+                                    陶藝茗品
+                                </div>
+                                <div class="pro_money">
+                                    50元
+                                    /
+                                    1入
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                    <div class="main_button">
+                        <a href="product.html" class="a_decoration">
+                            更多陶藝
+                        </a>
+                    </div>
+                </div>
+                <div class="row traffic">
+                    <div class="col-1"></div>
+                    <div class="col-6">
+                        <div class="main_title">
+                            <span>
+                                交通資訊
+                            </span>
+                            <span>
+                                <img src="./img/brown_cloud.svg" alt="">
+                            </span>
+                        </div>
+                        <div class="traffic_list">
+                            <span class="traffic_list_title">
+                                開車前往
+                            </span>
+                            <span class="traffic_list_con">
+                                台中市林森區里世北路3段888號
+                            </span>
+                        </div>
+                        <div class="traffic_list">
+                            <span class="traffic_list_title">
+                                大眾交通
+                            </span>
+                            <span class="traffic_list_con">
+                                由台中火車站，搭乘  <span>「1688號客運」</span> <img src="./img/traffic_arrow.svg" alt="">至<span>「煙花站」</span>下車後，往南沿著<span>「陶窯路」</span>步行2分鐘抵達
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <img src="./img/footer_bg_top.png" alt="" class="footer_bg_top">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-2 footer_title">
+                <div>
+                    茗陶．熬
+                </div>
+                <div>
+                    陶藝 · 創作 · 心靈
+                </div>
+            </div>
+            <div class="col-6 footer_con">
+                <div class="footer_con_l">
+                    <div>
+                        <img src="./img/footer_phone.svg" alt="">(04) 2277 - 388266
+                    </div>
+                    <div>
+                        <img src="./img/footer_map.svg" alt="">台中市林森區里世北路3段888號
+                    </div>
+                    <div>
+                        <img src="./img/footer_time.svg" alt="">上午 08 : 00 ~ 下午 18 : 00 (每週三、四公休)
+                    </div>
+                </div>
+                <div class="footer_con_r">
+                    <a href="reserve.html" target="_blank">
+                        預約服務
+                    </a>
+                    <a href="product.html" target="_blank">
+                        訂購陶藝
+                    </a>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <img src="./img/footer_bg_down.png" alt="" class="footer_bg_down">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        onerror="this.onerror=null;this.src='js/bootstrap.bundle.min.js';" defer></script>
+    <script src="js/index.js"></script>
+    <script src="js/body.js"></script>
+</body>
+
+</html>

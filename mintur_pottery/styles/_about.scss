@@ -1,0 +1,94 @@
+.same_top{
+    .index{
+        .main_bg_point_01{
+            .main_bg_02{
+                bottom: -110px;
+            }
+            .col-6{
+                padding-left: 83px;
+            }
+            .col-4{
+                padding-right: calc(var(--bs-gutter-x) * .5);
+            }
+            .main_contain{
+                height: auto;
+            }
+        }
+    }
+}
+.about{
+    .about_02{
+        margin-top: 180px;
+        .row{
+            align-items: center;
+        }
+        .col-6{
+            position: relative;
+            padding-right: 83px;
+            span{
+                position: absolute;
+                color: #ffffff;
+                letter-spacing: 2px;
+                font-size: 16px;
+                bottom: 23px;
+                left: 40px;
+            }
+            img{
+                border-radius: 80px 80px 80px 0px;
+            }
+        }
+        .main_title{
+            margin-bottom: 50px;
+        }
+    }
+    
+    .about_03_b{
+        margin-bottom: 190px;
+    }
+}
+
+// RWD開始
+@media(max-width:768px){
+    .same_top{
+        .index{
+            .main_bg_point_01{
+                .col-4{
+                    padding-right: $rwd_padding;
+                }
+                .index_img01{
+                    display: block;
+                    width: 100%;
+                    padding-left: $rwd_padding;
+                    padding-right: $rwd_padding;
+                    span{
+                        right: 70px;
+                    }
+                }
+            } 
+        }
+    }
+    .about{
+        .about_02{
+            margin-top: 154px;
+            .row{
+                .col-1{
+                    display: none;
+                }
+                .col-6 , .col-4{
+                    width: 100%;
+                    padding-left: $rwd_padding;
+                    padding-right: $rwd_padding;
+                }
+                .col-4{
+                    margin-bottom: 40px;
+                }
+                .col-6{
+                    order: 2;
+                    span{
+                        left: 70px;
+                    }
+                }
+            }
+        }
+    }
+}

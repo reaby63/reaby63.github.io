@@ -1,0 +1,112 @@
+
+footer{
+    background-color: $main_color;
+    background-image: url('/img/footer_bg.png');
+    padding: 68px 0px;
+    color: #ffffff;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: $font_size_S;
+    .row{
+        align-items: center;
+    }
+    .footer_bg_top , .footer_bg_down{
+        position: absolute;
+    }
+    .footer_bg_top{
+        width: 299px;
+        left: 0px;
+        top: -122px;
+        z-index: -9;
+    }
+    .footer_bg_down{
+        width: 283px;
+        right: 0px;
+        bottom: 0px;
+    }
+    .footer_title{
+        div{
+            &:first-child{
+                font-size: $font_size_ML;
+                margin-bottom: 12px;
+            }
+        }
+    }
+    .footer_con{
+        display: inline-flex;
+        justify-content: space-between;
+        .footer_con_l{
+            div{
+                margin-bottom: 16px;
+                img{
+                    width: 14px;
+                    margin-right: 8px;
+                    display: inline-block;
+                    position: relative;
+                    top: -2px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            
+        }
+        .footer_con_r{
+            a{
+                display: block;
+                border: solid 1px #ffffff;
+                padding: 6px 22px;
+                letter-spacing: 2px;
+                font-weight: 500;
+                color: #ffffff;
+                &:first-child{
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}
+
+
+// RWD開始
+@media(max-width:768px){
+    footer{
+        .footer_bg_top{
+            width: 226px;
+            top: -92px;
+        }
+        .row{
+            display: block;
+            .col-2{
+                display: none;
+            }
+            .footer_title{
+                display: block;
+                width: 100%;
+                padding: 0px $rwd_padding;
+                text-align: center;
+                margin-bottom: 32px;
+            }
+            .footer_con{
+                display: block;
+                width: 100%;
+                padding: 0px $rwd_padding;
+                .footer_con_l{
+                    margin-bottom: 32px;
+                    img{
+                        margin-right: 4px;
+                    }
+                }
+                .footer_con_r{
+                    text-align: center;
+                    a{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .footer_bg_down{
+            width: 220px;
+        }
+    }
+}
