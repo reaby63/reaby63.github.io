@@ -60,6 +60,7 @@ header{
     font-family: "Noto Serif TC", serif;
     font-style: normal;
     line-height: 28.8px;
+    letter-spacing: 1px;
 }
 
 body {
@@ -256,12 +257,13 @@ body{
             font-size: 14px;
             letter-spacing: 3px;
             position: relative;
+            font-size: $font_size_S;
               &::after , &::before{
                 content: "";
                 display: inline-block;
                 position: absolute;
                 border-radius: 20px;
-                top: 44px;
+                top: 47px;
                 height: 2px;
                 background-color: transparent;
                 z-index: 99;
@@ -269,8 +271,8 @@ body{
                 transition: all 0.5s;
               }
               &::before{
-                width: 59px;
-                left: 19px;
+                width: 67px;
+                left: 21px;
               }
               &::after{
                   width: 2px;
@@ -295,12 +297,12 @@ body{
             &.a_decoration{
               &::after , &::before{
                 background-color: #ffffff;
-                top: 44px;
+                top: 47px;
                 opacity: 1;
               }
               &::before{
-                width: 59px;
-                left: 19px;
+                width: 67px;
+                left: 21px;
               }
               &::after{
                 width: 2px;

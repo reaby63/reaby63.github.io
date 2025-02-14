@@ -1,0 +1,102 @@
+.reserve{
+    margin-bottom: 113px;
+    .main_title{
+        margin-bottom: 54px;
+    }
+    .reserve_list{
+        .reserve_list_self{
+            margin-right: 58px;
+            width: calc( (100% - 58px - 58px)/3 );
+            display: inline-table;
+            transition: all 0.5s;
+            margin-bottom: 77px;
+            &:nth-child(3n){
+                margin-right: 0;
+            }
+            .reserve_list_img{
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 16px;
+                .reserve_list_title{
+                    display: block;
+                    position: absolute;
+                    color: #ffffff;
+                    font-size: $font_size_M;
+                    font-weight: 500;
+                    z-index: 99;
+                    left: 25px;
+                    bottom: 15px;
+                }
+                .reserve_list_tbg{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    display: block;
+                    width: 100%;
+                    height: 120px;
+                    background: linear-gradient(to top, $main_color 0%, rgba(204, 136, 105, 0) 100%);
+                }
+            }
+            &:hover{
+                opacity: 0.8;
+            }
+            .reserve_list_tag{
+                padding: 0px 11px;
+                color: $sec_color;
+                font-size: $font_size_S;
+                span{
+                    display: inline-block;
+                    vertical-align: top;
+                    width: calc(100% - 14px);
+                    &:first-child{
+                        width: 4px;
+                        height: 4px;
+                        background-color: $sec_color;
+                        border-radius: 50%;
+                        position: relative;
+                        top: 13px;
+                        margin-right: 4px;
+                    }
+                }
+            }
+            .reserve_list_day , .reserve_list_con{
+                padding: 0px 25px;
+                font-size: $font_size_S;
+            }
+            .reserve_list_day{
+                color: $sec_color;
+                margin-bottom: 12px;
+            }
+            .reserve_list_con{
+                color: #ABABAB;
+                display: -webkit-box;
+                -webkit-line-clamp: 2; /* 限制最多顯示 2 行 */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-word;
+            }
+        }
+    }
+}
+
+
+@media(max-width:768px){
+    .reserve{
+        .col-10{
+            width: 100%;
+            padding-right: $rwd_padding;
+            padding-left: $rwd_padding;
+        }
+        .reserve_list{
+            .reserve_list_self{
+                width: calc((100% - 30px) /2 );
+                margin-right: 30px;
+                &:nth-child(2n){
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

@@ -20,22 +20,25 @@
             position: relative;
             .food_02_bg{
                 position: absolute;
-                bottom: -20px;
+                bottom: -68px;
                 width: 268px;
             }
         }
         .food_02_img{
             position: relative;
             z-index: 2;
+            display: inline-flex;
+            align-items: flex-end;
             .food_02_img_tag{
                 position: absolute;
                 top: 49px;
                 color: #ffffff;
                 background-color: $main_color;
-                padding: 16px 24px;
+                padding: 12px 24px;
                 font-weight: 500;
                 border-radius: 8px;
-                font-size: $font_size_M;
+                font-size: $font_size_S;
+                letter-spacing: 2px;
             }
         }
         .food_02_text{
@@ -45,6 +48,7 @@
             margin-top: 49px;
             background-color: #ffffff;
             z-index: 2;
+            padding: 60px 34px;
             div{
                 width: 100%;
             }
@@ -52,15 +56,20 @@
         // 左右切換
         .food_02_self{
             &:nth-child(1n){
+                margin-bottom: 100px;
                 .food_02_img{
                     padding-right: 0;
                     padding-left: calc(var(--bs-gutter-x)* .5* 2 + 23px);
                     .food_02_img_tag{
-                        left: 13px;
+                        left: 20px;
                     }
                     img{
                         border-radius: 40px 40px 0px 40px;
                     }
+                }
+                .food_02_text{
+                    border-radius: 0px 20px 20px 0px;
+                    margin-right: 20px;
                 }
                 .food_02_bg{
                     right: 0;
@@ -68,20 +77,33 @@
             }
             &:nth-child(2n){
                 .food_02_img{
-                    order: 2;
+                    order: 3;
                     padding-left: 0;
                     padding-right: calc(var(--bs-gutter-x)* .5* 2 + 23px);
                     .food_02_img_tag{
-                        right: 13px;
+                        right: 20px;
+                        left: auto;
                     }
                     img{
                         border-radius: 40px 40px 40px 0px;
                     }
                 }
+                .food_02_text{
+                    order: 1;
+                    margin-left: 20px;
+                    margin-right: 0;
+                    border-radius: 20px 0px 0px 20px;
+                }
                 .food_02_bg{
                     left: 0;
                     transform: scaleX(-1);
                 }
+                .order_04{
+                    order: 4;
+                }
+            }
+            &:last-child{
+                margin-bottom: 0;
             }
         }
     }
@@ -135,4 +157,9 @@
             }
         }
     }
+}
+
+
+@media(max-width:768px){
+    
 }
