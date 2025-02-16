@@ -59,8 +59,14 @@ footer{
                 letter-spacing: 2px;
                 font-weight: 500;
                 color: #ffffff;
+                transition: all 0.5s;
+                background-color: transparent;
                 &:first-child{
                     margin-bottom: 16px;
+                }
+                &:hover{
+                    background-color: #ffffff;
+                    color: $main_color;
                 }
             }
         }

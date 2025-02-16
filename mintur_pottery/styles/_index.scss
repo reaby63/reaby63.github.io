@@ -244,11 +244,14 @@
       text-align: center;
       font-weight: 500;
       margin-bottom: 46px;
+      vertical-align: top;
       &:nth-child(4n){
         margin-right: 0px;
       }
       .pro_img{
         margin-bottom: 16px;
+        border-radius: 10px;
+        overflow: hidden;
       }
       .pro_title{
         font-size: $font_size_S;
@@ -319,6 +322,9 @@
 @media(max-width:768px){
   header{
     overflow: hidden;
+    .all_width .header_title{
+      left: 0;
+    }
     .all_width .index_header_title{
       left: 0px;
       h6{
@@ -333,8 +339,13 @@
       max-width: initial;
       height: 360px;
     }
+    .col-1{
+      display: none;
+    }
     .col-10{
-      width: calc(100% - 28px - 28px);
+      width: 100%;
+      padding-right: $rwd_padding;
+      padding-left: $rwd_padding;
     }
   }
   // 茗陶故事
@@ -370,7 +381,7 @@
         padding: 0px;
         .index_home{
           display: inline-block;
-          width: calc((100% - 37px)/2);
+          width: calc((100% - $rwd_padding)/2);
           margin-right: 32px;
           &:nth-child(2n){
             margin-right: 0;
@@ -512,6 +523,87 @@
       }
     }
   }
+  }
+  
+}
+
+@media(max-width:500px){
+  header{
+    #header-img{
+      height: 350px;
+      width: auto;
+      max-width: max-content;
+    }
+    .all_width .header_title h6{
+      font-size: 28px;
+    }
+    .all_width .header_title .col-10 .header_title_img{
+      margin-right: 12px;
+      margin-top: -14px;
+      img{
+        height: 100%;
+      }
+    }
+  }
+  .index{
+    .index_02{
+      padding-top: 90px;
+      padding-bottom: 100px;
+      .col-10{
+        .index_home{
+          display: flex;
+          width: 100%;
+          margin-right: 0px;
+          border-radius: 40px;
+          align-items: center;
+          margin-bottom: 40px;
+          height: 180px;
+          overflow: hidden;
+          .home_text{
+            width: auto;
+            right: auto;
+            left: 30px;
+            bottom: 35px;
+          }
+        }
+      }
+      .home_02 .home_text , .home_03 .home_text,.home_04 .home_text{
+        top: auto;
+      }
+      .home_02,.home_04{
+        top: auto;
+      }
+      .home_01 .home_dec{
+        bottom: auto;
+        right: 30px;
+        top: 16px;
+      }
+      .home_02 .home_dec{
+        right: 13px;
+        top: 16px;
+      }
+      .home_03 .home_dec {
+        bottom: auto;
+        left: auto;
+        right: 4px;
+        top: 14px;
+      }
+      .home_04 .home_dec {
+        top: 20px;
+        left: auto;
+        right: 20px;
+      }
+    }
+    .product{
+      .row{
+        .product_list{
+          a{
+            width: 100%;
+            margin-right: 0px;
+          }
+        } 
+      } 
+    } 
   }
   
 }

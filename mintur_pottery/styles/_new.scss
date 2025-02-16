@@ -1,0 +1,109 @@
+.new{
+    .new_list{
+        a{
+            display: inline-table;
+            margin-right: 57px;
+            width: calc((100% - 57px - 57px)/3);
+            margin-bottom: 90px;
+            transition: all 0.5s;
+            &:nth-child(3n){
+                margin-right: 0;
+            }
+            span{
+                display: block;
+            }
+            .new_list_img{
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 29px;
+            }
+            .new_list_in{
+                font-size: $font_size_S;
+                color: #ABABAB;
+                padding: 0 18px;
+                .new_list_title{
+                    font-size: $font_size_M;
+                    color: $font_color;
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                }
+                .new_list_date{
+                    color: $main_color;
+                    margin-bottom: 8px;
+                }
+                .new_list_con{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; /* 限制最多顯示 2 行 */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    word-break: break-word;
+                    width: 100%;
+                }
+            }
+            &:hover{
+                opacity: 0.8;
+                .new_list_in{
+                    color: $main_color;
+                    .new_list_title{
+                        color: $main_color;
+                    }
+                }
+            }
+        }
+    }
+    .main_bg_point_01{
+        .main_bg_02{
+            bottom: auto;
+            top: 460px;
+        }
+        .main_bg_03{
+            position: absolute;
+            bottom: -35px;
+            right: 0px;
+            width: 267px;
+        }
+    }
+    .pagination{
+        margin-bottom: 150px;
+    }
+}
+
+
+
+@media(max-width:768px){
+    .new{
+        .col-1{
+            display: none;
+        }
+        .new_list{
+            width: 100%;
+            padding-right: $rwd_padding;
+            padding-left: $rwd_padding;
+            a{
+                margin-right: 40px;
+                width: calc((100% - 40px) / 2);
+                &:nth-child(3n){
+                    margin-right: 40px;
+                }
+                &:nth-child(2n){
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:400px){
+    .new{
+        .new_list{
+            a{
+                margin-right: 0px;
+                width: 100%;
+                &:nth-child(3n){
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}
