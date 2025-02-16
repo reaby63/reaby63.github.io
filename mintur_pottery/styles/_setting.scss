@@ -61,6 +61,7 @@ header{
     font-style: normal;
     line-height: 28.8px;
     letter-spacing: 1px;
+    box-sizing: border-box;
 }
 
 body {
@@ -113,6 +114,7 @@ img{
 body{
   animation-name: fadeIn;
   animation-duration: 2s;
+  overflow-x: hidden;
 }
 
 .container{
