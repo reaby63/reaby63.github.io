@@ -496,10 +496,11 @@ body{
         .menu_active  , .menu_active_over{
             display: block;
             max-height: fit-content;
-            background-color: rgba(41 , 15 , 3 , .5);
+            background-color: rgb(255 255 255 / 50%) !important;
             z-index: 1;
             padding: 0px;
             height: 100vh;
+            max-height: 100vh !important;
             li{
               display: block;
             }
@@ -571,5 +572,10 @@ body{
   }
   header{
     margin-top: 70px;
+  }
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
   }
 }

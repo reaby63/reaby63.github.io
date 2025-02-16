@@ -442,10 +442,11 @@ body {
     display: block;
     max-height: -moz-fit-content;
     max-height: fit-content;
-    background-color: rgba(41, 15, 3, 0.5);
+    background-color: rgba(255, 255, 255, 0.5) !important;
     z-index: 1;
     padding: 0px;
     height: 100vh;
+    max-height: 100vh !important;
   }
   .nav .nav_bar .menu_active li, .nav .nav_bar .menu_active_over li {
     display: block;
@@ -508,6 +509,11 @@ body {
   }
   header {
     margin-top: 70px;
+  }
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
   }
 }
 footer {
@@ -576,6 +582,9 @@ footer .footer_con .footer_con_r a:hover {
 }
 
 @media (max-width: 768px) {
+  footer {
+    overflow-x: hidden;
+  }
   footer .footer_bg_top {
     width: 226px;
     top: -92px;
@@ -1055,10 +1064,11 @@ body {
     display: block;
     max-height: -moz-fit-content;
     max-height: fit-content;
-    background-color: rgba(41, 15, 3, 0.5);
+    background-color: rgba(255, 255, 255, 0.5) !important;
     z-index: 1;
     padding: 0px;
     height: 100vh;
+    max-height: 100vh !important;
   }
   .nav .nav_bar .menu_active li, .nav .nav_bar .menu_active_over li {
     display: block;
@@ -1121,6 +1131,11 @@ body {
   }
   header {
     margin-top: 70px;
+  }
+  table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
   }
 }
 /* -----------以下為主要頁面css------------ */

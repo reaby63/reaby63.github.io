@@ -77,6 +77,7 @@ footer{
 // RWD開始
 @media(max-width:768px){
     footer{
+        overflow-x: hidden;
         .footer_bg_top{
             width: 226px;
             top: -92px;
