@@ -1139,6 +1139,12 @@ body {
   }
 }
 /* -----------以下為主要頁面css------------ */
+.index .a_decoration {
+  transition: all 0.2s;
+}
+.index .a_decoration:hover {
+  opacity: 0.8;
+}
 .index .main_bg_point_01 {
   display: flex;
   align-items: center;
@@ -1364,9 +1370,13 @@ body {
   font-weight: 500;
   margin-bottom: 46px;
   vertical-align: top;
+  transition: all 0.2s;
 }
 .product .product_list a:nth-child(4n) {
   margin-right: 0px;
+}
+.product .product_list a:hover {
+  opacity: 0.8;
 }
 .product .product_list a .pro_img {
   margin-bottom: 16px;

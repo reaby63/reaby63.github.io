@@ -3,6 +3,12 @@
 /* -----------以下為主要頁面css------------ */
 
 .index{
+  .a_decoration{
+    transition: all .2s;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
   .main_bg_point_01{
     display: flex;
     align-items: center;
@@ -245,8 +251,12 @@
       font-weight: 500;
       margin-bottom: 46px;
       vertical-align: top;
+      transition: all .2s;
       &:nth-child(4n){
         margin-right: 0px;
+      }
+      &:hover{
+        opacity: 0.8;
       }
       .pro_img{
         margin-bottom: 16px;
