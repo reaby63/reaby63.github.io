@@ -529,7 +529,12 @@
     }
     .traffic_list{
       .traffic_list_con{
-        width: calc(100% - 7em - 3px);
+        width: 100%;
+      }
+    }
+    .google_map{
+      iframe{
+        width: 100% !important;
       }
     }
   }
