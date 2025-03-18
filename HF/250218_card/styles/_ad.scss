@@ -32,8 +32,8 @@
     }
 }
 
-.ad{
-    .ad_top{
+.adt{
+    .adt_top{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -83,7 +83,7 @@
             }
         }
     }
-    .ad_bottom{
+    .adt_bottom{
         padding: 27px 48px;
         padding-bottom: 45px;
         color: #2b2b2b;
@@ -93,7 +93,7 @@
 }
 
 @media (max-width:480px) {
-    .ad .ad_top div{
+    .adt .adt_top div{
         height: 60vh;
     }
 }

@@ -489,12 +489,12 @@ button {
   opacity: 0.8;
 }
 
-.ad .ad_top {
+.adt .adt_top {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.ad .ad_top div {
+.adt .adt_top div {
   width: calc(100% - 61px);
   overflow: hidden;
   height: 513px;
@@ -502,20 +502,20 @@ button {
   align-items: center;
   justify-self: center;
 }
-.ad .ad_top div img {
+.adt .adt_top div img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.ad .ad_top button {
+.adt .adt_top button {
   padding: 24px;
   position: relative;
 }
-.ad .ad_top button img {
+.adt .adt_top button img {
   width: 13px;
 }
-.ad .ad_top button::before, .ad .ad_top button::after {
+.adt .adt_top button::before, .adt .adt_top button::after {
   content: "";
   display: block;
   position: absolute;
@@ -524,21 +524,21 @@ button {
   border-radius: 5px;
   height: 20px;
 }
-.ad .ad_top button::before {
+.adt .adt_top button::before {
   transform: rotate(40deg);
   top: 10px;
 }
-.ad .ad_top button::after {
+.adt .adt_top button::after {
   transform: rotate(-40deg);
 }
-.ad .ad_top button.arrow_r::before {
+.adt .adt_top button.arrow_r::before {
   transform: rotate(-40deg);
   top: 10px;
 }
-.ad .ad_top button.arrow_r::after {
+.adt .adt_top button.arrow_r::after {
   transform: rotate(40deg);
 }
-.ad .ad_bottom {
+.adt .adt_bottom {
   padding: 27px 48px;
   padding-bottom: 45px;
   color: #2b2b2b;
@@ -547,7 +547,7 @@ button {
 }
 
 @media (max-width: 480px) {
-  .ad .ad_top div {
+  .adt .adt_top div {
     height: 60vh;
   }
 }
