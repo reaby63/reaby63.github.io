@@ -64,7 +64,7 @@
 
 // 動畫
 .qa_an {
-    animation: qa_an 1.5s ease-out forwards;
+    animation: qa_an 1s ease-out forwards;
 }
   
   @keyframes qa_an {
@@ -77,7 +77,7 @@
   }
 
 .qa_close{
-    animation: qa_close 1.5s ease-out forwards;
+    animation: qa_close 1s ease-out forwards;
 }
 
 @keyframes qa_close {

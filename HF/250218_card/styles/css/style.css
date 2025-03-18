@@ -184,7 +184,7 @@ button {
   opacity: 0.7;
 }
 .container .c_info .ci_top .ci_top_r div .focus_bt::before {
-  content: url("/images/heart-line.svg");
+  content: url("../images/heart-line.svg");
   display: inline-block;
   width: 20px;
   height: 16px;
@@ -193,7 +193,7 @@ button {
   margin-right: 4px;
 }
 .container .c_info .ci_top .ci_top_r div .focus_bt.active::before {
-  content: url("/images/heart.svg");
+  content: url("../images/heart.svg");
 }
 .container .c_info .ci_top .ci_top_r div .focus_bt.active span::before {
   content: "已";
@@ -641,7 +641,7 @@ button {
 }
 
 .qa_an {
-  animation: qa_an 1.5s ease-out forwards;
+  animation: qa_an 1s ease-out forwards;
 }
 
 @keyframes qa_an {
@@ -653,7 +653,7 @@ button {
   }
 }
 .qa_close {
-  animation: qa_close 1.5s ease-out forwards;
+  animation: qa_close 1s ease-out forwards;
 }
 
 @keyframes qa_close {
