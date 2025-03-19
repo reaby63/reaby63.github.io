@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -35,11 +36,6 @@ button {
   border: 0px;
 }
 
-@media (max-width: 640px) {
-  body {
-    display: block;
-  }
-}
 .ccard {
   max-width: 640px;
   background-color: #ffffff;
@@ -104,9 +100,12 @@ button {
 .container .c_info .ci_top .ci_top_l {
   width: 144.5px;
   height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 .container .c_info .ci_top .ci_top_r {
   width: calc(100% - 144px);
+  padding-top: 9px;
 }
 .container .c_info .ci_top .ci_top_r h6, .container .c_info .ci_top .ci_top_r p {
   margin-left: 20px;
@@ -116,7 +115,7 @@ button {
 }
 .container .c_info .ci_top .ci_top_r p {
   font-size: 15px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 .container .c_info .ci_top .ci_top_r div {
   display: flex;
@@ -141,7 +140,20 @@ button {
   margin-right: 8px;
 }
 .container .c_info .ci_top .ci_top_r div .social button.arrow_r_bt {
-  margin-right: 6px;
+  margin-right: 9px;
+}
+.container .c_info .ci_top .ci_top_r div .social button.btn_fin {
+  cursor: initial;
+  opacity: 0.5;
+}
+.container .c_info .ci_top .ci_top_r div .social .social_icon_box {
+  overflow: hidden;
+  width: 175px;
+}
+.container .c_info .ci_top .ci_top_r div .social .social_icon_box .social_icon {
+  display: flex;
+  height: 32px;
+  align-items: center;
 }
 .container .c_info .ci_top .ci_top_r div .social a {
   display: inline-flex;
@@ -149,6 +161,8 @@ button {
   justify-content: center;
   width: 32px;
   height: 32px;
+  flex: 0 0 32px; /* 每個 icon 固定 50px 寬 */
+  transition: transform 0.3s ease-in-out;
   border-radius: 50%;
   background-color: #000000;
   margin-right: 13px;
@@ -160,9 +174,6 @@ button {
 .container .c_info .ci_top .ci_top_r div .social a img {
   width: 20px;
   height: 20px;
-}
-.container .c_info .ci_top .ci_top_r div .social a.threads {
-  margin-right: 8px;
 }
 .container .c_info .ci_top .ci_top_r div .social a.fb img {
   width: 10px;
@@ -189,7 +200,7 @@ button {
   width: 20px;
   height: 16px;
   position: relative;
-  top: 5px;
+  top: 4px;
   margin-right: 4px;
 }
 .container .c_info .ci_top .ci_top_r div .focus_bt.active::before {
@@ -209,11 +220,43 @@ button {
   animation-delay: 0.3s;
   opacity: 0;
 }
+.container .c_portfolio .c_contain {
+  overflow: hidden;
+}
+.container .c_portfolio .c_contain .cp_wrapper {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
 .container .c_portfolio .c_contain .cp_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+.container .c_portfolio .c_contain .cp_list a {
+  overflow: hidden;
+  max-height: 151px;
+  height: 100%;
+}
+.container .c_portfolio .c_contain .cp_list a img {
+  width: 100%;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.container .c_portfolio .c_contain .cp_list a:hover {
+  overflow: hidden;
+}
+.container .c_portfolio .c_contain .cp_list a:hover img {
+  transform: scale(1.1);
+}
+.container .c_portfolio .c_contain .cp_list.cp_list_last {
   display: inline-table;
   box-sizing: border-box;
 }
-.container .c_portfolio .c_contain .cp_list a {
+.container .c_portfolio .c_contain .cp_list.cp_list_last a {
   display: inline-block;
   vertical-align: top;
   margin-right: 20px;
@@ -222,19 +265,8 @@ button {
   width: calc((100% - 40px) / 3);
   max-height: 151px;
 }
-.container .c_portfolio .c_contain .cp_list a img {
-  width: 100%;
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
-}
-.container .c_portfolio .c_contain .cp_list a:nth-child(3n) {
+.container .c_portfolio .c_contain .cp_list.cp_list_last a:nth-child(3n) {
   margin-right: 0;
-}
-.container .c_portfolio .c_contain .cp_list a:hover {
-  overflow: hidden;
-}
-.container .c_portfolio .c_contain .cp_list a:hover img {
-  transform: scale(1.1);
 }
 .container .c_portfolio .c_contain .cp_listmark {
   text-align: center;
@@ -415,25 +447,30 @@ button {
     width: 100%;
   }
 }
-@media (max-width: 414px) {
-  .container .c_info .ci_top .ci_top_r div .social a.threads {
-    display: none;
-  }
-}
-@media (max-width: 385px) {
-  .container .c_info .ci_top .ci_top_r div .social a.line {
-    display: none;
+@media (max-width: 419px) {
+  .container .c_info .ci_top .ci_top_r div .social .social_icon_box {
+    width: 132px;
   }
 }
 @media (max-width: 375px) {
+  .c_portfolio .c_contain .cp_list {
+    flex-wrap: nowrap;
+  }
+  .container .c_portfolio .c_contain .cp_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .container .c_portfolio .c_contain .cp_list a {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 8);
+  }
+  .container .c_portfolio .c_contain .cp_list.cp_list_last a {
     width: calc((100% - 20px) / 2);
   }
-  .container .c_portfolio .c_contain .cp_list a:nth-child(3n) {
+  .container .c_portfolio .c_contain .cp_list.cp_list_last a:nth-child(3n) {
     margin-right: 20px;
   }
-  .container .c_portfolio .c_contain .cp_list a:nth-child(2n) {
-    margin-right: 0;
+  .container .c_portfolio .c_contain .cp_list.cp_list_last a:nth-child(2n) {
+    margin-right: 0px;
   }
   .container .c_company .c_contain {
     display: block;
@@ -450,10 +487,18 @@ button {
   .container .c_company .c_contain .cm_right {
     width: 100%;
   }
+  .container .c_info .ci_top .ci_top_r div .social .social_icon_box {
+    width: 90px;
+  }
 }
-@media (max-width: 338px) {
-  .container .c_info .ci_top .ci_top_r div .social a.fb {
-    display: none;
+@media (max-width: 360px) {
+  .header {
+    text-align: center;
+  }
+}
+@media (max-width: 328px) {
+  .container .c_info .ci_top .ci_top_r div .social .social_icon_box {
+    width: 42px;
   }
 }
 .cross {
@@ -489,33 +534,24 @@ button {
   opacity: 0.8;
 }
 
-.adt .adt_top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.adt .adt_top div {
-  width: calc(100% - 61px);
-  overflow: hidden;
-  height: 513px;
-  display: inline-flex;
-  align-items: center;
-  justify-self: center;
-}
-.adt .adt_top div img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.adt .adt_top button {
-  padding: 24px;
+.ccard {
   position: relative;
 }
-.adt .adt_top button img {
-  width: 13px;
+.ccard .adt_cross {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
-.adt .adt_top button::before, .adt .adt_top button::after {
+
+.adt {
+  display: flex;
+}
+.adt .adt_arrow_l button, .adt .adt_arrow_r button {
+  padding: 24px;
+  position: relative;
+  margin-top: 75.35px;
+}
+.adt .adt_arrow_l button::before, .adt .adt_arrow_l button::after, .adt .adt_arrow_r button::before, .adt .adt_arrow_r button::after {
   content: "";
   display: block;
   position: absolute;
@@ -524,32 +560,18 @@ button {
   border-radius: 5px;
   height: 20px;
 }
-.adt .adt_top button::before {
+.adt .adt_arrow_l button::before, .adt .adt_arrow_r button::before {
   transform: rotate(40deg);
-  top: 10px;
+  top: 8px;
 }
-.adt .adt_top button::after {
+.adt .adt_arrow_l button::after, .adt .adt_arrow_r button::after {
   transform: rotate(-40deg);
 }
-.adt .adt_top button.arrow_r::before {
+.adt .adt_arrow_r button::before {
   transform: rotate(-40deg);
-  top: 10px;
 }
-.adt .adt_top button.arrow_r::after {
+.adt .adt_arrow_r button::after {
   transform: rotate(40deg);
-}
-.adt .adt_bottom {
-  padding: 27px 48px;
-  padding-bottom: 45px;
-  color: #2b2b2b;
-  font-size: 15px;
-  line-height: 36px;
-}
-
-@media (max-width: 480px) {
-  .adt .adt_top div {
-    height: 60vh;
-  }
 }
 .pd {
   padding: 0 42px;

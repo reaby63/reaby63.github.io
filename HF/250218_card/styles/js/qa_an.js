@@ -18,8 +18,8 @@ function closeQuickAccess() {
     // 添加 class
     quickAccessElement.classList.add('qa_close');
     
-    // 5秒後移除該 class
+    // 1秒後移除該 class
     setTimeout(() => {
         quickAccessElement.classList.remove('qa_close', 'qa_an');
-    }, 2000); // 1000 毫秒 = 1 秒
+    }, 1000); // 1000 毫秒 = 1 秒
 }
