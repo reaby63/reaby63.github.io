@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Julius+Sans+One&family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+*{
+    padding: 0;
+	  margin: 0;
+    font-family: "Noto Sans TC", Arial , sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+$font_size_XL: 24px;
+$font_size_L: 18px;
+$font_size_ML: 16px;
+$font_size_M: 15px;
+$font_size_S: 14px;
+$font_size_XS:12px;
+
+body{
+  background-color: #303030;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all_width{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+}
+
+button{
+  cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+}
+
+

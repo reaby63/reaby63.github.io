@@ -1,0 +1,219 @@
+// 淡入進場
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+// 由下往上滑動進場
+@keyframes fadeInSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+// 作品展示 hover的彈跳小動畫
+@keyframes jumpIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(100px);
+      }
+      60% {
+        opacity: 1;
+        transform: scale(1) translateY(-10px);
+      }
+      80% {
+        transform: scale(0.85) translateY(5px);
+      }
+      100% {
+        transform: scale(1) translateY(0);
+      }
+}
+
+@keyframes jumpInOnly {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateY(-10px);
+      }
+      80% {
+        transform: translateY(5px);
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+}
+
+@keyframes jumpInHeight {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.2) translateY(0px);
+      }
+      60% {
+        opacity: 1;
+        transform: scaleY(1.1) translateY(0px);
+      }
+      80% {
+        transform: scaleY(0.95) translateY(0px);
+        opacity: 1;
+      }
+      100% {
+        transform: scaleY(1) translateY(0);
+        opacity: 1;
+      }
+}
+
+// 個別動畫
+@keyframes ci_img {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      100% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+}
+
+@keyframes c_info_right {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left center;
+      }
+      100% {
+        transform: scaleX(1);
+        opacity: 1;
+        transform-origin: left center;
+      }
+}
+
+@keyframes c_info_bluecat {
+    0% {
+        left: -152px;
+        bottom: -186px;
+    }
+    70% {
+        left: -55px;
+        bottom: -136px;
+        width: 103px;
+        height: 170px;
+    }
+    100% {
+        left: -55px;
+        bottom: -136px;
+        width: 96px;
+        height: 164px;
+    }
+}
+
+// jq套用動態class
+.fadein_an{
+    animation: fadeInSlideUp 1s ease-in-out forwards;
+    animation-delay: 0.8s;
+}
+
+.jumpInOnly_an{
+    animation: jumpInOnly 1s ease-in-out forwards;
+    animation-delay: 0.8s;
+}
+
+.c_photo_an{
+    .c_photo_bg{
+        animation: jumpInHeight 1s ease-in forwards;
+        animation-delay: 0s;
+        opacity: 0;
+    }
+    .c_photo_words{
+        animation: fadeInSlideUp 1s ease-in-out forwards;
+        animation-delay: 0.8s;
+        opacity: 0;
+    }
+    .c_photo_nice{
+        animation: fadeInSlideUp 1s ease-in-out forwards;
+        animation-delay: 1.3s;
+        opacity: 0;
+    }
+}
+
+.c_info_an{
+    &::before{
+        animation: jumpInHeight 1s ease-in-out forwards;
+        animation-delay: 2.5s;
+    }
+
+    .ci_title{
+        animation: fadeInSlideUp 1s ease-in-out forwards;
+        animation-delay: 3s;
+        opacity: 0;
+    }
+
+    .c_info_box{
+      animation: jumpInOnly 1.5s ease-in-out forwards;
+      animation-delay: 3.5s;
+      opacity: 0;
+    }
+    
+    &::after{
+        animation: c_info_bluecat 1.5s ease-in-out forwards;
+        animation-delay: 5s;
+    }
+}
+
+// 原始設定
+.c_serve , .c_contact , .container .c_info::before{
+    opacity: 0;
+}
+.container .c_info::after{
+    left: -152px;
+    bottom: -186px;
+}
+
+.c_portfolio{
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+// 手機板時
+@media (max-width:500px) {
+    .c_info_an{
+        // .c_info_right{
+        //     animation: fadeInSlideUp 1s ease-in-out forwards;
+        //     animation-delay: 3s;
+        //     opacity: 0;
+        // }
+    }
+
+    @keyframes c_info_bluecat {
+        0% {
+            height: 112px;
+            width: 69px;
+            left: -102px;
+            bottom: -166px;
+        }
+        70% {
+            height: 112px;
+            width: 69px;
+            left: -33px;
+            bottom: -136px;
+        }
+        100% {
+            height: 112px;
+            width: 69px;
+            left: -33px;
+            bottom: -136px;
+        }
+    }
+}
