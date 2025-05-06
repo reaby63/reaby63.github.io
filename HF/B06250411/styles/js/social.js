@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let startIndex = 0;
   
     function getVisibleCount() {
-      if (window.innerWidth <= 360) return 4;
-      // if (window.innerWidth <= 385) return 2;
-      // if (window.innerWidth <= 414) return 3;
-      return 4;
+      const width = window.innerWidth;
+      if (width <= 334) return 4;         // 0~334
+      if (width > 334 && width <= 350) return 3;  // 335~350
+      return 4;                            // 351以上
     }
 
     // 依據螢幕寬度回傳 icon 的寬度（px）

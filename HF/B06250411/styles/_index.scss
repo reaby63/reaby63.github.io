@@ -703,9 +703,9 @@
         box-sizing: border-box;
         img{
             width: 11px;
-            margin-left: 12px;
             position: absolute;
             top: 18px;
+            right: 24px;
             transition: all .3s;
         }
         .qa_new{
@@ -728,6 +728,7 @@
         .qa_contanin img{
             width: 15px;
             top: 17px;
+            right: 20px;
         }
     }
 }
@@ -858,6 +859,7 @@
             }
             .c_info_content{
                 margin-top: 24px;
+                font-size: 15px;
             }
         }
         .c_info_img{
@@ -871,10 +873,10 @@
         margin-top: 72px;
         .cs_title{
             .cs_title_left span:last-child{
-                margin-left: 12px;
+                margin-left: 5px;
             }
             .cs_title_right span:first-child{
-                margin-right: 12px;
+                margin-right: 5px;
             }
         }
         .cs_content{
@@ -883,9 +885,16 @@
                 width: 100%;
                 margin-right: 0;
                 margin-bottom: 15px;
+                .cs_list_title{
+                    font-size: 32px;
+                }
+                .cs_list_content div{
+                    font-size: 15px;
+                }
                 .cs_list_content p{
                     margin: 0px 38.5px;
                     margin-bottom: 45px;
+                    font-size: 14px;
                 }
             }
         } 
@@ -901,7 +910,7 @@
         width: calc(100% - 230px + 56px);
     }
     .container .c_serve .cs_title .cs_title_left span, .container .c_serve .cs_title .cs_title_right span{
-        font-size: 18px;
+        font-size: 16px;
     }
     // -----
     .container .c_portfolio::before{
@@ -922,10 +931,10 @@
         .cp_title{
             margin-bottom: 30px;
             .cp_title_left span:last-child{
-                margin-left: 12px;
+                margin-left: 5px;
             }
             .cp_title_right span:first-child{
-                margin-right: 12px;
+                margin-right: 5px;
             }
         }
         .cp_title_box{
@@ -953,10 +962,10 @@
         .c_contact_title{
             margin: 0px 56px;
             margin-bottom: 25px;
-            font-size: 18px;
+            font-size: 16px;
             .cc_title_line{
-                margin-right: 19px;
-                margin-left: 19px;
+                margin-right: 5px;
+                margin-left: 5px;
             }
         }
         .c_contain ul{
@@ -967,6 +976,9 @@
             a{
                 letter-spacing: 0.05em;
             }
+        }
+        .c_contain ul li span:last-child a{
+            font-size: 14px;
         }
     }
 
@@ -1020,54 +1032,54 @@
     // -----以上
 }
 
-@media (max-width:376px) {
-    .container .c_serve{
-        padding: 0px 35px;
-        padding-top: 35px;
-    }
+@media (max-width:380px) {
+    // .container .c_serve{
+    //     padding: 0px 35px;
+    //     padding-top: 35px;
+    // }
 
-    .container .c_portfolio .cp_title_box{
-        padding: 0 35px;
-    }
+    // .container .c_portfolio .cp_title_box{
+    //     padding: 0 35px;
+    // }
 
-    .container .c_portfolio .scroll-container .item:first-child{
-        margin-left: 35px;
-    }
+    // .container .c_portfolio .scroll-container .item:first-child{
+    //     margin-left: 35px;
+    // }
 
-    .container .c_portfolio .scroll-container .arrow-right{
-        right: 35px;
-    }
+    // .container .c_portfolio .scroll-container .arrow-right{
+    //     right: 35px;
+    // }
 
-    .container .c_portfolio .scroll-container .arrow-left{
-        right: 87px;
-    }
+    // .container .c_portfolio .scroll-container .arrow-left{
+    //     right: 87px;
+    // }
 
-    // 可能要多次設定的地方
-    .container .c_serve::before{
-        width: 177px;
-    }
-    .container .c_serve .cs_title .cs_title_left{
-        width: calc(100% - 177px + 35px);
-    }
-    // -----
-    .container .c_portfolio::before{
-        width: 225px;
-    }
-    .container .c_portfolio .cp_title .cp_title_right{
-        width: calc(100% - 225px + 35px);
-    }
-    // -----以上
+    // // 可能要多次設定的地方
+    // .container .c_serve::before{
+    //     width: 177px;
+    // }
+    // .container .c_serve .cs_title .cs_title_left{
+    //     width: calc(100% - 177px + 35px);
+    // }
+    // // -----
+    // .container .c_portfolio::before{
+    //     width: 225px;
+    // }
+    // .container .c_portfolio .cp_title .cp_title_right{
+    //     width: calc(100% - 225px + 35px);
+    // }
+    // // -----以上
 
 
-    .container .c_contact .c_contact_title{
-        margin: 0px 35px;
-        margin-bottom: 25px;
-    }
-    .container .c_contact .c_contain ul{
-        margin: 0px 35px;
-    }
+    // .container .c_contact .c_contact_title{
+    //     margin: 0px 35px;
+    //     margin-bottom: 25px;
+    // }
+    // .container .c_contact .c_contain ul{
+    //     margin: 0px 35px;
+    // }
     .social_box{
-        margin-left: 35px;
+        // margin-left: 35px;
         .social{
             .social_icon_box{
                 width: 186px;
@@ -1091,20 +1103,41 @@
     }
 }
 
-
-@media (max-width:350px) {
+@media (max-width:364px) {
     .container .c_portfolio::before {
-        width: 213px;
+        width: 201px;
     }
     .container .c_portfolio .cp_title .cp_title_right {
-        width: calc(100% - 213px + 35px);
-    }
-    .container .c_portfolio .scroll-container .arrow-left {
-        right: 82px;
+        width: calc(100% - 201px + 56px);
     }
 }
 
-@media (max-width:335px) {
+@media (max-width:356px) {
+    .container .c_portfolio .scroll-container .arrow-left {
+        right: 102px;
+    }
+}
+
+
+@media (max-width:350px) {
+    .social_box .social .social_icon_box {
+        width: 141px;
+    }
+}
+
+@media (max-width:338px) {
+    .container .c_portfolio::before {
+        width: 189px;
+    }
+    .container .c_portfolio .cp_title .cp_title_right {
+        width: calc(100% - 189px + 56px);
+    }
+}
+
+
+
+
+@media (max-width:330px) {
     .container .c_banner{
         margin: 25px;
         margin-bottom: 38px;
@@ -1156,14 +1189,5 @@
     }
     .social_box {
         margin-left: 25px;
-    }
-}
-
-@media (max-width:325px) {
-    .container .c_portfolio::before {
-        width: 200px;
-    }
-    .container .c_portfolio .cp_title .cp_title_right {
-        width: calc(100% - 200px + 25px);
     }
 }

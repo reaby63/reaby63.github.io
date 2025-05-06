@@ -1,6 +1,7 @@
 .rm_card{
-    background-color: #ffffff;
-    border: solid 1px #000000;
+    background-color: #000000;
+    border: solid 1px #ffffff;
+    color: #ffffff;
 }
 
 .rm_cross{
@@ -10,7 +11,7 @@
     button{
         border-radius: 50%;
         &::before , &::after{
-            background-color: #1E1E1E;
+            background-color: #ffffff;
         }
     }
 }
@@ -18,7 +19,6 @@
 .rm{
     margin: 77px 76px;
     .rm_title{
-        color: #000000;
         text-align: center;
         margin-bottom: 32px;
         img{
@@ -35,7 +35,7 @@
     }
     .rm_list{
         .rm_list_title , .rm_list_content{
-            background-color: #05438B;
+            background-color: #5700C2;
             >ul{
                 display: flex;
                 align-items: center;
@@ -117,26 +117,25 @@
             &.go_active{
                 background-color: transparent;
                 ul,button{
-                    color: #1E1E1E;
+                    color: #ffffff;
                 }
                 >ul>li{
                     white-space: normal;
                     overflow: auto;
                     text-overflow: initial;
                     &::after{
-                        background-color: #1E1E1E;
+                        background-color: #ffffff;
                     }
                 }
                 button{
                     &:after{
-                        background-color: #1E1E1E;
+                        background-color: #ffffff;
                     }
                 }
             }
         }
         .open_list{
             box-sizing: border-box;
-            color: #2b2b2b;
             font-size: $font_size_M;
             padding-bottom: 0;
             max-height: 0;
@@ -150,19 +149,19 @@
             
             /* 滾動條軌道（背景） */
             &::-webkit-scrollbar-track {
-                background: #ffffff;
+                background: #353535;
                 border-radius: 10px;
             }
             
             /* 滾動條滑塊（會移動的那一塊） */
             &::-webkit-scrollbar-thumb {
-                background: #00000033;
+                background: #e7e7e733;
                 border-radius: 10px;
             }
             
             /* 滑塊 hover 時樣式 */
             &::-webkit-scrollbar-thumb:hover {
-                background: #c5c5c5;
+                background: transparent;
             }
   
             .open_padding{
@@ -179,7 +178,7 @@
                     display: inline-block;
                     line-height: 1.8em;
                     padding: 2px 10px;
-                    border-bottom: solid 1px #000000;
+                    border-bottom: solid 1px #ffffff;
                 }
             }
             .work_content{
@@ -203,7 +202,7 @@
                             width: 4px;
                             height: 4px;
                             border-radius: 50%;
-                            background-color: #2b2b2b;
+                            background-color: #ffffff;
                             position: relative;
                             top: 10px;
                             margin:0px calc( 0.5em - 4px ) ;

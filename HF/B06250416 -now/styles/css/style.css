@@ -327,6 +327,7 @@ button {
   position: relative;
   min-height: 77.16px;
   text-align: center;
+  margin-bottom: 52px;
 }
 .container .c_portfolio .cp_select .select_btn {
   position: relative;
@@ -354,20 +355,24 @@ button {
 .container .c_portfolio .cp_select .select_btn .select_btn_arrow img {
   width: 12px;
   height: 7px;
+  transform: scaleY(1);
+  transition: all 0.3s;
 }
-.container .c_portfolio .cp_select .cp_select_box {
-  position: relative;
+.container .c_portfolio .cp_select .select_btn .select_btn_arrow img.scaleY {
+  transform: scaleY(-1);
 }
 .container .c_portfolio .cp_select .select_list {
   position: absolute;
-  top: 0px;
-  left: 0;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: #FFFFFF;
   border-radius: 20px;
   padding: 15px 0px;
   width: 189px;
   text-align: center;
   z-index: 5;
+  display: none;
 }
 .container .c_portfolio .cp_select .select_list button {
   color: #000000;
@@ -378,9 +383,14 @@ button {
   display: block;
   margin-bottom: 6px;
   width: 100%;
+  transition: all 0.3s;
 }
 .container .c_portfolio .cp_select .select_list button:last-child {
   margin-bottom: 0;
+}
+.container .c_portfolio .cp_select .select_list button:hover {
+  background-color: #519DF4;
+  color: #ffffff;
 }
 .container .c_portfolio .cp_select .cp_select_bg {
   position: absolute;
@@ -398,8 +408,7 @@ button {
 }
 .container .c_portfolio .c_contain {
   overflow: hidden;
-  margin: 0 105px;
-  margin-right: 91px;
+  margin: 0 67.5px;
   z-index: 2;
   position: relative;
 }
@@ -410,80 +419,157 @@ button {
 }
 .container .c_portfolio .c_contain .cp_list {
   box-sizing: border-box;
-  display: block;
+  display: flex;
   width: 100%;
   flex: 0 0 100%;
   flex-wrap: wrap;
 }
 .container .c_portfolio .c_contain .cp_list a {
-  position: relative;
-  display: inline-block;
-  width: calc((100% - 35px - 14px) / 2);
-  margin-right: 30px;
-  margin-bottom: 20px;
-}
-.container .c_portfolio .c_contain .cp_list a span {
-  display: inline-block;
-  border-radius: 20px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  border: solid 3px #333333;
+  border-radius: 20px;
+  border: solid 1px rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
-  height: 265px;
-  width: 100%;
+  overflow: hidden;
 }
-.container .c_portfolio .c_contain .cp_list a span img {
-  width: 100%;
+.container .c_portfolio .c_contain .cp_list a img {
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
-  transform: scale(1);
-  transition: transform 0.3s ease-in-out;
 }
-.container .c_portfolio .c_contain .cp_list a:nth-child(2n) {
-  margin-right: 0;
+.container .c_portfolio .c_contain .cp_list .cp_list_left {
+  width: 339px;
+  margin-right: 25px;
 }
-.container .c_portfolio .c_contain .cp_list a:nth-child(6n), .container .c_portfolio .c_contain .cp_list a:nth-child(6n+5) {
+.container .c_portfolio .c_contain .cp_list .cp_list_left > a {
+  height: 270px;
+}
+.container .c_portfolio .c_contain .cp_list .cp_list_left .cp_list_bottom {
+  margin-top: 15px;
+  display: flex;
+}
+.container .c_portfolio .c_contain .cp_list .cp_list_left .cp_list_bottom a {
+  height: 196px;
+  width: calc((100% - 15px) / 2);
+}
+.container .c_portfolio .c_contain .cp_list .cp_list_left .cp_list_bottom a:first-child {
+  margin-right: 15px;
+}
+.container .c_portfolio .c_contain .cp_list .cp_list_right {
+  width: calc(100% - 339px - 25px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .c_portfolio .c_contain .cp_list .cp_list_right a {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+}
+.container .c_portfolio .c_contain .cp_list .cp_list_right a:last-child {
   margin-bottom: 0;
-}
-.container .c_portfolio .c_contain .cp_list a:hover::after {
-  display: block;
-  opacity: 1;
-  transform: scale(0) translateY(100px);
-  animation: jumpIn 0.6s ease-out forwards;
-}
-.container .c_portfolio .c_contain .cp_list a:hover span {
-  overflow: hidden;
-}
-.container .c_portfolio .c_contain .cp_list a:hover span img {
-  transform: scale(1.1);
 }
 .container .c_portfolio .c_contain .cp_listmark {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .container .c_portfolio .c_contain .cp_listmark button {
   display: inline-block;
-  margin-right: 25px;
+  margin-right: 10px;
   opacity: 1;
+  padding: 10px;
+}
+.container .c_portfolio .c_contain .cp_listmark button span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  filter: brightness(1);
   transition: all 0.3s;
-  color: #ffffff;
-  width: 32px;
-  height: 32px;
 }
 .container .c_portfolio .c_contain .cp_listmark button:last-child {
   margin-right: 0;
 }
-.container .c_portfolio .c_contain .cp_listmark button:hover {
-  opacity: 0.8;
+.container .c_portfolio .c_contain .cp_listmark button:hover span {
+  filter: brightness(1.2);
 }
 .container .c_portfolio .c_contain .cp_listmark button.active, .container .c_portfolio .c_contain .cp_listmark button:active {
   cursor: initial;
-  color: #333333;
+}
+.container .c_portfolio .c_contain .cp_listmark button.active span, .container .c_portfolio .c_contain .cp_listmark button:active span {
+  background-color: #009DFF;
+  width: 55px;
 }
 .container .c_portfolio .c_contain .cp_listmark button.active:hover, .container .c_portfolio .c_contain .cp_listmark button:active:hover {
-  opacity: 1;
+  filter: brightness(1);
+}
+.container .c_comment {
+  margin-top: 90px;
+}
+.container .c_comment .c_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .c_comment .c_title img {
+  width: 22px;
+  height: 22px;
+}
+.container .c_comment .c_title span {
+  display: inline-block;
+  margin: 0 15px;
+}
+.container .c_comment .scroll-container {
+  position: relative;
+  width: 100%;
+  height: 105px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  padding-top: 35px;
+}
+.container .c_comment .scroll-container .scroll-content {
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  touch-action: auto;
+  overscroll-behavior-x: contain; /* 只攔截橫向，垂直讓它繼續滾動 */
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+.container .c_comment .scroll-container .scroll-content:active {
+  cursor: grabbing;
+}
+.container .c_comment .scroll-container .scroll-content::-webkit-scrollbar {
+  display: none;
+}
+.container .c_comment .scroll-container .inner-content {
+  display: inline-block;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  height: 100%;
+}
+.container .c_comment .scroll-container .item {
+  display: inline-block;
+  width: 410px;
+  vertical-align: top;
+  margin-left: 25px;
+  background-color: #ffffff;
+  height: 100%;
+  color: #000000;
+  border-radius: 30px;
+}
+.container .c_comment .scroll-container .item:first-child {
+  margin-left: 66px;
+}
+.container .c_comment .c_comment_bg {
+  margin-top: 85px;
 }
 .container .c_store {
   margin: 0px 67px;
@@ -588,6 +674,8 @@ button {
   overflow-wrap: break-word;
   word-wrap: break-word;
   white-space: normal;
+  width: 100%;
+  display: block;
 }
 
 .to_top {
@@ -787,6 +875,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 20px;
 }
 .adt_slide .adt_top > div .adt_img img {
   width: 100%;
@@ -810,12 +899,14 @@ button {
   margin-bottom: 8px;
   letter-spacing: 0.5px;
   color: #1E1E1E;
+  font-family: "Noto Sans Display", sans-serif;
 }
 .adt_slide .adt_bottom .adt_date {
   display: block;
   font-weight: 600;
   margin-top: 20px;
   letter-spacing: 0.5px;
+  font-family: "Noto Sans Display", sans-serif;
 }
 
 .adt_arrow_l, .adt_arrow_r {
@@ -1066,8 +1157,9 @@ button {
   }
 }
 .rm_card {
-  background-color: #ffffff;
-  border: solid 1px #000000;
+  background-color: #000000;
+  border: solid 1px #ffffff;
+  color: #ffffff;
 }
 
 .rm_cross {
@@ -1079,14 +1171,13 @@ button {
   border-radius: 50%;
 }
 .rm_cross button::before, .rm_cross button::after {
-  background-color: #1E1E1E;
+  background-color: #ffffff;
 }
 
 .rm {
   margin: 77px 76px;
 }
 .rm .rm_title {
-  color: #000000;
   text-align: center;
   margin-bottom: 32px;
 }
@@ -1102,7 +1193,7 @@ button {
   margin-left: 10px;
 }
 .rm .rm_list .rm_list_title, .rm .rm_list .rm_list_content {
-  background-color: #05438B;
+  background-color: #5700C2;
 }
 .rm .rm_list .rm_list_title > ul, .rm .rm_list .rm_list_content > ul {
   display: flex;
@@ -1186,7 +1277,7 @@ button {
   background-color: transparent;
 }
 .rm .rm_list .rm_list_content.go_active ul, .rm .rm_list .rm_list_content.go_active button {
-  color: #1E1E1E;
+  color: #ffffff;
 }
 .rm .rm_list .rm_list_content.go_active > ul > li {
   white-space: normal;
@@ -1194,14 +1285,13 @@ button {
   text-overflow: initial;
 }
 .rm .rm_list .rm_list_content.go_active > ul > li::after {
-  background-color: #1E1E1E;
+  background-color: #ffffff;
 }
 .rm .rm_list .rm_list_content.go_active button:after {
-  background-color: #1E1E1E;
+  background-color: #ffffff;
 }
 .rm .rm_list .open_list {
   box-sizing: border-box;
-  color: #2b2b2b;
   font-size: 15px;
   padding-bottom: 0;
   max-height: 0;
@@ -1216,15 +1306,15 @@ button {
   width: 10px; /* 垂直捲軸寬度 */
 }
 .rm .rm_list .open_list::-webkit-scrollbar-track {
-  background: #ffffff;
+  background: #353535;
   border-radius: 10px;
 }
 .rm .rm_list .open_list::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(231, 231, 231, 0.2);
   border-radius: 10px;
 }
 .rm .rm_list .open_list::-webkit-scrollbar-thumb:hover {
-  background: #c5c5c5;
+  background: transparent;
 }
 .rm .rm_list .open_list .open_padding {
   padding: 34px 0px;
@@ -1239,7 +1329,7 @@ button {
   display: inline-block;
   line-height: 1.8em;
   padding: 2px 10px;
-  border-bottom: solid 1px #000000;
+  border-bottom: solid 1px #ffffff;
 }
 .rm .rm_list .open_list .work_content {
   margin-bottom: 30px;
@@ -1261,7 +1351,7 @@ button {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #2b2b2b;
+  background-color: #ffffff;
   position: relative;
   top: 10px;
   margin: 0px calc(0.5em - 4px);

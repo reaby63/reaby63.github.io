@@ -4,6 +4,7 @@ $(document).ready(function() {
     var endX = 0;                           //手指離開螢幕時的X座標
     var totalItems = $('.cp_list').length;  //紀錄cp_list總共有幾個 (length:這個東西裡面有幾個項目/英文是長度 但在js不是~)
     var currentIndex = 0;                   //設定目前正在看的第幾個區塊
+    var isDragging = false;                //滑鼠是否正在拖曳
 
     // 預設第一個按鈕 active
     $('.cp_listmark button').first().addClass('active');
@@ -16,25 +17,47 @@ $(document).ready(function() {
         updateSlide(currentIndex);      // 呼叫updateSlide
     });
 
-    // 滑動事件
+    // 手機：滑動開始
     $('.cp_list').on('touchstart', function(e) {
-        startX = e.originalEvent.touches[0].clientX;
+        startX = e.originalEvent.touches[0].clientX; //紀錄起始X位置
     });
 
+    // 手機：滑動結束
     $('.cp_list').on('touchend', function(e) {
-        endX = e.originalEvent.changedTouches[0].clientX;
+        endX = e.originalEvent.changedTouches[0].clientX; //紀錄結束X位置
+        handleSlide(); // 判斷是否需要切換區塊
+    });
+
+    // 電腦：滑鼠按下（準備拖曳）
+    $('.cp_list').on('mousedown', function(e) {
+        isDragging = true;
+        startX = e.clientX; //紀錄起始X位置
+    });
+
+    // 電腦：滑鼠放開（拖曳結束）
+    $(document).on('mouseup', function(e) {
+        if (isDragging) {
+            endX = e.clientX; //紀錄結束X位置
+            isDragging = false;
+            handleSlide(); // 判斷是否需要切換區塊
+        }
+    });
+
+    // 根據滑動距離決定是否切換區塊
+    function handleSlide() {
         var deltaX = endX - startX;
 
         if (deltaX > 50 && currentIndex > 0) {
-            // 右滑，往上一個
+            // 右滑（或往右拖），切到上一個
             currentIndex--;
             $('.cp_listmark button').eq(currentIndex).trigger('click');
         } else if (deltaX < -50 && currentIndex < totalItems - 1) {
-            // 左滑，往下一個
+            // 左滑（或往左拖），切到下一個
             currentIndex++;
             $('.cp_listmark button').eq(currentIndex).trigger('click');
         }
-    });
+    }
+
 
     // 更新滑動畫面 + active 樣式 (設定updateSlide的作用)
     function updateSlide(index) {                           //定義一個叫做updateSlide的事件(根據傳入的index來更新按鈕狀態與畫面位置)
@@ -51,10 +74,16 @@ $(document).ready(function() {
 // 點擊 cp_serch後 cp_serch_box滑出 再點擊就收回
 $(document).ready(function(){
 
-    $('.cp_serch button , .cp_serch_box .search_list button').click(function(){
-        $('.cp_serch_box .search_list').slideToggle();
+    $('.select_btn').click(function(){
+        $('.select_list').slideToggle();
+        $('.select_btn_arrow img').toggleClass('scaleY');
     })
 
+    $('.select_list button').click(function(){
+        $('.select_list').slideUp(); // 收起選單
+        $('.select_btn_arrow img').removeClass('scaleY'); // 還原箭頭
+    });
+    
 })
 
 
