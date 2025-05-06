@@ -71,7 +71,12 @@
             &:nth-of-type(2n) ul{
                 background-color: #e7e7e7;
             }
-            
+            >ul>li{
+                &:nth-child(1) , &:nth-child(2) , &:nth-child(3){
+                    padding-top: 10.5px;
+                    padding-bottom: 11.5px;
+                }
+            }
             button{
                 font-size: $font_size_S;
                 font-family: "Roboto", sans-serif;

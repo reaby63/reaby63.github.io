@@ -1,0 +1,130 @@
+.quickaccess_in{
+    background-color: #000000;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    color: #ffffff;
+    position: fixed;
+    right: calc(50% - 320px);
+    bottom: -170px;
+    opacity: 0;
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    z-index: 9999;
+    .cross{
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        button{
+            &::before , &::after{
+                background-color: #ffffff;
+                height: 24px;
+            }
+        }
+    }
+    .qa_title{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        margin-bottom: 18px;
+        font-size: $font_size_L;
+    }
+    .qa_btn{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 calc( (640px - 14em - 60px) / 2 );
+        button{
+            color: #ffffff;
+            font-size: $font_size_M;
+            padding: 2px 20px;
+            transition: all .3s;
+            position: relative;
+            width: calc(7em + 30px);
+            &::after{
+                content: "";
+                display: inline-block;
+                width: 1px;
+                height: 1em;
+                background-color: #ffffff;
+                position: absolute;
+                top: 6px;
+                right: 0px;
+            }
+            img{
+                display: inline-block;
+                height: 16px;
+                width: auto;
+                margin-right: 6px;
+                position: relative;
+                top: 2px;
+            }
+            &:last-child , &:nth-child(2n){
+                &::after{
+                    display: none;
+                }
+            }
+            &:hover{
+                color: #cacaca;
+            }
+        }
+    }
+}
+
+
+// 動畫
+.qa_an {
+    animation: qa_an 1s ease-out forwards;
+}
+  
+  @keyframes qa_an {
+    from {
+        bottom: -170px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+  }
+
+.qa_close{
+    animation: qa_close 1s ease-out forwards;
+}
+
+@keyframes qa_close {
+    from {
+        bottom: 0px;
+        opacity: 1;
+    }
+    to {
+      bottom: -170px;
+      opacity: 0;
+    }
+  }
+
+
+@media (max-width:640px) {
+    .ccard{
+        position: relative;
+        .quickaccess_in{
+            width: 100%;
+            right: 0px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 23px;
+            .qa_title{
+                width: 100%;
+            }
+            .qa_btn{
+                padding: 0px 0px;
+                width: calc(14em + 80px);
+            }
+        }
+    }
+    
+}

@@ -244,11 +244,11 @@ button {
   font-size: 15px;
   line-height: 30px;
   padding-left: 9px;
-  padding-right: 9px;
+  padding-right: 6px;
 }
 .container .c_info .ci_down p {
   margin-bottom: 20px;
-  letter-spacing: 0.044em;
+  letter-spacing: 0.049em;
 }
 .container .c_portfolio {
   background-image: url("../../images/bg_02.jpg");
@@ -692,9 +692,9 @@ button {
 }
 
 .quickaccess {
-  position: absolute;
-  right: 0px;
+  position: fixed;
   bottom: 16px;
+  right: calc(50% - 320px);
   cursor: pointer;
 }
 .quickaccess .qa_contanin {
@@ -738,6 +738,11 @@ button {
   }
 }
 @media (max-width: 640px) {
+  .to_top, .quickaccess {
+    margin-right: 0;
+    z-index: 999;
+    right: 0;
+  }
   .to_top {
     right: 9px;
   }
@@ -889,8 +894,8 @@ button {
 }
 .adt_slide .adt_slide_box {
   height: auto;
-  width: calc(100% - 62px - 62px);
-  margin: 24px 58px;
+  width: calc(100% - 60px - 60px);
+  margin: 24px 60px;
   margin-bottom: 47px;
 }
 .adt_slide .adt_top {
@@ -1080,13 +1085,14 @@ button {
   padding-top: 22px;
   padding-bottom: 22px;
   color: #ffffff;
-  position: absolute;
+  position: fixed;
   right: calc(50% - 320px);
   bottom: -170px;
   opacity: 0;
   width: 100%;
   max-width: 640px;
   text-align: center;
+  z-index: 9999;
 }
 .quickaccess_in .cross {
   display: inline-block;
@@ -1177,7 +1183,6 @@ button {
     position: relative;
   }
   .ccard .quickaccess_in {
-    position: absolute;
     width: 100%;
     right: 0px;
     text-align: center;
@@ -1259,6 +1264,10 @@ button {
 }
 .rm .rm_list .rm_list_content:nth-of-type(2n) ul {
   background-color: #e7e7e7;
+}
+.rm .rm_list .rm_list_content > ul > li:nth-child(1), .rm .rm_list .rm_list_content > ul > li:nth-child(2), .rm .rm_list .rm_list_content > ul > li:nth-child(3) {
+  padding-top: 10.5px;
+  padding-bottom: 11.5px;
 }
 .rm .rm_list .rm_list_content button {
   font-size: 14px;

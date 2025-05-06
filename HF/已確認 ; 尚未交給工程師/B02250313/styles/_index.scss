@@ -209,10 +209,10 @@
             font-size: $font_size_M;
             line-height: 30px;
             padding-left: 9px;
-            padding-right: 9px;
+            padding-right: 6px;
             p{
                 margin-bottom: 20px;
-                letter-spacing: 0.044em;
+                letter-spacing: 0.049em;
             }
         }
     }
@@ -701,9 +701,9 @@
 }
 
 .quickaccess{
-    position: absolute;
-    right: 0px;
+    position: fixed;
     bottom: 16px;
+    right: calc(50% - 320px);
     cursor: pointer;
     .qa_contanin{
         background-color: #000000;
@@ -750,7 +750,12 @@
   }
 
 @media (max-width:640px) {
-    .to_top{
+    .to_top , .quickaccess{
+        margin-right: 0;
+        z-index: 999;
+        right: 0;
+    }
+    .to_top {
         right: 9px;
     }
 }
