@@ -1,0 +1,361 @@
+
+// 由下往上滑動進場
+@keyframes fadeInSlideUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+// 社群按鈕動畫
+@keyframes socialIconHover {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  50%{
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+// 滑到指定高度加上動畫
+.fadein_an{
+    animation: fadeInSlideUp 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
+
+
+
+// to_top的動態效果
+@keyframes totopIn {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes totopOut {
+  0% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.to_top{
+  &.to_top-in{
+    animation: totopIn 0.4s ease-in-out forwards;
+    &::before{
+      animation: totopIn 0.4s ease-in-out forwards;
+    }
+  }
+  &.to_top-out{
+    animation: totopOut 0.2s ease-in-out forwards;
+    &::before{
+      animation: totopOut 0.3s ease-in-out forwards;
+    }
+  }
+}
+
+// focus_bt的動態效果
+// Fellow字母
+@keyframes focusbtInFellow {
+  0% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+  80% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes focusbtOutFellow {
+  0% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+// 愛心
+@keyframes focusbtOutHeart {
+  0% {
+    margin-left: 4px;
+    margin-right: 4px;
+  } 
+  50% {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  70% {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+  100% {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+// 愛心背景
+@keyframes focusbtOutHeartBg {
+  0% {
+    width: 35px;
+  } 
+  50% {
+    width: 30px;
+  }
+  70% {
+    width: 33px;
+  }
+  100% {
+    width: 30px;
+  }
+}
+
+.focus_bt{
+  &.focus_bt-in{
+    .focus_bt_tag{
+      // fellow文字
+      animation: focusbtInFellow 0.4s ease-in-out forwards;
+    }
+  }
+  &.focus_bt-out{
+    .focus_bt_tag{
+      // fellow文字
+      animation: focusbtOutFellow 0.4s ease-in-out forwards;
+    }
+  }
+}
+
+// 套入active後 底圖放大 愛心微微位移
+@keyframes focusbtBgActive {
+  0% {
+    width: 30px;
+  } 
+  0% {
+    width: 50px;
+  } 
+  100% {
+    width: 30px;
+  }
+}
+@keyframes focusbtHeartActive {
+  0% {
+    left: 1.5px;
+    right: auto;
+  } 
+  50% {
+    left: 13px;
+    right: auto;
+  } 
+  100% {
+    left: auto;
+    right: 1.5px;
+  }
+}
+
+//首頁QA及TOP按鈕的的點擊彈出+彈入動態
+// 彈出
+@keyframes jumpOut {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(200px);
+  }
+}
+
+.jump_out{
+  animation: jumpOut 0.4s ease-in-out forwards;
+}
+
+// 彈入
+@keyframes jumpIn {
+  0% {
+    transform: translateY(200px);
+  }
+  70% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.jump_in{
+  transform: translateY(0px);
+  animation: jumpIn 0.6s ease-in-out forwards;
+}
+
+
+// 手機板
+// 發現fellow me會卡住
+@media (max-width:500px) {
+  // 先修正舊彈跳位子
+  @keyframes focusbtInFellow {
+    0% {
+      transform: translateY(0);
+    }
+    60% {
+      transform: translateY(0px);
+    }
+    80% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  // 再新增彈跳
+  @keyframes focusbtActiveFellow {
+    0% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-8px);
+    }
+    60% {
+      transform: translateY(-4px);
+    }
+    80% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .container .c_info .c_info_top .ci_right .focus_bt{
+    transform: translateY(0);
+  }
+  .container .c_info .c_info_top .ci_right .focus_bt.active .focus_bt_tag{
+    animation: focusbtActiveFellow 0.8s ease-in-out forwards;
+    transform: translateY(0);
+  }
+}
+
+// 手機板
+// 關注按鈕動態
+@media (max-width:410px) {
+  // 愛心背景
+  @keyframes focusbtInHeartBg {
+    0% {
+      width: 20px;
+    } 
+    30% {
+      width: 24px;
+    }
+    50% {
+      width: 22px;
+    }
+    70% {
+      width: 23px;
+    }
+    100% {
+      width: 20px;
+    }
+  }
+
+  @keyframes focusbtOutHeartBg {
+    0% {
+      width: 23px;
+    } 
+    50% {
+      width: 20px;
+    }
+    70% {
+      width: 21px;
+    }
+    100% {
+      width: 20px;
+    }
+  }
+
+  // 愛心
+  @keyframes focusbtInHeart {
+    0% {
+      margin-left: 0px;
+      margin-right: 0px;
+    } 
+    30% {
+      margin-left: 3.5px;
+      margin-right: 3.5px;
+    }
+    50% {
+      margin-left: 2.5px;
+      margin-right: 2.5px;
+    }
+    70% {
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+    100% {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  @keyframes focusbtOutHeart {
+    0% {
+      margin-left: 4px;
+      margin-right: 4px;
+    } 
+    50% {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    70% {
+      margin-left: 1px;
+      margin-right: 1px;
+    }
+    100% {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+  // 手機板 套入active後 底圖放大 愛心微微位移
+  @keyframes focusbtBgActive {
+    0% {
+      width: 20px;
+    } 
+    0% {
+      width: 34px;
+    } 
+    100% {
+      width: 20px;
+    }
+  }
+}
