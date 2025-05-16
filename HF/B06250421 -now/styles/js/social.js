@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function getIconWidth() {
       // if (window.innerWidth <= 375) return 43;
       if (window.innerWidth <= 500) return 43;
-      return 50;
+      return 65;
     }
   
     // 根據 startIndex 來計算當前顯示區域的位置，並且更新按鈕的顯示效果。

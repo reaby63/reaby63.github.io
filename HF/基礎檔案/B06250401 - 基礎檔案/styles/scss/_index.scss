@@ -8,7 +8,7 @@
     position: relative;
 }
 
-.focus_bt{
+.focus_bt {
     background-color: rgba($color: #000000, $alpha: 0.6);
     border-radius: 25px;
     padding-top: 9px;
@@ -17,37 +17,38 @@
     font-size: $font_size_S;
     color: #d2d7db;
     height: 40px;
-    transition: all .2s;
-    border: solid 1px #858585;
+    transition: all .3s;
     letter-spacing: 0.5px;
     position: absolute;
-    top: -10px;
-    right: 25px;
+    top: 36px;
+    right: 0px;
     z-index: 99;
     display: flex;
     align-items: center;
     justify-content: center;
-    span{
-        position: relative;
-        top: 1px;
+
+    &:hover {
+        filter: brightness(1.3);
     }
-    &:hover{
-        background-color: #195498;
-    }
-    &::before{
+
+    &::before {
         content: url('../../images/heart-line.svg');
         display: inline-block;
         width: 20px;
         position: relative;
         top: 1.5px;
-        margin-right: 12px;
+        margin-right: 6px;
     }
-    &.active{
-        &::before{
+
+    &.active {
+        filter: brightness(1.3);
+
+        &::before {
             content: url('../../images/heart.svg');
         }
-        span{
-            &::before{
+
+        span {
+            &::before {
                 content: "已";
             }
         }
@@ -57,7 +58,6 @@
 .social_box{
     display: flex;
     align-items: center;
-    margin-left: 76px;
     .social{
         display: inline-flex;
         align-items: center;
@@ -65,17 +65,11 @@
             padding: 5px;
             transition: all .2s;
             &:hover{
-                opacity: 0.8;
+                filter: brightness(1.3);
             }
             img{
                 width: 9px;
                 height: 13px;
-            }
-            &.arrow_l_bt , &.arrow_r_bt{
-                border:solid 2px #ffffff;
-                border-radius: 50%;
-                width: 30px;
-                height: 30px;
             }
             &.arrow_l_bt{
                 margin-right: 25px;
