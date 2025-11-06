@@ -1,0 +1,780 @@
+ body{  font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Source Han Sans', sans-serif;margin: 0;}
+ /* 隱藏頁面內容，初始為白色背景 */
+body {
+ 
+  background-color: #ffffff;
+  margin: 0;
+}
+
+/* 初始將內容設為透明 */
+.page-content {
+  opacity: 0; /* 初始透明，保持佈局 */
+  transition: opacity 0.5s ease; /* 淡入過渡效果 */
+}
+
+/* 圈圈動畫容器 */
+.circle-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #ffdf88; /* 黃色 */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: bounce 0.5s ease, expand 0.5s ease 0.5s forwards;
+  z-index: 9999;
+}
+
+/* 跳動動畫 */
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -60%) scale(1.2); /* 向上跳動並放大 */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* 擴展動畫 */
+@keyframes expand {
+  0% {
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+  }
+  100% {
+    width: 3000px; /* 放大到足夠覆蓋整個螢幕 */
+    height: 3000px;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(10);
+  }
+}
+
+ h1 ,h2 {padding: 0; margin: 0;}
+ a {    color: #353535;
+        cursor: pointer;
+        text-decoration: none;}
+ @media screen and (min-width: 768px){
+ .for_pc{display: block !important;}
+ .for_m {display: none !important;}
+ }
+ @media screen and (max-width: 767px){
+  .for_pc{display: none !important;}
+  .for_m {display: block !important;}
+  }
+
+ @media screen and (min-width: 768px){
+
+  
+  
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff8e5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; 
+  }
+  
+
+  .fixed-box {
+    width:75vw; 
+    height: 47vw; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* 盒子陰影效果 */
+    text-align: left;
+    padding: 0px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+.main-bg{
+  position: absolute;
+  z-index: -2;
+}
+.main-bg img{
+  width: 70.5vw;
+  margin: 0 ;
+}
+.main-image{
+  position: absolute;
+  z-index: -3;
+  width: 42vw;
+  height: 47vw;
+  overflow: hidden;
+  margin: 0vw 0 0 33vw;
+}
+.main-image img{
+  width: 50vw;
+  height:50vw
+
+}
+a.main-image-href{
+  position: absolute;
+  width: 32vw;
+  height: 47vw;
+  margin: 0 0 0 42vw;
+}
+.main-image-more{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 6.5vw;
+  background-color: #0000006b;
+  color: #fff;
+  width: 50vw;
+  right: 1vw;
+  padding-bottom: 2vw;
+}
+
+.main-image-more p{
+  margin: 1vw 1vw 1.2vw;
+  text-align: center;
+  font-size: 1.4vw;
+}
+
+/* 自訂滾動條樣式 */
+.fixed-box::-webkit-scrollbar {
+    width: 12px; /* 滾動條寬度 */
+    height: 12px; /* 滾動條高度（橫向） */
+}
+
+.fixed-box::-webkit-scrollbar-thumb {
+    background-color: #ffdf89; /* 拉桿顏色 */
+    border-radius: 6px; /* 圓角 */
+    border: 3px solid white; /* 拉桿周圍的空隙 */
+}
+
+.fixed-box::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* 滾動條背景色 */
+    border-radius: 6px; /* 圓角 */
+}
+
+/* LOGO區 */
+.area-logo {
+    top: 0%;
+    left:0%;
+    width: 50vw;
+    position: relative;
+    text-align: left;
+    display: flex;
+    align-items: center; 
+    padding-bottom: 1vw;
+  }
+  
+  .logo-square ,.logo-horizontal {
+    padding-left: 1vw;
+    flex-shrink: 0; 
+    margin-right: 1vw; 
+  }
+  
+ .logo-horizontal img {
+    padding-top: 1vw;
+    max-width: 100%;
+    height: 3.5vw;
+  }
+  .logo-square img{
+    padding-top: 10px;
+    max-width: 100%;
+    height: 60px;
+  }
+  .logo-font {
+    flex: 1; 
+    min-width: 0; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    font-size: 2vw;
+    font-weight: 900;
+    color: #353535;
+
+  }
+
+
+
+/* tag區 */
+  .Area-kind-tag{padding-bottom: 1vw;}
+  .kind-tag-all{width: 46vw; height: auto; }
+  .tag-item {
+    display: inline-block;
+    padding: .5vw 1vw; 
+    background-color: #fff8e5; 
+    color: #353535; 
+    font-size: 1.3vw;
+    border-radius: 50px;
+    text-align: center; 
+    white-space: nowrap;
+    margin: 0.5vw;
+  }
+
+
+  .Area-introduction-txt {
+    width: 50vw;
+    height: auto;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-bottom: 2vw;
+  }
+
+  .Area-introduction-txt h2{
+    color:#353535;
+    font-size: 1.2vw;
+    font-weight: 500;
+
+  }
+
+  /* 社群媒體icon */
+  .Area-social-media{
+    width: 47vw;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .Area-social-media .social-media{
+   margin-left: 1.5vw;
+  }
+
+  .Area-social-media .social-media img{
+    width: 3vw;
+   }
+
+   /* 主要資訊區 */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 1.5vw;
+    width: 100%;
+    max-width: 38vw;
+
+  }
+  
+  .contact-item {
+    text-align: left;
+  }
+  
+  .contact-item h3 {
+    margin: 0;
+    font-size: 2vw;
+    color: #333;
+  }
+  
+  
+  .contact-item p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 1.5vw;
+  }
+
+  .area-product{
+    width: 50vw;
+    height:auto;
+    overflow: hidden;
+  }
+
+  .area-product .product-all .pd{
+    background-color: #fff;
+    width: 35vw;
+    height: 20vw;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    border-radius: 1vw;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: .5vw .5vw .5vw #0000001c;
+  }
+  .area-product .product-all .pd .pd_images{
+    margin:0 0 0 2vw;
+
+  }
+  .area-product .heart {color: #ff5353; position: absolute; bottom: 2vw; right: 3vw; font-size: 1.5vw;}
+  .product-all{
+   padding-left: 1vw;
+  }
+
+  .product-all .swiper-wrapper{
+    width: 70vw;
+    height: 21vw;
+    overflow: hidden;
+    margin-left: -1vw;
+    padding-left: 1vw;
+  }
+
+  .product-all .swiper-wrapper .swiper-slide img{
+    width: 17vw !important;
+  }
+
+
+  .product-title {
+    display: inline-block;
+    padding: 0vw 1vw 0vw 2vw;
+    background-color: #fff8e5;
+    color: #353535;
+    font-size: 1.3vw;
+    border-radius: 50px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: -1vw;
+    margin-bottom: 1vw;
+  }
+  .pd-info{padding:1vw .5vw 0 1vw; color: #353535; overflow: hidden; width: 17vw; height: auto;padding-bottom: 3vw; }
+  .pd-txt{font-size: 1.2vw;}
+  .pd-price{font-size:1.2vw;font-weight: 700;}
+  
+
+
+  .contact-info2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 1.5vw 1.5vw 3.5vw;
+    width: 100%;
+    max-width: 31vw;
+  }
+
+  .hover-button {
+ 
+    transition: transform 0.3s ease; /* 調整過渡時間，讓動畫更滑順 */
+    position: relative;
+  }
+
+
+
+}
+
+  @media screen and (max-width: 767px){
+    .fullscreen-container {
+      width: 100vw;
+      overflow: hidden;
+      background-color: #ffdf89;
+    }
+    .area-main{
+      position: relative;
+      left: 5vw;
+      z-index: 2;
+      top: -26vw;
+    }
+    .main-bg{
+      position: absolute;
+      z-index:1;
+      top: 85vw;
+    }
+    .main-bg img{
+      width: 100vw;
+      margin: 0 ;
+    }
+    .main-image{
+      position: relative;
+      z-index: 0;
+      width: 100vw;
+      display: flex;
+      height: auto;
+      overflow: hidden;
+      margin: -14vw 0 0 0;
+      justify-content: center;
+    }
+    .main-image img{
+      width: 140vw;
+      height:auto
+    }
+    a.main-image-href{
+      position: absolute;
+      width: 100vw;
+      height: 110vw;
+      margin: 0 0 0 0;
+      z-index: 1;
+    }
+
+    .area-product{
+      width: 100vw;
+      height:auto;
+      overflow: hidden;
+    }
+
+    .area-product .product-all .pd{
+      background-color: #fff;
+      width: 35vw;
+      height: 20vw;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+      border-radius: 1vw;
+      flex-wrap: nowrap;
+      align-items: center;
+      box-shadow: .5vw .5vw .5vw #0000001c;
+    }
+    .area-product .product-all .pd .pd_images{
+      margin:0 2vw 0;
+      width: 48vw;
+  
+    }
+    .area-product .heart {color: #ff5353; position: absolute; bottom: 2vw; right: 3vw; font-size: 1.5vw;}
+    .product-all{
+     padding-left: 1vw;
+    }
+    
+/* LOGO區 */
+.area-logo {
+  top: 0%;
+  left: 0%;
+  width: 50vw;
+  position: relative;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  padding-bottom: 1vw;
+  flex-direction: column;
+}
+
+.logo-square ,.logo-horizontal {
+  padding-left: 0vw;
+  flex-shrink: 0; 
+  margin-right: 0vw; 
+}
+
+.logo-horizontal img {
+  padding-top: 1vw;
+  max-width: 100%;
+  height: auto;
+  width: 30vw;
+}
+.logo-square img{
+padding-top: 10px;
+max-width: 100%;
+height: 60px;
+}
+.logo-font {
+  flex: 1; 
+  min-width: 0; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+  font-size: 4vw;
+  font-weight: 900;
+  color: #353535;
+
+}
+
+/* tag區 */
+.Area-kind-tag{padding-bottom: 2vw;}
+.kind-tag-all{width: 90vw; height: auto; }
+.tag-item {
+  display: inline-block;
+  padding: .5vw 2.5vw;
+  background-color: #fff8e5;
+  color: #353535;
+  font-size: 3.6vw;
+  border-radius: 50px;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: .5vw;
+  margin-bottom: 1.5vw;
+}
+
+.Area-introduction-txt {
+  width: 90vw;
+  height: auto;
+  overflow: hidden;
+  padding-bottom: 11vw;
+}
+
+.Area-introduction-txt h2{
+  color:#353535;
+  font-size: 3.3vw;
+  font-weight: 500;
+
+}
+
+  /* 社群媒體icon */
+  .Area-social-media{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .Area-social-media .social-media{
+   margin-left: 1.5vw;
+  }
+
+  .Area-social-media .social-media img{
+    width: 10vw;
+   }
+
+   .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding:1.5vw 1.5vw 5vw;
+    width: 100%;
+    max-width: 87vw;
+
+  }
+  
+  .contact-item {
+    text-align: left;
+  }
+  
+  .contact-item h3 {
+    margin: 0;
+    font-size: 5vw;
+    color: #333;
+  }
+  
+  .contact-item p {
+    margin: 1.5vw 0;
+    color: #555;
+    font-size: 4.5vw;
+  }
+
+  .area-product{
+    width: 100vw;
+    height:auto;
+    overflow: visible;
+  }
+
+  .product-all{
+   padding-left: 1vw;
+   padding-bottom: 4vw;
+  }
+
+  .area-product .product-all .pd{
+    background-color: #fff;
+    width: 90vw;
+    height: 55vw;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    border-radius: 1vw;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: .5vw .5vw .5vw #0000001c;
+  }
+
+  .area-product .heart {color: #ff5353; position: absolute; bottom: 2vw; right: 3vw; font-size: 8vw;}
+
+  .product-all .swiper-wrapper{
+    width: 100vw;
+    height: 100%;
+    margin-left: -1vw;
+  }
+
+  .product-all .swiper-wrapper .swiper-slide{
+ 
+  }
+
+
+  .product-title {
+    display: inline-block;
+    padding: 1vw 3vw 1vw 12vw;
+    background-color: #fff8e5;
+    color: #353535;
+    font-size: 5.5vw;
+    border-radius: 50px;
+    text-align: center;
+    white-space: nowrap;
+    margin-left: -13vw;
+    margin-bottom: 5vw;
+  }
+  .pd-info{padding:1vw .5vw 0 1vw; color: #353535; overflow: hidden; width: 35vw; height: auto;padding-bottom: 3vw; }
+  .pd-txt{font-size: 3vw;}
+  .pd-price{font-size:3vw;font-weight: 700;}
+
+  .contact-info2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    padding: 0;
+    width: 100%;
+    max-width: 90vw;
+
+  }
+
+  }
+
+
+  /* 動畫區 */
+
+  @keyframes slideUp {
+    0% {
+        transform: scaleY(0%);
+    }
+    100% {
+      transform: scaleY(600%);
+    }
+}
+
+.content {
+  width: 100vw;
+  background-color: #ffdf89;
+  position: absolute;
+  z-index: 11;
+  transform: translateY(100%);
+  animation: slideUp 1.5s ease-out forwards;
+  transform-origin: bottom; 
+}
+
+
+
+
+  /* 設置整個 SVG 的大小和背景色 */
+  svg {
+    width: 600px;
+    height: 600px;
+    background-color: #f0f0f0;
+  }
+
+  /* 第一個路徑，保持填充不變 */
+  .cls-1 {
+    fill: #b5e3b3; /* 保持填充 */
+    stroke: none; /* 無描邊 */
+  }
+
+  /* 第二個路徑 (模擬手寫劃出) */
+  .cls-2 {
+    fill: none; /* 開始時不顯示填充，只顯示描邊 */
+    stroke: #020202; /* 設置描邊顏色 */
+    stroke-width: 2; /* 描邊寬度 */
+    stroke-dasharray: 1000; /* 設置一個大於路徑長度的值 */
+    stroke-dashoffset: 1000; /* 開始時隱藏整個描邊 */
+    animation: draw 5s ease forwards; /* 5秒動畫劃出效果 */
+  }
+
+  /* 動畫 */
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0; /* 最終顯示整個路徑 */
+    }
+  }
+
+  /* 填充顏色在動畫結束後出現 */
+  @keyframes fill {
+    to {
+      fill: #020202; /* 在動畫結束後顯示填充色 */
+    }
+  }
+
+  /* 給 cls-2 添加填充動畫，延遲至描邊動畫結束後 */
+  .cls-2-fill {
+    animation: fill 0.5s ease forwards 5s; /* 0.5秒填充顏色，延遲5秒 */
+  }
+
+  .loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 9999;
+    transition: opacity 1s ease;
+  }
+  
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    margin: 75px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation: rotating 1s ease-in-out infinite;
+  }
+  
+  @keyframes rotating {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  .circle:before, .circle:after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    animation: center 2s ease-in-out infinite;
+  }
+  
+  @keyframes center {
+    50% {
+      top: calc(50% - (40px / 2));
+      left: calc(50% - (40px / 2));
+      box-shadow: 0 0 0 rgba(105, 241, 15, 0.5);
+      background-color: rgba(15, 241, 158, 0.5);
+    }
+  }
+  
+  .circle:before {
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 135, 53, 0.7);
+    border-radius: 50%;
+    box-shadow: 60px 60px 0;
+  }
+  
+  .circle:after {
+    top: 0;
+    left: calc(100% - 40px);
+    background-color: rgba(128, 128, 0, 0.5);
+    border-radius: 50%;
+    box-shadow: -60px 60px 0;
+  }
+  
+  /* Hidden class to hide the loading screen */
+  .hidden {
+    display: none;
+  }
+  
+  .wrapper {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  
+
+  .reveal {
+    position: relative;
+    display: inline-block; /* 保持文字排版 */
+    overflow: hidden; /* 確保遮罩不超出元素範圍 */
+    color: transparent; /* 初始隱藏文字 */
+    transition: color 0.5s ease; /* 文字淡入過渡效果 */
+  }
+  
+  .reveal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* 與內容寬度匹配 */
+    height: 100%; /* 與內容高度匹配 */
+    background-color: #333; /* 遮罩顏色 */
+    transform: translateX(-100%);
+    transition: transform 1s ease, opacity 0.1s ease 0.9s;
+    z-index: 2;
+    opacity: 1;
+  }
+  
+  .reveal.active::before {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  .reveal.active {
+    color: inherit; /* 當遮罩滑過後，文字顯現 */
+    transition-delay: 0.5s; /* 配合遮罩過渡效果的延遲 */
+  }
+  
+
+  

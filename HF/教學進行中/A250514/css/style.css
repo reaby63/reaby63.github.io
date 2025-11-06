@@ -5,7 +5,6 @@
 
 .carousel {
   position: relative;
-  height: 550px;
   overflow: hidden;
 }
 .carousel .arrow {
@@ -13,13 +12,19 @@
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  color: #2e2e2e;
+  color: #9F9F9F;
   border: 0px;
   box-shadow: 0 1px 3px #9c9c9c;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 999;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.carousel .arrow:hover {
+  filter: brightness(1.2);
+  color: #545454;
 }
 .carousel .arrow.arrow_right {
   right: 32px;
@@ -27,40 +32,70 @@
 .carousel .arrow.arrow_left {
   left: 30px;
 }
-.carousel .carousel_img {
-  display: flex;
-}
 .carousel .carousel_img .carousel_img_scroll {
-  width: -moz-max-content;
-  width: max-content;
-  display: flex;
+  max-height: 85vh;
+  overflow: hidden;
 }
 .carousel .carousel_img .carousel_img_scroll img {
   width: 100vw;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
+  animation: imgIn 4s ease-in-out forwards;
 }
 
+@keyframes imgIn {
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .page {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 .page button {
-  padding: 4px 8px;
-  padding-top: 5px;
-  font-size: 15px;
-  background-color: bisque;
-  border-radius: 8px;
-  border: 0px;
-  color: #606060;
-  margin-right: 20px;
+  margin-right: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1em;
   cursor: pointer;
+  background-color: transparent;
+  border: 0px;
+  width: 20px;
+  height: 20px;
+  border: solid 1.5px transparent;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.page button div {
+  width: 8px;
+  height: 8px;
+  background-color: #FFD5A1;
+  border-radius: 50%;
 }
 .page button:last-child {
   margin-right: 0;
+}
+.page button.active {
+  border-color: #FFC073;
+  cursor: initial;
+}
+.page button.active:hover {
+  filter: brightness(1);
+}
+.page button.active div {
+  background-color: #FFB459;
+}
+.page button:hover {
+  filter: brightness(1.05);
 }/*# sourceMappingURL=style.css.map */

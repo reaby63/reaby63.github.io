@@ -1,0 +1,333 @@
+{
+  // reset
+  "reset font": {
+		"scope": "scss",
+		"prefix": "//re:font",
+		"body": [
+			"margin: 0px;",
+      "padding: 0px;",
+      "font-size: 100%;",
+      "font-weight: inherit;"
+		],
+		"description": "reset font"
+	},
+  "reset list": {
+		"scope": "scss",
+		"prefix": "//re:list",
+		"body": [
+			"margin: 0px;",
+      "padding: 0px;",
+      "list-style: none;"
+		],
+		"description": "reset list"
+	},
+  // mobile size
+  "size change mobile": {
+		"scope": "scss",
+		"prefix": "//mobile",
+		"body": [
+      "1280"
+		],
+		"description": "change mobile"
+	},
+  "size 4xl": {
+		"scope": "scss",
+		"prefix": "//4xl",
+		"body": [
+      "2560"
+		],
+		"description": "4xl"
+	},
+  "size 3xl": {
+		"scope": "scss",
+		"prefix": "//3xl",
+		"body": [
+      "1920"
+		],
+		"description": "3xl: 1920"
+	},
+  "size 2xl": {
+		"scope": "scss",
+		"prefix": "//2xl",
+		"body": [
+      "1600"
+		],
+		"description": "2xl: 1600"
+	},
+  "size xl": {
+		"scope": "scss",
+		"prefix": "//xl",
+		"body": [
+      "1440"
+		],
+		"description": "xl: 1440"
+	},
+  "size lg": {
+		"scope": "scss",
+		"prefix": "//lg",
+		"body": [
+      "1280"
+		],
+		"description": "lg: 1280"
+	},
+  "size md": {
+		"scope": "scss",
+		"prefix": "//md",
+		"body": [
+      "1024"
+		],
+		"description": "md: 1024"
+	},
+  "size sm": {
+		"scope": "scss",
+		"prefix": "//sm",
+		"body": [
+      "768"
+		],
+		"description": "sm: 768"
+	},
+  "size xs": {
+		"scope": "scss",
+		"prefix": "//xs",
+		"body": [
+      "600"
+		],
+		"description": "xs: 600"
+	},
+  "size 2xs": {
+		"scope": "scss",
+		"prefix": "//2xs",
+		"body": [
+      "480"
+		],
+		"description": "2xs: 480"
+	},
+  "size 3xs": {
+		"scope": "scss",
+		"prefix": "//3xs",
+		"body": [
+      "360"
+		],
+		"description": "3xs: 360"
+	},
+  // breakpoints
+  "breakpoints max": {
+		"scope": "scss",
+		"prefix": "//mq:max",
+		"body": [
+			"@media all and (max-width: (${1:1280}px)) {${2:...}}"
+		],
+		"description": "@media max"
+	},
+  "breakpoints min": {
+		"scope": "scss",
+		"prefix": "//mq:min",
+		"body": [
+			"@media all and (min-width: (${1:1281}px)) {${2:...}}"
+		],
+		"description": "@media min"
+	},
+  "breakpoints range": {
+		"scope": "scss",
+		"prefix": "//mq:range",
+		"body": [
+			"@media all and (min-width: (${1:1281}px)) and (max-width: (${2:1366}px)) {${3:...}}"
+		],
+		"description": "@media max"
+	},
+	// Unit
+  "Letter-spacing": {
+		"scope": "scss",
+		"prefix": "//ls",
+		"body": [
+			"letter-spacing: calc(${1:16} / 1000 * ${2:50})+px;",
+		],
+		"description": "calc($font / 1000 * $ls)"
+	},
+	"Line-height": {
+		"scope": "scss",
+		"prefix": "//lh",
+		"body": [
+			"line-height: calc(${1:24} / ${2:16});",
+		],
+		"description": "calc($lh / $px)"
+	},
+	"to rem": {
+		"scope": "scss",
+		"prefix": "//rem",
+		"body": [
+			"calc(${1:16} / 16) + rem",
+		],
+		"description": "calc($val / $unit)"
+	},
+	"to vw": {
+		"scope": "scss",
+		"prefix": "//vw",
+		"body": [
+			"calc(${1:1920} / (1920 / 100)) + vw",
+		],
+		"description": "calc($val / $unit)"
+	},
+	"to dvw": {
+		"scope": "scss",
+		"prefix": "//dvw",
+		"body": [
+			"calc(${1:1920} / (1920 / 100)) + dvw",
+		],
+		"description": "calc($val / $unit)"
+	},
+	"to vh": {
+		"scope": "scss",
+		"prefix": "//vh",
+		"body": [
+			"calc(${1:1080} / (1080 / 100)) + vh",
+		],
+		"description": "calc($val / $unit)"
+	},
+	"to dvh": {
+		"scope": "scss",
+		"prefix": "//dvh",
+		"body": [
+			"calc(${1:1080} / (1080 / 100)) + dvh",
+		],
+		"description": "calc($val / $unit)"
+	},
+	"to em": {
+		"scope": "scss",
+		"prefix": "//em",
+		"body": [
+			"calc(${1:16} / 16) + em;",
+		],
+		"description": "calc($val / $unit)"
+	},
+	"to pa": {
+		"scope": "scss",
+		"prefix": "//pa",
+		"body": [
+			"calc((${1:1920} / ${2:1920}) * 100%)",
+		],
+		"description": "calc($val / $unit)"
+	},
+	// utility
+	"imgfix-height": {
+		"scope": "scss",
+		"prefix": "//imgfix-h",
+		"body": [
+			"&::before{ padding-bottom: calc((${1:9} / ${2:16}) * 100%); }",
+		],
+		"description": ""
+	},
+  "Text Linear Gradient": {
+		"scope": "scss",
+		"prefix": "//t-lg",
+		"body": [
+			"background: linear-gradient(${1:45deg, #f00, #00f});",
+      "background-clip: text;",
+      "-webkit-background-clip: text;",
+      "color: transparent;",
+      "-webkit-text-fill-color: transparent;"
+		],
+		"description": ""
+	},
+  "Text Overflow": {
+		"scope": "scss",
+		"prefix": "//t-o",
+		"body": [
+			"overflow: hidden;",
+      "text-overflow: ellipsis;",
+      "display: -webkit-box;",
+      "-webkit-box-orient: vertical;",
+      "-webkit-line-clamp: ${1:2};"
+		],
+		"description": "text-overflow"
+	},
+  "Text Overflow only": {
+		"scope": "scss",
+		"prefix": "//t-o:1",
+		"body": [
+			"overflow: hidden;",
+      "text-overflow: ellipsis;",
+      "white-space: nowrap;",
+      "-webkit-line-clamp: ${1:1};"
+		],
+		"description": "text-overflow"
+	},
+  "Text Overflow n": {
+		"scope": "scss",
+		"prefix": "//t-o:n",
+		"body": [
+      "-webkit-line-clamp: ${1:2};"
+		],
+		"description": "text-overflow"
+	},
+  "size (w/h)": {
+		"scope": "scss",
+		"prefix": "//size",
+		"body": [
+      "width: ${1:100%};",
+      "height: ${1:100%};"
+		],
+		"description": "size (w/h)"
+	},
+  "Position Full": {
+		"scope": "scss",
+		"prefix": "//abs:full",
+		"body": [
+      "position: absolute;",
+      "top: 0px;",
+      "left: 0px;",
+      "width: 100%;",
+      "height: 100%;"
+		],
+		"description": "Position full"
+	},
+  "Position Center": {
+		"scope": "scss",
+		"prefix": "//abs:center",
+		"body": [
+      "position: absolute;",
+      "top: 50%;",
+      "left: 50%;",
+      "transform: translate(-50%,-50%);"
+		],
+		"description": "Position center"
+	},
+  "mask": {
+		"scope": "scss",
+		"prefix": "//mask",
+		"body": [
+      "mask-position: center;",
+      "mask-repeat: no-repeat;",
+      "mask-size: contain;",
+      "mask-image: url(${1:url});"
+		],
+		"description": "mask"
+	},
+  "mask init": {
+		"scope": "scss",
+		"prefix": "//mask:init",
+		"body": [
+      "mask-position: center;",
+      "mask-repeat: no-repeat;",
+      "mask-size: contain;",
+		],
+		"description": "mask init"
+	},
+  "scrollbar": {
+		"scope": "scss",
+		"prefix": "//scrollbar",
+		"body": [
+      "&::-webkit-scrollbar {",
+      "  width: ${1: 5}px;",
+      "  background: ${2: bg};",
+      "}",
+      "&::-webkit-scrollbar-track { ",
+      "  background: ${2:bg};",
+      "}",
+      "&::-webkit-scrollbar-thumb { ",
+      "  background: ${3:bar};",
+      "}"
+		],
+		"description": "scrollbar"
+	},
+}

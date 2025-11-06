@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* Klee One - Regular (font-weight: 400) */
+@font-face {
+  font-family: "Klee One";
+  font-style: normal;
+  font-weight: 400; /* Regular 的粗細值 */
+  font-display: swap;
+  src: url("../fonts/base/KleeOne/KleeOne-Regular.ttf") format("truetype");
+}
+/* Klee One - SemiBold (font-weight: 600) */
+@font-face {
+  font-family: "Klee One";
+  font-style: normal;
+  font-weight: 600; /* SemiBold 的粗細值 */
+  font-display: swap;
+  src: url("../fonts/base/KleeOne/KleeOne-SemiBold.ttf") format("truetype");
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Nanum+Pen+Script&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Noto Sans" , Arial , sans-serif;
+} 
+
+$font_size_XL: 24px;
+$font_size_L: 18px;
+$font_size_ML: 16px;
+$font_size_M: 15px;
+$font_size_S: 14px;
+$font_size_XS:12px;
+
+body{
+  background-color: #3f3f3f;
+}
+
+.all_width{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+img{
+  width: 100%;
+}
+
