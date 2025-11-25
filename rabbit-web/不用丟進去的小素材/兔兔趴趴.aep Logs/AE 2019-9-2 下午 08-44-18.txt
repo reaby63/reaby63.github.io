@@ -1,12 +1,0 @@
-Adobe After Effects v14.0 Windows 64 render log for project “兔兔趴趴.aep”
-
-Rendering started on 2019/9/2 at 下午 08:44:18
-
-  2019/9/2 下午 08:44:18: Starting composition “Background/兔兔趴趴”.
-
-  Output To: C:\Users\USER\Desktop\Background-兔兔趴趴.mov    2019/9/2 下午 08:44:20: Finished composition “Background/兔兔趴趴”.
-
-
-  Total Time Elapsed: 2 Seconds
-Log closed on 2019/9/2 at 下午 08:44:20
-

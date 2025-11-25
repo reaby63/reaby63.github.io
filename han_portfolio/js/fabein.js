@@ -4,7 +4,6 @@ $(document).ready(function(){
     
 });
 
-
 function fadein_setting(div,cssname,offset){  
     var a,b,c,d;  
     d=$(div).offset().top;  
