@@ -19,7 +19,7 @@ a {
 }
 
 .all_width{
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -55,7 +55,7 @@ header{
             }
         }
         .header_title{
-            font-size: 30px;
+            font-size: 26px;
             letter-spacing: 25px;
             color: #ffffff;
             &::before{
@@ -73,7 +73,7 @@ header{
         vertical-align: top;
         margin-top: calc(20vh - 2em);
         .h_name{
-            font-size: 18px;
+            font-size: 17px;
             color: #82A9B3;
             font-weight: 600;
             letter-spacing: 0.5em;
@@ -81,7 +81,7 @@ header{
             text-indent: 0.5em;
         }
         .h_birth{
-            font-size: 16px;
+            font-size: 15px;
             color: #82A9B3;
             letter-spacing: 0.5em;
             margin-bottom: 24px;
@@ -89,7 +89,7 @@ header{
         }
         .h_history{
             color: #959595;
-            font-size: 16px;
+            font-size: 14px;
             border-left: solid 2px #A7CBD5;
             padding-left: 14px;
             margin-bottom: 32px;
@@ -109,7 +109,7 @@ header{
                 border: solid 1px #A7CFEE;
                 align-items: center;
                 justify-content: center;
-                font-size: 14px;
+                font-size: 12px;
                 margin-right: 16px;
                 margin-bottom: 12px;
                 text-align: center;
@@ -173,7 +173,7 @@ header{
     }
     .work_title{
         color: #A7CBD5;
-        font-size: 36px;
+        font-size: 30px;
         letter-spacing: 1em;
         display: flex;
         align-items: center;
@@ -217,21 +217,22 @@ header{
                 top: 0px;
                 left: 0px;
                 height: -webkit-fill-available;
-                padding: 60px 32px;
+                padding: 50px 32px;
                 color: #ffffff;
                 transition: all .4s;
                 .work_h_title{
                     font-weight: 500;
-                    font-size: 20px;
+                    font-size: 16px;
                     margin-bottom: 20px;
-                    letter-spacing: 0.3em;
+                    letter-spacing: 3px;
                 }
                 .work_h_dis{
                     border-left: solid 2px #ffffff;
                     padding-left: 8px;
                     line-height: 1.7em;
                     letter-spacing: 0.1em;
-                    font-size: 16px;
+                    font-size: 14px;
+                    text-align: justify;
                 }
                 button{
                     position: absolute;
@@ -244,6 +245,7 @@ header{
                     padding: 8px 12px;
                     letter-spacing: 1px;
                     cursor: pointer;
+                    font-size: 12px;
                     img{
                         width: 0.9em;
                     }
