@@ -1,0 +1,51 @@
+@use "./animate.scss" as *;
+@use "./fontBebasNeue.scss" as *;
+@use "./fontZenKakuGothicNew.scss" as *;
+
+.bg {
+    background-color: #303030;
+    font-family: "Noto Sans TC", Arial, sans-serif;
+}
+
+.title {
+    font-size: 17px;
+    margin-bottom: 9px;
+
+    &:before,
+    &:after {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 20px;
+        background-color: #7f7f7f;
+        position: relative;
+        top: 4px;
+        margin-right: 11px;
+    }
+
+    &:after {
+        margin-right: 0;
+        margin-left: 11px;
+    }
+
+    span {
+        display: inline-block;
+        color: #ffd214;
+    }
+
+    .titile-en {
+        color: #858585;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 20px;
+        position: relative;
+        top: 1px;
+        margin-left: 8px;
+    }
+}
+
+.title-p {
+    line-height: 30px;
+    margin-bottom: 34px;
+    color: #ffffff;
+    font-size: 15px;
+}

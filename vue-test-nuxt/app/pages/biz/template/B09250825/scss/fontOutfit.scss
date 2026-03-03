@@ -1,0 +1,9 @@
+// Outfit
+@font-face {
+    font-family: 'Outfit';
+    src: url('@/assets/fonts/Outfit/Outfit-Medium.woff2') format('woff2'),
+        url('@/assets/fonts/Outfit/Outfit-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,41 @@
+@use "./animate.scss" as *;
+@use "./fontGudea.scss" as *;
+@use "./fontNotoSansDisplay.scss" as *;
+
+.bg {
+    background-color: #3f3f3f;
+    font-family: "Noto Sans TC", sans-serif;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.6em;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: "Noto Sans Display", sans-serif;
+}
+
+.bgimg-size {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    img {
+        width: 645px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.scrollBar-y {
+    overflow-y: auto;
+    height: auto;
+    scrollbar-width: none;
+    min-height: auto;
+    max-height: 100%;
+    width: 100%;
+}

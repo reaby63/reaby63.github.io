@@ -1,0 +1,29 @@
+@use "./animate.scss" as *;
+@use "./fontOutfit.scss" as *;
+
+.bg {
+    background-color: #000000;
+    font-family: "Outfit", sans-serif;
+}
+
+.ccard {
+    max-width: 640px;
+    background: linear-gradient(180deg, #2C2C2C 0%, #000 100%);
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.scrollBar-y {
+    overflow-y: auto;
+    height: auto;
+    scrollbar-width: none;
+    min-height: auto;
+    max-height: 100%;
+    width: 100%;
+}

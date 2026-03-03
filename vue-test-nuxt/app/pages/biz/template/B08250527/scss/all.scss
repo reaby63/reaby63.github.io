@@ -1,0 +1,76 @@
+@use "./fontNotoSerifTC.scss" as *;
+
+// 文字
+@font-face {
+    font-family: 'MiSans TC';
+    src: url('@/assets/fonts/miSansTC/MisansTC-Normal.woff2') format('woff2'),
+        url('@/assets/fonts/miSansTC/MisansTC-Normal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bg {
+    background-color: #D7D0C9;
+    font-family: "Noto Serif TC", Arial, sans-serif;
+    color: #221D1A;
+}
+
+$font_size_XL: 24px;
+$font_size_L: 18px;
+$font_size_ML: 16px;
+$font_size_M: 15px;
+$font_size_S: 14px;
+$font_size_XS: 12px;
+
+.cross {
+    padding: 10px 10px;
+    padding-top: 15px;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    button {
+        position: relative;
+        display: inline-block;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1px;
+            background-color: #000000;
+            border-radius: 5px;
+            height: 28px;
+            top: -2px;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.container {
+    color: #434343;
+    position: relative;
+}
+
+.scrollBar-y {
+    overflow-y: auto;
+    height: auto;
+    scrollbar-width: none;
+    min-height: auto;
+    max-height: 100%;
+    width: 100%;
+}

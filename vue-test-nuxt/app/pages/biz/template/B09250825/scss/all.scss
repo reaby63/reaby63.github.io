@@ -1,0 +1,30 @@
+@use "./fontYsabeauInfant.scss" as *;
+@use "./fontTexturina.scss" as *;
+@use "./fontOutfit.scss" as *;
+
+.bg {
+    background-color: #cfcfcf;
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+.ccard {
+    max-width: 640px;
+    background: #FCF7EE;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+.scrollBar-y {
+    overflow-y: auto;
+    height: auto;
+    scrollbar-width: none;
+    min-height: auto;
+    max-height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,8 @@
+// Texturina
+@font-face {
+    font-family: 'Texturina';
+    src: url('@/assets/fonts/Texturina/Texturina-Regular.woff2') format('woff2'),
+        url('@/assets/fonts/Texturina/Texturina-Regular.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}

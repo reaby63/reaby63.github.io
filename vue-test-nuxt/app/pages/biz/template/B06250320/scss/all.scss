@@ -1,0 +1,43 @@
+@use "./animate.scss" as *;
+
+.bg {
+    background-color: #3f3f3f;
+    font-family: "Noto Sans TC", Arial, sans-serif;
+}
+
+.title {
+    font-size: 20px;
+    color: #1E1E1E;
+    margin-bottom: 25px;
+    line-height: 1.6em;
+    text-align: center;
+    position: relative;
+
+    span {
+        position: relative;
+        display: inline-block;
+        letter-spacing: 0.05em;
+        margin-left: 0.05em;
+        width: 8em;
+        font-weight: 700;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: inline-block;
+        background-color: #1E1E1E;
+        height: 1px;
+        width: calc((100% - 15px - 8em)/2);
+        position: absolute;
+        top: 16px;
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+    }
+}

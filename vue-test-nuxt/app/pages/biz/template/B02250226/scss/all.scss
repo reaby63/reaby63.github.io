@@ -1,0 +1,56 @@
+// @use "./animate.scss" as *;
+
+.bg {
+  background-color: #3f3f3f;
+  font-family: "Noto Sans TC", Arial, sans-serif;
+  line-height: 1.3333333333;
+  letter-spacing: 1px;
+}
+
+.all_width {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cross {
+  padding: 10px 10px;
+  padding-top: 15px;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  button {
+    position: relative;
+    display: inline-block;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      background-color: #000000;
+      border-radius: 5px;
+      height: 28px;
+      top: -2px;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.scrollBar-y {
+  overflow-y: auto;
+  height: auto;
+  scrollbar-width: none;
+  min-height: auto;
+  max-height: 100%;
+  width: 100%;
+}

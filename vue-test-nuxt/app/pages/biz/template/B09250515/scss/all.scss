@@ -1,0 +1,21 @@
+@use "./animate.scss" as *;
+@use "./fontPalanquinDark.scss" as *;
+@use "./fontNotoSansJP.scss" as *;
+@use "./fontImpact.scss" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Palanquin+Dark:wght@400;500;600;700&display=swap');
+
+body {
+    background-color: #3f3f3f;
+    font-family: "Noto Sans JP", "Noto Sans TC", sans-serif;
+    color: #ffffff;
+}
+
+.scrollBar-y {
+    overflow-y: auto;
+    height: auto;
+    scrollbar-width: none;
+    min-height: auto;
+    max-height: 100%;
+    width: 100%;
+}

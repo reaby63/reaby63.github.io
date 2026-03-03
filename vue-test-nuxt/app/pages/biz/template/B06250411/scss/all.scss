@@ -1,0 +1,88 @@
+@use './animation.scss' as *;
+
+// 字體
+@font-face {
+    font-family: 'Limelight';
+    src: url('@/assets/fonts/limelight/Limelight-Regular.woff2') format('woff2'),
+        url('@/assets/fonts/limelight/Limelight-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Noto Sans Display';
+    src: url('@/assets/fonts/notoSansDisplay/NotoSansDisplay-Regular.woff2') format('woff2'),
+        url('@/assets/fonts/notoSansDisplay/NotoSansDisplay-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Freeman';
+    src: url('@/assets/fonts/freeman/Freeman-Regular.woff2') format('woff2'),
+        url('@/assets/fonts/freeman/Freeman-Regular.woff') format('woff');
+}
+
+.bg {
+    background-color: #3f3f3f;
+    font-family: "Noto Sans Display", Arial, sans-serif;
+}
+
+.scrollBar-y {
+    overflow-y: auto;
+    scrollbar-width: none;
+    max-height: 100vh;
+    overscroll-behavior: contain;
+    width: 100%;
+}
+
+.cross {
+    padding: 10px 10px;
+    padding-top: 15px;
+    text-align: right;
+    padding-top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    button {
+        position: relative;
+        display: inline-block;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1px;
+            background-color: #000000;
+            border-radius: 5px;
+            height: 28px;
+            top: -2px;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.container {
+    color: #000000;
+}
+
+.ccard {
+    max-width: 640px;
+    background-color: #000000;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: solid 2px #ffffff;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+

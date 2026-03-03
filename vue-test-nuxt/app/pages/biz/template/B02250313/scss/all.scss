@@ -1,0 +1,47 @@
+@use "./animate.scss" as *;
+
+@font-face {
+    font-family: 'Iansui';
+    src: url('@/assets/fonts/Iansui/Iansui-Regular.woff2') format('woff2'),
+        url('@/assets/fonts/Iansui/Iansui-Regular.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klee One';
+    src: url('@/assets/fonts/kleeOne/KleeOne-Regular.woff2') format('woff2'),
+        url('@/assets/fonts/kleeOne/KleeOne-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klee One';
+    src: url('@/assets/fonts/kleeOne/KleeOne-SemiBold.woff2') format('woff2'),
+        url('@/assets/fonts/kleeOne/KleeOne-SemiBold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+.bg {
+    background-color: #ECE1E1;
+    font-family: "Noto Sans TC", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    color: #434343;
+    position: relative;
+}
+
+.scrollBar-y {
+    overflow-y: auto;
+    height: auto;
+    scrollbar-width: none;
+    min-height: auto;
+    max-height: 100%;
+    width: 100%;
+}
