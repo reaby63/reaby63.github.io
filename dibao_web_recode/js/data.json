@@ -1,13 +1,39 @@
 {
+  "site": {
+    "company": "帝堡實業有限公司",
+    "logo": "../img/logo.svg"
+  },
   "footer": {
-    "logo": "../img/logo.svg",
-    "title": "帝堡實業有限公司",
-    "en_title": "Dì Bǎo Industrial Co., Ltd."
+    "logo": "{{ logo }}",
+    "title": "{{ company }}",
+    "en_title": "Dì Bǎo Industrial Co., Ltd.",
+    "copy_right": "Copyright © 2025 {{company}}. All Rights Reserved.Design by Choice"
   },
   "header": {
+    "title": "{{ company }}",
+    "logo": "{{ logo }}",
     "nav": [
-      {"title": "首頁", "href": "index.html"},
-      {"title": "產品", "href": "products.html"}
+      {
+        "title": "關於我們",
+        "href": "index.html",
+        "dataPage": "page-home"
+      },
+      {
+        "title": "產品介紹",
+        "href": "products.html"
+      },
+      {
+        "title": "工程實績",
+        "href": "products.html"
+      },
+      {
+        "title": "最新消息",
+        "href": "products.html"
+      },
+      {
+        "title": "聯絡我們",
+        "href": "products.html"
+      }
     ]
   },
   "banner": [

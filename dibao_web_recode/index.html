@@ -10,22 +10,29 @@
     <!-- Swiper套用 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <script>
-        // 要插入的檔案和對應容器 ID
-            const layouts = [
-                { file: 'layout/Header.html', id: 'header' },
-                { file: 'layout/Footer.html', id: 'footer' }
-            ];
+        // 套共用元件方式
+        const layouts = [
+            { file: 'layout/Header.html', id: 'header' },
+            { file: 'layout/Footer.html', id: 'footer' }
+        ];
 
-            layouts.forEach(layout => {
-                fetch(layout.file)
-                    .then(res => res.text())
-                    .then(html => {
-                        document.getElementById(layout.id).innerHTML = html;
-                    })
-                    .catch(err => console.error(`載入 ${layout.file} 失敗`, err));
-            });
+        layouts.forEach(layout => {
+            fetch(layout.file)
+                .then(res => res.text())
+                .then(html => {
+                    document.getElementById(layout.id).innerHTML = html;
+                })
+                .catch(err => console.error(`載入 ${layout.file} 失敗`, err));
+        });
+
+        // 將data內的同樣資料套變數 共用函式
+        function replaceVars(str, vars) {
+            if (!str) return '';
+            return str.replace(/\{\{\s*(.*?)\s*\}\}/g, (_, key) => vars[key.trim()] || '');
+        }
     </script>
     <script src="./js/layout/footer.js"></script>
+    <script src="./js/layout/header.js"></script>
 </head>
 <body>
     <div id="header"></div>

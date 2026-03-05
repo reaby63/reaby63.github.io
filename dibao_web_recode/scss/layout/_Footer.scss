@@ -1,23 +1,129 @@
-$main-color:#2C4B79;
+$main-color: #2C4B79;
 
 .footer {
     background-color: $main-color;
-    box-shadow: 0 -2px 6px #000;
-    .left {
+    box-shadow: 0 -2px 6px #BDBDBD;
+    .all_width {
+        display: flex;
+    }
+    .f_left {
         background-color: #fff;
         text-align: center;
         width: 300px;
         padding: 46.8px 0;
         color: $main-color;
-        .logo {
+        letter-spacing: 1.2px;
+        font-weight: bold;
+        max-height: 280px;
+        .f_logo {
             margin-bottom: 19px;
         }
-        .title {
-            font-weight: bold;
+        .f_title {
             font-size: 20px;
-            letter-spacing: 1.2px;
             line-height: 27px;
             margin-bottom: 19px;
+        }
+        .f_en_title {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+    .f_right {
+        width: calc( 100% - 300px );
+        padding: 40px 158px 40px 80px;
+        .f_nav_btn {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            button {
+                color: #fff;
+                transition: all 0.2s;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+        .f_mid_btn {
+            display: flex;
+            .f_mid_left {
+                width: 30%;
+                margin-right: 40px;
+            }
+            .f_mid_mid {
+                width: calc( 100% - 30% - 92px );
+                margin-right: 40px;
+            }
+            .f_mid_right {
+                display: inline-flex;
+                width: 92px;
+                justify-content: flex-end;
+                .f_icon {
+                    &:first-child {
+                        margin-right: 20px;   
+                    }
+                }
+            }
+            // 黃色框框
+            .f_yellow_box {
+                display: flex;
+                align-items: center;
+                border: solid 1px #FFB921;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+                transition: all 0.2s;
+                &:first-child {
+                    margin-bottom: 28px;
+                }
+                .f_text {
+                    color: #FFB921;
+                    margin-left: 14px;
+                    font-size: 16px;
+                    letter-spacing: 1.2px;
+                    font-weight: 500;
+                }
+                &:before {
+                    content: "";
+                    background-color: #FFB921;
+                    position: absolute;
+                    height: 100%;
+                    width: 0px;
+                    top: 0;
+                    left: 36px;
+                    display: block;
+                    transition: all 0.3s;
+                }
+                &:hover {
+                    &:before {
+                        width: calc(100% - 36px);
+                    }
+                    .f_text {
+                        color: #2C4B79;
+                        position: relative;
+                        z-index: 2;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .f_icon {
+                background-color: #FFB921;
+                width: 36px;
+                height: 36px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                img {
+                    width: 22px;
+                    height: 22px;
+                }
+            }
+        }
+        .f_copyright {
+            color: #CACACA;
+            font-size: 14px;
+            margin-top: 50px;
         }
     }
 }
