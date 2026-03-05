@@ -1,0 +1,17 @@
+{
+  "footer": {
+    "logo": "../img/logo.svg",
+    "title": "帝堡實業有限公司",
+    "en_title": "Dì Bǎo Industrial Co., Ltd."
+  },
+  "header": {
+    "nav": [
+      {"title": "首頁", "href": "index.html"},
+      {"title": "產品", "href": "products.html"}
+    ]
+  },
+  "banner": [
+    {"img":"banner1.jpg"},
+    {"img":"banner2.jpg"}
+  ]
+}
