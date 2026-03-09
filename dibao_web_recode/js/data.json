@@ -36,8 +36,38 @@
       }
     ]
   },
-  "banner": [
-    {"img":"banner1.jpg"},
-    {"img":"banner2.jpg"}
-  ]
+  "banner":{
+      "one": [
+        {
+          "img":"../img/banner-01.png",
+          "title":"帝堡實業有限公司",
+          "icon": "../img/banner-icon.svg",
+          "desc": "品質至上．公道價格．誠信經營"
+        },
+        {
+          "img":"../img/banner-02.png",
+          "title":"帝堡實業有限公司",
+          "icon": "../img/banner-icon.svg",
+          "desc": "品質至上．公道價格．誠信經營"
+        },
+        {
+          "img":"../img/banner-03.png",
+          "title":"帝堡實業有限公司",
+          "icon": "../img/banner-icon.svg",
+          "desc": "品質至上．公道價格．誠信經營"
+        },
+        {
+          "img":"../img/banner-04.png",
+          "title":"帝堡實業有限公司",
+          "icon": "../img/banner-icon.svg",
+          "desc": "品質至上．公道價格．誠信經營"
+        },
+        {
+          "img":"../img/banner-05.png",
+          "title":"帝堡實業有限公司",
+          "icon": "../img/banner-icon.svg",
+          "desc": "品質至上．公道價格．誠信經營"
+        }
+      ]
+    }
 }

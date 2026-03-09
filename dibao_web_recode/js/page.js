@@ -1,25 +1,55 @@
-// 1- 預設首頁
-const main = document.getElementById('main-content');
-fetch('page/page-home.html') // 進入頁面時預設載入首頁
-    .then(res => res.text())
-    .then(html => {
-        main.innerHTML = html;
-    })
-    .catch(err => console.error('載入首頁失敗', err));
-
-
-// 2- 點 nav 切換 main 內容
-document.addEventListener('click', e => {
-  const link = e.target.closest('[data-page]');
-  if (!link) return;
-
-  e.preventDefault(); // 防止頁面跳轉
-  const pageFile = `page/${link.dataset.page}.html`;
-
-  fetch(pageFile)
-    .then(res => res.text())
-    .then(html => {
+// 先載入頁面
+fetch('page/page-home.html')
+  .then(res => res.text())
+  .then(html => {
       document.getElementById('main-content').innerHTML = html;
-    })
-    .catch(err => console.error(`載入 ${pageFile} 失敗`, err));
-});
+
+      // 現在元素已經在 DOM
+      buildSwiper('one');
+  });
+
+// 1. 載入 JSON 資料
+let data = {};
+fetch('./js/data.json')
+  .then(res => res.json())
+  .then(json => {
+      data = json;
+      buildSwiper('one'); // 生成 swiper
+  })
+  .catch(err => console.error('讀取 data.json 失敗', err));
+
+// 2. 將資料生成 swiper slide
+function buildSwiper(key) {
+    const slidesData = data.banner[key];
+    if (!slidesData) return;
+
+    const wrapper = document.getElementById('swiper-slides');
+    wrapper.innerHTML = slidesData.map(item => `
+        <div class="swiper-slide">
+            <div class="swiper-text">
+              <h2>${item.title}</h2>
+              <img src="${item.icon}" alt="icon" class="slide-icon">
+              <p>${item.desc}</p>
+            </div>
+            <img src="${item.img}" alt="${item.title}">
+        </div>
+    `).join('');
+
+    // 初始化 Swiper
+    new Swiper(".mySwiper", {
+      loop: true,
+      speed: 1000, // 滑動動畫時間 (毫秒) 1000 = 1秒
+      autoplay: {
+          delay: 3000, // 幾毫秒換一張 (3000 = 3秒)
+          disableOnInteraction: false // 使用者點擊後仍然繼續輪播
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+}

@@ -28,6 +28,57 @@ button {
   background-color: transparent;
 }
 
+.swiper {
+  width: 100%;
+  height: 535px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background: #eee;
+}
+.swiper-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-text {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: #fff;
+  top: calc(50% - 91px);
+}
+.swiper-text h2, .swiper-text p {
+  width: 100%;
+  letter-spacing: 5px;
+}
+.swiper-text h2 {
+  margin-bottom: 32px;
+  font-size: 40px;
+  line-height: 53px;
+}
+.swiper-text p {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.swiper-text .slide-icon {
+  width: auto;
+  height: auto;
+  margin-bottom: 36px;
+}
+
 .footer {
   background-color: #2C4B79;
   box-shadow: 0 -2px 6px #BDBDBD;
@@ -157,6 +208,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9;
 }
 header .all_width {
   background-color: #2C4B79;
@@ -191,5 +243,5 @@ header .nav a {
 }
 
 main {
-  margin-top: 80px;
+  margin-top: 60px;
 }/*# sourceMappingURL=style.css.map */

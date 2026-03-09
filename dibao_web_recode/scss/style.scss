@@ -1,9 +1,11 @@
-// 共用元件
+// 基礎設定
 @use './base/Reset';
 @use './base/Share';
+
+// 共用元件 輪播
+@use './components/Swiper';
+
+// 框架
 @use './layout/Footer';
 @use './layout/Header';
-@use './layout/About';
-@use './layout/Nav';
-@use './layout/Contact';
 

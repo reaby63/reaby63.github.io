@@ -1,0 +1,51 @@
+// Swiper基礎樣式
+.swiper {
+    width: 100%;
+    height: 535px;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: #eee;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 輪播圖的樣式
+.swiper-text {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    color: #fff;
+    top: calc(50% - 91px);
+    h2, p {
+        width: 100%;
+        letter-spacing: 5px;
+    }
+    h2 {
+        margin-bottom: 32px;
+        font-size: 40px;
+        line-height: 53px;
+    }
+    p {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 40px;
+    }
+    .slide-icon {
+        width: auto;
+        height: auto;
+        margin-bottom: 36px;
+    }
+}
