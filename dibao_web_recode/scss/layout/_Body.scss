@@ -46,7 +46,7 @@
         right: 0;
         width: 192px;
         height: 100%;
-        background: url('../../img/about-02.png') no-repeat center;
+        background: url('../img/about-02.png') no-repeat center;
         background-size: cover;
     }
     .about_left {
@@ -97,7 +97,7 @@
 
 // product
 .product {
-    background-image: url("../../img/product-bg.png");
+    background-image: url("../img/product-bg.png");
     padding-bottom: 70px;
     .pro_title {
         display: flex;
@@ -167,7 +167,7 @@
     margin-top: 70px;
     margin-left: calc( (100% - 1200px) / 2 );
     padding-right: 93px;
-    background-image: url("../../img/contact_bg.png");
+    background-image: url("../img/contact_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     .all_width.half_width {
