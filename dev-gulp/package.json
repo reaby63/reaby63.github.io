@@ -1,0 +1,51 @@
+{
+  "name": "jhuang-ping",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "git submodule update --init --recursive",
+    "dev": "gulp dev",
+    "pro": "gulp build --env pro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhuangping/jhuangping.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhuangping/jhuangping.github.io/issues"
+  },
+  "homepage": "https://github.com/jhuangping/jhuangping.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "7.26.0",
+    "@babel/preset-env": "7.26.0",
+    "autoprefixer": "10.4.20",
+    "browser-sync": "3.0.3",
+    "gulp": "5.0.0",
+    "gulp-babel": "8.0.0",
+    "gulp-clean-css": "4.3.0",
+    "gulp-concat": "2.6.1",
+    "gulp-html-extend": "1.1.6",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-if": "3.0.0",
+    "gulp-load-plugins": "2.0.8",
+    "gulp-postcss": "10.0.0",
+    "gulp-pug": "5.0.0",
+    "gulp-sass": "6.0.0",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-uglify": "3.0.2",
+    "merge-stream": "^2.0.0",
+    "minimist": "^1.2.8",
+    "sass": "1.82.0"
+  },
+  "dependencies": {
+    "dotenv": "16.4.7",
+    "fs-extra": "11.3.0",
+    "html-minifier-terser": "7.2.0",
+    "lodash.template": "4.5.0"
+  }
+}

@@ -45,7 +45,13 @@ function buildSwiper(key) {
       },
       pagination: {
         el: ".swiper-pagination",
-        clickable: true
+        clickable: true,
+        // 這邊是改數字輪播!
+        // type: "bullets",
+        // renderBullet: function (index, className) {
+        //   console.log("有跑", index);
+        //         return `<span class="${className}">${index + 1}</span>`;
+        //     },
       },
       navigation: {
         nextEl: ".swiper-button-next",

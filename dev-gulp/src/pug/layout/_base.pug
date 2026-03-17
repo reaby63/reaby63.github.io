@@ -1,0 +1,19 @@
+include ../config/_use.pug
+include ../component/_use.pug
+
+doctype html
+html(lang=lang)
+  +CfgHead
+    +CfgScript
+  //- Setting Page Class
+  block head
+body
+  .l-wp-html
+    +CmpHeader
+
+    .l-wp-main
+      //- Main Layout
+      block main
+
+    block ft
+    +CmpFooter

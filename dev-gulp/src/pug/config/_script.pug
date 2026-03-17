@@ -1,0 +1,18 @@
+//- script
+mixin CfgScript
+  //- plugin
+  script(defer src="../scripts/plugin.min.js")
+  //- 自訂義
+  script(defer src="../scripts/custom.js")
+
+//- Setting Page Class
+mixin CfgPageClass(addClass)
+  if addClass
+      script.
+        window.addEventListener('load', function() {
+          document.body.classList.add("#{addClass}");
+
+          if (typeof $ !== 'undefined' && typeof page !== 'undefined') {
+            page.#{addClass}();
+          }
+        });

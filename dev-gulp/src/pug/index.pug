@@ -1,0 +1,24 @@
+extends ./layout/_base.pug
+
+block head
+  +CfgPageClass('home')
+  script.
+    window.addEventListener('load', function() {
+      console.log('hello world !!')
+    });
+
+block main
+  h1 Pug 編譯用
+  .test test class
+  .test3 test3 class
+  nav
+    ul
+      each item in t.menu
+        li= item
+
+  each item, index in t.form
+    .row
+      .col-12
+        +CmpBaseInput(`test${index}`, item.label, item.placeholder, item.type, item.required)
+
+  h3 #{t.name}

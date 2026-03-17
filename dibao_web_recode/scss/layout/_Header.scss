@@ -9,6 +9,15 @@ header {
     left: 0;
     width: 100%;
     z-index: 9;
+    &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 26px;
+        background-color: #EC8832;
+    }
 
     .all_width {
         background-color: #2C4B79;
@@ -33,6 +42,7 @@ header {
         a {
             text-decoration: none;
             color: #fff;
+            padding: 8px 15px;
         }
     }
 }
