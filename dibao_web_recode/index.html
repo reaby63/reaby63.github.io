@@ -11,22 +11,26 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Swiper套用 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <script src="./js/data.json"></script>
+    <!-- <script src="./js/data.json"></script> -->
     <script>
-        // 套共用元件方式
-        const layouts = [
-            { file: 'layout/Header.html', id: 'header' },
-            { file: 'layout/Footer.html', id: 'footer' }
-        ];
+        // 等DOM載入後再來執行裏頭的事情
+        document.addEventListener('DOMContentLoaded', () => {
 
-        layouts.forEach(layout => {
-            fetch(layout.file)
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById(layout.id).innerHTML = html;
-                })
-                .catch(err => console.error(`載入 ${layout.file} 失敗`, err));
-        });
+            // 套共用元件方式
+            const layouts = [
+                { file: 'layout/Header.html', id: 'header' },
+                { file: 'layout/Footer.html', id: 'footer' }
+            ];
+
+            layouts.forEach(layout => {
+                fetch(layout.file)
+                    .then(res => res.text())
+                    .then(html => {
+                        document.getElementById(layout.id).innerHTML = html;
+                    })
+                    .catch(err => console.error(`載入 ${layout.file} 失敗`, err));
+            });
+        })
 
         // 將data內的同樣資料套變數 共用函式
         function replaceVars(str, vars) {
@@ -36,8 +40,6 @@
             });
         }
     </script>
-    <script src="./js/layout/footer.js"></script>
-    <script src="./js/layout/header.js"></script>
 </head>
 <body>
     <div id="header"></div>
@@ -57,4 +59,6 @@
 <!-- 其他套用 -->
 <script src="./js/components/swiper.js"></script>
 <script src="./js/page.js"></script>
+<script src="./js/layout/footer.js"></script>
+<script src="./js/layout/header.js"></script>
 </html>

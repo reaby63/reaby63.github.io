@@ -1,22 +1,13 @@
-// 先載入頁面
-fetch('page/page-home.html')
-  .then(res => res.text())
-  .then(html => {
-      document.getElementById('main-content').innerHTML = html;
-
-      // 現在元素已經在 DOM
-      buildSwiper('one');
-  });
-
 // 1. 載入 JSON 資料
 let data = {};
-fetch('./js/data.json')
-  .then(res => res.json())
-  .then(json => {
-      data = json;
-      buildSwiper('one'); // 生成 swiper
-  })
-  .catch(err => console.error('讀取 data.json 失敗', err));
+async function loadData() {
+    try {
+        const res = await fetch('./js/data.json');
+        data = await res.json();
+    } catch (err) {
+        console.error('讀取 data.json 失敗', err);
+    }
+}
 
 // 2. 將資料生成 swiper slide
 function buildSwiper(key) {
@@ -59,3 +50,16 @@ function buildSwiper(key) {
       }
     });
 }
+
+// 等資料都到了 再載入頁面
+async function initPage() {
+    // 先載入 HTML
+    const res = await fetch('page/page-home.html');
+    const html = await res.text();
+    document.getElementById('main-content').innerHTML = html;
+
+    await loadData(); // 再載入資料
+    buildSwiper('one'); // 最後才建swiper
+}
+
+initPage();

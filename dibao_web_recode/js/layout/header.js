@@ -12,7 +12,7 @@ fetch('layout/Header.html')
                 const siteVars = data.site; // 共用資料 先撈出
                 const headerData = data.header;
                 const navData = data.header.nav;
-                const tpl = document.getElementById('header-template').content.cloneNode(true);
+                const tpl = document.getElementById('header-template');
 
                 tpl.querySelector('.h_title img').src =
                     replaceVars(headerData.logo, siteVars);
@@ -31,9 +31,8 @@ fetch('layout/Header.html')
                     btn.dataPage = nav.dataPage;
                 });
 
-                header.appendChild(tpl);
-
                 // 滾動後header縮小 動態效果
+                const header = document.querySelector('.header');
                 window.addEventListener('scroll', () => {
                     if (window.scrollY > 50) {   // 滾動超過 50px
                         header.classList.add('scrolled');

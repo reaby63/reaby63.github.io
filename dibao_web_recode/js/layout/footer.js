@@ -11,7 +11,7 @@ fetch('layout/Footer.html')
                 const siteVars = data.site; // 共用資料 先撈出
                 const footerData = data.footer;
                 const navData = data.header.nav;
-                const tpl = document.getElementById('footer-template').content.cloneNode(true);
+                const tpl = document.getElementById('footer-template');
 
                 tpl.querySelector('.f_logo img').src =
                     replaceVars(footerData.logo, siteVars);
@@ -28,7 +28,5 @@ fetch('layout/Footer.html')
                     btn.textContent = nav.title;
                     btnContainer.appendChild(btn);
                 });
-
-                footer.appendChild(tpl);
             });
     });
