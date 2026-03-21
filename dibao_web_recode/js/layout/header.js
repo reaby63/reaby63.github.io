@@ -4,6 +4,15 @@ fetch('layout/Header.html')
     .then(html => {
         document.getElementById('header').innerHTML = html;
 
+        // 漢堡選單 必須再DOM建立好後再觸發唷
+        document.addEventListener('click', (e) => {
+            const hamburger = e.target.closest('.hamburger');
+            if (!hamburger) return;
+
+            const nav = document.querySelector('.nav');
+            nav.classList.toggle('active');
+        });
+
         // header JS 渲染資料
         const header = document.querySelector('.header');
         fetch('js/data.json')
@@ -43,6 +52,9 @@ fetch('layout/Header.html')
                             top: y,
                             behavior: 'smooth'
                         });
+
+                        // 點了收起選單
+                        document.querySelector('.nav').classList.remove('active');
                     });
 
                     btnContainer.appendChild(btn);
@@ -58,5 +70,6 @@ fetch('layout/Header.html')
                     }
                 });
             });
+
     });
 

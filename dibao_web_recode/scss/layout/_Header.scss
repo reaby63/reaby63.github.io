@@ -60,3 +60,39 @@ header {
 main {
     margin-top: 60px;
 }
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        z-index: 999;
+        right: 39px;
+        top: 0;
+        color: #fff;
+    }
+
+    header {
+        .nav {
+            transform: translateY(-20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            flex-direction: column;
+            position: absolute;
+            background-color: #EC8832;
+            right: 0;
+            top: 55px;
+        }
+
+        .nav.active {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
