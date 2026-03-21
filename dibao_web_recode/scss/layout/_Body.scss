@@ -1,3 +1,19 @@
+// swiper
+.mySwiper {
+    .swiper-pagination-bullet {
+        background-image: url('../img/swiper-noactive.svg');
+        border-radius: 0;
+        width: 19px;
+        height: 23px;
+        background-color: transparent;
+        opacity: 1;
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-image: url('../img/swiper-active.svg');
+    }
+}
+
+
 // title 共用
 .title {
     color: #fff;

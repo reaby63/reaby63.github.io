@@ -15,24 +15,15 @@
     "nav": [
       {
         "title": "關於我們",
-        "href": "index.html",
-        "dataPage": "page-home"
+        "href": "about"
       },
       {
         "title": "產品介紹",
-        "href": "products.html"
-      },
-      {
-        "title": "工程實績",
-        "href": "products.html"
-      },
-      {
-        "title": "最新消息",
-        "href": "products.html"
+        "href": "product"
       },
       {
         "title": "聯絡我們",
-        "href": "products.html"
+        "href": "contact"
       }
     ]
   },

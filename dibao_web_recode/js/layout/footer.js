@@ -26,6 +26,24 @@ fetch('layout/Footer.html')
                 navData.forEach(nav => {
                     const btn = document.createElement('button');
                     btn.textContent = nav.title;
+                    // btn.href = nav.href; //這邊是跳頁行為
+                    btn.href = `#${nav.href}`; // 這是滑動行為寫法
+
+                    // 滑動行為須加下面
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+
+                        const target = document.getElementById(nav.href);
+                        if (!target) return;
+
+                        const offset = 55; // header 高度
+                        const y = target.getBoundingClientRect().top + window.scrollY - offset;
+
+                        window.scrollTo({
+                            top: y,
+                            behavior: 'smooth'
+                        });
+                    });
                     btnContainer.appendChild(btn);
                 });
             });
