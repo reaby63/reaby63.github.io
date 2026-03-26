@@ -130,3 +130,41 @@ $main-color: #2C4B79;
         }
     }
 }
+
+@media (max-width: 768px) {
+    .footer {
+        .f_left {
+            display: none;
+        }
+        .f_right {
+            width: 100%;
+            padding: 60px 24px;
+            .f_nav_btn {
+                display: none;
+            }
+            .f_mid_btn {
+                display: block;
+                .f_mid_left {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 28px;
+                }
+                .f_mid_mid {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 28px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .f_right .f_mid_btn .f_yellow_box .f_text {
+        font-size: 14px;
+    }
+
+    .footer .f_right .f_copyright {
+        font-size: 12px;
+    }
+}
