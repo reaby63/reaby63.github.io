@@ -65,6 +65,9 @@
         background: url('../img/about-02.png') no-repeat center;
         background-size: cover;
     }
+    .phone_img {
+        display: none;
+    }
     .about_left {
         width: 439px;
         position: relative;
@@ -275,11 +278,124 @@
 
 
 @media (max-width: 768px) {
+    .title {
+        span {
+            font-size: 20px;
+            padding-bottom: 10px;
+            &::after {
+                height: 4px;
+                bottom: -2px;
+            }
+        }
+    }
+
     .about {
+        padding: 50px 0 120px;
+        &:after {
+            top: auto;
+            bottom: 0;
+            right: 0;
+            height: 100px;
+            width: 100%;
+            background-position: bottom;
+        }
         .all_width {
             display: block;
-            .about_left {
-                display: none;
+        }
+        .about_left {
+            display: none;
+        }
+        .phone_img {
+            display: flex;
+            height: 200px;
+            overflow: hidden;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .about_right {
+            margin-right: 0;
+            .about_content {
+                margin-top: 20px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .product {
+        .pro_title {
+            display: block;
+            margin-bottom: 50px;
+            .pro_title_left {
+                margin: 0 auto;
+                width: 197px;
+                padding: 39px 47px;
+            }
+            .pro_title_right {
+                margin-top: 30px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+        .pro_list {
+            .pro_list_self {
+                width: calc((100% - 35px) / 2);
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .pro_btn {
+        button{
+            padding: 13px 23px;
+            font-size: 14px;
+        }
+    }
+
+    .contact {
+        margin-left: 0;
+        padding-right: 0;
+        .all_width.half_width {
+            justify-content: center;
+        }
+        .con_title {
+            .title {
+                width: 197px;
+                height: 118px;
+            }
+        }
+        .contact_body {
+            padding: 53px 28px;
+            .con_s_title {
+                font-size: 16px;
+            }
+        }
+    }
+    .form_row {
+        display: block;
+    }
+    .con_input {
+        margin-bottom: 24px;
+        &.half {
+            width: 100%;
+            &:first-child {
+                margin-right: 0;
+            }
+        }
+        .con_input_title {
+            font-size: 14px;
+        }
+        .con_input_self {
+            input ,
+            textarea {
+                height: 36px;
             }
         }
     }
