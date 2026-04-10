@@ -72,7 +72,7 @@ main {
         position: absolute;
         z-index: 999;
         right: 39px;
-        top: 0;
+        top: calc( 50% - 12px );
         color: #fff;
     }
 
