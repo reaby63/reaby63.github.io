@@ -1,0 +1,275 @@
+.portfolio {
+    position: relative;
+    z-index: 2;
+    margin: 55px 52px;
+    margin-bottom: 14px;
+
+    button {
+        border: 0;
+        cursor: pointer;
+    }
+
+    .title {
+        text-align: center;
+        color: #000;
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 2.56px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+
+    .subTitle {
+        text-align: center;
+        color: #000;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    .select {
+        position: relative;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .select-btn {
+        position: relative;
+        background-color: #fff;
+        padding: 1px 17px;
+        border-radius: 50px;
+        color: #333333;
+        z-index: 7;
+        display: inline-flex;
+        align-items: center;
+        border: 0.5px solid #333;
+        span {
+            letter-spacing: 1.5px;
+            font-size: 15px;
+            line-height: 30px;
+        }
+        .select-btn-content {
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            top: -0.5px;
+            width: 105px;
+            text-align: left;
+            margin-right: 8px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .select-btn-arrow {
+            img {
+                transform: scaleY(1);
+                transition: all 0.3s;
+                position: relative;
+                top: -3px;
+            }
+            &.scaleY {
+                img {
+                    transform: scaleY(-1);
+                    top: -2px;
+                }
+            }
+        }
+    }
+
+    .select-list {
+        position: absolute;
+        top: 17px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        border: 0.5px solid #5E5338;
+        border-radius: 0 0 5px 5px;
+        padding: 0;
+        z-index: 6;
+        transition: all 0.5s;
+        overflow: hidden;
+        width: 164px;
+        max-height: 175px;
+        overflow-y: auto;
+        opacity: 0;
+        button {
+            color: #5E5338;
+            font-size: 15px;
+            line-height: 30px;
+            letter-spacing: 1.5px;
+            padding: 4px 0;
+            padding-left: 24px;
+            display: block;
+            text-align: left;
+            width: 100%;
+            transition: all .3s;
+            background-color: #fff;
+            font-weight: 400;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                background-color: rgb(240 240 240 / 94%);
+            }
+        }
+        &.select-open {
+            opacity: 1;
+            padding-top: 20px;
+            padding-bottom: 6px;
+            height: auto;
+        }
+    }
+}
+
+.portfolioSwiper {
+    padding-bottom: 48px;
+    position: relative;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    .portfolio-self {
+        width: calc( (100% - 18px) / 2 );
+        margin-right: 18px;
+        margin-bottom: 33px;
+        transition: all 0.3s;
+        cursor: pointer;
+        position: relative;
+        padding-right: 5px;
+        box-sizing: border-box;
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
+        &:hover{
+            filter: brightness(1.1);
+            img {
+                transform: scale(1.1);
+            }
+            &:before {
+                background-color: #5E5338;
+                background-image: url('');
+            }
+        }
+        &.disable {
+            cursor: initial;
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: calc(100% - 5px);
+            height: 0.5px;
+            position: absolute;
+            background-color: #000;
+            bottom: 7px;
+            left: 0;
+            z-index: 1;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 17px;
+            height: 17px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-radius: 50px;
+            background-color: transparent;
+            background-image: url('../../img/portfolio-icon.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 2;
+        }
+    }
+    .title-space {
+        margin: 14px;
+        text-align: center;
+    }
+    .img-title ,
+    .img-subtitle {
+        color: #000;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 1.5px;
+    }
+    .img-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        aspect-ratio: 256 / 271;
+        background-color: #fff;
+    }
+    img {
+        transition: all 0.3s;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.portfolioSwiper {
+    :global(.swiper-pagination-fraction),
+    :global(.swiper-pagination-custom),
+    :global(.swiper-horizontal > .swiper-pagination-bullets),
+    :global(.swiper-pagination-bullets.swiper-pagination-horizontal) {
+        bottom: 26px;
+    }
+    :global(.swiper-pagination) {
+        text-align: left;
+        margin-left: 31px;
+    }
+    :global(.swiper-pagination-bullet) {
+        background-color: transparent;
+        opacity: 1;
+        transition: all 0.3s;
+        margin: 0 5px !important;
+        height: 19px;
+        border-radius: 0;
+        &:global(.swiper-pagination-bullet-active) {
+            border-bottom: solid 0.5px #000;
+        }
+    }
+}
+
+.portfolio {
+    .swiper-arrow {
+        position: absolute;
+        bottom: 22px;
+        width: 9px;
+        height: 13px;
+        overflow: hidden;
+        cursor: pointer;
+        background: url('../../img/portfolio-arrow.svg') no-repeat center center;
+        background-size: contain;
+        padding: 5px 0px;
+        z-index: 9;
+        &:hover {
+            opacity: 0.7;
+        }
+        &:global(.swiper-button-disabled) {
+            opacity: 0.5;
+            cursor: initial;
+        }
+    }
+
+    .swiper-prev {
+        margin-right: 12px;
+        left: 8px;
+    }
+
+    .swiper-next {
+        transform: scaleX(-1);
+    }
+}
+
+@media (max-width:400px) {
+    .portfolio {
+        margin: 45px 20px;
+    }
+}

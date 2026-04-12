@@ -1,0 +1,103 @@
+.quickaccess_in{
+    background-color: #000000;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    color: #ffffff;
+    position: absolute;
+    right: calc(50% - 320px);
+    bottom: -110px;
+    width: 100%;
+    max-width: 640px;
+    text-align: center;
+    .cross{
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        button{
+            &::before , &::after{
+                background-color: #ffffff;
+                height: 24px;
+            }
+        }
+    }
+    .qa_title{
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        margin-bottom: 18px;
+        font-size: $font_size_L;
+    }
+    .qa_btn{
+        button{
+            color: #ffffff;
+            font-size: $font_size_M;
+            padding: 2px 20px;
+            transition: all .3s;
+            img{
+                display: inline-block;
+                height: 16px;
+                width: auto;
+                margin-right: 6px;
+                position: relative;
+                top: 2px;
+            }
+            &:first-child{
+                position: relative;
+                &::after{
+                    content: "";
+                    display: inline-block;
+                    width: 1px;
+                    height: 1em;
+                    background-color: #ffffff;
+                    position: absolute;
+                    top: 6px;
+                    right: -3px;
+                }
+            }
+            &:hover{
+                color: #cacaca;
+            }
+        }
+    }
+}
+
+
+// 動畫
+.qa_an {
+    animation: qa_an 1.5s ease-out forwards;
+}
+  
+  @keyframes qa_an {
+    from {
+        bottom: -110px;
+    }
+    to {
+        bottom: 0px;
+    }
+  }
+
+.qa_close{
+    animation: qa_close 1.5s ease-out forwards;
+}
+
+@keyframes qa_close {
+    from {
+        bottom: 0px;
+    }
+    to {
+      bottom: -110px;
+    }
+  }
+
+
+@media (max-width:640px) {
+    .ccard{
+        position: relative;
+        .quickaccess_in{
+            position: absolute;
+            width: 100%;
+            right: 0px;
+        }
+    }
+    
+}

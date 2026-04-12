@@ -58,3 +58,233 @@
     </div>
 </div>
 
+
+<div class="portfolio">
+    <div class="title">
+        The Luméa Collection
+    </div>
+    <div class="subTitle">
+        光采必備系列
+    </div>
+    <div class="select">
+        <button class="select-btn">
+            <span class="select-btn-content">所有產品</span>
+            <span class="select-btn-arrow">
+                <img src="../img/btn_dropdown_list.svg">
+            </span>
+        </button>
+        <div class="select-list">
+            <button>
+                選項A
+            </button>
+            <button>
+                選項B
+            </button>
+        </div>
+    </div>
+    <div class="swiper-arrow swiper-prev"></div>
+    <Swiper class="portfolioSwiper">
+        <SwiperSlide class="portfolio-list">
+            <div class="portfolio-self">
+                <div class="img-box">
+                    <img src="../img/pro-01.png" alt="">
+                </div>
+                <div class="title-space">
+                    <div class="img-title">
+                        Luméa 亮澤淨肌潔顏露
+                    </div>
+                    <div class="img-subtitle">
+                        NT$980
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-self">
+                <div class="img-box">
+                    <img src="../img/pro-02.png" alt="">
+                </div>
+                <div class="title-space">
+                    <div class="img-title">
+                        Luméa 全效滋養修護霜
+                    </div>
+                    <div class="img-subtitle">
+                        NT$1,680
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-self">
+                <div class="img-box">
+                    <img src="../img/pro-03.png" alt="">
+                </div>
+                <div class="title-space">
+                    <div class="img-title">
+                        Luméa 光采煥膚精華
+                    </div>
+                    <div class="img-subtitle">
+                        NT$2,280
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-self">
+                <div class="img-box">
+                    <img src="../img/pro-04.png" alt="">
+                </div>
+                <div class="title-space">
+                    <div class="img-title">
+                        水潤能量雙件組
+                    </div>
+                    <div class="img-subtitle">
+                        NT$3,680
+                    </div>
+                </div>
+            </div>
+        </SwiperSlide>
+    </Swiper>
+    <div class="swiper-arrow swiper-next"></div>
+</div>
+
+
+<div class="secportfolio">
+    <div class="title">
+        <div class="mainTitle">
+            Everyday Glow
+        </div>
+        <div class="subTitle">
+            日常光澤
+        </div>
+    </div>
+    <div class="select">
+        <button class="select-btn">
+            <span class="select-btn-content">所有照片</span>
+            <span class="select-btn-arrow">
+                <img src="../img/btn_dropdown_list.svg">
+            </span>
+        </button>
+        <div class="select-list">
+            <button>
+                選項A
+            </button>
+            <button>
+                選項B
+            </button>
+        </div>
+    </div>
+    <div class="swiper-arrow swiper-prev"></div>
+    <Swiper class="secportfolioSwiper">
+        <SwiperSlide class="secportfolio-list">
+            <div class="img-box">
+                <img src="../img/prosec-01.png">
+            </div>
+            <div class="img-box">
+                <img src="../img/prosec-02.png">
+            </div>
+            <div class="img-box">
+                <img src="../img/prosec-03.png">
+            </div>
+            <div class="img-box">
+                <img src="../img/prosec-04.png">
+            </div>
+            <div class="img-box">
+                <img src="../img/prosec-05.png">
+            </div>
+            <div class="img-box">
+                <img src="../img/prosec-06.png">
+            </div>
+        </SwiperSlide>
+    </Swiper>
+    <div class="swiper-arrow swiper-next"></div>
+</div>
+
+
+<!-- <div class="contact">
+    <div class="all-bg">
+        <img src="../img/contactBg.jpg" alt="">
+    </div>
+
+    <div class="contact-top">
+        <div class="contact-info">
+            <div :class="$style['name']">
+                {{ curPageData.basic?.info?.name || curPageData.basic?.info?.enName }}
+            </div>
+            <div :class="$style['contact-list']">
+                <div>
+                    <img src="/images/biz/B06250411/phone.svg">
+                </div>
+                <div
+                    :class="$style.link"
+                    title="撥打電話"
+                    @click="openMobile"
+                >
+                    {{ commonStore.getPageInfo.basic?.info?.mobile }}
+                </div>
+            </div>
+            <div v-if="commonStore.getPageInfo.basic?.info?.email" :class="$style['contact-list']">
+                <div>
+                    <img src="/images/biz/B06250411/mail.svg">
+                </div>
+                <div
+                    :class="$style.link"
+                    title="前往寄信"
+                    @click="openMail"
+                >
+                    {{ commonStore.getPageInfo.basic?.info?.email }}
+                </div>
+            </div>
+            <div v-if="commonStore.getPageInfo.basic?.info?.url" :class="$style['contact-list']">
+                <div>
+                    <img src="/images/biz/B06250411/web.svg">
+                </div>
+                <div
+                    :class="$style.link"
+                    title="前往網站"
+                    @click="openUrl"
+                >
+                    {{ commonStore.getPageInfo.basic?.info?.url }}
+                </div>
+            </div>
+            <!-- 社群元件 -->
+        </div>
+        <div :class="$style['contact-title']">
+            <span :class="$style['en']">Contact</span>
+            <span :class="$style['ch']">
+                <span>聯</span>
+                <span>絡</span>
+                <span>我</span>
+                <span>們</span>
+            </span>
+        </div>
+    </div>
+
+    <div :class="$style['contact-bottom']">
+        <div :class="$style['contact-logo']">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="">
+            </div>
+        </div>
+        <div :class="$style['contact-otherinfo']">
+            <div :class="$style['info-office']">
+                <div title="前往Google Map" @click="openMap" :class="$style['info-office-title']">
+                    品牌總部 Office
+                </div>
+                <div :class="$style['info-office-contain']">
+                    {{ curPageData.basic?.info?.location }}
+                </div>
+            </div>
+            <div title="撥打電話" :class="$style['otherinfo-self']">
+                <span>
+                    電話
+                </span>
+                <span>
+                    {{ commonStore.getPageInfo.basic?.info?.mobile }}
+                </span>
+            </div>
+            <div title="前往網站" :class="$style['otherinfo-self']">
+                <span>
+                    信箱
+                </span>
+                <span>
+                    {{ commonStore.getPageInfo.basic?.info?.email }}
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->

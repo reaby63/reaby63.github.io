@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.88 17.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #333;
+      }
+    </style>
+  </defs>
+  <polygon class="cls-1" points="27.88 .9 27.88 16.8 19.93 8.85 27.88 .9"/>
+  <path class="cls-1" d="M26.98,17.7H.9l7.95-7.95,4.63,4.63c.12.12.29.19.45.19s.33-.06.45-.19l4.64-4.64,7.95,7.95Z"/>
+  <polygon class="cls-1" points="7.95 8.85 0 16.8 0 .9 7.95 8.85"/>
+  <polygon class="cls-1" points="26.98 0 18.12 8.85 13.94 13.03 9.75 8.85 8.85 7.95 .9 0 26.98 0"/>
+</svg>

@@ -1,0 +1,209 @@
+.secportfolio {
+    position: relative;
+    z-index: 2;
+    margin: 55px 52px;
+    margin-bottom: 14px;
+
+    button {
+        border: 0;
+        cursor: pointer;
+    }
+
+    .title {
+        text-align: left;
+        color: #000;
+        font-weight: 500;
+        line-height: 28px;
+        min-height: 66px;
+    }
+
+    .mainTitle {
+        font-size: 32px;
+        letter-spacing: 2.56px;
+        margin-bottom: 15px;
+        max-width: calc( 100% - 160px );
+    }
+
+    .subTitle {
+        letter-spacing: 1.5px;
+        font-size: 15px;
+    }
+
+    .select {
+        position: absolute;
+        text-align: center;
+        right: 0;
+        top: 5.5px;
+    }
+
+    .select-btn {
+        position: relative;
+        background-color: #fff;
+        padding: 1px 13px;
+        border-radius: 50px;
+        color: #333333;
+        z-index: 11;
+        display: inline-flex;
+        align-items: center;
+        border: 0.5px solid #333;
+        box-sizing: border-box;
+        span {
+            letter-spacing: 1.5px;
+            font-size: 15px;
+            line-height: 30px;
+        }
+        .select-btn-content {
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            top: -0.5px;
+            width: 105px;
+            text-align: left;
+            margin-right: 8px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .select-btn-arrow {
+            img {
+                transform: scaleY(1);
+                transition: all 0.3s;
+                position: relative;
+                top: -2px;
+            }
+            &.scaleY {
+                img {
+                    transform: scaleY(-1);
+                }
+            }
+        }
+    }
+
+    .select-list {
+        position: absolute;
+        top: 17px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        border: 0.5px solid #5E5338;
+        border-radius: 0 0 5px 5px;
+        padding: 0;
+        z-index: 10;
+        transition: all 0.5s;
+        overflow: hidden;
+        width: 155px;
+        max-height: 175px;
+        overflow-y: auto;
+        opacity: 0;
+        button {
+            color: #5E5338;
+            font-size: 15px;
+            line-height: 30px;
+            letter-spacing: 1.5px;
+            padding: 4px 0;
+            padding-left: 24px;
+            display: block;
+            text-align: left;
+            width: 100%;
+            transition: all .3s;
+            background-color: #fff;
+            font-weight: 400;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover {
+                background-color: rgb(240 240 240 / 94%);
+            }
+        }
+        &.select-open {
+            opacity: 1;
+            padding-top: 20px;
+            padding-bottom: 6px;
+        }
+    }
+
+    .contain {
+        padding-top: 28px;
+    }
+}
+
+.secportfolioSwiper {
+    position: relative;
+    margin-bottom: 33px;
+}
+
+.secportfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    .img-box {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        aspect-ratio: 361 / 247;
+        background-color: #fff;
+        border: solid 0.5px #858585;
+        box-sizing: border-box;
+        width: 60%;
+        &:nth-child(2n) {
+            margin-right: 0;
+            aspect-ratio: 189 / 247;
+            width: calc( 40% - 20px );
+        }
+        img {
+            transition: all 0.3s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &:hover {
+            filter: brightness(1.1);
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.secportfolio {
+    .swiper-arrow {
+        position: absolute;
+        top: -12px;
+        right: 0;
+        width: 12.7px;
+        height: 14.7px;
+        overflow: hidden;
+        cursor: pointer;
+        background: url('../../img/portfolio-arrow.svg') no-repeat center center;
+        background-size: contain;
+        padding: 5px 0px;
+        z-index: 9;
+        &:hover {
+            opacity: 0.7;
+        }
+        &:global(.swiper-button-disabled) {
+            opacity: 0.5;
+            cursor: initial;
+        }
+    }
+
+    .swiper-prev {
+        margin-right: 12px;
+        right: 50px;
+    }
+
+    .swiper-next {
+        transform: scaleX(-1);
+    }
+}
+
+@media (max-width:400px) {
+    .secportfolio {
+        margin: 45px 20px;
+    }
+}
