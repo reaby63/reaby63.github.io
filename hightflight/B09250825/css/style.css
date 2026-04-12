@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Ysabeau Infant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all_width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bg {
+  background-color: #cfcfcf;
+}
+
+.ccard {
+  max-width: 640px;
+  background: #FCF7EE;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+.scrollBar-y {
+  overflow-y: auto;
+  height: auto;
+  scrollbar-width: none;
+  min-height: auto;
+  max-height: 100%;
+  width: 100%;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  padding: 9px 20px;
+}
+.banner .center .img-box {
+  height: 100%;
+  width: 100%;
+}
+.banner .center .img-box img {
+  background-color: #FCF7EE;
+  max-height: 54px;
+}
+
+.topBg {
+  aspect-ratio: 640/564;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 564px;
+  overflow: hidden;
+  position: relative;
+}
+.topBg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.info-box {
+  position: absolute;
+  bottom: 0;
+  width: -webkit-fill-available;
+  margin: 0 75px;
+}
+
+.info-left {
+  display: inline-flex;
+  vertical-align: bottom;
+  width: calc(50% + 16px);
+  justify-content: end;
+  align-items: end;
+  position: relative;
+}
+.info-left .info-img {
+  aspect-ratio: 100/100;
+  overflow: hidden;
+  max-width: 226px;
+  z-index: 2;
+  border: 1px solid #858585;
+  height: 100%;
+  width: 100%;
+}
+.info-left .info-img img {
+  display: flex;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.info-left:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 259px;
+  width: 199px;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #F7F2E9;
+}
+
+.info-right {
+  display: inline-block;
+  vertical-align: bottom;
+  width: calc(50% - 16px);
+  background-color: #F7F2E9;
+  padding: 33px 23px 8px 23px;
+  box-sizing: border-box;
+}
+.info-right .info-job {
+  font-size: 15px;
+  color: #5E5338;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  margin-bottom: 7px;
+}
+.info-right .info-name {
+  font-size: 17px;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+@media (max-width: 600px) {
+  .info-box {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 470px) {
+  .info-left {
+    display: block;
+    background-color: #F7F2E9;
+    padding-top: 32px;
+  }
+  .info-left .info-img {
+    position: relative;
+    margin-left: 32px;
+  }
+  .info-left::before {
+    max-height: 259px;
+    max-width: 199px;
+    height: auto;
+    width: auto;
+    aspect-ratio: 259/199;
+  }
+  .info-right {
+    display: block;
+    width: 100%;
+    padding: 23px 23px 0 32px;
+  }
+}
+.about-movie {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-movie .all-bg {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.about-movie .all-bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.about-movie .resume {
+  position: relative;
+  z-index: 1;
+  margin: 0 75px;
+  background-color: #F7F2E9;
+  padding: 23px 27px 54px;
+  width: 100%;
+  line-height: 28px;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  margin-bottom: 41px;
+}
+.about-movie .movie {
+  display: block;
+  width: 100%;
+  margin: 20px 20px 98px;
+  position: relative;
+  z-index: 1;
+}
+.about-movie .movie-title {
+  display: flex;
+  justify-content: flex-end;
+  color: #000;
+  font-weight: 500;
+  line-height: 28px;
+  margin-bottom: 27px;
+}
+.about-movie .movie-title .title {
+  font-size: 32px;
+  letter-spacing: 2.56px;
+  margin-bottom: 5px;
+}
+.about-movie .movie-title .subTitle {
+  margin-left: 9px;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+.about-movie .movie-wrap {
+  max-height: 446px;
+  aspect-ratio: 600/446;
+}
+
+@media (max-width: 600px) {
+  .about-movie .resume {
+    margin: 0 20px 41px;
+  }
+}
+@media (max-width: 470px) {
+  .about-movie .resume {
+    padding: 16px 32px 54px;
+  }
+}/*# sourceMappingURL=style.css.map */
