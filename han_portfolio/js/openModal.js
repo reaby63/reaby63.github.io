@@ -10,6 +10,7 @@ $(document).ready(function(){
         // 鎖住背景滾動
         $('body').css('overflow', 'hidden');
 
+        // 有空改成 加class .is-open .is-close ...
         $('#modal').fadeIn(200, function(){
             $(this).addClass('show');
         });

@@ -72,3 +72,43 @@
         }
     }
 }
+
+@media(max-width:768px){
+    .hf_modal {
+        .card_item {
+            width: calc( (100% - 40px - 6px) / 3 );
+            &:nth-child(4n) {
+                margin-right: 20px;
+            }
+            &:nth-child(3n) {
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+@media(max-width:550px){
+    .hf_modal {
+        .card_item {
+            width: calc( (100% - 20px - 6px) / 2 );
+            &:nth-child(3n) {
+                margin-right: 20px;
+            }
+            &:nth-child(2n) {
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+@media(max-width:375px){
+    .hf_modal {
+        .card_item {
+            width: calc( 100% - 6px );
+            margin-right: 6px;
+            &:nth-child(3n) {
+                margin-right: 6px;
+            }
+        }
+    }
+}
