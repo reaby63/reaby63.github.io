@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raby Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/styles/css/style.css">
     <link rel="icon" href="img/connect_ph.png">
     <meta name="description" content="網頁設計、切版、前端">
     <meta property="og:title" content="RABY PORTFOLIO">
@@ -109,7 +109,7 @@
                 <div class="work_line"></div>
             </div>
             <div class="work_in" id="work_in">
-                <!-- <a class="work_item" target="_blank">
+                <a class="work_item open-modal" data-modal="modal/hf_modal.html">
                     <img src="img/hf_work.png" alt="">
                     <div class="work_item_hover">
                         <div class="work_h_title">
@@ -120,7 +120,7 @@
                         </div>
                         <button>名片列表 <img src="img/i_arrow.svg" alt=""></button>
                     </div>
-                </a> -->
+                </a>
                 <a class="work_item" href="https://www.tarkbiopharma.com/" target="_blank">
                     <img src="img/tark_work.svg" alt="">
                     <div class="work_item_hover">
@@ -352,7 +352,17 @@
     <div class="copyright">
         copyright@RABY Lin
     </div>
+    <!-- 彈窗 -->
+    <div id="modal" class="modal">
+        <div class="modal_content">
+            <span class="modal_close">
+                <img src="./img/cross.svg" alt="">
+            </span>
+            <div id="modal_body"></div>
+        </div>
+    </div>
 </body>
 <script src="js/jquery-3.7.1.min.js"></script>
 <script src="js/fabein.js"></script>
+<script src="js/openModal.js"></script>
 </html>

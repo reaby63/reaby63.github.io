@@ -1,5 +1,81 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap");
+.hf_modal .title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 25%;
+  text-align: center;
+}
+.hf_modal .dec {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.hf_modal .content {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 28px 20px;
+  padding-right: 14px;
+  border-radius: 20px;
+}
+.hf_modal .content .scroll-box {
+  display: flex;
+  max-height: 58vh;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  /* 整個 scrollbar */
+}
+.hf_modal .content .scroll-box::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.hf_modal .content .scroll-box {
+  /* 軌道背景 */
+}
+.hf_modal .content .scroll-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+.hf_modal .content .scroll-box {
+  /* 滑塊 可以拖的那塊 */
+}
+.hf_modal .content .scroll-box::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+.hf_modal .content .scroll-box {
+  /* 滑鼠 hover 時 */
+}
+.hf_modal .content .scroll-box::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+.hf_modal .card_item {
+  border-radius: 12px;
+  overflow: hidden;
+  width: calc((100% - 60px - 6px) / 4);
+  margin-right: 20px;
+  margin-bottom: 28px;
+  border: solid 1px #ccc;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+.hf_modal .card_item:nth-child(4n) {
+  margin-right: 6px;
+}
+.hf_modal .card_item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+.hf_modal .card_item:hover {
+  filter: brightness(1.1);
+}
+.hf_modal .card_item:hover img {
+  transform: scale(1.05);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -56,8 +132,8 @@ header .h_left .h_photo_box .header_photo .my_photo {
   border-radius: 50%;
 }
 header .h_left .header_title {
-  font-size: 25px;
-  letter-spacing: 1em;
+  font-size: 26px;
+  letter-spacing: 25px;
   color: #ffffff;
 }
 header .h_left .header_title::before {
@@ -68,12 +144,11 @@ header .h_left .header_title::before {
 }
 header .h_right {
   display: inline-block;
-  width: calc(32em + 72px);
   vertical-align: top;
   margin-top: calc(20vh - 2em);
 }
 header .h_right .h_name {
-  font-size: 18px;
+  font-size: 17px;
   color: #82A9B3;
   font-weight: 600;
   letter-spacing: 0.5em;
@@ -81,7 +156,7 @@ header .h_right .h_name {
   text-indent: 0.5em;
 }
 header .h_right .h_birth {
-  font-size: 16px;
+  font-size: 15px;
   color: #82A9B3;
   letter-spacing: 0.5em;
   margin-bottom: 24px;
@@ -89,7 +164,7 @@ header .h_right .h_birth {
 }
 header .h_right .h_history {
   color: #959595;
-  font-size: 16px;
+  font-size: 14px;
   border-left: solid 2px #A7CBD5;
   padding-left: 14px;
   margin-bottom: 32px;
@@ -98,7 +173,8 @@ header .h_right .h_history > div {
   margin-bottom: 20px;
   line-height: 1em;
 }
-header .h_right .h_skill span {
+header .h_right .h_skill .h_skill_list {
+  vertical-align: top;
   display: inline-flex;
   color: #A7CFEE;
   width: 4em;
@@ -107,12 +183,19 @@ header .h_right .h_skill span {
   border: solid 1px #A7CFEE;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  margin-right: 12px;
+  font-size: 12px;
+  margin-right: 16px;
   margin-bottom: 12px;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-header .h_right .h_skill span:last-child {
+header .h_right .h_skill .h_skill_list:last-child {
   margin-right: 0px;
+}
+header .h_right .h_skill .h_skill_list span span {
+  width: 100%;
+  display: block;
 }
 
 @keyframes slide {
@@ -132,7 +215,7 @@ header .h_right .h_skill span:last-child {
   }
 }
 .work {
-  /* background: url("../img/work_bg.png") no-repeat;
+  /* background: url("../../img/work_bg.png") no-repeat;
   background-position: bottom center; */
   background-size: 100%;
   margin-bottom: 60px;
@@ -149,22 +232,22 @@ header .h_right .h_skill span:last-child {
 .work .work_bg_f {
   height: 171px;
   background-position: bottom left;
-  background: url("../img/work_bg_f.png") repeat-x;
+  background: url("../../img/work_bg_f.png") repeat-x;
   animation: slide 180s linear infinite;
 }
 .work .work_bg_b {
   height: 250px;
   background-position: bottom left;
-  background: url("../img/work_bg_b.png") repeat-x;
+  background: url("../../img/work_bg_b.png") repeat-x;
   animation: slide_b 180s linear infinite;
 }
 .work .work_title {
   color: #A7CBD5;
-  font-size: 36px;
+  font-size: 30px;
   letter-spacing: 1em;
   display: flex;
   align-items: center;
-  margin-bottom: 32px;
+  margin: 50px 0;
 }
 .work .work_title > div {
   display: inline-block;
@@ -175,8 +258,7 @@ header .h_right .h_skill span:last-child {
   background-color: #CFE9F0;
 }
 .work .work_in {
-  padding-bottom: 70px;
-  display: flex;
+  padding-bottom: 10px;
 }
 .work .work_in .work_item {
   display: inline-flex;
@@ -185,14 +267,21 @@ header .h_right .h_skill span:last-child {
   border-radius: 24px;
   box-shadow: 0px 2px 4px #acacac;
   justify-content: center;
-  margin-right: 28px;
+  margin-right: 36px;
+  width: calc((100% - 122px) / 4);
+  box-sizing: border-box;
+  margin-bottom: 50px;
+  cursor: pointer;
 }
-.work .work_in .work_item:last-child {
+.work .work_in .work_item:nth-child(4n) {
   margin-right: 0px;
 }
 .work .work_in .work_item img {
   border-radius: 24px;
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .work .work_in .work_item .work_item_hover {
   position: absolute;
@@ -201,22 +290,23 @@ header .h_right .h_skill span:last-child {
   top: 0px;
   left: 0px;
   height: -webkit-fill-available;
-  padding: 60px 32px;
+  padding: 50px 32px;
   color: #ffffff;
   transition: all 0.4s;
 }
 .work .work_in .work_item .work_item_hover .work_h_title {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 20px;
-  letter-spacing: 0.3em;
+  letter-spacing: 3px;
 }
 .work .work_in .work_item .work_item_hover .work_h_dis {
   border-left: solid 2px #ffffff;
   padding-left: 8px;
-  line-height: 1.3em;
+  line-height: 1.7em;
   letter-spacing: 0.1em;
-  font-size: 16px;
+  font-size: 14px;
+  text-align: justify;
 }
 .work .work_in .work_item .work_item_hover button {
   position: absolute;
@@ -224,10 +314,12 @@ header .h_right .h_skill span:last-child {
   bottom: 40px;
   color: #FFEBBB;
   background-color: rgba(63, 63, 63, 0);
-  border: 0;
-  border-bottom: solid 1px #FFEBBB;
-  padding-bottom: 3px;
+  border: solid 1px #FFEBBB;
+  border-radius: 8px;
+  padding: 8px 12px;
+  letter-spacing: 1px;
   cursor: pointer;
+  font-size: 12px;
 }
 .work .work_in .work_item .work_item_hover button img {
   width: 0.9em;
@@ -323,16 +415,13 @@ header .h_right .h_skill span:last-child {
   width: 100%;
   border: 0px;
   box-shadow: 0px 4px 4px #e1e1e1;
-  background: url("../img/app.png") no-repeat;
+  background: url("../../img/app.png") no-repeat;
   background-position: right;
   background-size: 100%;
   text-align: left;
   border-radius: 16px;
   overflow: hidden;
   background-color: #ffffff;
-  position: relative;
-  top: 0px;
-  transition: all 0.5s;
 }
 .app .app_right .app_btn .app_btn_in {
   display: inline-block;
@@ -374,6 +463,11 @@ header .h_right .h_skill span:last-child {
   margin-left: 4px;
   position: relative;
   top: 1px;
+}
+.app .app_right .app_btn {
+  position: relative;
+  top: 0px;
+  transition: all 0.5s;
 }
 .app .app_right .app_btn:hover {
   top: -8px;
@@ -466,7 +560,7 @@ header .h_right .h_skill span:last-child {
 }
 
 footer {
-  background: url("../img/connect_bg.png") no-repeat;
+  background: url("../../img/connect_bg.png") no-repeat;
   background-position: top center;
   background-size: cover;
   min-height: 335px;
@@ -595,14 +689,49 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   right: 0.3em;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal_content {
+  background: #A2CEDA;
+  width: 80%;
+  max-width: 800px;
+  margin: 5% auto;
+  padding: 28px 36px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.modal_close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+.modal_close img {
+  width: 20px;
+}
+
 @media (max-width: 1200px) {
+  .all_width {
+    padding: 0 80px;
+  }
   footer {
     background-size: auto;
   }
 }
 @media (max-width: 768px) {
   .all_width {
-    margin: 0 24px;
+    padding: 0 24px;
   }
   header {
     display: block;
@@ -613,7 +742,7 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     animation-direction: alternate;
     display: block;
     margin-right: 0px;
-    background: url("../img/header_bg.png") no-repeat;
+    background: url("../../img/header_bg.png") no-repeat;
     background-position: top center;
     background-size: 100%;
     height: 180px;
@@ -684,7 +813,7 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
     margin-left: 24px;
     margin-right: 12px;
   }
-  header .h_right .h_skill span {
+  header .h_right .h_skill .h_skill_list {
     font-size: 14px;
     width: 4.4em;
     height: 4.4em;
@@ -702,7 +831,9 @@ footer .footer_in .footer_in_button a:hover .footer_ig .ig_y {
   .work .work_in .work_item {
     display: flex;
     margin-right: 0px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 400px;
   }
   .app .all_width {
     display: block;
