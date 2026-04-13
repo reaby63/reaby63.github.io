@@ -193,12 +193,12 @@ body {
 .nav .nav_bar {
   display: block;
   /* 隱藏 checkbox */
-  /* 漢堡按鈕 */
-  /* menu*/
-  /* 下拉選單效果 */
 }
 .nav .nav_bar input {
   display: none;
+}
+.nav .nav_bar {
+  /* 漢堡按鈕 */
 }
 .nav .nav_bar .line {
   right: 34px;
@@ -232,6 +232,9 @@ body {
 }
 .nav .nav_bar .line .switch::after {
   top: 9px;
+}
+.nav .nav_bar {
+  /* menu*/
 }
 .nav .nav_bar .menu {
   clear: both;
@@ -297,6 +300,9 @@ body {
 .nav .nav_bar .menu li a.a_decoration::after {
   width: 2px;
   right: 23px;
+}
+.nav .nav_bar {
+  /* 下拉選單效果 */
 }
 .nav .nav_bar .menu {
   max-height: 0;
@@ -443,7 +449,7 @@ body {
     max-height: -moz-fit-content;
     max-height: fit-content;
     background-color: rgba(255, 255, 255, 0.5) !important;
-    z-index: 1;
+    z-index: 100;
     padding: 0px;
     height: 100vh;
     max-height: 100vh !important;
@@ -815,12 +821,12 @@ body {
 .nav .nav_bar {
   display: block;
   /* 隱藏 checkbox */
-  /* 漢堡按鈕 */
-  /* menu*/
-  /* 下拉選單效果 */
 }
 .nav .nav_bar input {
   display: none;
+}
+.nav .nav_bar {
+  /* 漢堡按鈕 */
 }
 .nav .nav_bar .line {
   right: 34px;
@@ -854,6 +860,9 @@ body {
 }
 .nav .nav_bar .line .switch::after {
   top: 9px;
+}
+.nav .nav_bar {
+  /* menu*/
 }
 .nav .nav_bar .menu {
   clear: both;
@@ -919,6 +928,9 @@ body {
 .nav .nav_bar .menu li a.a_decoration::after {
   width: 2px;
   right: 23px;
+}
+.nav .nav_bar {
+  /* 下拉選單效果 */
 }
 .nav .nav_bar .menu {
   max-height: 0;
@@ -1065,7 +1077,7 @@ body {
     max-height: -moz-fit-content;
     max-height: fit-content;
     background-color: rgba(255, 255, 255, 0.5) !important;
-    z-index: 1;
+    z-index: 100;
     padding: 0px;
     height: 100vh;
     max-height: 100vh !important;
@@ -1149,8 +1161,20 @@ body {
   display: flex;
   align-items: center;
 }
+.index .main_bg_point_01.fadein_index_01 .col-4 {
+  left: 0;
+  opacity: 1;
+}
+.index .main_bg_point_01.fadein_index_01 .index_img01 {
+  right: 0;
+  opacity: 1;
+}
 .index .main_bg_point_01 .col-4 {
   padding-right: 67px;
+  position: relative;
+  left: -200px;
+  opacity: 0;
+  transition: all 3s;
 }
 .index .main_bg_point_01 .col-6 {
   display: flex;
@@ -1167,6 +1191,9 @@ body {
   max-height: 500px;
   position: relative;
   overflow: hidden;
+  transition: all 3s;
+  right: -100px;
+  opacity: 0;
 }
 .index .main_bg_point_01 .index_img01 img {
   border-radius: 80px 80px 0px 80px;
@@ -1475,7 +1502,8 @@ body {
   .index .main_bg_point_01 .col-1 {
     display: none;
   }
-  .index .main_bg_point_01 .main_bg_01, .index .main_bg_point_01 .main_bg_02 {
+  .index .main_bg_point_01 .main_bg_01,
+  .index .main_bg_point_01 .main_bg_02 {
     width: 220px;
   }
   .index .main_bg_point_01 .col-4 {
