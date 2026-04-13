@@ -7,7 +7,8 @@
   </head>
 
   <body>
-    <div class="ccard rm_card">
+    <!-- lightbox 套完拿掉style 謝謝-->
+    <div class="ccard rm_card" style="margin: 150px auto;">
       <div class="cross rm_cross">
         <button onclick="window.location.href='index.html';"></button>
       </div>
@@ -18,10 +19,18 @@
         <ul class="rm_list">
           <li class="rm_list_title">
             <ul>
-              <li>職務名稱</li>
-              <li>工作性質</li>
-              <li>工作地點</li>
-              <li>詳細介紹</li>
+              <li>
+                <span>職務</span><span>名稱</span> 
+              </li>
+              <li>
+                <span>工作</span><span>性質</span>
+              </li>
+              <li>
+                <span>工作</span><span>地點</span>
+              </li>
+              <li>
+                <span>詳細</span><span>介紹</span>
+              </li>
             </ul>
           </li>
           <li class="rm_list_content">
@@ -35,7 +44,8 @@
             </ul>
             
           </li>
-          <div class="open_list">
+          <!-- 第一則預設展開 -->
+          <div class="open_list active">
             <div class="open_padding">
               <div class="work_content">
                 <div class="open_title">

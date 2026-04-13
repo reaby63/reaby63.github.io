@@ -60,10 +60,20 @@
             margin-bottom: 16px;
             .ci_top_l{
                 width: 144.5px;
-                height: 100%;
+                height: 144.5px;
+                border-radius: 50%;
+                overflow: hidden;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
             .ci_top_r{
                 width: calc(100% - 144px);
+                padding-top: 9px;
                 h6,p{
                     margin-left: 20px;
                 }
@@ -72,7 +82,7 @@
                 }
                 p{
                     font-size: $font_size_M;
-                    margin-bottom: 16px;
+                    margin-bottom: 14px;
                 }
                 div{
                     display: flex;
@@ -94,7 +104,20 @@
                                 margin-right: 8px;
                             }
                             &.arrow_r_bt{
-                                margin-right: 6px;
+                                margin-right: 9px;
+                            }
+                            &.btn_fin{
+                                cursor: initial;
+                                opacity: 0.5;
+                            }
+                        }
+                        .social_icon_box{
+                            overflow: hidden;
+                            width: 175px;
+                            .social_icon{
+                                display: flex;
+                                height: 32px;
+                                align-items: center;
                             }
                         }
                         a{
@@ -103,6 +126,8 @@
                             justify-content: center;
                             width: 32px;
                             height: 32px;
+                            flex: 0 0 32px; /* 每個 icon 固定 50px 寬 */
+                            transition: transform 0.3s ease-in-out;
                             border-radius: 50%;
                             background-color: #000000;
                             margin-right: 13px;
@@ -113,9 +138,6 @@
                             img{
                                 width: 20px;
                                 height: 20px;
-                            }
-                            &.threads{
-                                margin-right: 8px;
                             }
                             &.fb{
                                 img{
@@ -140,17 +162,17 @@
                             opacity: 0.7;
                         }
                         &::before{
-                            content: url('/images/heart-line.svg');
+                            content: url('../../images/heart-line.svg');
                             display: inline-block;
                             width: 20px;
                             height: 16px;
                             position: relative;
-                            top: 5px;
+                            top: 4px;
                             margin-right: 4px;
                         }
                         &.active{
                             &::before{
-                                content: url('/images/heart.svg');
+                                content: url('../../images/heart.svg');
                             }
                             span{
                                 &::before{
@@ -174,24 +196,32 @@
         animation-delay: 0.3s;
         opacity: 0;
         .c_contain{
+            overflow: hidden;
+            .cp_wrapper {
+                display: flex;
+                transition: transform 0.4s ease-in-out; // 加上滑動動畫
+                width: 100%; // 避免 flex 影響排列
+            }
             .cp_list{
-                display: inline-table;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 20px;
+                flex: 0 0 100%; // 讓每頁剛好佔滿容器
                 box-sizing: border-box;
+                padding-bottom: 10px;
                 a{
-                    display: inline-block;
-                    vertical-align: top;
-                    margin-right: 20px;
-                    margin-bottom: 20px;
                     overflow: hidden;
-                    width: calc( ( 100% - 40px ) / 3 );
                     max-height: 151px;
+                    height: 100%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
                     img{
                         width: 100%;
+                        object-fit: cover;
+                        height: 100%;
                         transform:scale(1);
                         transition: transform 0.3s ease-in-out;
-                    }
-                    &:nth-child(3n){
-                        margin-right: 0;
                     }
                     &:hover{
                         overflow: hidden;
@@ -201,9 +231,26 @@
                         
                     }
                 }
+                &.cp_list_last{
+                    display: inline-table;
+                    box-sizing: border-box;
+                    a{
+                        display: inline-block;
+                        vertical-align: top;
+                        margin-right: 20px;
+                        margin-bottom: 20px;
+                        overflow: hidden;
+                        width: calc( ( 100% - 40px ) / 3 );
+                        max-height: 151px;
+                        &:nth-child(3n){
+                            margin-right: 0;
+                        }
+                    }
+                }
             }
             .cp_listmark{
                 text-align: center;
+                margin-top: 15px;
                 button{
                     display: inline-block;
                     border-radius: 50%;
@@ -235,16 +282,19 @@
         opacity: 0;
         .c_contain{
             ul li{
-                display: flex;
-                align-items: center;
                 padding: 12px 6px;
                 border-bottom: solid 1px #cacaca;
                 line-height: 1em;
                 span{
-                    display: inline-flex;
                     font-family: "Roboto", sans-serif;
                     font-weight: 400;
                     font-size: $font_size_M;
+                    word-wrap: break-word;
+                    display: inline-block;
+                    vertical-align: top;
+                    &:last-child{
+                        width: calc(100% - 52px);
+                    }
                     &:first-child{
                         margin-right: 24px;
                         img{
@@ -257,6 +307,30 @@
                 }
                 &:last-child{
                     border-bottom: 0px;
+                }
+            }
+            a{
+                color: #434343;
+                text-decoration: none;
+                transition: all 0.3s;
+                &:hover{
+                    opacity: 0.9;
+                }
+            }
+        }
+        .phone{
+            span{
+                &:last-child{
+                    position: relative;
+                    top: 5px;
+                }
+            }
+        }
+        .web{
+            span{
+                &:last-child{
+                    position: relative;
+                    top: 5px;
                 }
             }
         }
@@ -281,17 +355,29 @@
             }
             .cm_right{
                 width: calc(100% - 123px - 26px);
+                ul{
+                    margin-top: -2px;
+                }
                 ul li{
                     padding: 12px 1px;
                     border-bottom: solid 1px #cacaca;
                     font-size: $font_size_M;
                     line-height: 1em;
+                    word-wrap: break-word;
                     &:first-child{
                         padding-top: 0;
                     }
                     &:last-child{
                         padding-bottom: 0;
                         border-bottom: 0px;
+                    }
+                }
+                a{
+                    color: #434343;
+                    text-decoration: none;
+                    transition: all 0.3s;
+                    &:hover{
+                        opacity: 0.9;
                     }
                 }
             }
@@ -323,8 +409,10 @@
     position: absolute;
     right: 0px;
     bottom: 16px;
+    cursor: pointer;
     .qa_contanin{
         background-color: #000000;
+        cursor: pointer;
         color: #ffffff;
         font-size: $font_size_L;
         padding: 18px 18px;
@@ -368,10 +456,8 @@
 
 
 @media (max-width:640px) {
-    .container{
-        .to_top{
-            right: 9px;
-        }
+    .to_top{
+        right: 9px;
     }
 }
 
@@ -393,34 +479,37 @@
     }
 }
 
-@media (max-width:414px) {
-    .container .c_info .ci_top .ci_top_r div .social a{
-        &.threads{
-            display: none;
-        }
+@media (max-width:419px) {
+    .container .c_info .ci_top .ci_top_r div .social .social_icon_box{
+        width: 132px;
     }
-    
-}
-
-@media (max-width:385px) {
-    .container .c_info .ci_top .ci_top_r div .social a{
-        &.line{
-            display: none;
-        }
-    }
-    
 }
 
 @media (max-width:375px) {
-    .container .c_portfolio .c_contain .cp_list a{
-        width: calc((100% - 20px) / 2);
-        &:nth-child(3n){
-            margin-right: 20px;
+    .c_portfolio .c_contain .cp_list {
+        flex-wrap: nowrap; // 讓其能夠水平滾動
+    }
+
+    .container .c_portfolio .c_contain .cp_list{
+        grid-template-columns: repeat(2, 1fr);
+        a {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 8); // 變成 4 行
         }
-        &:nth-child(2n){
-            margin-right: 0;
+    } 
+
+    .container .c_portfolio .c_contain .cp_list.cp_list_last{
+        a{
+            width: calc((100% - 20px) / 2);
+            &:nth-child(3n){
+                margin-right: 20px;
+            }
+            &:nth-child(2n){
+                margin-right: 0px;
+            }
         }
     }
+
     .container .c_company .c_contain{
         display: block;
         .cm_left{
@@ -436,13 +525,52 @@
             width: 100%;
         }
     }
+    .container .c_info .ci_top .ci_top_r div .social .social_icon_box{
+        width: 90px;
+    }
 }
 
-@media (max-width:338px) {
-    .container .c_info .ci_top .ci_top_r div .social a{
-        &.fb{
-            display: none;
+
+@media (max-width:360px) {
+    .header{
+        text-align: center;
+    }
+    .container .c_info .ci_top{
+        display: block;
+        text-align: center;
+        .ci_top_r{
+            width: 100%;
+            h6,p{
+                margin-left: 0;
+            }
+            p{
+                margin-bottom: 11px;
+            }
+            div{
+                margin-left: 0px;
+                .social{
+                    justify-content: center;
+                    .social_icon_box{
+                        width: 175px;
+                    }
+                    button.arrow_r_bt{
+                        margin-right: 0;
+                        margin-left: 2px;
+                    }
+                }
+            }
         }
     }
-    
+}
+
+@media (max-width:328px) {
+    // .container .c_info .ci_top .ci_top_r div .social .social_icon_box{
+    //     width: 42px;
+    // }
+    .container .c_info .ci_top .ci_top_r div .social button.arrow_l_bt{
+        margin-right: 11px;
+    }
+    .container .c_info .ci_top .ci_top_r div .social button.arrow_r_bt{
+        margin-right: 0;
+    }
 }

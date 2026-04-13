@@ -195,57 +195,88 @@
 </div>
 
 
-<!-- <div class="contact">
+<div class="contact">
     <div class="all-bg">
         <img src="../img/contactBg.jpg" alt="">
     </div>
 
     <div class="contact-top">
         <div class="contact-info">
-            <div :class="$style['name']">
+            <div class="name">
                 {{ curPageData.basic?.info?.name || curPageData.basic?.info?.enName }}
             </div>
-            <div :class="$style['contact-list']">
+            <div class="contact-list">
                 <div>
-                    <img src="/images/biz/B06250411/phone.svg">
+                    <img src="../img/phone.svg">
                 </div>
                 <div
-                    :class="$style.link"
+                    class="link"
                     title="撥打電話"
-                    @click="openMobile"
                 >
                     {{ commonStore.getPageInfo.basic?.info?.mobile }}
                 </div>
             </div>
-            <div v-if="commonStore.getPageInfo.basic?.info?.email" :class="$style['contact-list']">
+            <div class="contact-list">
                 <div>
-                    <img src="/images/biz/B06250411/mail.svg">
+                    <img src="../img/mail.svg">
                 </div>
                 <div
-                    :class="$style.link"
+                    class="link"
                     title="前往寄信"
-                    @click="openMail"
                 >
                     {{ commonStore.getPageInfo.basic?.info?.email }}
                 </div>
             </div>
-            <div v-if="commonStore.getPageInfo.basic?.info?.url" :class="$style['contact-list']">
+            <div class="contact-list">
                 <div>
-                    <img src="/images/biz/B06250411/web.svg">
+                    <img src="../img/web.svg">
                 </div>
                 <div
-                    :class="$style.link"
+                    class="link"
                     title="前往網站"
-                    @click="openUrl"
                 >
                     {{ commonStore.getPageInfo.basic?.info?.url }}
                 </div>
             </div>
-            <!-- 社群元件 -->
+            <div class="social-box">
+                <span class="social">
+                    <button class="arrow_l_bt">
+                        <img src="../img/arrow-l.svg" alt="">
+                    </button>
+                    <span class="social_icon_box">
+                        <span class="social_icon">
+                            <a href="#" class="ig" target="_blank">
+                                <img src="../img/instagram.svg" alt="">
+                            </a>
+                            <a href="#" class="fb" target="_blank">
+                                <img src="../img/facebook.svg" alt="">
+                            </a>
+                            <a href="#" class="line" target="_blank">
+                                <img src="../img/line.svg" alt="">
+                            </a>
+                            <a href="#" class="threads" target="_blank">
+                            <img src="../img/threads.svg" alt="">
+                            </a>
+                                <a href="#" class="threads" target="_blank">
+                            <img src="../img/threads.svg" alt="">
+                            </a>
+                            <a href="#" class="threads" target="_blank">
+                                <img src="../img/threads.svg" alt="">
+                            </a>
+                            <a href="#" class="threads" target="_blank">
+                                <img src="../img/threads.svg" alt="">
+                            </a>
+                        </span>
+                    </span>
+                    <button class="arrow_r_bt">
+                        <img src="../img/arrow-r.svg" alt="">
+                    </button>
+                </span>
+            </div>
         </div>
-        <div :class="$style['contact-title']">
-            <span :class="$style['en']">Contact</span>
-            <span :class="$style['ch']">
+        <div class="contact-title">
+            <span class="en">Contact</span>
+            <span class="ch">
                 <span>聯</span>
                 <span>絡</span>
                 <span>我</span>
@@ -254,22 +285,22 @@
         </div>
     </div>
 
-    <div :class="$style['contact-bottom']">
-        <div :class="$style['contact-logo']">
+    <div class="contact-bottom">
+        <div class="contact-logo">
             <div class="logo">
                 <img src="../img/logo.svg" alt="">
             </div>
         </div>
-        <div :class="$style['contact-otherinfo']">
-            <div :class="$style['info-office']">
-                <div title="前往Google Map" @click="openMap" :class="$style['info-office-title']">
+        <div class="contact-otherinfo">
+            <div class="info-office">
+                <div title="前往Google Map" class="info-office-title">
                     品牌總部 Office
                 </div>
-                <div :class="$style['info-office-contain']">
+                <div class="info-office-contain">
                     {{ curPageData.basic?.info?.location }}
                 </div>
             </div>
-            <div title="撥打電話" :class="$style['otherinfo-self']">
+            <div title="撥打電話" class="otherinfo-self">
                 <span>
                     電話
                 </span>
@@ -277,7 +308,7 @@
                     {{ commonStore.getPageInfo.basic?.info?.mobile }}
                 </span>
             </div>
-            <div title="前往網站" :class="$style['otherinfo-self']">
+            <div title="前往網站" class="otherinfo-self">
                 <span>
                     信箱
                 </span>
@@ -287,4 +318,4 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>

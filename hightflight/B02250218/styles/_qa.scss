@@ -5,7 +5,8 @@
     color: #ffffff;
     position: absolute;
     right: calc(50% - 320px);
-    bottom: -110px;
+    bottom: -170px;
+    opacity: 0;
     width: 100%;
     max-width: 640px;
     text-align: center;
@@ -28,11 +29,28 @@
         font-size: $font_size_L;
     }
     .qa_btn{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 calc( (640px - 14em - 60px) / 2 );
         button{
             color: #ffffff;
             font-size: $font_size_M;
             padding: 2px 20px;
             transition: all .3s;
+            position: relative;
+            width: calc(7em + 30px);
+            &::after{
+                content: "";
+                display: inline-block;
+                width: 1px;
+                height: 1em;
+                background-color: #ffffff;
+                position: absolute;
+                top: 6px;
+                right: 0px;
+            }
             img{
                 display: inline-block;
                 height: 16px;
@@ -41,17 +59,9 @@
                 position: relative;
                 top: 2px;
             }
-            &:first-child{
-                position: relative;
+            &:last-child , &:nth-child(2n){
                 &::after{
-                    content: "";
-                    display: inline-block;
-                    width: 1px;
-                    height: 1em;
-                    background-color: #ffffff;
-                    position: absolute;
-                    top: 6px;
-                    right: -3px;
+                    display: none;
                 }
             }
             &:hover{
@@ -64,28 +74,32 @@
 
 // 動畫
 .qa_an {
-    animation: qa_an 1.5s ease-out forwards;
+    animation: qa_an 1s ease-out forwards;
 }
   
   @keyframes qa_an {
     from {
-        bottom: -110px;
+        bottom: -170px;
+        opacity: 0;
     }
     to {
         bottom: 0px;
+        opacity: 1;
     }
   }
 
 .qa_close{
-    animation: qa_close 1.5s ease-out forwards;
+    animation: qa_close 1s ease-out forwards;
 }
 
 @keyframes qa_close {
     from {
         bottom: 0px;
+        opacity: 1;
     }
     to {
-      bottom: -110px;
+      bottom: -170px;
+      opacity: 0;
     }
   }
 
@@ -97,6 +111,18 @@
             position: absolute;
             width: 100%;
             right: 0px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            .qa_title{
+                width: 100%;
+            }
+            .qa_btn{
+                padding: 0px 0px;
+                width: calc(14em + 80px);
+            }
         }
     }
     

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant:ital,wght@0,1..1000;1,1..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
@@ -876,6 +877,106 @@ img {
   font-weight: 400;
   width: calc(100% - 2em - 12px);
   font-family: "Ysabeau Infant", sans-serif;
+}
+
+.social-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.social-box .social {
+  display: inline-flex;
+  align-items: center;
+}
+.social-box .social button {
+  padding: 5px;
+  transition: all 0.2s;
+}
+.social-box .social button:hover {
+  opacity: 0.8;
+}
+.social-box .social button img {
+  width: 5px;
+  height: 10px;
+}
+.social-box .social button.arrow_l_bt {
+  margin-right: 33px;
+}
+.social-box .social button.arrow_r_bt {
+  margin-right: 0px;
+  margin-left: 15px;
+}
+.social-box .social button.btn_fin {
+  cursor: initial;
+  opacity: 0.5;
+}
+.social-box .social .social_icon_box {
+  overflow: hidden;
+  width: 212px;
+}
+.social-box .social .social_icon_box .social_icon {
+  display: flex;
+  height: 35px;
+  align-items: center;
+}
+.social-box .social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px; /* 每個 icon 固定寬度 */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
+  background-color: #000000;
+  margin-right: 18px;
+  transition: all 0.2s;
+}
+.social-box .social a:hover {
+  opacity: 0.7;
+}
+.social-box .social a img {
+  width: 20px;
+  height: 20px;
+}
+.social-box .social a.fb img {
+  width: 10px;
+  height: auto;
+}
+.social-box .social a[class*="c-icon:"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-box .social a[class*="c-icon:"]::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background: #fff;
+}
+.social-box .social a.c-icon\:ruten::before {
+  -webkit-mask-image: url("../../images/ruten.svg");
+          mask-image: url("../../images/ruten.svg");
+}
+.social-box .social a.c-icon\:shopee::before {
+  -webkit-mask-image: url("../../images/shopee.svg");
+          mask-image: url("../../images/shopee.svg");
+}
+.social-box .social a.c-icon\:tiktok::before {
+  -webkit-mask-image: url("../../images/tiktok.svg");
+          mask-image: url("../../images/tiktok.svg");
+}
+.social-box .social a.c-icon\:youtube::before {
+  -webkit-mask-image: url("../../images/youtube.svg");
+          mask-image: url("../../images/youtube.svg");
 }
 
 @media (max-width: 600px) {

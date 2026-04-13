@@ -177,6 +177,101 @@
     }
 }
 
+.social-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    .social{
+        display: inline-flex;
+        align-items: center;
+        button{
+            padding: 5px;
+            transition: all .2s;
+            &:hover{
+                opacity: 0.8;
+            }
+            img{
+                width: 5px;
+                height: 10px;
+            }
+            &.arrow_l_bt{
+                margin-right: 33px;
+            }
+            &.arrow_r_bt{
+                margin-right: 0px;
+                margin-left: 15px;
+            }
+            &.btn_fin{
+                cursor: initial;
+                opacity: 0.5;
+            }
+        }
+        .social_icon_box{
+            overflow: hidden;
+            width: 212px;
+            .social_icon{
+                display: flex;
+                height: 35px;
+                align-items: center;
+            }
+        }
+        a{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            flex: 0 0 35px; /* 每個 icon 固定寬度 */
+            transition: transform 0.3s ease-in-out;
+            border-radius: 50%;
+            background-color: #000000;
+            margin-right: 18px;
+            transition: all .2s;
+            &:hover{
+                opacity: 0.7;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+            }
+            &.fb{
+                img{
+                    width: 10px;
+                    height: auto;
+                }
+            }
+            &[class*="c-icon:"] {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                    mask-size: contain;
+                    background: #fff;
+                }
+            }
+
+            $icons: ('ruten', 'shopee', 'tiktok', 'youtube');
+            @each $item in $icons {
+                $path: '../../images/' + $item + '.svg';
+                &.c-icon\:#{$item} {
+                    
+                    &::before {
+                        mask-image: url($path);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
 @media (max-width:600px) {
     .contact-top {
         margin-right: 0;
