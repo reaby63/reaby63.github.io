@@ -1,8 +1,8 @@
 // 彈窗用JQ
 $(document).ready(function(){
 
-    // 點擊打開 modal
-    $('.open-modal').click(function(e){
+    // 點擊打開 modal（只需要一個！）
+    $(document).on('click', '.open-modal', function(e){
         e.preventDefault();
 
         const file = $(this).data('modal');
@@ -10,26 +10,43 @@ $(document).ready(function(){
         // 鎖住背景滾動
         $('body').css('overflow', 'hidden');
 
-        // 有空改成 加class .is-open .is-close ...
-        $('#modal').fadeIn(200, function(){
-            $(this).addClass('show');
-        });
+        // 載入整個 modal
+        $('#modal_container').load(file, function(){
+            const $modal = $('#modal_container').find('.modal');
 
-        $('#modal_body').html('<p style="text-align:center;">Loading...</p>');
-        $('#modal_body').load(file);
+            // 先顯示（但不動畫）
+            $modal.show();
+
+            // 下一幀再加 class（讓動畫吃得到）
+            setTimeout(() => {
+                $modal.addClass('is-open');
+            }, 20);
+        });
     });
+
+    // 共用關閉
+    function closeModal(){
+        const $modal = $('.modal');
+
+        // 先切換成關閉狀態
+        $modal.removeClass('is-open').addClass('is-close');
+
+        // 等動畫結束再移除
+        setTimeout(() => {
+            $('#modal_container').html('');
+            $('body').css('overflow', '');
+        }, 300); // 這個要跟 CSS 動畫時間一致！
+    }
 
     // 點擊 X 關閉
     $(document).on('click', '.modal_close', function(){
-        $('#modal').fadeOut();
-        $('body').css('overflow', '');
+        closeModal();
     });
 
     // 點擊背景關閉
-    $('#modal').click(function(e){
-        if(e.target.id === 'modal'){
-            $(this).fadeOut();
-            $('body').css('overflow', '');
+    $(document).on('click', '.modal', function(e){
+        if($(e.target).hasClass('modal')){
+            closeModal();
         }
     });
 
@@ -39,14 +56,5 @@ $(document).ready(function(){
             closeModal();
         }
     });
-
-    function closeModal(){
-        $('#modal').removeClass('show');
-        $('#modal').fadeOut(200);
-        $('body').css('overflow', ''); // 還原body滾動
-
-        // 清空內容-避免殘留
-        $('#modal_body').html('');
-    }
 
 });

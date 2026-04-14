@@ -1,0 +1,27 @@
+.qr-modal {
+    .modal_content {
+        background: #A2CEDA;
+        width: 300px;
+        margin: 5% auto;
+        padding: 28px 36px;
+        border-radius: 10px;
+    }
+    .title {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+    }
+    .content {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 240px;
+        }
+    }
+}
