@@ -13,19 +13,16 @@
     display: flex;
     align-items: center;
     &.fadein_index_01 {
-      .col-4 {
-        left: 0;
-        opacity: 1;
-      }
-      .index_img01{
-        right: 0;
+      .col-4 ,
+      .index_img01 {
+        bottom: 0;
         opacity: 1;
       }
     }
     .col-4{
       padding-right: 67px;
       position: relative;
-      left: -200px;
+      bottom: -20px;
       opacity: 0;
       transition: all 3s;
     }
@@ -45,7 +42,7 @@
       position: relative;
       overflow: hidden;
       transition: all 3s;
-      right: -100px;
+      bottom: -20px;
       opacity: 0;
       img{
         border-radius: 80px 80px 0px 80px;
@@ -68,6 +65,18 @@
     padding-top: 170px;
     padding-bottom: 280px;
     position: relative;
+    &.fadein_index_02 {
+        .home_01 ,
+        .home_03 {
+          opacity: 1;
+          top: 0;
+        }
+        .home_02 ,
+        .home_04 {
+          opacity: 1;
+          top: 109px;
+        }
+    }
     .home_bg_bottom{
       position: absolute;
       bottom: 0px;
@@ -103,7 +112,13 @@
           }
       }
     }
+    .home_01 ,.home_02 , .home_03, .home_04 {
+      opacity: 0;
+      transition: all 1s;
+    }
     .home_01{
+      top: 30px;
+      transition-delay: 0.5s;
       .home_text{
         bottom: 35px;
       }
@@ -114,6 +129,7 @@
       }
     }
     .home_02{
+      transition-delay: 1.5s;
       .home_text{
         top: 130px;
       }
@@ -124,6 +140,8 @@
       }
     }
     .home_03{
+      top: 30px;
+      transition-delay: 2.5s;
       .home_text{
         top: 80px;
       }
@@ -134,6 +152,7 @@
       }
     }
     .home_04{
+      transition-delay: 3.5s;
       .home_text{
         top: 38px;
       }
@@ -144,12 +163,20 @@
       }
     }
     .home_02 , .home_04{
-      top: 109px;
+      top: 78px;
     }
   }
   // 第三區
   .index_03{
     padding-top: 43px;
+    opacity: 0;
+    transition: all 1.5s;
+    position: relative;
+    right: -20px;
+    &.fadein_index_03 {
+      right: 0;
+      opacity: 1;
+    }
     .home_05{
       padding-right: 50px;
       img{
@@ -186,6 +213,13 @@
   padding-top: 110px;
   position: relative;
   margin-bottom: 155px;
+  opacity: 0;
+  transition: all 1s 0.2s;
+  left: -20px;
+  &.fadein_index_04 {
+    opacity: 1;
+    left: 0;
+  }
   .index_04_l{
     padding-right: 50px;
   }
@@ -248,6 +282,14 @@
   background-image: url('/mintur_pottery/img/product/pro_bg.jpg');
   padding-top: 100px;
   padding-bottom: 90px;
+  opacity: 0;
+  transition: all 1s;
+  position: relative;
+  bottom: -10px;
+  &.fadein_product {
+    opacity: 1;
+    bottom: 0;
+  }
   .product_content{
     text-align: center;
     margin-bottom: 40px;
@@ -300,6 +342,11 @@
 .traffic{
   margin-top: 100px;
   padding-bottom: 122px;
+  opacity: 0;
+  transition: all 1s;
+  &.fadein_traffic {
+    opacity: 1;
+  }
   .main_title{
     margin-bottom: 45px;
     font-size: $font_size_M;
