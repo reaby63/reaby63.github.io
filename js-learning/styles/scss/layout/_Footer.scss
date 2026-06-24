@@ -1,0 +1,23 @@
+$main-color:#2C4B79;
+
+.footer {
+    background-color: $main-color;
+    box-shadow: 0 -2px 6px #000;
+    .left {
+        background-color: #fff;
+        text-align: center;
+        width: 300px;
+        padding: 46.8px 0;
+        color: $main-color;
+        .logo {
+            margin-bottom: 19px;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 1.2px;
+            line-height: 27px;
+            margin-bottom: 19px;
+        }
+    }
+}
