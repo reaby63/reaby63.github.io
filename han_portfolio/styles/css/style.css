@@ -186,6 +186,16 @@
   cursor: none !important;
 }
 
+body::-moz-selection {
+  background: #88aeb9;
+  color: white;
+}
+
+body::selection {
+  background: #88aeb9;
+  color: white;
+}
+
 ul {
   list-style: none;
 }

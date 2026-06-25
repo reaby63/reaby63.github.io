@@ -14,6 +14,11 @@
     cursor: none !important;
 }
 
+body::selection {
+    background: #88aeb9;
+    color: white;
+}
+
 ul {
     list-style: none;
 }
