@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Microsoft JhengHei", "PingFang TC", "蘋方-繁", "Heiti TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.all_width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: #2C4B79;
+  box-shadow: 0 -2px 6px #000;
+}
+.footer .left {
+  background-color: #fff;
+  text-align: center;
+  width: 300px;
+  padding: 46.8px 0;
+  color: #2C4B79;
+}
+.footer .left .logo {
+  margin-bottom: 19px;
+}
+.footer .left .title {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  line-height: 27px;
+  margin-bottom: 19px;
+}
+
+header {
+  background: linear-gradient(to right, #FFB921 50%, #2C4B79 50%);
+  box-shadow: 0 2px 4px #B0B0B0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+header:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 26px;
+  background-color: #EC8832;
+}
+header .all_width {
+  background-color: #2C4B79;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .h_title {
+  background-color: #fff;
+  color: #2C4B79;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 51px 15px 24px;
+  transition: all 0.5s;
+}
+header .h_title img {
+  width: 36px;
+  margin-right: 16px;
+  transition: all 0.5s;
+}
+header .nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 15px;
+}
+
+.header.scrolled .h_title {
+  padding: 12px 51px 12px 24px;
+  font-size: 17px;
+}
+.header.scrolled .h_title img {
+  width: 28px;
+}
+
+.header-normal {
+  margin-top: 200px;
+}
+
+main {
+  margin-top: 100px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    right: 39px;
+    top: calc(50% - 12px);
+    color: #fff;
+  }
+  header .nav {
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    flex-direction: column;
+    position: absolute;
+    background-color: #2C4B79;
+    right: 0;
+    top: 58px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 16px 0;
+  }
+  header .nav a {
+    padding: 16px;
+  }
+  header .nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+@media (max-width: 500px) {
+  header .h_title {
+    font-size: 16px;
+    padding: 15px 30px 15px 24px;
+  }
+  header .h_title img {
+    width: 30px;
+  }
+  header.scrolled .h_title {
+    padding: 12px 30px 12px 24px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
