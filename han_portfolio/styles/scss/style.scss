@@ -320,6 +320,7 @@ header{
         position: relative;
         opacity: 0;
         top: 50px;
+        animation-delay: 0.2s;
             &::before,&::after{
                 content: "";
                 display: block;
@@ -1048,7 +1049,22 @@ footer{
     to{
       opacity: 1;
 }
-}  
+}
+
+.fadeout{
+    animation:fadeout 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;    
+}
+
+@keyframes fadeout{  
+    from { 
+      opacity: 1;
+    }  
+    to{
+      opacity: 0;
+}
+}
 
 .fadein_top_bot{  
     animation:fadein_top_bot 2s;  
@@ -1088,7 +1104,7 @@ footer{
             }
         }
     }
-} 
+}
 
 @keyframes fadein_bot_top{  
     from { 
@@ -1100,12 +1116,68 @@ footer{
       opacity: 1;
       position: relative;
       top: 0px;
+    }
 }
-}  
 
+.fadeout_bot_top{  
+    animation:fadeout_bot_top 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;
+}
+
+@keyframes fadeout_bot_top{  
+    from { 
+      opacity: 1;
+      position: relative;
+      top: 0px;
+    }  
+    to{
+      opacity: 0.2;
+      position: relative;
+      top: 50px;
+    }
+}
+
+.fadein_bot_bottom {
+    animation:fadein_bot_bottom 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;
+}
+
+@keyframes fadein_bot_bottom{  
+    from { 
+      opacity: 0;
+      position: relative;
+      top: -50px;
+    }  
+    to{
+      opacity: 1;
+      position: relative;
+      top: 0px;
+    }
+}
+
+.fadeout_bot_bottom {
+    animation:fadeout_bot_bottom 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;
+}
+
+@keyframes fadeout_bot_bottom{  
+    from { 
+      opacity: 1;
+      position: relative;
+      top: 0px;
+    }  
+    to{
+      opacity: 0;
+      position: relative;
+      top: -50px;
+    }
+}
 
 @keyframes fadein_bot_top_in{  
-    20% { 
+    0% { 
       opacity: 0 ;
       position: relative;
       top: 50px ;
@@ -1114,14 +1186,14 @@ footer{
       opacity: 1;
       position: relative;
       top: 0px;
-}
+    }
 }  
 
 @keyframes fadein_top_bot_in{  
     30% { 
       opacity: 0 ;
       position: relative;
-      top: -50px ;
+      top: -50px;
     }  
     to{
       opacity: 1;
@@ -1148,7 +1220,26 @@ footer{
       position: relative;
       left: 0px;
     }
-}  
+}
+
+.fadeout_r_l{  
+    animation:fadeout_r_l 2s;  
+    animation-fill-mode:forwards;  
+    animation-direction:alternate;  
+} 
+
+@keyframes fadeout_r_l{  
+    from { 
+      opacity: 1;
+      position: relative;
+      left: 0px;
+    }  
+    to{
+      opacity: 0;
+      position: relative;
+      left: 50px;
+    }
+}
 
 
 .f_blue_ball{

@@ -1,0 +1,33 @@
+// 跑馬燈
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-322px);
+    }
+}
+
+ul,li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.runing {
+    padding: 20px 50px;
+    overflow: hidden;
+    ul {
+        display: flex;
+        li {
+            padding-right: 100px;
+            white-space: nowrap;
+            animation: marquee 5s linear infinite;
+        }
+        &:hover {
+            li {
+                animation-play-state: paused; // 滑鼠移入會靜止
+            }
+        }
+    }
+}

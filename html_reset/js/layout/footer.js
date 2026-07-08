@@ -13,8 +13,7 @@ fetch('layout/Footer.html')
                 const navData = data.header.nav;
                 const tpl = document.getElementById('footer-template').content.cloneNode(true);
 
-                tpl.querySelector('.f_logo img').src =
-                    footerData.logo;
+                tpl.querySelector('.f_logo img').src = footerData.logo;
                 tpl.querySelector('.f_title').textContent =
                     replaceVars(footerData.title, siteVars); // 共用資料 套共用函式就能抓出同名資料
                 tpl.querySelector('.f_en_title').textContent =

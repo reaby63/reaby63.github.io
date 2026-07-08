@@ -152,4 +152,78 @@ main {
   header.scrolled .h_title {
     padding: 12px 30px 12px 24px !important;
   }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-322px);
+  }
+}
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.runing {
+  padding: 20px 50px;
+  overflow: hidden;
+}
+.runing ul {
+  display: flex;
+}
+.runing ul li {
+  padding-right: 100px;
+  white-space: nowrap;
+  animation: marquee 5s linear infinite;
+}
+.runing ul:hover li {
+  animation-play-state: paused;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.modal.is-open {
+  opacity: 1;
+}
+.modal.is-close {
+  opacity: 0;
+}
+
+.qr-modal .modal_content {
+  background: #A2CEDA;
+  width: 300px;
+  margin: 5% auto;
+  padding: 28px 36px;
+  border-radius: 10px;
+}
+.qr-modal .title {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+.qr-modal .content {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qr-modal .content img {
+  width: 240px;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,47 @@
+// 彈窗
+.modal {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+    &.is-open {
+        opacity: 1;
+    }
+    &.is-close {
+        opacity: 0;
+    }
+}
+
+.qr-modal {
+    .modal_content {
+        background: #A2CEDA;
+        width: 300px;
+        margin: 5% auto;
+        padding: 28px 36px;
+        border-radius: 10px;
+    }
+    .title {
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+        margin-bottom: 20px;
+    }
+    .content {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 240px;
+        }
+    }
+}
