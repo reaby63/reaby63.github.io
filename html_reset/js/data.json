@@ -1,6 +1,6 @@
 {
   "site": {
-    "company": "帝堡實業有限公司",
+    "company": "公司名稱",
     "logo": "../img/logo.svg"
   },
   "footer": {
@@ -36,8 +36,20 @@
       }
     ]
   },
-  "banner": [
-    {"img":"banner1.jpg"},
-    {"img":"banner2.jpg"}
-  ]
+  "banner": {
+    "one": [
+        {
+            "title":"AAA",
+            "icon":"icon1.svg",
+            "desc":"111",
+            "img":"banner1.jpg"
+        },
+        {
+            "title":"BBB",
+            "icon":"icon2.svg",
+            "desc":"222",
+            "img":"banner2.jpg"
+        }
+    ]
+  }
 }

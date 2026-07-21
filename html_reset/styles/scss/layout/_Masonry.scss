@@ -1,0 +1,30 @@
+// 瀑布流
+.masonry-layout {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 1rem;
+    .masonry-layout-item {
+        border-radius: 0.5rem;
+        &:nth-child(4n + 1) {
+            background-color: #5B9BD5;
+        }
+        &:nth-child(4n + 2) {
+            background-color: #ED7D31;
+        }
+        &:nth-child(4n + 3) {
+            background-color: #FFC000;
+        }
+        &:nth-child(4n) {
+            background-color: #70AD47;
+        }
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    .masonry-layout-content {
+        padding: 1rem;
+    }
+}

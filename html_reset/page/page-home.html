@@ -1,13 +1,25 @@
 <div>
     <!-- Swiper -->
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper" id="swiper-slides">
-            <!-- JS 會自動生成 slides -->
+    <!-- data-source 資料來源分類 - 第一層 key
+    data-key 資料來源分類 - 第二層 key
+    data-loop 是否循環播放
+    data-autoplay 是否自動播放
+    data-pagination 是否顯示分頁器
+    data-navigation 是否顯示左右箭頭 -->
+    <div 
+        class="swiper mySwiper"
+        data-source="banner"
+        data-key="one"
+        data-loop="true"
+        data-autoplay="true"
+        data-pagination="true"
+        data-navigation="true">
+            <div class="swiper-wrapper swiper-slides">
         </div>
 
         <div class="swiper-pagination"></div>
-        <!-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 
     <div class="about" id="about">

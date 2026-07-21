@@ -1,60 +1,113 @@
-// 彈窗用JQ
-$(document).ready(function(){
+// Modal 元件
 
-    // 點擊打開 modal（只需要一個！）
-    $(document).on('click', '.open-modal', function(e){
-        e.preventDefault();
+// 初始化
+function initModal() {
 
-        const file = $(this).data('modal');
+    $(document)
 
-        // 鎖住背景滾動
-        $('body').css('overflow', 'hidden');
+        // 打開 Modal
+        .off('click.modalOpen')
+        .on('click.modalOpen', '.open-modal', function (e) {
 
-        // 載入整個 modal
-        $('#modal_container').load(file, function(){
-            const $modal = $('#modal_container').find('.modal');
+            e.preventDefault();
 
-            // 先顯示（但不動畫）
-            $modal.show();
+            // 已有 Modal 就不重複開
+            if ($('#modal_container').children().length) return;
 
-            // 下一幀再加 class（讓動畫吃得到）
-            setTimeout(() => {
-                $modal.addClass('is-open');
-            }, 20);
-        });
-    });
+            const file = $(this).data('modal');
 
-    // 共用關閉
-    function closeModal(){
-        const $modal = $('.modal');
+            openModal(file);
 
-        // 先切換成關閉狀態
-        $modal.removeClass('is-open').addClass('is-close');
+        })
 
-        // 等動畫結束再移除
-        setTimeout(() => {
-            $('#modal_container').html('');
-            $('body').css('overflow', '');
-        }, 300); // 這個要跟 CSS 動畫時間一致！
-    }
+        // 點 X 關閉
+        .off('click.modalClose')
+        .on('click.modalClose', '.modal_close', function () {
 
-    // 點擊 X 關閉
-    $(document).on('click', '.modal_close', function(){
-        closeModal();
-    });
-
-    // 點擊背景關閉
-    $(document).on('click', '.modal', function(e){
-        if($(e.target).hasClass('modal')){
             closeModal();
-        }
-    });
+
+        })
+
+        // 點背景關閉
+        .off('click.modalBackground')
+        .on('click.modalBackground', '.modal', function (e) {
+
+            if ($(e.target).hasClass('modal')) {
+
+                closeModal();
+
+            }
+
+        });
 
     // ESC 關閉
-    $(document).keyup(function(e){
-        if(e.key === "Escape"){
-            closeModal();
+    $(document)
+
+        .off('keyup.modal')
+
+        .on('keyup.modal', function (e) {
+
+            if (e.key === "Escape") {
+
+                closeModal();
+
+            }
+
+        });
+
+}
+
+
+// 打開 Modal
+function openModal(file) {
+
+    $('body').addClass('modal-open');
+
+    $('#modal_container').load(file, function (response, status) {
+
+        if (status === "error") {
+
+            console.error(`Modal 載入失敗：${file}`);
+
+            $('body').removeClass('modal-open');
+
+            return;
+
         }
+
+        const $modal = $('#modal_container').find('.modal');
+
+        $modal.show();
+
+        requestAnimationFrame(() => {
+
+            $modal.addClass('is-open');
+
+        });
+
     });
 
-});
+}
+
+
+// 關閉 Modal
+function closeModal() {
+
+    const $modal = $('.modal');
+
+    if (!$modal.length) return;
+
+    // 如果禁止關閉
+    if ($modal.data('close') === false) return;
+
+    $modal.removeClass('is-open').addClass('is-close');
+
+    $modal.one('transitionend animationend', function () {
+
+        $('#modal_container').empty();
+
+        $('body').removeClass('modal-open');
+
+    });
+
+}

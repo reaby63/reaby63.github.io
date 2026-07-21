@@ -1,23 +1,12 @@
 
 header {
-    background: linear-gradient(to right,
-                #FFB921 50%,
-                #2C4B79 50%);
+    background: #fff;
     box-shadow: 0 2px 4px #B0B0B0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9;
-    &:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 26px;
-        background-color: #EC8832;
-    }
 
     .all_width {
         background-color: #2C4B79;
@@ -26,12 +15,13 @@ header {
         align-items: center;
     }
     .h_title {
-        background-color: #fff;
-        color: #2C4B79;
+        color: #fff;
         font-size: 20px;
         font-weight: bold;
         padding: 15px 51px 15px 24px;
         transition: all 0.5s;
+        display: flex;
+        align-items: center;
         img {
             width: 36px;
             margin-right: 16px;
@@ -58,7 +48,11 @@ header {
 }
 
 .header-normal {
-    margin-top: 200px;
+    margin-top: 400px;
+    a {
+        color: blue;
+        text-decoration: underline;
+    }
 }
 
 main {

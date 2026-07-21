@@ -1,65 +1,145 @@
-// 1. 載入 JSON 資料
-let data = {};
-async function loadData() {
+// Swiper 元件
+
+let swiperData = {};
+let swiperInstances = [];
+
+// 載入 data.json（只讀一次）
+async function loadSwiperData() {
+    if (Object.keys(swiperData).length > 0) return;
     try {
         const res = await fetch('./js/data.json');
-        data = await res.json();
+        swiperData = await res.json();
     } catch (err) {
         console.error('讀取 data.json 失敗', err);
     }
 }
 
-// 2. 將資料生成 swiper slide
-function buildSwiper(key) {
-    const slidesData = data.banner[key];
-    if (!slidesData) return;
+// 初始化 Swiper
+async function initSwiper() {
 
-    const wrapper = document.getElementById('swiper-slides');
-    wrapper.innerHTML = slidesData.map(item => `
-        <div class="swiper-slide">
-            <div class="swiper-text">
-              <h2>${item.title}</h2>
-              <img src="${item.icon}" alt="icon" class="slide-icon">
-              <p>${item.desc}</p>
-            </div>
-            <img src="${item.img}" alt="${item.title}">
-        </div>
-    `).join('');
+    const swiperEls = document.querySelectorAll('.mySwiper');
 
-    // 初始化 Swiper
-    new Swiper(".mySwiper", {
-      loop: true,
-      speed: 1000, // 滑動動畫時間 (毫秒) 1000 = 1秒
-      autoplay: {
-          delay: 3000, // 幾毫秒換一張 (3000 = 3秒)
-          disableOnInteraction: false // 使用者點擊後仍然繼續輪播
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        // 這邊是改數字輪播!
-        // type: "bullets",
-        // renderBullet: function (index, className) {
-        //   console.log("有跑", index);
-        //         return `<span class="${className}">${index + 1}</span>`;
-        //     },
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev"
-      }
+    if (!swiperEls.length) return;
+
+    await loadSwiperData();
+
+    swiperEls.forEach(swiperEl => {
+
+        // 資料來源
+        const source = swiperEl.dataset.source || 'banner';
+
+        // 資料名稱
+        const key = swiperEl.dataset.key || 'one';
+
+        buildSwiper(
+            swiperEl,
+            source,
+            key
+        );
     });
 }
 
-// 等資料都到了 再載入頁面
-async function initPage() {
-    // 先載入 HTML
-    const res = await fetch('page/page-home.html');
-    const html = await res.text();
-    document.getElementById('main-content').innerHTML = html;
+// 建立 Swiper
+function buildSwiper(swiperEl, source, key) {
 
-    await loadData(); // 再載入資料
-    buildSwiper('one'); // 最後才建swiper
+    // 取得資料
+    const slidesData = swiperData[source]?.[key];
+
+    if (!slidesData) {
+        console.warn(
+            `找不到資料：${source}.${key}`
+        );
+        return;
+    }
+
+    const wrapper = swiperEl.querySelector('.swiper-slides');
+
+    if (!wrapper) return;
+    // 生成 slide
+    wrapper.innerHTML = slidesData.map(item => `
+        <div class="swiper-slide">
+            <div class="swiper-text">
+                <h2>${item.title || ''}</h2>
+                ${
+                    item.icon 
+                    ? 
+                    `<img src="${item.icon}" 
+                          alt="icon" 
+                          class="slide-icon">`
+                    :
+                    ''
+                }
+                <p>${item.desc || ''}</p>
+            </div>
+            ${
+                item.img
+                ?
+                `<img src="${item.img}" 
+                      alt="${item.title || ''}">`
+                :
+                ''
+            }
+        </div>
+    `).join('');
+
+    // Swiper 設定
+    const swiperOption = {
+        loop:
+        swiperEl.dataset.loop !== "false",
+
+        speed:
+        Number(swiperEl.dataset.speed) || 1000,
+    };
+
+
+    // autoplay
+    if(
+        swiperEl.dataset.autoplay !== "false"
+    ){
+        swiperOption.autoplay = {
+            delay:
+            Number(swiperEl.dataset.delay) || 3000,
+            
+            disableOnInteraction:false
+        };
+    }
+
+    // pagination
+    if(
+        swiperEl.dataset.pagination !== "false"
+    ){
+        swiperOption.pagination = {
+            el:
+            swiperEl.querySelector(
+                ".swiper-pagination"
+            ),
+            clickable:true
+        };
+    }
+
+
+    // navigation
+    if(
+        swiperEl.dataset.navigation === "true"
+    ){
+        swiperOption.navigation = {
+            nextEl:
+            swiperEl.querySelector(
+                ".swiper-button-next"
+            ),
+            prevEl:
+            swiperEl.querySelector(
+                ".swiper-button-prev"
+            )
+        };
+    }
+
+
+    // 建立 Swiper
+    const instance = new Swiper(
+        swiperEl,
+        swiperOption
+    );
+    swiperInstances.push(instance);
+
 }
-
-initPage();

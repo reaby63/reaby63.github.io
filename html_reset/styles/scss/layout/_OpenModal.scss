@@ -18,6 +18,10 @@
     }
 }
 
+body.is-open{
+    overflow:hidden;
+}
+
 .qr-modal {
     .modal_content {
         background: #A2CEDA;
