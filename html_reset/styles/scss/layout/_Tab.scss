@@ -1,0 +1,24 @@
+// Tab 切換元件
+
+.tabs {
+    .tab-buttons {
+        display:flex;
+        button {
+            padding:10px 20px;
+            cursor:pointer;
+            &.active {
+                background:#333;
+                color:white;
+            }
+        }
+    }
+
+    .tab-content {
+        display:none;
+        padding:20px;
+        &.active {
+            display:block;
+        }
+    }
+
+}

@@ -84,13 +84,38 @@ function buildSwiper(swiperEl, source, key) {
 
     // Swiper 設定
     const swiperOption = {
-        loop:
-        swiperEl.dataset.loop !== "false",
-
-        speed:
-        Number(swiperEl.dataset.speed) || 1000,
+        loop: swiperEl.dataset.loop !== "false",
+        effect: swiperEl.dataset.effect || "slide",
+        speed: Number(swiperEl.dataset.speed) || 1000,
+        slidesPerView: swiperEl.dataset.slidesPerView === "auto" ? "auto" : Number(swiperEl.dataset.slidesPerView) || 1,
+        spaceBetween: Number(swiperEl.dataset.spaceBetween) || 0,
     };
 
+    // effect - fade
+    if(swiperOption.effect === "fade"){
+        swiperOption.fadeEffect = {
+            crossFade:true
+        };
+    }
+
+    // effect - cube
+    if(swiperOption.effect === "cube"){
+        swiperOption.cubeEffect = {
+            shadow:false,
+            slideShadows:false
+        };
+    }
+
+    // effect - coverflow
+    if(swiperOption.effect === "coverflow"){
+        swiperOption.coverflowEffect = {
+            rotate:20,
+            stretch:0,
+            depth:100,
+            modifier:1,
+            slideShadows:false
+        };
+    }
 
     // autoplay
     if(

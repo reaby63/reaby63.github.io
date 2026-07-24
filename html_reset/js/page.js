@@ -34,9 +34,17 @@ document.addEventListener('click', e => {
 
 // 這邊是元件載入用的
 function initComponents() {
-    initModal(); // Modal 元件
+
+    initModal(); // Modal 彈窗元件
+
     initAccordion(); // 手風琴元件
+
     initSwiper(); // Swiper 元件
+
     initMasonry(); // 瀑布流樣式
+
     initCircleText(); // 圓圈文字
+
+    initTabs(); // Tab 切換元件
+
 }

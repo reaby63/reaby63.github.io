@@ -306,4 +306,96 @@ body.is-open {
 }
 .masonry-layout .masonry-layout-content {
   padding: 1rem;
+}
+
+.tabs .tab-buttons {
+  display: flex;
+}
+.tabs .tab-buttons button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.tabs .tab-buttons button.active {
+  background: #333;
+  color: white;
+}
+.tabs .tab-content {
+  display: none;
+  padding: 20px;
+}
+.tabs .tab-content.active {
+  display: block;
+}
+
+.table-responsive {
+  --pc-head-align:left;
+  --pc-body-align:left;
+  --mobile-head-align:left;
+  --mobile-content-align:left;
+  --mobile-head-width:90px;
+}
+
+.table-responsive th {
+  text-align: var(--pc-head-align);
+}
+
+.table-responsive td {
+  text-align: var(--pc-body-align);
+}
+
+.pc-head-center {
+  --pc-head-align:center;
+}
+
+.pc-head-right {
+  --pc-head-align:right;
+}
+
+.pc-body-center {
+  --pc-body-align:center;
+}
+
+.pc-body-right {
+  --pc-body-align:right;
+}
+
+.mobile-head-center {
+  --mobile-head-align:center;
+}
+
+.mobile-head-right {
+  --mobile-head-align:right;
+}
+
+.mobile-content-center {
+  --mobile-content-align:center;
+}
+
+.mobile-content-right {
+  --mobile-content-align:right;
+}
+
+@media (max-width: 768px) {
+  .table-responsive thead {
+    display: none;
+  }
+  .table-responsive,
+  .table-responsive tbody,
+  .table-responsive tr,
+  .table-responsive td {
+    display: block;
+    width: 100%;
+  }
+  .table-responsive td {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    width: calc(100% - var(--mobile-head-width, 90px) - 24px);
+    text-align: var(--mobile-content-align);
+  }
+  .table-responsive td::before {
+    content: attr(data-label);
+    text-align: var(--mobile-head-align);
+    flex: 0 0 var(--mobile-head-width, 90px);
+  }
 }/*# sourceMappingURL=style.css.map */
