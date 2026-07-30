@@ -16,5 +16,8 @@
 @use './animation/BtnAn';
 @use './animation/Loading';
 
+// 個別用scss
+@use './layout/scss';
+
 // 開始切版用
 @use './slicinguse/Scss.scss';

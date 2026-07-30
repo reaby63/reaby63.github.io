@@ -39,16 +39,10 @@
   "banner": {
     "one": [
         {
-            "title":"AAA",
-            "icon":"icon1.svg",
-            "desc":"111",
-            "img":"banner1.jpg"
+            "img":"../../img/banner-01.png"
         },
         {
-            "title":"BBB",
-            "icon":"icon2.svg",
-            "desc":"222",
-            "img":"banner2.jpg"
+            "img":"../../img/banner-01.png"
         }
     ]
   }
