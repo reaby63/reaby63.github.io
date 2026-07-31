@@ -47,4 +47,6 @@ function initComponents() {
 
     initTabs(); // Tab 切換元件
 
+    initNumberCounter(); // 數字動畫
+
 }

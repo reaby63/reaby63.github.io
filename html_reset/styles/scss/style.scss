@@ -1,14 +1,19 @@
 // 共用元件
 @use './base/Reset';
-@use './layout/Footer';
-@use './layout/Header';
-@use './layout/Marquee-circleText';
-@use './layout/Accordion';
-@use './layout/OpenModal';
-@use './layout/Masonry';
-@use './layout/Tab';
+@use './base/Footer';
+@use './base/Header';
+@use './components/Marquee-circleText';
+@use './components/Accordion';
+@use './components/OpenModal';
+@use './components/Masonry';
+@use './components/Tab';
+@use './components/CounterNumber';
 
 // 編排用
 @use './layout/Table-layout';
 
+// 動畫用
+@use './animation/BtnAn';
 
+// 開始切版用
+@use './slicinguse/scss.scss';

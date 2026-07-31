@@ -1,0 +1,37 @@
+.number-counter {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+
+    .counter-item {
+        text-align: center;
+    }
+
+    .counter-number {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1;
+
+        &.is-active {
+            animation: numberFade .3s ease;
+        }
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}
+
+
+@keyframes numberFade {
+    from {
+        opacity: .5;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
