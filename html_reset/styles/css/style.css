@@ -476,124 +476,11 @@ body.is-open {
   max-width: 1000px;
   margin: 0 auto;
 }
-.btnAnReset .content h2 {
-  margin: 0 0 2em;
-}
-.btnAnReset .content p {
-  margin: 1em 0;
-  padding: 0 0 2em;
-  font-size: 0.85em;
-}
 .btnAnReset .box {
   padding: 4.5em 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-.btnAnReset {
-  /* Header */
-}
-.btnAnReset .codrops-header {
-  padding: 3em 190px 4em;
-  letter-spacing: -1px;
-}
-.btnAnReset .codrops-header h1 {
-  font-weight: 200;
-  font-size: 4em;
-  line-height: 1;
-  margin-bottom: 0;
-}
-.btnAnReset .codrops-header h1 span {
-  display: block;
-  font-size: 40%;
-  letter-spacing: 0;
-  padding: 0.5em 0 1em 0;
-  color: #A8B3B8;
-}
-.btnAnReset {
-  /* Top Navigation Style */
-}
-.btnAnReset .codrops-links {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  font-size: 1.25em;
-  text-align: center;
-}
-.btnAnReset .codrops-links::after {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background: #BFCACF;
-  content: "";
-  transform: rotate3d(0, 0, 1, 22.5deg);
-}
-.btnAnReset .codrops-icon {
-  display: inline-block;
-  margin: 0.5em;
-  padding: 0em 0;
-  width: 1.5em;
-  text-decoration: none;
-}
-.btnAnReset .codrops-icon:before {
-  margin: 0 5px;
-  text-transform: none;
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
-  font-family: "codropsicons";
-  line-height: 1;
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-}
-.btnAnReset .codrops-icon span {
-  display: none;
-}
-.btnAnReset .codrops-icon--drop:before {
-  content: "\e001";
-}
-.btnAnReset .codrops-icon--prev:before {
-  content: "\e004";
-}
-.btnAnReset {
-  /* Related demos */
-}
-.btnAnReset .content--related {
-  text-align: center;
-  font-weight: 600;
-}
-.btnAnReset .media-item {
-  display: inline-block;
-  padding: 1em;
-  margin: 1em 0 0 0;
-  vertical-align: top;
-  transition: color 0.3s;
-}
-.btnAnReset .media-item__img {
-  opacity: 0.8;
-  max-width: 100%;
-  transition: opacity 0.3s;
-}
-.btnAnReset .media-item:hover .media-item__img,
-.btnAnReset .media-item:focus .media-item__img {
-  opacity: 1;
-}
-.btnAnReset .media-item__title {
-  font-size: 0.85em;
-  margin: 0;
-  padding: 0.5em;
-}
-@media screen and (max-width: 50em) {
-  .btnAnReset .codrops-header {
-    padding: 3em 10% 4em;
-  }
-}
-@media screen and (max-width: 40em) {
-  .btnAnReset .codrops-header h1 {
-    font-size: 2.8em;
-  }
 }
 .btnAnReset {
   /* Box colors */
@@ -609,6 +496,21 @@ body.is-open {
 .btnAnReset .bg-3 {
   background: #37474f;
   color: #fff;
+}
+.btnAnReset {
+  /* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
+}
+.btnAnReset .bg-1 .button {
+  color: #37474f;
+  border-color: #37474f;
+}
+.btnAnReset .bg-2 .button {
+  color: #ECEFF1;
+  border-color: #ECEFF1;
+}
+.btnAnReset .bg-3 .button {
+  color: #fff;
+  border-color: #fff;
 }
 .btnAnReset {
   /* Common button styles */
@@ -628,64 +530,13 @@ body.is-open {
   z-index: 1;
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
 }
 .btnAnReset .button:focus {
   outline: none;
 }
 .btnAnReset .button > span {
   vertical-align: middle;
-}
-.btnAnReset {
-  /* Text color adjustments (we could stick to the "inherit" but that does not work well in Safari) */
-}
-.btnAnReset .bg-1 .button {
-  color: #37474f;
-  border-color: #37474f;
-}
-.btnAnReset .bg-2 .button {
-  color: #ECEFF1;
-  border-color: #ECEFF1;
-}
-.btnAnReset .bg-3 .button {
-  color: #fff;
-  border-color: #fff;
-}
-.btnAnReset {
-  /* Sizes */
-}
-.btnAnReset .button--size-s {
-  font-size: 14px;
-}
-.btnAnReset .button--size-m {
-  font-size: 16px;
-}
-.btnAnReset .button--size-l {
-  font-size: 18px;
-}
-.btnAnReset {
-  /* Typography and Roundedness */
-}
-.btnAnReset .button--text-upper {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.btnAnReset .button--text-thin {
-  font-weight: 300;
-}
-.btnAnReset .button--text-medium {
-  font-weight: 500;
-}
-.btnAnReset .button--text-thick {
-  font-weight: 600;
-}
-.btnAnReset .button--round-s {
-  border-radius: 5px;
-}
-.btnAnReset .button--round-m {
-  border-radius: 15px;
-}
-.btnAnReset .button--round-l {
-  border-radius: 40px;
 }
 .btnAnReset {
   /* Borders */
@@ -700,10 +551,11 @@ body.is-open {
   border: 3px solid;
 }
 .btnAnReset {
-  /* Individual button styles */
   /* Winona */
 }
 .btnAnReset .button--winona {
+  border: 1px solid;
+  border-radius: 5px;
   overflow: hidden;
   padding: 0;
   transition: border-color 0.3s, background-color 0.3s;
@@ -894,6 +746,7 @@ body.is-open {
   overflow: hidden;
   padding: 0;
   width: 230px;
+  border: 1px solid;
 }
 .btnAnReset .button--rayen.button--inverted {
   color: #fff;
@@ -1101,6 +954,7 @@ body.is-open {
   color: #fff;
   background: #7986cb;
   overflow: hidden;
+  border: solid 1px;
 }
 .btnAnReset .button--isi::before {
   content: "";
@@ -1818,4 +1672,468 @@ body.is-open {
   background: #3f51b5;
   border-color: #3f51b5;
   color: #fff;
+}
+
+.loadingAn {
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.col-sm-2 {
+  padding: 10px;
+  border-radius: 4px;
+  height: 125px;
+  margin-bottom: 10px;
+}
+
+.sp {
+  width: 32px;
+  height: 32px;
+  clear: both;
+  margin: 20px auto;
+}
+
+/* Spinner Circle Rotation */
+.sp-circle {
+  border: 4px rgba(0, 0, 0, 0.25) solid;
+  border-top: 4px black solid;
+  border-radius: 50%;
+  animation: spCircRot 0.6s infinite linear;
+}
+@keyframes spCircRot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* Spinner 3Balls Scale */
+.sp-3balls, .sp-3balls:before, .sp-3balls:after {
+  border-radius: 50%;
+  background-color: #000;
+  width: 18px;
+  height: 18px;
+  transform-origin: center center;
+  display: inline-block;
+}
+
+.sp-3balls {
+  position: relative;
+  background-color: black;
+  opacity: 1;
+  animation: spScaleAlpha 1s infinite linear;
+}
+
+.sp-3balls:before, .sp-3balls:after {
+  content: "";
+  position: relative;
+  opacity: 0.25;
+}
+
+.sp-3balls:before {
+  left: 30px;
+  top: 0px;
+  animation: spScaleAlphaBefore 1s infinite linear;
+}
+
+.sp-3balls:after {
+  left: -30px;
+  top: -23px;
+  animation: spScaleAlphaAfter 1s infinite linear;
+}
+@keyframes spScaleAlpha {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0.25;
+  }
+  66% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spScaleAlphaBefore {
+  0% {
+    opacity: 0.25;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 0.25;
+  }
+}
+@keyframes spScaleAlphaAfter {
+  33% {
+    opacity: 0.25;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+/* Spinner VolumeButton */
+.sp-volume {
+  background-color: #000;
+  border-radius: 50%;
+  position: relative;
+  animation: spVolRot 0.6s infinite linear;
+}
+
+.sp-volume:after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  left: 5px;
+  top: 5px;
+  background-color: white;
+}
+@keyframes spVolRot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* Spinner Vortex */
+.sp-vortex {
+  border: 1px #000 solid;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sp-vortex:after, .sp-vortex:before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  animation: spVortex 2s infinite linear;
+}
+
+.sp-vortex:before {
+  border-top: 6px #000 solid;
+  top: -3px;
+  left: calc(-50% - 3px);
+  transform-origin: right center;
+}
+
+.sp-vortex:after {
+  border-bottom: 6px #000 solid;
+  top: 3px;
+  right: calc(-50% - 3px);
+  transform-origin: left center;
+}
+@keyframes spVortex {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* Spinner Slices */
+.sp.sp-slices {
+  border-radius: 50%;
+  border-top: 16px rgba(0, 0, 0, 0.75) solid;
+  border-left: 16px rgba(0, 0, 0, 0.25) solid;
+  border-bottom: 16px rgba(0, 0, 0, 0.25) solid;
+  border-right: 16px rgba(0, 0, 0, 0.25) solid;
+  animation: spSlices 1s infinite linear;
+}
+@keyframes spSlices {
+  0% {
+    border-top: 16px rgba(0, 0, 0, 0.75) solid;
+    border-right: 16px rgba(0, 0, 0, 0.25) solid;
+    border-bottom: 16px rgba(0, 0, 0, 0.25) solid;
+    border-left: 16px rgba(0, 0, 0, 0.25) solid;
+  }
+  25% {
+    border-top: 16px rgba(0, 0, 0, 0.25) solid;
+    border-right: 16px rgba(0, 0, 0, 0.75) solid;
+    border-bottom: 16px rgba(0, 0, 0, 0.25) solid;
+    border-left: 16px rgba(0, 0, 0, 0.25) solid;
+  }
+  50% {
+    border-top: 16px rgba(0, 0, 0, 0.25) solid;
+    border-right: 16px rgba(0, 0, 0, 0.25) solid;
+    border-bottom: 16px rgba(0, 0, 0, 0.75) solid;
+    border-left: 16px rgba(0, 0, 0, 0.25) solid;
+  }
+  75% {
+    border-top: 16px rgba(0, 0, 0, 0.25) solid;
+    border-right: 16px rgba(0, 0, 0, 0.25) solid;
+    border-bottom: 16px rgba(0, 0, 0, 0.25) solid;
+    border-left: 16px rgba(0, 0, 0, 0.75) solid;
+  }
+  100% {
+    border-top: 16px rgba(0, 0, 0, 0.75) solid;
+    border-right: 16px rgba(0, 0, 0, 0.25) solid;
+    border-bottom: 16px rgba(0, 0, 0, 0.25) solid;
+    border-left: 16px rgba(0, 0, 0, 0.25) solid;
+  }
+}
+/* Spinner Sphere */
+.sp-sphere {
+  border-radius: 50%;
+  border-left: 0px #000 solid;
+  border-right: 0px #000 solid;
+  animation: spSphere 1s infinite linear;
+}
+@keyframes spSphere {
+  0% {
+    border-left: 0px #000 solid;
+    border-right: 0px #000 solid;
+  }
+  33% {
+    border-left: 32px #000 solid;
+    border-right: 0px #000 solid;
+  }
+  34% {
+    border-left: 0px #000 solid;
+    border-right: 32px #000 solid;
+  }
+  66% {
+    border-left: 0px #000 solid;
+    border-right: 0px #000 solid;
+  }
+}
+/* Spinner Bars */
+.sp-bars {
+  position: relative;
+  width: 10px;
+  border: 1px #000 solid;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation: spBars 1s infinite linear;
+}
+
+.sp-bars:after, .sp-bars:before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  background-color: inherit;
+  top: -1px;
+}
+
+.sp-bars:before {
+  left: -20px;
+  animation: spBarsBefore 1s infinite linear;
+}
+
+.sp-bars:after {
+  right: -20px;
+  animation: spBarsAfter 1s infinite linear;
+}
+
+@keyframes spBarsBefore {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.25);
+  }
+  50% {
+    transform: scale(1, 0.75);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes spBars {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.25);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes spBarsAfter {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.75);
+  }
+  75% {
+    transform: scale(1, 1.25);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/* Spinner Clock */
+.sp-clock {
+  border: 1px #000 solid;
+  border-radius: 50%;
+  position: relative;
+}
+
+.sp-clock:before {
+  content: "";
+  border-left: 1px #000 solid;
+  position: absolute;
+  top: 2px;
+  width: 1px;
+  height: calc(50% - 2px);
+  transform: rotate(0deg);
+  transform-origin: 0% 100%;
+  animation: spClock 1s infinite linear;
+}
+@keyframes spClock {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+/* Spinner Wave */
+.sp-wave {
+  border-radius: 50%;
+  position: relative;
+  opacity: 1;
+}
+
+.sp-wave:before, .sp-wave:after {
+  content: "";
+  border: 1px #000 solid;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+}
+
+.sp-wave:before {
+  transform: scale(1, 1);
+  opacity: 1;
+  animation: spWaveBe 0.6s infinite linear;
+}
+
+.sp-wave:after {
+  transform: scale(0, 0);
+  opacity: 0;
+  animation: spWaveAf 0.6s infinite linear;
+}
+@keyframes spWaveAf {
+  from {
+    transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes spWaveBe {
+  from {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5, 1.5);
+    opacity: 0;
+  }
+}
+/* Spinner Texture */
+.sp-texture {
+  border: 1px #000 solid;
+  border-radius: 4px;
+  position: relative;
+  background: linear-gradient(45deg, transparent 49%, #000 50%, #000 50%, transparent 51%, transparent), linear-gradient(-45deg, transparent 49%, #000 50%, #000 50%, transparent 51%, transparent);
+  background-size: 16px 16px;
+  background-position: 0% 0%;
+  animation: spTexture 1s infinite linear;
+}
+@keyframes spTexture {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -16px 0px;
+  }
+}
+/* Spinner LoadBar */
+.sp-loadbar {
+  width: 50px;
+  height: 18px;
+  border: 1px #000 solid;
+  border-radius: 4px;
+  background: linear-gradient(-60deg, transparent 0%, transparent 50%, #000 50%, #000 75%, transparent 75%, transparent);
+  background-size: 20px 30px;
+  background-position: 0px 0px;
+  animation: spLoadBar 0.8s infinite linear;
+}
+@keyframes spLoadBar {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -20px 0px;
+  }
+}
+/* Spinner Hydrogen */
+.sp-hydrogen {
+  position: relative;
+  border: 1px #000 solid;
+  border-radius: 50%;
+  animation: spHydro 0.6s infinite linear;
+}
+
+.sp-hydrogen:before, .sp-hydrogen:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.sp-hydrogen:before {
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+}
+
+.sp-hydrogen:after {
+  top: -1px;
+  left: -1px;
+}
+@keyframes spHydro {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }/*# sourceMappingURL=style.css.map */
