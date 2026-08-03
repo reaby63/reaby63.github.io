@@ -49,7 +49,32 @@
   "product": {
     "one": [
         {
-            "img":"../../img/banner-01.png",
+            "img":"../../img/product-01.png",
+            "title":"產品名稱",
+            "desc":"產品簡介產品簡介產品簡介產品簡介產品簡介"
+        },
+        {
+            "img":"../../img/product-02.png",
+            "title":"產品名稱",
+            "desc":"產品簡介產品簡介產品簡介產品簡介產品簡介"
+        },
+        {
+            "img":"../../img/product-03.png",
+            "title":"產品名稱",
+            "desc":"產品簡介產品簡介產品簡介產品簡介產品簡介"
+        },
+        {
+            "img":"../../img/product-04.png",
+            "title":"產品名稱",
+            "desc":"產品簡介產品簡介產品簡介產品簡介產品簡介"
+        },
+        {
+            "img":"../../img/product-01.png",
+            "title":"產品名稱",
+            "desc":"產品簡介產品簡介產品簡介產品簡介產品簡介"
+        },
+        {
+            "img":"../../img/product-02.png",
             "title":"產品名稱",
             "desc":"產品簡介產品簡介產品簡介產品簡介產品簡介"
         }
