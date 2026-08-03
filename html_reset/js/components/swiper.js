@@ -55,32 +55,43 @@ function buildSwiper(swiperEl, source, key) {
     const wrapper = swiperEl.querySelector('.swiper-slides');
 
     if (!wrapper) return;
-    // 生成 slide
-    wrapper.innerHTML = slidesData.map(item => `
-        <div class="swiper-slide">
-            <div class="swiper-text">
-                <h2>${item.title || ''}</h2>
+
+    // 生成 slide 依照套用模板
+    const swiperTemplate = {
+        // data-template 套用 banner
+        banner(item){
+            return `
+            <div class="swiper-slide">
+                <div class="swiper-text">
+                    <h2>${item.title || ''}</h2>
+                    ${
+                        item.icon 
+                        ? 
+                        `<img src="${item.icon}" 
+                            alt="icon" 
+                            class="slide-icon">`
+                        :
+                        ''
+                    }
+                    <p>${item.desc || ''}</p>
+                </div>
                 ${
-                    item.icon 
-                    ? 
-                    `<img src="${item.icon}" 
-                          alt="icon" 
-                          class="slide-icon">`
+                    item.img
+                    ?
+                    `<img src="${item.img}" 
+                        alt="${item.title || ''}">`
                     :
                     ''
                 }
-                <p>${item.desc || ''}</p>
-            </div>
-            ${
-                item.img
-                ?
-                `<img src="${item.img}" 
-                      alt="${item.title || ''}">`
-                :
-                ''
-            }
-        </div>
-    `).join('');
+            </div>`;
+        }
+    };
+
+    const template = swiperTemplate[swiperEl.dataset.template];
+
+    wrapper.innerHTML = slidesData
+    .map(template)
+    .join("");
 
     // Swiper 設定
     const swiperOption = {
