@@ -26,7 +26,17 @@
 .about {
     background-color: #FFE4EF;
     min-height: 100vh;
-    padding-top: 220px; 
+    padding-top: 220px;
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 88px;
+        background-color: #CFAAFF;
+    }
     .about-content {
         margin: 0 auto;
         max-width: 750px;
@@ -67,6 +77,7 @@
             position: absolute;
             top: 133px;
             left: -402px;
+            z-index: 3;
         }
         .about-float-05 {
             position: absolute;
@@ -120,7 +131,103 @@
             line-height: 30px;
         }
     }
+    .about-bottom {
+        background-color: #FF7895;
+        border:solid 2px #FF7895;
+        border-radius: 44px;
+        display: flex;
+        align-items: center;
+        max-width: 1369px;
+        margin: 0 auto;
+        justify-content: space-between;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        .about-bottom-left {
+            letter-spacing: 10%;
+            margin-left: 85px;
+            .about-bottom-title {
+                font-size: 48px;
+                font-weight: 900;
+                color: #FEFE9D;
+                line-height: 65px;
+                margin-bottom: 11px;
+            }
+            .about-bottom-subtitle {
+                font-size: 18px;
+                font-weight: 900;
+                color: #FEFE9D;
+                line-height: 65px;
+                margin-bottom: 19px;
+            }
+            .about-bottom-content {
+                color: #FFFFFF;
+                line-height: 30px;
+                margin-bottom: 88px;
+            }
+            .about-bottom-button button{
+                cursor: pointer;
+                border:solid 2px #FFFFFF;
+                border-radius: 50px;
+                font-size: 15px;
+                font-weight: 900;
+                color: #FFFFFF;
+                transition: all 0.3s ease-in-out;
+                background-color: transparent;
+                padding: 5px 12px;
+                letter-spacing: 10%;
+                &:hover {
+                    filter: brightness(0.8);
+                }
+                img {
+                    margin-left: 8px;
+                }
+            }
+        }
+        .about-bottom-right {
+            display: flex;
+        }
+    }
 }
 
 
 
+.product {
+    background-color: #CFAAFF;
+    padding-top: 105px;
+    .title {
+        text-align: center;
+        color: #FEFE9D;
+        letter-spacing: 10%;
+        padding-bottom: 27px;
+        position: relative;
+        img {
+            position: absolute;
+            top: 40%;
+            right: 40px;
+            transform: translateY(-50%);
+            width: 300px;
+        }
+    }
+    .product-title {
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 50px;
+        margin-bottom: 11px;
+    }
+    .product-subtitle {
+        margin-bottom: 22px;
+    }
+}
+
+.productSwiper {
+    .swiper-button-prev,
+    .swiper-button-next {
+        &:after {
+            display: none;
+        }
+    }
+    .swiper-button-next {
+        transform: rotate(180deg);
+    }
+}

@@ -45,5 +45,14 @@
             "img":"../../img/banner-01.png"
         }
     ]
+  },
+  "product": {
+    "one": [
+        {
+            "img":"../../img/banner-01.png",
+            "title":"產品名稱",
+            "desc":"產品簡介產品簡介產品簡介產品簡介產品簡介"
+        }
+    ]
   }
 }
