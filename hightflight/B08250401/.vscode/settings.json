@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.port": 5501,
+    "liveSassCompile.settings.formats": [{
+        "savePath": "~/css"
+    }],
+    "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+}
