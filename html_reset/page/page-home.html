@@ -10,7 +10,8 @@
     data-space-between 每張卡片間距(px)
     data-autoplay 是否自動播放
     data-pagination 是否顯示分頁器
-    data-navigation 是否顯示左右箭頭 -->
+    data-navigation 是否顯示左右箭頭
+    data-scrollbar 是否顯示拖曳滾動條 -->
     <div 
         class="swiper mySwiper"
         data-source="banner"
@@ -20,13 +21,17 @@
         data-loop="true"
         data-autoplay="true"
         data-pagination="true"
-        data-navigation="true">
+        data-navigation="true"
+        data-scrollbar="true">
             <div class="swiper-wrapper swiper-slides">
         </div>
 
         <div class="swiper-pagination"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
+
+        <!-- 滾動條 -->
+        <div class="swiper-scrollbar"></div>
     </div>
 
     <div class="about" id="about">

@@ -187,20 +187,20 @@ button {
   }
 }
 .social_box .social a.c-icon\:ruten span {
-  -webkit-mask-image: url("/images/ruten.svg");
-          mask-image: url("/images/ruten.svg");
+  -webkit-mask-image: url("../../images/ruten.svg");
+          mask-image: url("../../images/ruten.svg");
 }
 .social_box .social a.c-icon\:shopee span {
-  -webkit-mask-image: url("/images/shopee.svg");
-          mask-image: url("/images/shopee.svg");
+  -webkit-mask-image: url("../../images/shopee.svg");
+          mask-image: url("../../images/shopee.svg");
 }
 .social_box .social a.c-icon\:tiktok span {
-  -webkit-mask-image: url("/images/tiktok.svg");
-          mask-image: url("/images/tiktok.svg");
+  -webkit-mask-image: url("../../images/tiktok.svg");
+          mask-image: url("../../images/tiktok.svg");
 }
 .social_box .social a.c-icon\:youtube span {
-  -webkit-mask-image: url("/images/youtube.svg");
-          mask-image: url("/images/youtube.svg");
+  -webkit-mask-image: url("../../images/youtube.svg");
+          mask-image: url("../../images/youtube.svg");
 }
 .social_box .social a img {
   width: 36px;
@@ -352,7 +352,7 @@ button {
 }
 .container .c_info .c_info_top .ci_right .focus_bt .focus_bt_heart::before {
   content: "";
-  mask-image: url("/images/heart-line.svg");
+  mask-image: url("../../images/heart-line.svg");
   mask-repeat: no-repeat;
   mask-size: contain;
   mask-position: center;
@@ -364,7 +364,7 @@ button {
   top: 1.5px;
   background-color: #ffffff;
   /* ✅ WebKit Mask - 支援 Safari, iOS, Android */
-  -webkit-mask-image: url("/images/heart-line.svg");
+  -webkit-mask-image: url("../../images/heart-line.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: contain;
   -webkit-mask-position: center;

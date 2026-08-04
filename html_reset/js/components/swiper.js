@@ -231,6 +231,18 @@ function buildSwiper(swiperEl, source, key) {
         };
     }
 
+    // scrollbar
+    if (
+        swiperEl.dataset.scrollbar === "true"
+    ){
+        swiperOption.scrollbar = {
+            el: swiperEl.querySelector(".swiper-scrollbar"),
+            draggable: true,
+            dragSize: "auto",
+            hide: false
+        };
+    }
+
 
     // navigation
     if(

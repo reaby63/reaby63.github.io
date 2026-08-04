@@ -119,7 +119,7 @@
             }
             $icons: ('ruten', 'shopee', 'tiktok', 'youtube');
             @each $item in $icons {
-                $path: '/images/' + $item + '.svg';
+                $path: '../../images/' + $item + '.svg';
                 &.c-icon\:#{$item} {
                     
                     span {
@@ -266,7 +266,7 @@
                         border-radius: 12px;
                         &::before{
                             content: "";
-                            mask-image: url('/images/heart-line.svg');
+                            mask-image: url('../../images/heart-line.svg');
                             mask-repeat: no-repeat;
                             mask-size: contain;
                             mask-position: center;
@@ -278,7 +278,7 @@
                             top: 1.5px;
                             background-color: #ffffff;
                             /* ✅ WebKit Mask - 支援 Safari, iOS, Android */
-                            -webkit-mask-image: url('/images/heart-line.svg');
+                            -webkit-mask-image: url('../../images/heart-line.svg');
                             -webkit-mask-repeat: no-repeat;
                             -webkit-mask-size: contain;
                             -webkit-mask-position: center;
