@@ -2108,26 +2108,23 @@ button {
   -webkit-transition: max-height 1s ease-out;
   transition: max-height 1s ease-out;
   /* 整個 scrollbar（捲軸本體） */
+<<<<<<< HEAD
+=======
+  /* 滾動條軌道（背景） */
+  /* 滾動條滑塊（會移動的那一塊） */
+  /* 滑塊 hover 時樣式 */
+>>>>>>> 2bd4498e (12321)
 }
 .rm .rm_list .open_list::-webkit-scrollbar {
   width: 10px; /* 垂直捲軸寬度 */
-}
-.rm .rm_list .open_list {
-  /* 滾動條軌道（背景） */
 }
 .rm .rm_list .open_list::-webkit-scrollbar-track {
   background: #000000;
   border-radius: 10px;
 }
-.rm .rm_list .open_list {
-  /* 滾動條滑塊（會移動的那一塊） */
-}
 .rm .rm_list .open_list::-webkit-scrollbar-thumb {
   background: #bdbdbd;
   border-radius: 10px;
-}
-.rm .rm_list .open_list {
-  /* 滑塊 hover 時樣式 */
 }
 .rm .rm_list .open_list::-webkit-scrollbar-thumb:hover {
   background: #c5c5c5;

@@ -2361,7 +2361,7 @@ body.is-open {
   transform: rotate(180deg);
 }
 
-.product-slide {
+.ps--slide {
   display: inline-flex;
   align-items: center;
   width: 50%;
