@@ -17,7 +17,7 @@ async function loadSwiperData() {
 // 初始化 Swiper
 async function initSwiper() {
 
-    const swiperEls = document.querySelectorAll('.mySwiper');
+    const swiperEls = document.querySelectorAll('.swiper');
 
     if (!swiperEls.length) return;
 
@@ -100,21 +100,83 @@ function buildSwiper(swiperEl, source, key) {
                     ''
                 }
             </div>`;
+        },
+        // data-template 套用 product 假設是使用 data-slide-group 模式
+        product(item){
+
+            // 判斷是不是 data-slide-group 模式
+            const items = Array.isArray(item) ? item : [item];
+
+            return `
+            <div class="swiper-slide">
+
+                <div class="product-group">
+
+                    ${items.map(item => `
+                        <div class="ps--slide">
+
+                            <div class="ps-text">
+
+                                <div class="ps-title">
+                                    ${item.title || ''}
+                                </div>
+
+                                <div class="ps-desc">
+                                    ${item.desc || ''}
+                                </div>
+
+                                <div class="ps-btn">
+                                    <button>
+                                        See More
+                                    </button>
+                                </div>
+
+                            </div>
+
+                            <div class="ps-img">
+                                <img src="${item.img}" alt="">
+                            </div>
+
+                        </div>
+                    `).join("")}
+
+                </div>
+
+            </div>
+        `;
         }
     };
 
     const template = swiperTemplate[swiperEl.dataset.template];
 
-    wrapper.innerHTML = slidesData
-    .map(template)
-    .join("");
+    const slideGroup = Number(swiperEl.dataset.slideGroup) || 0;
+
+    if(slideGroup){
+        const groupedData = chunkArray(slidesData, slideGroup);
+        wrapper.innerHTML = groupedData
+            .map(template)
+            .join("");
+
+    }else{
+        wrapper.innerHTML = slidesData
+            .map(template)
+            .join("");
+    }
 
     // Swiper 設定
     const swiperOption = {
         loop: swiperEl.dataset.loop !== "false",
         effect: swiperEl.dataset.effect || "slide",
         speed: Number(swiperEl.dataset.speed) || 1000,
-        slidesPerView: swiperEl.dataset.slidesPerView === "auto" ? "auto" : Number(swiperEl.dataset.slidesPerView) || 1,
+        // 有data-slide-group時 slidesPerView永遠:1
+        slidesPerView:
+        swiperEl.dataset.slideGroup
+            ? 1
+            : (
+                swiperEl.dataset.slidesPerView === "auto"
+                    ? "auto"
+                    : Number(swiperEl.dataset.slidesPerView) || 1
+            ),
         spaceBetween: Number(swiperEl.dataset.spaceBetween) || 0,
     };
 
