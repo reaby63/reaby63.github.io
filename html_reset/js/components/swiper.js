@@ -39,6 +39,22 @@ async function initSwiper() {
     });
 }
 
+// 陣列分組 data-slide-group使用的
+function chunkArray(array, size){
+
+    const result = [];
+
+    for(let i = 0; i < array.length; i += size){
+
+        result.push(
+            array.slice(i, i + size)
+        );
+
+    }
+
+    return result;
+}
+
 // 建立 Swiper
 function buildSwiper(swiperEl, source, key) {
 
