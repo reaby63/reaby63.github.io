@@ -219,16 +219,53 @@ function buildSwiper(swiperEl, source, key) {
     }
 
     // pagination
-    if(
-        swiperEl.dataset.pagination !== "false"
-    ){
+    const paginationType = swiperEl.dataset.pagination || "false";
+
+    if (paginationType !== "false") {
+
         swiperOption.pagination = {
-            el:
-            swiperEl.querySelector(
-                ".swiper-pagination"
-            ),
-            clickable:true
+            el: swiperEl.querySelector(".swiper-pagination")
         };
+
+        switch (paginationType) {
+
+            // 小圓點（預設）
+            case "bullet":
+                swiperOption.pagination.clickable = true;
+                break;
+
+            // 數字 1 / 5
+            case "fraction":
+                swiperOption.pagination.type = "fraction";
+                break;
+
+            // 進度條
+            case "progressbar":
+                swiperOption.pagination.type = "progressbar";
+                break;
+
+            // 1 2 3 4
+            case "number":
+                swiperOption.pagination.clickable = true;
+
+                swiperOption.pagination.renderBullet = function(index, className) {
+
+                    return `
+                        <span class="${className}">
+                            ${index + 1}
+                        </span>
+                    `;
+
+                };
+
+                break;
+
+            // 沒寫就當 bullet
+            default:
+                swiperOption.pagination.clickable = true;
+                break;
+        }
+
     }
 
     // scrollbar
