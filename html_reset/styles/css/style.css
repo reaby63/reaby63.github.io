@@ -2361,6 +2361,11 @@ body.is-open {
   transform: rotate(180deg);
 }
 
+.product-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .ps--slide {
   display: inline-flex;
   align-items: center;
