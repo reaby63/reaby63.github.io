@@ -2149,6 +2149,20 @@ body.is-open {
   max-width: 1440px;
 }
 
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  width: auto;
+  height: auto;
+  margin: 0;
+  z-index: 99999;
+}
+.mySwiper .swiper-button-prev img,
+.mySwiper .swiper-button-next img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 .mySwiper .swiper-button-prev:after,
 .mySwiper .swiper-button-next:after {
   display: none;
@@ -2352,22 +2366,173 @@ body.is-open {
 .product .product-subtitle {
   margin-bottom: 22px;
 }
-
-.productSwiper .swiper-button-prev:after,
-.productSwiper .swiper-button-next:after {
+.product .productSwiper {
+  padding-bottom: 135px;
+  position: relative;
+}
+.product .productSwiper .swiper-button-prev,
+.product .productSwiper .swiper-button-next {
+  position: absolute;
+  bottom: 47px;
+  top: auto;
+  width: auto;
+  height: auto;
+  margin: 0;
+  z-index: 99999;
+}
+.product .productSwiper .swiper-button-prev img,
+.product .productSwiper .swiper-button-next img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.product .productSwiper .swiper-button-prev:after,
+.product .productSwiper .swiper-button-next:after {
   display: none;
 }
-.productSwiper .swiper-button-next {
+.product .productSwiper .swiper-button-next {
   transform: rotate(180deg);
 }
-
-.product-group {
+.product .productSwiper .swiper-bottom {
+  position: relative;
+  height: 139px;
+}
+.product .productSwiper .swiper-pagination {
+  position: absolute;
+  bottom: 55px;
+}
+.product .productSwiper .swiper-pagination-bullet {
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: solid 2px #FEFE9D;
+  opacity: 1;
+  font-size: 14px;
+  color: #FEFE9D;
+}
+.product .productSwiper .product-group {
   display: flex;
   flex-wrap: wrap;
 }
-
-.ps--slide {
+.product .productSwiper .ps--slide {
   display: inline-flex;
   align-items: center;
   width: 50%;
+  background-color: #EDFE9D;
+}
+.product .productSwiper .ps--slide .ps-text {
+  padding: 0 66px;
+  width: 50%;
+  box-sizing: border-box;
+  letter-spacing: 10%;
+}
+.product .productSwiper .ps--slide .ps-text .ps-title {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 50px;
+}
+.product .productSwiper .ps--slide .ps-text .ps-desc {
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 32px;
+}
+.product .productSwiper .ps--slide .ps-text .ps-btn button {
+  cursor: pointer;
+  background-color: #FF7895;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 900;
+  transition: all 0.3s ease-in-out;
+  padding: 5px 12px;
+  letter-spacing: 10%;
+  color: #EDFE9D;
+  border: none;
+}
+.product .productSwiper .ps--slide .ps-text .ps-btn button:hover {
+  background-color: #fe8ea6;
+}
+.product .productSwiper .ps--slide .ps-img {
+  display: inline-flex;
+  width: 50%;
+}
+.product .productSwiper .ps--slide .ps-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product .productSwiper .ps--slide:nth-child(3) .ps-text, .product .productSwiper .ps--slide:nth-child(4) .ps-text {
+  order: 2;
+}
+
+.work {
+  background-color: #FFE4EF;
+  padding-top: 161px;
+  padding-bottom: 58px;
+  display: flex;
+  justify-content: center;
+}
+.work .work-top {
+  display: flex;
+  justify-content: center;
+}
+.work .work-top .work-left {
+  display: flex;
+}
+.work .work-top .work-left img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.work .work-top .work-right {
+  background-color: #FF7895;
+  padding: 47.4px 28px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #FEFE9D;
+  letter-spacing: 10%;
+}
+.work .work-top .work-right h5 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 52px;
+}
+.work .work-top .work-right h6 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.work .work-top .work-right p {
+  font-size: 15px;
+  line-height: 30px;
+}
+.work .work-mid {
+  padding: 82px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.work .work-mid .work-mid-img {
+  position: absolute;
+  bottom: 42px;
+  left: 26px;
+}
+.work .work-mid .work-mid-dialog {
+  color: #231F20;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 900;
+  display: inline-block;
+  background-color: #EDFE9D;
+  border: solid 2px #FF7895;
+  padding: 25px 29px;
+  border-radius: 25px;
+  position: relative;
+}
+.work .work-mid .work-mid-dialog img {
+  position: absolute;
+  top: 50%;
+  left: -60px;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */
