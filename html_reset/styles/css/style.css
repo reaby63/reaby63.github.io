@@ -2136,4 +2136,72 @@ body.is-open {
   to {
     transform: rotate(359deg);
   }
+}
+[class*=an-] {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+
+.an-fade-in {
+  opacity: 0;
+}
+.an-fade-in.is-active {
+  animation: anFadeIn 0.8s forwards;
+}
+
+.an-slide-up {
+  transform: translateY(40px);
+}
+.an-slide-up.is-active {
+  animation: anSlideUp 0.8s forwards;
+}
+
+.an-fade-slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.an-fade-slide-up.is-active {
+  animation: anFadeSlideUp 0.8s forwards;
+}
+
+@keyframes anFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anSlideUp {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes anFadeSlideUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: auto;
+  height: auto;
+  margin: 0;
+  z-index: 99999;
+}
+.swiper-button-prev img,
+.swiper-button-next img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+// 進場動態
+// 初始值 等js加再動
+[class*="an-"]{
+    animation-duration:.8s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+// 初始狀態
+.an-fade-in{
+    opacity:0;
+    &.is-active{
+        animation:anFadeIn .8s forwards;
+    }
+}
+
+.an-slide-up{
+    transform:translateY(40px);
+    &.is-active{
+        animation:anSlideUp .8s forwards;
+    }
+}
+
+.an-fade-slide-up{
+    opacity:0;
+    transform:translateY(40px);
+    &.is-active{
+        animation:anFadeSlideUp .8s forwards;
+    }
+}
+
+
+@keyframes anFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes anSlideUp{
+    from {
+        transform:translateY(40px);
+
+    }
+    to {
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes anFadeSlideUp {
+    0% {
+        transform:translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform:translateY(0);
+        opacity: 1;
+    }
+}

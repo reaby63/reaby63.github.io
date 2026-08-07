@@ -49,4 +49,6 @@ function initComponents() {
 
     initNumberCounter(); // 數字動畫
 
+    initAnimation(); // 進入動畫
+
 }
