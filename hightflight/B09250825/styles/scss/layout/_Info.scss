@@ -6,9 +6,33 @@
     max-height: 564px;
     overflow: hidden;
     position: relative;
-    img {
+    .topBgImg {
         object-fit: cover;
         height: 100%;
+        opacity: 0;
+        transform:translateY(40px);
+    }
+    &.fadein_an {
+        .topBgImg {
+            animation:topBgAnImg 1.3s forwards;
+            animation-delay: 0.8s;
+        }
+        .info-box {
+            .info-left {
+                animation:topBgAnImg 1s forwards;
+                animation-delay: 1.2s;
+            }
+            .info-right {
+                .info-job {
+                    animation:topBgAnImg 1s forwards;
+                    animation-delay: 1.5s;
+                }
+                .info-name {
+                    animation:topBgAnImg 1s forwards;
+                    animation-delay: 1.8s;
+                }
+            }
+        }
     }
 }
 
@@ -26,6 +50,8 @@
     justify-content: end;
     align-items: end;
     position: relative;
+    opacity: 0;
+    transform:translateY(40px);
     .info-img {
         aspect-ratio: 100/100;
         overflow: hidden;
@@ -37,6 +63,7 @@
         img {
             display: flex;
             object-fit: cover;
+            height: 100%;
         }
     }
     &:before {
@@ -59,13 +86,14 @@
     background-color: #F7F2E9;
     padding: 33px 23px 8px 23px;
     box-sizing: border-box;
-
     .info-job {
         font-size: 15px;
         color: #5E5338;
         font-weight: 500;
         letter-spacing: 1.2px;
         margin-bottom: 7px;
+        opacity: 0;
+        transform:translateY(40px);
     }
 
     .info-name {
@@ -73,8 +101,22 @@
         color: #000;
         font-weight: 700;
         letter-spacing: 1.7px;
+        opacity: 0;
+        transform:translateY(40px);
     }
 }
+
+@keyframes topBgAnImg {
+    0% {
+        opacity: 0;
+        transform:translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform:translateY(0);
+    }
+}
+
 
 @media (max-width:600px) {
     .info-box {

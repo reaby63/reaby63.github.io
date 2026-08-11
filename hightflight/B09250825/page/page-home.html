@@ -8,7 +8,7 @@
 
 <!-- info -->
 <div class="topBg">
-    <img src="../img/topBg.jpg">
+    <img class="topBgImg" src="../img/topBg.jpg">
     <div class="info-box">
         <div class="info-left">
             <div class="info-img">
@@ -82,7 +82,7 @@
             </button>
         </div>
     </div>
-    <div class="swiper-arrow swiper-prev"></div>
+    <!-- <div class="swiper-arrow swiper-prev"></div> -->
     <Swiper class="portfolioSwiper">
         <SwiperSlide class="portfolio-list">
             <div class="portfolio-self">
@@ -139,7 +139,7 @@
             </div>
         </SwiperSlide>
     </Swiper>
-    <div class="swiper-arrow swiper-next"></div>
+    <!-- <div class="swiper-arrow swiper-next"></div> -->
 </div>
 
 
@@ -168,7 +168,7 @@
             </button>
         </div>
     </div>
-    <div class="swiper-arrow swiper-prev"></div>
+    <!-- <div class="swiper-arrow swiper-prev"></div> -->
     <Swiper class="secportfolioSwiper">
         <SwiperSlide class="secportfolio-list">
             <div class="img-box">
@@ -191,7 +191,7 @@
             </div>
         </SwiperSlide>
     </Swiper>
-    <div class="swiper-arrow swiper-next"></div>
+    <!-- <div class="swiper-arrow swiper-next"></div> -->
 </div>
 
 
@@ -203,7 +203,7 @@
     <div class="contact-top">
         <div class="contact-info">
             <div class="name">
-                {{ curPageData.basic?.info?.name || curPageData.basic?.info?.enName }}
+                Clara Chen
             </div>
             <div class="contact-list">
                 <div>
@@ -213,7 +213,7 @@
                     class="link"
                     title="撥打電話"
                 >
-                    {{ commonStore.getPageInfo.basic?.info?.mobile }}
+                    0984888212
                 </div>
             </div>
             <div class="contact-list">
@@ -224,7 +224,7 @@
                     class="link"
                     title="前往寄信"
                 >
-                    {{ commonStore.getPageInfo.basic?.info?.email }}
+                    clara.chen@lumea.com
                 </div>
             </div>
             <div class="contact-list">
@@ -235,7 +235,7 @@
                     class="link"
                     title="前往網站"
                 >
-                    {{ commonStore.getPageInfo.basic?.info?.url }}
+                    www.lumea.com
                 </div>
             </div>
             <div class="social-box">
@@ -297,7 +297,7 @@
                     品牌總部 Office
                 </div>
                 <div class="info-office-contain">
-                    {{ curPageData.basic?.info?.location }}
+                    台北市信義區松仁路100號 15F
                 </div>
             </div>
             <div title="撥打電話" class="otherinfo-self">
@@ -305,7 +305,7 @@
                     電話
                 </span>
                 <span>
-                    {{ commonStore.getPageInfo.basic?.info?.mobile }}
+                    02-1234-5678
                 </span>
             </div>
             <div title="前往網站" class="otherinfo-self">
@@ -313,7 +313,7 @@
                     信箱
                 </span>
                 <span>
-                    {{ commonStore.getPageInfo.basic?.info?.email }}
+                    contact@lumea.com
                 </span>
             </div>
         </div>

@@ -10,6 +10,12 @@
   font-style: normal;
 }
 
+body {
+  overflow-x: hidden;
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }

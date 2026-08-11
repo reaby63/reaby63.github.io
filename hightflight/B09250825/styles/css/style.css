@@ -54,6 +54,9 @@ img {
   display: flex;
   justify-content: center;
   padding: 9px 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: banner 1s forwards;
 }
 .banner .center .img-box {
   height: 100%;
@@ -64,6 +67,16 @@ img {
   max-height: 54px;
 }
 
+@keyframes banner {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .topBg {
   aspect-ratio: 640/564;
   display: flex;
@@ -73,10 +86,28 @@ img {
   overflow: hidden;
   position: relative;
 }
-.topBg img {
+.topBg .topBgImg {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+}
+.topBg.fadein_an .topBgImg {
+  animation: topBgAnImg 1.3s forwards;
+  animation-delay: 0.8s;
+}
+.topBg.fadein_an .info-box .info-left {
+  animation: topBgAnImg 1s forwards;
+  animation-delay: 1.2s;
+}
+.topBg.fadein_an .info-box .info-right .info-job {
+  animation: topBgAnImg 1s forwards;
+  animation-delay: 1.5s;
+}
+.topBg.fadein_an .info-box .info-right .info-name {
+  animation: topBgAnImg 1s forwards;
+  animation-delay: 1.8s;
 }
 
 .info-box {
@@ -93,6 +124,8 @@ img {
   justify-content: end;
   align-items: end;
   position: relative;
+  opacity: 0;
+  transform: translateY(40px);
 }
 .info-left .info-img {
   aspect-ratio: 100/100;
@@ -107,6 +140,7 @@ img {
   display: flex;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 100%;
 }
 .info-left:before {
   content: "";
@@ -134,14 +168,28 @@ img {
   font-weight: 500;
   letter-spacing: 1.2px;
   margin-bottom: 7px;
+  opacity: 0;
+  transform: translateY(40px);
 }
 .info-right .info-name {
   font-size: 17px;
   color: #000;
   font-weight: 700;
   letter-spacing: 1.7px;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
+@keyframes topBgAnImg {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (max-width: 600px) {
   .info-box {
     margin: 0 20px;
@@ -186,12 +234,17 @@ img {
   height: 100%;
   width: 100%;
   z-index: 0;
+  opacity: 0;
 }
 .about-movie .all-bg img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+.about-movie .all-bg.fadein_an {
+  animation: aboutImg 1.2s forwards;
+  animation-delay: 2s;
 }
 .about-movie .resume {
   position: relative;
@@ -204,6 +257,12 @@ img {
   letter-spacing: 1.5px;
   font-size: 15px;
   margin-bottom: 41px;
+  opacity: 0;
+  transform: translateY(40px);
+}
+.about-movie .resume.fadein_an {
+  animation: aboutResume 1.2s forwards;
+  animation-delay: 2s;
 }
 .about-movie .movie {
   display: block;
@@ -211,6 +270,17 @@ img {
   margin: 20px 20px 98px;
   position: relative;
   z-index: 1;
+}
+.about-movie .movie.fadein_an .movie-title .title {
+  animation: aboutResume 1s forwards;
+}
+.about-movie .movie.fadein_an .movie-title .subTitle {
+  animation: aboutResume 1s forwards;
+  animation-delay: 0.7s;
+}
+.about-movie .movie.fadein_an .movie-wrap {
+  animation: aboutResume 1.3s forwards;
+  animation-delay: 1.2s;
 }
 .about-movie .movie-title {
   display: flex;
@@ -224,17 +294,41 @@ img {
   font-size: 32px;
   letter-spacing: 2.56px;
   margin-bottom: 5px;
+  opacity: 0;
+  transform: translateY(40px);
 }
 .about-movie .movie-title .subTitle {
   margin-left: 9px;
   font-size: 15px;
   letter-spacing: 1.5px;
+  opacity: 0;
+  transform: translateY(40px);
 }
 .about-movie .movie-wrap {
   max-height: 446px;
   aspect-ratio: 600/446;
+  opacity: 0;
+  transform: translateY(40px);
 }
 
+@keyframes aboutImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes aboutResume {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (max-width: 600px) {
   .about-movie .resume {
     margin: 0 20px 41px;
@@ -882,8 +976,6 @@ img {
 .social-box {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
 }
 .social-box .social {
   display: inline-flex;
@@ -892,20 +984,18 @@ img {
 .social-box .social button {
   padding: 5px;
   transition: all 0.2s;
+  border: none;
+  background-color: transparent;
 }
 .social-box .social button:hover {
   opacity: 0.8;
 }
-.social-box .social button img {
-  width: 5px;
-  height: 10px;
-}
 .social-box .social button.arrow_l_bt {
-  margin-right: 33px;
+  margin-right: 18px;
 }
 .social-box .social button.arrow_r_bt {
   margin-right: 0px;
-  margin-left: 15px;
+  margin-left: 0px;
 }
 .social-box .social button.btn_fin {
   cursor: initial;
@@ -929,7 +1019,7 @@ img {
   flex: 0 0 35px; /* 每個 icon 固定寬度 */
   transition: transform 0.3s ease-in-out;
   border-radius: 50%;
-  background-color: #000000;
+  background-color: #5E5338;
   margin-right: 18px;
   transition: all 0.2s;
 }
@@ -939,10 +1029,6 @@ img {
 .social-box .social a img {
   width: 20px;
   height: 20px;
-}
-.social-box .social a.fb img {
-  width: 10px;
-  height: auto;
 }
 .social-box .social a[class*="c-icon:"] {
   display: flex;

@@ -2,6 +2,9 @@
     display: flex;
     justify-content: center;
     padding: 9px 20px;
+    opacity: 0;
+    transform:translateY(40px);
+    animation:banner 1s forwards;
     .center {
         .img-box {
             height: 100%;
@@ -11,5 +14,16 @@
                 max-height: 54px;
             }
         }
+    }
+}
+
+@keyframes banner {
+    0% {
+        opacity: 0;
+        transform:translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform:translateY(0);
     }
 }

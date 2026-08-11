@@ -180,27 +180,23 @@
 .social-box{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
     .social{
         display: inline-flex;
         align-items: center;
         button{
             padding: 5px;
             transition: all .2s;
+            border: none;
+            background-color: transparent;
             &:hover{
                 opacity: 0.8;
             }
-            img{
-                width: 5px;
-                height: 10px;
-            }
             &.arrow_l_bt{
-                margin-right: 33px;
+                margin-right: 18px;
             }
             &.arrow_r_bt{
                 margin-right: 0px;
-                margin-left: 15px;
+                margin-left: 0px;
             }
             &.btn_fin{
                 cursor: initial;
@@ -225,7 +221,7 @@
             flex: 0 0 35px; /* 每個 icon 固定寬度 */
             transition: transform 0.3s ease-in-out;
             border-radius: 50%;
-            background-color: #000000;
+            background-color: #5E5338;
             margin-right: 18px;
             transition: all .2s;
             &:hover{
@@ -234,12 +230,6 @@
             img{
                 width: 20px;
                 height: 20px;
-            }
-            &.fb{
-                img{
-                    width: 10px;
-                    height: auto;
-                }
             }
             &[class*="c-icon:"] {
                 display: flex;
