@@ -111,12 +111,6 @@
     }
 
     /* Borders */
-    .button--border-thin {
-        border: 1px solid;
-    }
-    .button--border-medium {
-        border: 2px solid;
-    }
     .button--border-thick {
         border: 3px solid;
     }
@@ -182,6 +176,7 @@
 
     /* Ujarak */
     .button--ujarak {
+        border: 1px solid;
         -webkit-transition: border-color 0.4s, color 0.4s;
         transition: border-color 0.4s, color 0.4s;
     }
@@ -229,6 +224,7 @@
 
     /* Wayra */
     .button--wayra {
+        border: 1px solid;
         overflow: hidden;
         width: 245px;
         -webkit-transition: border-color 0.3s, color 0.3s;
@@ -274,6 +270,7 @@
 
     /* Tamaya */
     .button--tamaya {
+        border: 1px solid;
         overflow: hidden;
         color: #7986cb;
         min-width: 180px;
@@ -671,6 +668,7 @@
 
     /* Saqui */
     .button.button--saqui {
+        border: 1px solid;
         overflow: hidden;
         color: #fff;
         background: #37474f;
@@ -766,6 +764,7 @@
 
     /* Nina */
     .button--nina {
+        border: 1px solid;
         padding: 0 2em;
         background: #7986cb;
         color: #fff;
@@ -858,6 +857,7 @@
 
     /* Nanuk */
     .button--nanuk {
+        border: 1px solid;
         padding: 0 2em;
         overflow: hidden;
         background: #7986cb;
@@ -1047,6 +1047,7 @@
 
     /* Antiman */
     .button--antiman {
+        border: 1px solid;
         background: none;
         border: none;
         height: 60px;
@@ -1127,7 +1128,6 @@
 
     /* Itzel */
     .button--itzel {
-        border: none;
         padding: 0px;
         overflow: hidden;
         width: 255px;
@@ -1204,6 +1204,7 @@
 
     /* Naira */
     .button--naira {
+        border: 1px solid;
         padding: 0;
         overflow: hidden;
         -webkit-transition: background-color 0.3s;
@@ -1460,6 +1461,7 @@
 
     /* Shikoba */
     .button.button--shikoba {
+        border: 1px solid;
         padding: 1em 30px 1em 50px;
         overflow: hidden;
         background: #fff;

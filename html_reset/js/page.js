@@ -50,5 +50,6 @@ function initComponents() {
     initNumberCounter(); // 數字動畫
 
     initAnimation(); // 進入動畫
+    initTextReveal(); // 文字逐字從上往下淡入進場
 
 }

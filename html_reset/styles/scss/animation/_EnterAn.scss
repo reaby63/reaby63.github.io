@@ -29,6 +29,21 @@
     }
 }
 
+// 由上往下 一個字一個字淡入的文字效果
+.an-text-reveal {
+    .an-text-char {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    &.is-active {
+        .an-text-char {
+            animation: anTextReveal .6s ease forwards;
+            animation-delay: var(--char-delay);
+        }
+    }
+}
+
 
 @keyframes anFadeIn {
     0% {
@@ -59,5 +74,18 @@
     100% {
         transform:translateY(0);
         opacity: 1;
+    }
+}
+
+// 由上往下 一個字一個字淡入的文字效果
+@keyframes anTextReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Parallax.js | Simple Example</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="../../styles/css/styles.css"/>
+
+</head>
+<body>
+
+	<!-- 使用上就是 貼上parallax.min.js -->
+	<!-- 還有那段 Pretty simple huh? 好嘲諷 -->
+	<!-- 然後設定一下data-depth="1.00" -->
+	<div id="container" class="container">
+		<div id="scene" class="scene">
+			<div data-depth="1.00"><img src="https://picsum.photos/500/300"></div>
+			<div data-depth="0.80"><img src="https://picsum.photos/800/300"></div>
+			<div data-depth="0.60"><img src="https://picsum.photos/1000/300"></div>
+			<div data-depth="0.40"><img src="https://picsum.photos/600/300"></div>
+			<div data-depth="0.20"><img src="https://picsum.photos/700/300"></div>
+			<div data-depth="0.00"><img src="https://picsum.photos/900/300"></div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
+	<script src="../../src/parallax.min.js"></script>
+	<script>
+
+	// Pretty simple huh?
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+
+	</script>
+
+</body>
+</html>

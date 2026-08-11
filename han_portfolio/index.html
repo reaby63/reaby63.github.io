@@ -28,14 +28,16 @@
         <div class="h_left">
             <img id="header_bg" src="img/header_bg.png" alt="" class="header_bg">
             <div id="h_photo_box" class="h_photo_box">
-                <div class="header_photo">
-                    <img src="img/h_photo.png" alt="" class="my_photo">
-                    <object type="image/svg+xml" data="img/circle.svg">
-                        <img src="img/circle.svg" />
-                    </object>
+                <div id="parallax" class="header_photo">
+                    <div data-depth="0.70">
+                        <img src="img/h_photo.png" alt="" class="my_photo">
+                        <object type="image/svg+xml" data="img/circle.svg">
+                            <img src="img/circle.svg" />
+                        </object>
+                    </div>
                 </div>
             </div>
-            <div class="header_title">
+            <div class="header_title" data-depth="0.80">
                 <!-- PORTFOLIO -->
             </div>
         </div>
@@ -369,6 +371,15 @@
     <div id="cursor"></div>
 </body>
 <script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script>
+
+	// Pretty simple huh?
+    // 有夠嘲諷...
+	var scene = document.getElementById('parallax');
+	var parallax = new Parallax(scene);
+
+</script>
 <script src="js/mouse-outfit.js"></script>
 <script src="js/mouse-bubble.js"></script>
 <script src="js/fabein.js"></script>
