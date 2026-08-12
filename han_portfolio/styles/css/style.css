@@ -1134,6 +1134,9 @@ footer .footer_in .footer_in_button a:hover .qrcode {
     padding: 12px 0px;
     font-size: 14px;
   }
+  .overflow {
+    overflow-x: hidden;
+  }
 }
 @media (max-width: 360px) {
   header .h_right .h_history {
