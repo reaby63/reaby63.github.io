@@ -365,6 +365,51 @@ body.is-open {
     transform: translateY(0);
   }
 }
+.cmp-scrollX {
+  position: relative;
+}
+.cmp-scrollX__viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  cursor: grab;
+}
+.cmp-scrollX__viewport::-webkit-scrollbar {
+  display: none;
+}
+.cmp-scrollX__viewport.is-dragging {
+  cursor: grabbing;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.cmp-scrollX__track {
+  display: flex;
+  gap: 20px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.cmp-scrollX__item {
+  flex: 0 0 auto;
+}
+.cmp-scrollX__prev, .cmp-scrollX__next {
+  cursor: pointer;
+}
+.cmp-scrollX__prev.is-disabled, .cmp-scrollX__next.is-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.cmp-scrollX__scrollbar {
+  background-color: black;
+  height: 2px;
+}
+.cmp-scrollX__scrollbar .cmp-scrollX__thumb {
+  background-color: aqua;
+  height: 5px;
+}
+
 .table-responsive {
   --pc-head-align:left;
   --pc-body-align:left;

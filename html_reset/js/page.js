@@ -52,4 +52,6 @@ function initComponents() {
     initAnimation(); // 進入動畫
     initTextReveal(); // 文字逐字從上往下淡入進場
 
+    cmpScrollX.init(); // 橫向捲動元件
+
 }

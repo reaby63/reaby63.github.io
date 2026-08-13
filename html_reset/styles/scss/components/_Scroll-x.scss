@@ -1,0 +1,50 @@
+.cmp-scrollX {
+    position: relative;
+
+    &__viewport {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        cursor: grab;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &.is-dragging {
+            cursor: grabbing;
+            user-select: none;
+        }
+    }
+
+    &__track {
+        display: flex;
+        gap: 20px;
+        width: max-content;
+    }
+
+    &__item {
+        flex: 0 0 auto;
+    }
+
+    &__prev,
+    &__next {
+        cursor: pointer;
+
+        &.is-disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+}
+
+.cmp-scrollX__scrollbar {
+    background-color: black;
+    height: 2px;
+    .cmp-scrollX__thumb {
+        background-color: aqua;
+        height: 5px;
+    }
+}
