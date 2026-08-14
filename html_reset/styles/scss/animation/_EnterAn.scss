@@ -1,91 +1,237 @@
+// ========================================
 // 進場動態
-// 初始值 等js加再動
-[class*="an-"]{
-    animation-duration:.8s;
+// ========================================
+
+// 初始值
+// 等 JS 加上 .is-active 後播放
+
+[class*="an-"] {
+    animation-duration: .8s;
     animation-fill-mode: both;
     animation-timing-function: ease;
 }
 
-// 初始狀態
-.an-fade-in{
-    opacity:0;
-    &.is-active{
-        animation:anFadeIn .8s forwards;
-    }
-}
 
-.an-slide-up{
-    transform:translateY(40px);
-    &.is-active{
-        animation:anSlideUp .8s forwards;
-    }
-}
+// ========================================
+// Fade In
+// ========================================
 
-.an-fade-slide-up{
-    opacity:0;
-    transform:translateY(40px);
-    &.is-active{
-        animation:anFadeSlideUp .8s forwards;
-    }
-}
+.an-fade-in {
 
-// 由上往下 一個字一個字淡入的文字效果
-.an-text-reveal {
-    .an-text-char {
-        display: inline-block;
-        opacity: 0;
-        transform: translateY(-20px);
-    }
+    opacity: 0;
+
     &.is-active {
-        .an-text-char {
-            animation: anTextReveal .6s ease forwards;
-            animation-delay: var(--char-delay);
-        }
+        animation: anFadeIn .8s forwards;
     }
+
 }
 
+
+// ========================================
+// Slide Up
+// ========================================
+
+.an-slide-up {
+
+    transform: translateY(40px);
+
+    &.is-active {
+        animation: anSlideUp .8s forwards;
+    }
+
+}
+
+
+// ========================================
+// Fade + Slide Up
+// ========================================
+
+.an-fade-slide-up {
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    &.is-active {
+        animation: anFadeSlideUp .8s forwards;
+    }
+
+}
+
+
+// ========================================
+// 文字逐字淡入
+// ========================================
+//
+// 預設：上 → 下
+//
+// .an-text-reveal
+// .an-text-reveal.an-text-up
+// .an-text-reveal.an-text-left
+// .an-text-reveal.an-text-right
+//
+// 可搭配：
+// .an-once
+// .an-repeat
+//
+// 可自訂：
+// --an-text-speed
+// --an-text-distance
+// ========================================
+
+.an-text-reveal {
+
+    // 預設設定
+    --an-text-speed: .05s;
+    --an-text-distance: 20px;
+
+    // 預設：上 → 下
+    --an-text-x: 0;
+    --an-text-y: calc(var(--an-text-distance) * -1);
+
+
+    .an-text-char {
+
+        display: inline-block;
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--an-text-x),
+                var(--an-text-y)
+            );
+
+    }
+
+
+    &.is-active {
+
+        .an-text-char {
+
+            animation:
+                anTextReveal .6s ease forwards;
+
+            animation-delay: var(--char-delay);
+
+        }
+
+    }
+
+}
+
+
+// ========================================
+// 文字方向
+// ========================================
+
+
+// 下 → 上
+
+.an-text-reveal.an-text-up {
+
+    --an-text-x: 0;
+    --an-text-y: var(--an-text-distance);
+
+}
+
+
+// 左 → 右
+
+.an-text-reveal.an-text-left {
+
+    --an-text-x: calc(var(--an-text-distance) * -1);
+    --an-text-y: 0;
+
+}
+
+
+// 右 → 左
+
+.an-text-reveal.an-text-right {
+
+    --an-text-x: var(--an-text-distance);
+    --an-text-y: 0;
+
+}
+
+
+// ========================================
+// Keyframes
+// ========================================
+
+
+// Fade In
 
 @keyframes anFadeIn {
+
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
+
 }
 
 
-@keyframes anSlideUp{
+// Slide Up
+
+@keyframes anSlideUp {
+
     from {
-        transform:translateY(40px);
-
-    }
-    to {
-        transform:translateY(0);
-    }
-
-}
-
-@keyframes anFadeSlideUp {
-    0% {
-        transform:translateY(40px);
-        opacity: 0;
-    }
-    100% {
-        transform:translateY(0);
-        opacity: 1;
-    }
-}
-
-// 由上往下 一個字一個字淡入的文字效果
-@keyframes anTextReveal {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(40px);
     }
 
     to {
-        opacity: 1;
         transform: translateY(0);
     }
+
+}
+
+
+// Fade + Slide Up
+
+@keyframes anFadeSlideUp {
+
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+
+// ========================================
+// 文字逐字淡入
+// ========================================
+
+@keyframes anTextReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translate(
+                var(--an-text-x),
+                var(--an-text-y)
+            );
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translate(0, 0);
+
+    }
+
 }
