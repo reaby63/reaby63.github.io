@@ -297,6 +297,80 @@ function buildSwiper(swiperEl, source, key) {
         };
     }
 
+    // RWD Breakpoints
+    if (
+        !swiperEl.dataset.slideGroup &&
+        swiperEl.dataset.breakpoints
+    ) {
+
+        try {
+
+            const breakpointData =
+                JSON.parse(
+                    swiperEl.dataset.breakpoints
+                );
+
+            swiperOption.breakpoints = {};
+
+            Object.entries(breakpointData).forEach(
+                ([breakpoint, config]) => {
+
+                    // 如果只寫數字
+                    if (
+                        typeof config === "number" ||
+                        config === "auto"
+                    ) {
+
+                        swiperOption.breakpoints[
+                            breakpoint
+                        ] = {
+                            slidesPerView:
+                                config === "auto"
+                                    ? "auto"
+                                    : config
+                        };
+
+                        return;
+                    }
+
+
+                    // 如果寫完整設定
+                    swiperOption.breakpoints[
+                        breakpoint
+                    ] = {
+
+                        slidesPerView:
+                            config.slidesPerView === "auto"
+                                ? "auto"
+                                : Number(
+                                    config.slidesPerView
+                                ) || 1,
+
+                        ...(config.spaceBetween !== undefined
+                            ? {
+                                spaceBetween:
+                                    Number(
+                                        config.spaceBetween
+                                    ) || 0
+                            }
+                            : {})
+
+                    };
+
+                }
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Swiper data-breakpoints 格式錯誤",
+                error
+            );
+
+        }
+
+    }
+
 
     // 建立 Swiper
     const instance = new Swiper(
