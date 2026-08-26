@@ -78,6 +78,67 @@
             "title":"產品名稱",
             "desc":"產品簡介產品簡介產品簡介產品簡介產品簡介"
         }
+    ],
+    "two": [
+        {
+            "img":"../../img/product02-01.png"
+        },
+        {
+            "img":"../../img/product02-02.png"
+        },
+        {
+            "img":"../../img/product02-03.png"
+        },
+        {
+            "img":"../../img/product02-02.png"
+        },
+        {
+            "img":"../../img/product02-01.png"
+        }
+    ]
+  },
+  "recommend": {
+    "one": [
+        {
+            "img":"../../img/icon-01.png",
+            "title":"搬家公司",
+            "entitle":"ROOM ROOM"
+        },
+        {
+            "img":"../../img/icon-02.png",
+            "title":"搬家公司",
+            "entitle":"ROOM ROOM"
+        },
+        {
+            "img":"../../img/icon-03.png",
+            "title":"搬家公司",
+            "entitle":"ROOM ROOM"
+        },
+        {
+            "img":"../../img/icon-04.png",
+            "title":"搬家公司",
+            "entitle":"ROOM ROOM"
+        },
+        {
+            "img":"../../img/icon-05.png",
+            "title":"搬家公司",
+            "entitle":"ROOM ROOM"
+        },
+        {
+            "img":"../../img/icon-06.png",
+            "title":"搬家公司",
+            "entitle":"ROOM ROOM"
+        },
+        {
+            "img":"../../img/icon-07.png",
+            "title":"搬家公司",
+            "entitle":"ROOM ROOM"
+        },
+        {
+            "img":"../../img/icon-08.png",
+            "title":"搬家公司",
+            "entitle":"ROOM ROOM"
+        }
     ]
   }
 }

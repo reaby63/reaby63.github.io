@@ -144,7 +144,61 @@ function buildSwiper(swiperEl, source, key) {
 
             </div>
         `;
-        }
+        },
+        secProduct(item){
+
+            // 判斷是不是 data-slide-group 模式
+            const items = Array.isArray(item) ? item : [item];
+
+            return `
+            <div class="swiper-slide">
+
+                <div class="secProduct-group">
+
+                    ${items.map(item => `
+                        <div class="ps--slide">
+                            <div class="ps-img">
+                                <img src="${item.img}" alt="">
+                            </div>
+                        </div>
+                    `).join("")}
+
+                </div>
+
+            </div>
+        `;
+        },
+        recommend(item){
+
+            // 判斷是不是 data-slide-group 模式
+            const items = Array.isArray(item) ? item : [item];
+
+            return `
+            <div class="swiper-slide">
+
+                <div class="recommend-group">
+
+                    ${items.map(item => `
+                        <div class="re--slide">
+                            <div class="re-img">
+                                <img src="${item.img}" alt="">
+                            </div>
+                            <div class="re-text">
+                                <div class="re-entitle">
+                                    ${item.entitle}
+                                </div>
+                                <div class="re-entitle">
+                                    ${item.title}
+                                </div>
+                            </div>
+                        </div>
+                    `).join("")}
+
+                </div>
+
+            </div>
+        `;
+        },
     };
 
     const template = swiperTemplate[swiperEl.dataset.template];
