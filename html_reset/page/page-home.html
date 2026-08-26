@@ -8,6 +8,20 @@
     data-slide-group 一次顯示幾張 但也一次滑動這個數量的張數
     data-slides-per-view 一次顯示幾張 也可以寫auto 滑動一次是一張
     data-space-between 每張卡片間距(px)
+        data-breakpoints='{
+        "0": {
+            "slidesPerView": 4,
+            "spaceBetween": 10
+        },
+        "377": {
+            "slidesPerView": 5,
+            "spaceBetween": 15
+        },
+        "769": {
+            "slidesPerView": 6,
+            "spaceBetween": 20
+        }
+    }'
     data-autoplay 是否自動播放
     data-pagination
         data-pagination="bullet"      // 小圓點
@@ -247,6 +261,10 @@
                     data-loop="false"
                     data-autoplay="false"
                     data-slide-group="6"
+
+                    data-slide-group-breakpoints='{
+                        "768": 4
+                    }'
                     data-pagination="false"
                     data-navigation="true">
                         <div class="swiper-wrapper swiper-slides">

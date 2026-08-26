@@ -1,118 +1,104 @@
+// ========================================
 // Swiper 元件
+// ========================================
 
 let swiperData = {};
-let swiperInstances = [];
 
-// 載入 data.json（只讀一次）
+
+// ========================================
+// 載入 data.json
+// ========================================
+
 async function loadSwiperData() {
-    if (Object.keys(swiperData).length > 0) return;
-    try {
-        const res = await fetch('./js/data.json');
-        swiperData = await res.json();
-    } catch (err) {
-        console.error('讀取 data.json 失敗', err);
-    }
-}
 
-// 初始化 Swiper
-async function initSwiper() {
-
-    const swiperEls = document.querySelectorAll('.swiper');
-
-    if (!swiperEls.length) return;
-
-    await loadSwiperData();
-
-    swiperEls.forEach(swiperEl => {
-
-        // 資料來源
-        const source = swiperEl.dataset.source || 'banner';
-
-        // 資料名稱
-        const key = swiperEl.dataset.key || 'one';
-
-        buildSwiper(
-            swiperEl,
-            source,
-            key
-        );
-    });
-}
-
-// 陣列分組 data-slide-group使用的
-function chunkArray(array, size){
-
-    const result = [];
-
-    for(let i = 0; i < array.length; i += size){
-
-        result.push(
-            array.slice(i, i + size)
-        );
-
-    }
-
-    return result;
-}
-
-// 建立 Swiper
-function buildSwiper(swiperEl, source, key) {
-
-    // 取得資料
-    const slidesData = swiperData[source]?.[key];
-
-    if (!slidesData) {
-        console.warn(
-            `找不到資料：${source}.${key}`
-        );
+    if (Object.keys(swiperData).length) {
         return;
     }
 
-    const wrapper = swiperEl.querySelector('.swiper-slides');
+    try {
 
-    if (!wrapper) return;
+        const res = await fetch('./js/data.json');
 
-    // 生成 slide 依照套用模板
-    const swiperTemplate = {
-        // data-template 套用 banner
-        banner(item){
-            return `
+        swiperData = await res.json();
+
+    } catch (err) {
+
+        console.error(
+            '讀取 data.json 失敗',
+            err
+        );
+
+    }
+
+}
+
+
+// ========================================
+// Swiper Template
+// ========================================
+
+const swiperTemplate = {
+
+    banner(item) {
+
+        return `
             <div class="swiper-slide">
+
                 <div class="swiper-text">
-                    <h2>${item.title || ''}</h2>
+
+                    <h2>
+                        ${item.title || ''}
+                    </h2>
+
                     ${
-                        item.icon 
-                        ? 
-                        `<img src="${item.icon}" 
-                            alt="icon" 
-                            class="slide-icon">`
-                        :
-                        ''
+                        item.icon
+                            ? `
+                                <img
+                                    src="${item.icon}"
+                                    alt="icon"
+                                    class="slide-icon"
+                                >
+                            `
+                            : ''
                     }
-                    <p>${item.desc || ''}</p>
+
+                    <p>
+                        ${item.desc || ''}
+                    </p>
+
                 </div>
+
                 ${
                     item.img
-                    ?
-                    `<img src="${item.img}" 
-                        alt="${item.title || ''}">`
-                    :
-                    ''
+                        ? `
+                            <img
+                                src="${item.img}"
+                                alt="${item.title || ''}"
+                            >
+                        `
+                        : ''
                 }
-            </div>`;
-        },
-        // data-template 套用 product 假設是使用 data-slide-group 模式
-        product(item){
 
-            // 判斷是不是 data-slide-group 模式
-            const items = Array.isArray(item) ? item : [item];
+            </div>
+        `;
 
-            return `
+    },
+
+
+    product(item) {
+
+        const items =
+            Array.isArray(item)
+                ? item
+                : [item];
+
+        return `
             <div class="swiper-slide">
 
                 <div class="product-group">
 
                     ${items.map(item => `
+
                         <div class="ps--slide">
 
                             <div class="ps-text">
@@ -134,229 +120,976 @@ function buildSwiper(swiperEl, source, key) {
                             </div>
 
                             <div class="ps-img">
-                                <img src="${item.img}" alt="">
+                                <img
+                                    src="${item.img}"
+                                    alt=""
+                                >
                             </div>
 
                         </div>
-                    `).join("")}
+
+                    `).join('')}
 
                 </div>
 
             </div>
         `;
-        },
-        secProduct(item){
 
-            // 判斷是不是 data-slide-group 模式
-            const items = Array.isArray(item) ? item : [item];
+    },
 
-            return `
+
+    secProduct(item) {
+
+        const items =
+            Array.isArray(item)
+                ? item
+                : [item];
+
+        return `
             <div class="swiper-slide">
 
                 <div class="secProduct-group">
 
                     ${items.map(item => `
+
                         <div class="ps--slide">
+
                             <div class="ps-img">
-                                <img src="${item.img}" alt="">
+
+                                <img
+                                    src="${item.img}"
+                                    alt=""
+                                >
+
                             </div>
+
                         </div>
-                    `).join("")}
+
+                    `).join('')}
 
                 </div>
 
             </div>
         `;
-        },
-        recommend(item){
 
-            // 判斷是不是 data-slide-group 模式
-            const items = Array.isArray(item) ? item : [item];
+    },
 
-            return `
+
+    recommend(item) {
+
+        const items =
+            Array.isArray(item)
+                ? item
+                : [item];
+
+        return `
             <div class="swiper-slide">
 
                 <div class="recommend-group">
 
                     ${items.map(item => `
+
                         <div class="re--slide">
+
                             <div class="re-img">
-                                <img src="${item.img}" alt="">
+
+                                <img
+                                    src="${item.img}"
+                                    alt=""
+                                >
+
                             </div>
+
                             <div class="re-text">
+
                                 <div class="re-entitle">
-                                    ${item.entitle}
+                                    ${item.entitle || ''}
                                 </div>
-                                <div class="re-entitle">
-                                    ${item.title}
+
+                                <div class="re-title">
+                                    ${item.title || ''}
                                 </div>
+
                             </div>
+
                         </div>
-                    `).join("")}
+
+                    `).join('')}
 
                 </div>
 
             </div>
         `;
-        },
-    };
 
-    const template = swiperTemplate[swiperEl.dataset.template];
-
-    const slideGroup = Number(swiperEl.dataset.slideGroup) || 0;
-
-    if(slideGroup){
-        const groupedData = chunkArray(slidesData, slideGroup);
-        wrapper.innerHTML = groupedData
-            .map(template)
-            .join("");
-
-    }else{
-        wrapper.innerHTML = slidesData
-            .map(template)
-            .join("");
     }
 
-    // Swiper 設定
-    const swiperOption = {
-        loop: swiperEl.dataset.loop !== "false",
-        effect: swiperEl.dataset.effect || "slide",
-        speed: Number(swiperEl.dataset.speed) || 1000,
-        // 有data-slide-group時 slidesPerView永遠:1
+};
+
+
+// ========================================
+// chunkArray
+// ========================================
+
+function chunkArray(array, size) {
+
+    const result = [];
+
+    for (
+        let i = 0;
+        i < array.length;
+        i += size
+    ) {
+
+        result.push(
+            array.slice(
+                i,
+                i + size
+            )
+        );
+
+    }
+
+    return result;
+
+}
+
+
+// ========================================
+// 取得目前 group
+// ========================================
+
+function getSlideGroup(swiperEl) {
+
+    // 預設數量
+    const defaultGroup =
+        Number(
+            swiperEl.dataset.slideGroup
+        ) || 1;
+
+
+    // 沒有設定 breakpoint
+    if (
+        !swiperEl.dataset.slideGroupBreakpoints
+    ) {
+
+        return defaultGroup;
+
+    }
+
+
+    try {
+
+        const breakpoints =
+            JSON.parse(
+                swiperEl.dataset.slideGroupBreakpoints
+            );
+
+
+        const width =
+            window.innerWidth;
+
+
+        console.log(
+            '目前寬度：',
+            width
+        );
+
+        console.log(
+            'Breakpoint：',
+            breakpoints
+        );
+
+
+        /*
+        ========================================
+        找出符合目前寬度的 breakpoint
+        ========================================
+
+        例如：
+
+        data-slide-group="6"
+
+        {
+            "768": 4,
+            "480": 2
+        }
+
+
+        width = 1200
+
+        → 沒有符合
+        → 6
+
+
+        width = 700
+
+        → 700 <= 768
+        → 4
+
+
+        width = 400
+
+        → 400 <= 768
+        → 400 <= 480
+        → 2
+        */
+
+
+        const matchedBreakpoints =
+            Object.entries(
+                breakpoints
+            )
+            .map(
+                ([breakpoint, group]) => ({
+
+                    breakpoint:
+                        Number(breakpoint),
+
+                    group:
+                        Number(group)
+
+                })
+            )
+            .filter(
+                item =>
+                    width <= item.breakpoint
+            )
+            .sort(
+                (a, b) =>
+                    a.breakpoint -
+                    b.breakpoint
+            );
+
+
+        console.log(
+            '符合的 breakpoint：',
+            matchedBreakpoints
+        );
+
+
+        // 沒有符合
+        if (
+            matchedBreakpoints.length === 0
+        ) {
+
+            return defaultGroup;
+
+        }
+
+
+        // 最接近目前寬度的 breakpoint
+        const matched =
+            matchedBreakpoints[0];
+
+
+        console.log(
+            '套用：',
+            matched.group
+        );
+
+
+        return (
+            matched.group > 0
+                ? matched.group
+                : defaultGroup
+        );
+
+
+    } catch (error) {
+
+        console.error(
+            'data-slide-group-breakpoints 格式錯誤',
+            error
+        );
+
+        return defaultGroup;
+
+    }
+
+}
+
+
+// ========================================
+// Render Slides
+// ========================================
+
+function renderSwiperSlides(
+    swiperEl
+) {
+
+    const source =
+        swiperEl.dataset.source;
+
+    const key =
+        swiperEl.dataset.key;
+
+    const templateName =
+        swiperEl.dataset.template;
+
+
+    const slidesData =
+        swiperData[source]?.[key];
+
+
+    if (!slidesData) {
+
+        console.warn(
+            `找不到資料：${source}.${key}`
+        );
+
+        return;
+
+    }
+
+
+    const template =
+        swiperTemplate[templateName];
+
+
+    if (!template) {
+
+        console.warn(
+            `找不到 template：${templateName}`
+        );
+
+        return;
+
+    }
+
+
+    const wrapper =
+        swiperEl.querySelector(
+            '.swiper-slides'
+        );
+
+
+    if (!wrapper) {
+        return;
+    }
+
+
+    const slideGroup =
+        getSlideGroup(swiperEl);
+
+
+    // ====================================
+    // 分組
+    // ====================================
+
+    if (slideGroup > 0) {
+
+        const groupedData =
+            chunkArray(
+                slidesData,
+                slideGroup
+            );
+
+
+        wrapper.innerHTML =
+            groupedData
+                .map(template)
+                .join('');
+
+    } else {
+
+        wrapper.innerHTML =
+            slidesData
+                .map(template)
+                .join('');
+
+    }
+
+
+    // ====================================
+    // 把「目前真正使用的 group」
+    // 記錄下來
+    // ====================================
+
+    swiperEl.dataset.currentGroup =
+        slideGroup;
+
+}
+
+
+// ========================================
+// 建立 Swiper Option
+// ========================================
+
+function getSwiperOption(
+    swiperEl
+) {
+
+    const option = {
+
+        loop:
+            swiperEl.dataset.loop !== 'false',
+
+        effect:
+            swiperEl.dataset.effect || 'slide',
+
+        speed:
+            Number(
+                swiperEl.dataset.speed
+            ) || 1000,
+
+
+        /*
+            slide-group 模式：
+
+            一個 .swiper-slide
+            就是一組資料
+
+            所以永遠 1
+        */
+
         slidesPerView:
-        swiperEl.dataset.slideGroup
-            ? 1
-            : (
-                swiperEl.dataset.slidesPerView === "auto"
-                    ? "auto"
-                    : Number(swiperEl.dataset.slidesPerView) || 1
-            ),
-        spaceBetween: Number(swiperEl.dataset.spaceBetween) || 0,
+            swiperEl.dataset.slideGroup
+                ? 1
+                :
+                (
+                    swiperEl.dataset
+                        .slidesPerView === 'auto'
+                        ? 'auto'
+                        :
+                        Number(
+                            swiperEl.dataset
+                                .slidesPerView
+                        ) || 1
+                ),
+
+
+        spaceBetween:
+            Number(
+                swiperEl.dataset
+                    .spaceBetween
+            ) || 0
+
     };
 
-    // effect - fade
-    if(swiperOption.effect === "fade"){
-        swiperOption.fadeEffect = {
-            crossFade:true
+
+    // ====================================
+    // Effect
+    // ====================================
+
+    if (
+        option.effect === 'fade'
+    ) {
+
+        option.fadeEffect = {
+            crossFade: true
         };
+
     }
 
-    // effect - cube
-    if(swiperOption.effect === "cube"){
-        swiperOption.cubeEffect = {
-            shadow:false,
-            slideShadows:false
+
+    if (
+        option.effect === 'cube'
+    ) {
+
+        option.cubeEffect = {
+
+            shadow: false,
+
+            slideShadows: false
+
         };
+
     }
 
-    // effect - coverflow
-    if(swiperOption.effect === "coverflow"){
-        swiperOption.coverflowEffect = {
-            rotate:20,
-            stretch:0,
-            depth:100,
-            modifier:1,
-            slideShadows:false
+
+    if (
+        option.effect === 'coverflow'
+    ) {
+
+        option.coverflowEffect = {
+
+            rotate: 20,
+
+            stretch: 0,
+
+            depth: 100,
+
+            modifier: 1,
+
+            slideShadows: false
+
         };
+
     }
 
-    // autoplay
-    if(
-        swiperEl.dataset.autoplay !== "false"
-    ){
-        swiperOption.autoplay = {
+
+    if (
+        option.effect === 'flip'
+    ) {
+
+        option.flipEffect = {
+
+            slideShadows: false
+
+        };
+
+    }
+
+
+    // ====================================
+    // Autoplay
+    // ====================================
+
+    if (
+        swiperEl.dataset.autoplay !== 'false'
+    ) {
+
+        option.autoplay = {
+
             delay:
-            Number(swiperEl.dataset.delay) || 3000,
-            
-            disableOnInteraction:false
+                Number(
+                    swiperEl.dataset.delay
+                ) || 3000,
+
+            disableOnInteraction: false
+
         };
+
     }
 
-    // pagination
-    const paginationType = swiperEl.dataset.pagination || "false";
 
-    if (paginationType !== "false") {
+    // ====================================
+    // Pagination
+    // ====================================
 
-        swiperOption.pagination = {
-            el: swiperEl.querySelector(".swiper-pagination")
+    const pagination =
+        swiperEl.dataset.pagination
+        || 'false';
+
+
+    if (
+        pagination !== 'false'
+    ) {
+
+        option.pagination = {
+
+            el:
+                swiperEl.querySelector(
+                    '.swiper-pagination'
+                )
+
         };
 
-        switch (paginationType) {
 
-            // 小圓點（預設）
-            case "bullet":
-                swiperOption.pagination.clickable = true;
-                break;
+        switch (pagination) {
 
-            // 數字 1 / 5
-            case "fraction":
-                swiperOption.pagination.type = "fraction";
-                break;
+            case 'fraction':
 
-            // 進度條
-            case "progressbar":
-                swiperOption.pagination.type = "progressbar";
-                break;
-
-            // 1 2 3 4
-            case "number":
-                swiperOption.pagination.clickable = true;
-
-                swiperOption.pagination.renderBullet = function(index, className) {
-
-                    return `
-                        <span class="${className}">
-                            ${index + 1}
-                        </span>
-                    `;
-
-                };
+                option.pagination.type =
+                    'fraction';
 
                 break;
 
-            // 沒寫就當 bullet
+
+            case 'progressbar':
+
+                option.pagination.type =
+                    'progressbar';
+
+                break;
+
+
+            case 'number':
+
+                option.pagination.clickable =
+                    true;
+
+                option.pagination.renderBullet =
+                    function (
+                        index,
+                        className
+                    ) {
+
+                        return `
+                            <span
+                                class="${className}"
+                            >
+                                ${index + 1}
+                            </span>
+                        `;
+
+                    };
+
+                break;
+
+
+            case 'bullet':
             default:
-                swiperOption.pagination.clickable = true;
+
+                option.pagination.clickable =
+                    true;
+
                 break;
+
         }
 
     }
 
-    // scrollbar
+
+    // ====================================
+    // Navigation
+    // ====================================
+
     if (
-        swiperEl.dataset.scrollbar === "true"
-    ){
-        swiperOption.scrollbar = {
-            el: swiperEl.querySelector(".swiper-scrollbar"),
-            draggable: true,
-            dragSize: "auto",
-            hide: false
-        };
-    }
+        swiperEl.dataset.navigation === 'true'
+    ) {
 
+        option.navigation = {
 
-    // navigation
-    if(
-        swiperEl.dataset.navigation === "true"
-    ){
-        swiperOption.navigation = {
             nextEl:
-            swiperEl.querySelector(
-                ".swiper-button-next"
-            ),
+                swiperEl.querySelector(
+                    '.swiper-button-next'
+                ),
+
             prevEl:
-            swiperEl.querySelector(
-                ".swiper-button-prev"
-            )
+                swiperEl.querySelector(
+                    '.swiper-button-prev'
+                )
+
         };
+
     }
 
 
-    // 建立 Swiper
-    const instance = new Swiper(
-        swiperEl,
-        swiperOption
-    );
-    swiperInstances.push(instance);
+    // ====================================
+    // Scrollbar
+    // ====================================
+
+    if (
+        swiperEl.dataset.scrollbar === 'true'
+    ) {
+
+        option.scrollbar = {
+
+            el:
+                swiperEl.querySelector(
+                    '.swiper-scrollbar'
+                ),
+
+            draggable: true,
+
+            dragSize: 'auto',
+
+            hide: false
+
+        };
+
+    }
+
+
+    // ====================================
+    // 一般 slidesPerView breakpoint
+    // ====================================
+
+    if (
+        !swiperEl.dataset.slideGroup &&
+        swiperEl.dataset.breakpoints &&
+        swiperEl.dataset.slidesPerView
+    ) {
+
+        const breakpoints =
+            swiperEl.dataset.breakpoints
+                .split(',')
+                .map(Number);
+
+
+        const views =
+            swiperEl.dataset.slidesPerView
+                .split(',')
+                .map(value => {
+
+                    return value.trim() === 'auto'
+                        ? 'auto'
+                        : Number(value);
+
+                });
+
+
+        option.breakpoints = {};
+
+
+        breakpoints.forEach(
+            (
+                breakpoint,
+                index
+            ) => {
+
+                option.breakpoints[
+                    breakpoint
+                ] = {
+
+                    slidesPerView:
+                        views[index] ??
+                        views[0]
+
+                };
+
+            }
+        );
+
+    }
+
+
+    return option;
 
 }
+
+
+// ========================================
+// 建立 Swiper
+// ========================================
+
+function initSingleSwiper(
+    swiperEl
+) {
+
+    // ------------------------------------
+    // 先 Render
+    // ------------------------------------
+
+    renderSwiperSlides(
+        swiperEl
+    );
+
+
+    // ------------------------------------
+    // 建立
+    // ------------------------------------
+
+    const instance =
+        new Swiper(
+            swiperEl,
+            getSwiperOption(
+                swiperEl
+            )
+        );
+
+
+    // ------------------------------------
+    // 保存 instance
+    // ------------------------------------
+
+    swiperEl._swiperInstance =
+        instance;
+
+
+    return instance;
+
+}
+
+
+// ========================================
+// 重新建立單一 Swiper
+// ========================================
+
+function rebuildSingleSwiper(
+    swiperEl
+) {
+
+    const oldSwiper =
+        swiperEl._swiperInstance;
+
+
+    // ====================================
+    // Destroy
+    // ====================================
+
+    if (
+        oldSwiper &&
+        !oldSwiper.destroyed
+    ) {
+
+        oldSwiper.destroy(
+            true,
+            true
+        );
+
+    }
+
+
+    swiperEl._swiperInstance =
+        null;
+
+
+    // ====================================
+    // 清空舊 slides
+    // ====================================
+
+    const wrapper =
+        swiperEl.querySelector(
+            '.swiper-slides'
+        );
+
+
+    if (wrapper) {
+
+        wrapper.innerHTML = '';
+
+    }
+
+
+    // ====================================
+    // 重新建立
+    // ====================================
+
+    initSingleSwiper(
+        swiperEl
+    );
+
+}
+
+
+// ========================================
+// initSwiper
+// ========================================
+
+async function initSwiper() {
+
+    const swiperEls =
+        document.querySelectorAll(
+            '#main-content .swiper'
+        );
+
+
+    if (!swiperEls.length) {
+        return;
+    }
+
+
+    await loadSwiperData();
+
+
+    swiperEls.forEach(
+        swiperEl => {
+
+            initSingleSwiper(
+                swiperEl
+            );
+
+        }
+    );
+
+}
+
+
+// ========================================
+// Resize
+// ========================================
+
+let swiperResizeTimer = null;
+
+
+window.addEventListener(
+    'resize',
+    function () {
+
+        clearTimeout(
+            swiperResizeTimer
+        );
+
+
+        swiperResizeTimer =
+            setTimeout(
+                function () {
+
+                    const swiperEls =
+                        document.querySelectorAll(
+                            '#main-content .swiper'
+                        );
+
+
+                    swiperEls.forEach(
+                        swiperEl => {
+
+                            // ----------------
+                            // 沒有 group
+                            // ----------------
+
+                            if (
+                                !swiperEl.dataset
+                                    .slideGroup
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            // ----------------
+                            // 沒有 breakpoint
+                            // ----------------
+
+                            if (
+                                !swiperEl.dataset
+                                    .slideGroupBreakpoints
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            // ----------------
+                            // 現在應該是多少
+                            // ----------------
+
+                            const newGroup =
+                                getSlideGroup(
+                                    swiperEl
+                                );
+
+
+                            // ----------------
+                            // 上一次是多少
+                            // ----------------
+
+                            const oldGroup =
+                                Number(
+                                    swiperEl.dataset
+                                        .currentGroup
+                                ) || 0;
+
+
+                            console.log(
+                                'Swiper group:',
+                                oldGroup,
+                                '→',
+                                newGroup
+                            );
+
+
+                            // ----------------
+                            // 沒變
+                            // ----------------
+
+                            if (
+                                newGroup === oldGroup
+                            ) {
+
+                                return;
+
+                            }
+
+
+                            // ----------------
+                            // 真的變了
+                            // ----------------
+
+                            rebuildSingleSwiper(
+                                swiperEl
+                            );
+
+                        }
+                    );
+
+                },
+                150
+            );
+
+    }
+);
