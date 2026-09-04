@@ -54,4 +54,6 @@ function initComponents() {
 
     cmpScrollX.init(); // 橫向捲動元件
 
+    initGsap(); // GSAP 動畫
+
 }

@@ -5,22 +5,11 @@
     data-key 資料來源分類 - 第二層 key
     data-loop 是否循環播放
     data-effect 切換效果 slide/fade/cube/coverflow/flip
-    data-slide-group 一次顯示幾張 但也一次滑動這個數量的張數
+    data-slide-group 一次顯示幾張 但也一次滑動這個數量的張數 預設1
     data-slides-per-view 一次顯示幾張 也可以寫auto
     data-space-between 每張卡片間距(px)
-        data-breakpoints='{ 有斷點的寫法
-            "0": {
-                "slidesPerView": 4,
-                "spaceBetween": 10
-            },
-            "377": {
-                "slidesPerView": 5,
-                "spaceBetween": 15
-            },
-            "769": {
-                "slidesPerView": 6,
-                "spaceBetween": 20
-            }
+        data-slide-group-breakpoints='{
+            "768": 4
         }'
     data-autoplay 是否自動播放
     data-pagination
@@ -41,6 +30,10 @@
         data-autoplay="true"
         data-pagination="true"
         data-navigation="true"
+        data-slide-group="1"
+        data-slide-group-breakpoints='{
+            "768": 2
+        }'
         data-scrollbar="true">
             <div class="swiper-wrapper swiper-slides">
         </div>

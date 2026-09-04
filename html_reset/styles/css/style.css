@@ -2285,6 +2285,12 @@ body.is-open {
     transform: translate(0, 0);
   }
 }
+.box {
+  width: 100px;
+  height: 100px;
+  background: pink;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   width: auto;

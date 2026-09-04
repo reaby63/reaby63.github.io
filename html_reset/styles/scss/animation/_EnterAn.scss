@@ -17,13 +17,13 @@
 // ========================================
 
 .an-fade-in {
-
+    
     opacity: 0;
-
+    
     &.is-active {
         animation: anFadeIn .8s forwards;
     }
-
+    
 }
 
 
