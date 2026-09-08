@@ -2285,12 +2285,67 @@ body.is-open {
     transform: translate(0, 0);
   }
 }
-.box {
-  width: 100px;
-  height: 100px;
-  background: pink;
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+.hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.hero__content p {
+  font-size: 14px;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+.hero__content h1 {
+  font-size: clamp(70px, 12vw, 180px);
+  line-height: 0.8;
+  letter-spacing: -8px;
+}
+
+.ball {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #fff, #888);
+  filter: blur(0px);
+}
+
+.next {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.next h2 {
+  font-size: clamp(60px, 10vw, 150px);
+  line-height: 0.85;
+  text-align: center;
+}
+
+.ball {
+  animation: morph 4s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0%, 100% {
+    border-radius: 50%;
+  }
+  50% {
+    border-radius: 40% 60% 60% 40%/60% 40% 60% 40%;
+  }
+}
 .swiper-button-prev,
 .swiper-button-next {
   width: auto;
