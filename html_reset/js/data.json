@@ -4,14 +4,14 @@
     "logo": "../img/logo.svg"
   },
   "footer": {
-    "logo": "{{ logo }}",
-    "title": "{{ company }}",
+    "logo": "{{ site.logo }}",
+    "title": "{{ site.company }}",
     "en_title": "Dì Bǎo Industrial Co., Ltd.",
-    "copy_right": "Copyright © 2025 {{company}}. All Rights Reserved.Design by Choice"
+    "copy_right": "Copyright © 2025 {{site.company}}. All Rights Reserved.Design by Choice"
   },
   "header": {
-    "title": "{{ company }}",
-    "logo": "{{ logo }}",
+    "title": "{{ site.company }}",
+    "logo": "{{ site.logo }}",
     "nav": [
       {
         "title": "關於我們",

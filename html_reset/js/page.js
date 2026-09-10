@@ -1,33 +1,38 @@
 const main = document.getElementById('main-content');
 
-// 載入頁面的事件
-function loadPage(pageFile) {
+function loadPage(pageName) {
+
+    const pageFile = `page/${pageName}.html`;
 
     fetch(pageFile)
         .then(res => res.text())
         .then(html => {
 
+            // 套 data.json
+            html = replaceVars(html, siteData);
+
             main.innerHTML = html;
 
-            initComponents(); // 所有元件初始化
+            // 初始化元件
+            initComponents();
 
         })
-        .catch(err => console.error(`載入 ${pageFile} 失敗`, err));
-
+        .catch(err => {
+            console.error(`載入 ${pageFile} 失敗`, err);
+        });
 }
 
-// 預設首頁
-loadPage('page/page-home.html');
 
-// 點選切換頁面
+// 點擊 Header
 document.addEventListener('click', e => {
 
     const link = e.target.closest('[data-page]');
+
     if (!link) return;
 
     e.preventDefault();
 
-    loadPage(`page/${link.dataset.page}.html`);
+    loadPage(link.dataset.page);
 
 });
 

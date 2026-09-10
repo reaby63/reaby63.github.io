@@ -20,14 +20,21 @@
 <header class="header">
     <div class="all_width" id="header-template">
         <div class="h_title">
-            <img src="" alt="">
-            <span><!-- 公司名稱 --></span>
+            <img src="{{ header.logo }}" alt="">
+            <span>{{ header.title }}</span>
         </div>
         <div class="hamburger">
             ☰
         </div>
         <div class="nav">
-            <!-- <a href="page-home.html" data-page="page-home">首頁</a> -->
+            {{#each header.nav}}
+                <a
+                    href="{{ href }}"
+                    data-page="{{ dataPage }}"
+                >
+                    {{ title }}
+                </a>
+            {{/each}}
         </div>
     </div>
 </header>

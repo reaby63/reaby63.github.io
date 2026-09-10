@@ -10,29 +10,102 @@
     <!-- Swiper套用 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <script>
-        // 套共用元件方式
-        const layouts = [
-            { file: 'layout/Header.html', id: 'header' },
-            { file: 'layout/Footer.html', id: 'footer' }
-        ];
+        let siteData = {};
 
-        layouts.forEach(layout => {
-            fetch(layout.file)
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById(layout.id).innerHTML = html;
-                })
-                .catch(err => console.error(`載入 ${layout.file} 失敗`, err));
-        });
+        // 載入 data.json
+        fetch('./js/data.json')
+            .then(res => res.json())
+            .then(data => {
 
-        // 將data內的同樣資料套變數 共用函式
-        function replaceVars(str, vars) {
+                siteData = data;
+
+                loadLayouts();
+                // 初始頁面只載入一次
+                loadPage('page-home');
+
+            });
+
+
+        // 載入 Header / Footer
+        function loadLayouts() {
+
+            const layouts = [
+                { file: 'layout/Header.html', id: 'header' },
+                { file: 'layout/Footer.html', id: 'footer' }
+            ];
+
+            layouts.forEach(layout => {
+
+                fetch(layout.file)
+                    .then(res => res.text())
+                    .then(html => {
+
+                        html = replaceVars(html, siteData);
+
+                        document.getElementById(layout.id).innerHTML = html;
+
+                    })
+                    .catch(err => console.error(`載入 ${layout.file} 失敗`, err));
+
+            });
+
+        }
+
+
+        // 取得 {{ site.company }} 這種資料
+        function getValue(obj, path) {
+
+            return path
+                .split('.')
+                .reduce((value, key) => value?.[key], obj);
+
+        }
+
+
+        // 替換data.json裡的 {{ site.company }} 這種資料 但最多五層
+        function replaceVars(str, data) {
             if (!str) return '';
-            return str.replace(/\{\{\s*(.*?)\s*\}\}/g, (_, key) => vars[key.trim()] || '');
+            let result = str;
+            // ==========================================
+            // ① 處理 {{#each xxx}} ... {{/each}}
+            // ==========================================
+            const eachRegex =
+                /\{\{#each\s+([\w.]+)\s*\}\}([\s\S]*?)\{\{\/each\}\}/g;
+            result = result.replace(eachRegex, (_, path, template) => {
+
+                const list = getValue(data, path);
+
+                if (!Array.isArray(list)) {
+                    return '';
+                }
+
+                return list.map(item => {
+
+                    return replaceVars(template, item);
+
+                }).join('');
+
+            });
+            // ==========================================
+            // ② 處理一般 {{ xxx }}
+            // ==========================================
+            for (let i = 0; i < 5; i++) {
+                const newResult = result.replace(
+                    /\{\{\s*(.*?)\s*\}\}/g,
+                    (_, key) => {
+
+                        return getValue(data, key.trim()) ?? '';
+
+                    }
+                );
+                if (newResult === result) {
+                    break;
+                }
+                result = newResult;
+            }
+            return result;
         }
     </script>
-    <script src="./js/layout/footer.js"></script>
-    <script src="./js/layout/header.js"></script>
 </head>
 <body>
     <div id="header"></div>
@@ -46,8 +119,9 @@
     <!-- 彈窗內容 -->
     <div id="modal_container"></div>
 </body>
-
 <script src="js/jquery-3.7.1.min.js"></script>
+<script src="./js/layout/footer.js"></script>
+<script src="./js/layout/header.js"></script>
 <!-- gsap套用 -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
