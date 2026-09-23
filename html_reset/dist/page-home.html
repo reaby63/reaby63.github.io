@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版雛形</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrap套用 -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Swiper套用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    
+</head>
+<body>
+    <div id="header"></div>
+    
+    <main id="main-content"><div>
+    <!-- Swiper -->
+    <!-- data-source 資料來源分類 - 第一層 key
+    data-template html 吃的資料模板 (類似react寫法)
+    data-key 資料來源分類 - 第二層 key
+    data-loop 是否循環播放
+    data-effect 切換效果 slide/fade/cube/coverflow/flip
+    data-slide-group 一次顯示幾張 但也一次滑動這個數量的張數 預設1
+    data-slides-per-view 一次顯示幾張 也可以寫auto
+    data-space-between 每張卡片間距(px)
+        data-slide-group-breakpoints='{
+            "768": 4
+        }'
+    data-autoplay 是否自動播放
+    data-pagination
+        data-pagination="bullet"      // 小圓點
+        data-pagination="fraction"    // 1 / 5
+        data-pagination="number"      // 1 2 3 4
+        data-pagination="progressbar" // 進度條
+        data-pagination="false"       // 關閉
+    data-navigation 是否顯示左右箭頭
+    data-scrollbar 是否顯示拖曳滾動條 -->
+    <div class="swiper mySwiper" data-source="banner" data-template="banner" data-key="one" data-effect="slide" data-loop="true" data-autoplay="true" data-pagination="true" data-navigation="true" data-slide-group="1" data-slide-group-breakpoints="{
+            &quot;768&quot;: 2
+        }" data-scrollbar="true">
+            <div class="swiper-wrapper swiper-slides">
+            <div class="swiper-slide">
+
+                <div class="swiper-text">
+
+                    <h2>
+                        AAA
+                    </h2>
+
+                    
+                                <img src="icon1.svg" alt="icon" class="slide-icon">
+                            
+
+                    <p>
+                        111
+                    </p>
+
+                </div>
+
+                
+                            <img src="banner1.jpg" alt="AAA">
+                        
+
+            </div>
+        
+            <div class="swiper-slide">
+
+                <div class="swiper-text">
+
+                    <h2>
+                        BBB
+                    </h2>
+
+                    
+                                <img src="icon2.svg" alt="icon" class="slide-icon">
+                            
+
+                    <p>
+                        222
+                    </p>
+
+                </div>
+
+                
+                            <img src="banner2.jpg" alt="BBB">
+                        
+
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- 滾動條 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+    <div class="about" id="about">
+        滑動第一區塊公司名稱
+    </div>
+
+    <div class="product" id="product">
+        滑動第二區塊
+    </div>
+
+    <div class="contact" id="contact">
+        滑動第三區塊
+    </div>
+
+    <!-- 迴圈資料套用方式 -->
+    <div class="faq">
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    Q1 什麼是你們的服務？
+                </div>
+                <div class="faq-answer">
+                    A1 我們提供網站設計與前端切版服務。
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    Q2 網站製作需要多久？
+                </div>
+                <div class="faq-answer">
+                    A2 一般網站約需要 2～4 週。
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    Q3 可以做 RWD 嗎？
+                </div>
+                <div class="faq-answer">
+                    A3 可以，我們會製作手機、平板與桌機版本。
+                </div>
+            </div>
+        
+    </div>
+        
+</div></main>
+    
+    <div id="footer"></div>
+    
+    <!-- 彈窗內容 -->
+    <div id="modal_container"></div>
+
+
+
+
+<!-- 共用模板引擎 -->
+
+<!-- gsap套用 -->
+ 
+
+<!-- bootstrap套用 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- Swiper套用 -->
+
+<!-- 其他套用 -->
+
+
+
+
+
+
+
+
+
+<!-- 進場動畫 -->
+
+
+
+            <script src="js/jquery-3.7.1.min.js">
+            </script>
+        
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js">
+            </script>
+        
+            <script src="js/components/swiper.js">
+            </script>
+        </body></html>

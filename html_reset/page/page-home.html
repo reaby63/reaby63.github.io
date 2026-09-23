@@ -57,5 +57,19 @@
     <div class="contact" id="contact">
         滑動第三區塊
     </div>
+
+    <!-- 迴圈資料套用方式 -->
+    <div class="faq">
+        {{#each faq}}
+            <div class="faq-item">
+                <div class="faq-question">
+                    {{ question }}
+                </div>
+                <div class="faq-answer">
+                    {{ answer }}
+                </div>
+            </div>
+        {{/each}}
+    </div>
         
 </div>
