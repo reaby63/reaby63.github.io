@@ -1,0 +1,17 @@
+// 開始切版寫這哦~
+@use '../base/Reset';
+
+// swiper的箭頭 依照裏頭的圖片大小來點擊
+.swiper-button-prev,
+.swiper-button-next{
+    width:auto;
+    height:auto;
+    margin:0;
+    z-index: 99999;
+    img{
+        display:block;
+        width:100%;
+        height:100%;
+        pointer-events:none;
+    }
+}

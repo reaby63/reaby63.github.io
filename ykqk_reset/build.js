@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
+const sass = require('sass');
 
 
 // ==================================================
@@ -36,6 +37,18 @@ const pageDir = path.join(
 const distDir = path.join(
     rootDir,
     'dist'
+);
+
+
+// ==================================================
+// SCSS 路徑
+// ==================================================
+
+const slicingScssDir = path.join(
+    rootDir,
+    'styles',
+    'scss',
+    'slicinguse'
 );
 
 
@@ -329,6 +342,177 @@ function buildSwipers(html) {
 
 
 // ==================================================
+// 編譯該頁專用 SCSS
+// ==================================================
+
+function buildPageScss(pageFile) {
+
+    // --------------------------------------------------
+    // page 檔名
+    //
+    // index.html
+    // about.html
+    //
+    // 對應：
+    //
+    // _index.scss
+    // _about.scss
+    // --------------------------------------------------
+
+    const pageName =
+        path.basename(
+            pageFile,
+            '.html'
+        );
+
+
+    const scssFileName =
+        `_${pageName}.scss`;
+
+
+    const scssPath =
+        path.join(
+            slicingScssDir,
+            scssFileName
+        );
+
+
+    // ==================================================
+    // 找不到 SCSS
+    // ==================================================
+
+    if (!fs.existsSync(scssPath)) {
+
+        console.warn(
+            `⚠ 找不到頁面 SCSS：styles/scss/slicinguse/${scssFileName}`
+        );
+
+        return '';
+
+    }
+
+
+    // ==================================================
+    // Sass Compile
+    // ==================================================
+
+    try {
+
+        const result =
+            sass.compile(
+                scssPath,
+                {
+                    style: 'expanded',
+                    sourceMap: false
+                }
+            );
+
+
+        console.log(
+            `✓ SCSS：slicinguse/${scssFileName}`
+        );
+
+
+        return result.css;
+
+    } catch (error) {
+
+        console.error(
+            `✗ SCSS 編譯失敗：${scssFileName}`
+        );
+
+        console.error(
+            error.message
+        );
+
+        return '';
+
+    }
+
+}
+
+
+// ==================================================
+// 將 CSS 塞進 HTML <style>
+// ==================================================
+
+function injectPageCss(html, css) {
+
+    const $ =
+        cheerio.load(
+            html,
+            {
+                decodeEntities: false
+            }
+        );
+
+
+    // ==================================================
+    // 移除原本 stylesheet
+    //
+    // 注意：
+    // 這裡只移除你自己的：
+    //
+    // styles/css/style.css
+    //
+    // Swiper CDN CSS 不會被移除
+    // ==================================================
+
+    $('link[rel="stylesheet"]').each(
+        function () {
+
+            const link =
+                $(this);
+
+            const href =
+                link.attr('href') || '';
+
+
+            if (
+                href.includes(
+                    'styles/css/style.css'
+                )
+            ) {
+
+                link.remove();
+
+            }
+
+        }
+    );
+
+
+    // ==================================================
+    // 如果有 CSS
+    // ==================================================
+
+    if (css.trim()) {
+
+        const styleTag = `
+<style>
+/* ==================================================
+   Page SCSS
+   ================================================== */
+
+${css}
+
+</style>
+`;
+
+
+        $('head').append(
+            styleTag
+        );
+
+    }
+
+
+    return $.html();
+
+}
+
+
+// ==================================================
 // 建立 dist
 // ==================================================
 
@@ -354,15 +538,8 @@ fs.mkdirSync(
 
 
 // ==================================================
-// 建立 dist 資料夾
+// 建立 dist JS 資料夾
 // ==================================================
-
-const distCssDir =
-    path.join(
-        distDir,
-        'css'
-    );
-
 
 const distJsDir =
     path.join(
@@ -379,14 +556,6 @@ const distComponentsDir =
 
 
 fs.mkdirSync(
-    distCssDir,
-    {
-        recursive: true
-    }
-);
-
-
-fs.mkdirSync(
     distJsDir,
     {
         recursive: true
@@ -400,46 +569,6 @@ fs.mkdirSync(
         recursive: true
     }
 );
-
-
-// ==================================================
-// 複製 CSS
-// ==================================================
-
-const cssSource =
-    path.join(
-        rootDir,
-        'styles',
-        'css',
-        'style.css'
-    );
-
-
-const cssDestination =
-    path.join(
-        distCssDir,
-        'style.css'
-    );
-
-
-if (fs.existsSync(cssSource)) {
-
-    fs.copyFileSync(
-        cssSource,
-        cssDestination
-    );
-
-    console.log(
-        '✓ CSS：style.css'
-    );
-
-} else {
-
-    console.warn(
-        '⚠ 找不到 styles/css/style.css'
-    );
-
-}
 
 
 // ==================================================
@@ -630,44 +759,6 @@ pages.forEach(file => {
 
 
     // ==================================================
-    // ★ 修正 dist CSS 路徑
-    // ==================================================
-
-    $('link[rel="stylesheet"]').each(
-        function () {
-
-            const link =
-                $(this);
-
-            const href =
-                link.attr('href');
-
-
-            // ==================================================
-            // 開發環境：
-            // styles/css/style.css
-            //
-            // dist：
-            // css/style.css
-            // ==================================================
-
-            if (
-                href ===
-                'styles/css/style.css'
-            ) {
-
-                link.attr(
-                    'href',
-                    'css/style.css'
-                );
-
-            }
-
-        }
-    );
-
-
-    // ==================================================
     // 移除 index.html 原本的資料載入程式
     // ==================================================
 
@@ -776,15 +867,28 @@ pages.forEach(file => {
 
 
     // ==================================================
-    // ★ 加入必要 CSS
+    // 取得這一頁的 SCSS
     // ==================================================
-    //
-    // 注意：
-    //
-    // index.html 本身已經有 Swiper CDN CSS
-    // 所以這裡不要再 append 一次。
-    //
+
+    const pageCss =
+        buildPageScss(
+            file
+        );
+
+
     // ==================================================
+    // 將 CSS 寫入 <style>
+    // ==================================================
+
+    let finalHTML =
+        $.html();
+
+
+    finalHTML =
+        injectPageCss(
+            finalHTML,
+            pageCss
+        );
 
 
     // ==================================================
@@ -800,7 +904,7 @@ pages.forEach(file => {
 
     fs.writeFileSync(
         outputPath,
-        $.html(),
+        finalHTML,
         'utf8'
     );
 
