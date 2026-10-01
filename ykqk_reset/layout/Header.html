@@ -1,0 +1,40 @@
+<!-- 切換頁Header -->
+<header class="header-normal">
+    我是Header
+    <a data-page="page-home">首頁(輪播)</a>
+    <a data-page="components/marquee-circleText">跑馬燈</a>
+    <a data-page="openModal">彈窗</a>
+    <a data-page="components/accordion">QA向下展開</a>
+    <a data-page="components/masonry">瀑布流(類似pintreset)</a>
+    <a data-page="components/tab">Tab 切換</a>
+    <a data-page="components/animation">常用的滑入動畫</a>
+    <a data-page="components/counterNumber">數字動畫</a>
+    <a data-page="components/loading">Loading 動畫</a>
+    <a data-page="layout/table-layout">Table 編排</a>
+    <a data-page="animation/btnAn">按鈕特效</a>
+    <a data-page="components/scroll-x">左右scroll 可套scrollbar</a>
+    <a data-page="animation/gsap">gsap</a>
+</header>
+
+<!-- 滑動的header -->
+<header class="header">
+    <div class="all_width" id="header-template">
+        <div class="h_title">
+            <img src="{{ header.logo }}" alt="">
+            <span>{{ header.title }}</span>
+        </div>
+        <div class="hamburger">
+            ☰
+        </div>
+        <div class="nav">
+            {{#each header.nav}}
+                <a
+                    href="{{ href }}"
+                    data-page="{{ dataPage }}"
+                >
+                    {{ title }}
+                </a>
+            {{/each}}
+        </div>
+    </div>
+</header>

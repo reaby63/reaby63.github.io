@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans+TC:wght@100..900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100dvh;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.all_width {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.keyword_i {
+    display: none;
+}

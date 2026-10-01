@@ -1,0 +1,258 @@
+@use "../layout/core" as *;
+// 開始切版寫這哦~
+
+// swiper的箭頭 依照裏頭的圖片大小來點擊
+// .swiper-button-prev,
+// .swiper-button-next{
+//     width:auto;
+//     height:auto;
+//     margin:0;
+//     z-index: 99999;
+//     img{
+//         display:block;
+//         width:100%;
+//         height:100%;
+//         pointer-events:none;
+//     }
+// }
+
+// 首頁-----------
+// 共用樣式
+.index_title {
+    &::before {
+        content: "";
+        display: block;
+        background-color: #ffcb00;
+        height: 4px;
+        width: 280px;
+        margin-bottom: 55px;
+    }
+    .en_title {
+        font-size: 60px;
+        font-family: "Audiowide", sans-serif;
+        color: #221814;
+    }
+    .ch_title {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #221814;
+    }
+}
+
+.index_bg {
+    background-image: url("../../../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.index_btn {
+    color: #fff;
+    background-color: #000;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 169px;
+    padding: 13px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    position: relative;
+    z-index: 1;
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    &:after {
+        content: "";
+        mask-image: url("../../../img/btn-arrow.svg");
+        display: inline-block;
+        width: 13px;
+        height: 10px;
+        background-color: #fff;
+        margin-left: 6px;
+        position: relative;
+        z-index: 2;
+    }
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 50px;
+        background-color: #ffcc00;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        transition: all 0.5s;
+    }
+    &:hover {
+        color: #211713;
+        &:after {
+            background-color: #211713;
+        }
+        &::before {
+            width: 169px;
+        }
+    }
+}
+
+// about
+.about {
+    padding: 108px 0;
+    position: relative;
+    .all_width {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 54px;
+    }
+    .about_left {
+        padding-left: 14%;
+        margin-bottom: 250px;
+        p {
+            font-size: 16px;
+            color: #595757;
+            line-height: 35px;
+            font-weight: 500;
+            margin-top: 50px;
+        }
+        .about_tag {
+            margin-top: 16px;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            span {
+                display: inline-block;
+                &:first-child {
+                    &:after {
+                        content: "";
+                        display: inline-block;
+                        width: 2px;
+                        height: 25px;
+                        background-color: #000;
+                        position: relative;
+                        top: 3px;
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+    .about_right {
+        position: relative;
+        z-index: 2;
+    }
+    .about_runing {
+        font-size: 150px;
+        font-family: "Audiowide", sans-serif;
+        color: #d9dada;
+        position: absolute;
+        bottom: 148px;
+        left: 0;
+        z-index: 1;
+        animation: marquee 8s linear infinite;
+    }
+}
+
+// 跑馬燈
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1000px);
+    }
+}
+
+// 中間裝飾
+.dec_bg {
+    background-color: transparent;
+    padding: 123px 0;
+    .all_width {
+        .dec_in {
+            padding-left: 14%;
+            max-width: 875px;
+            color: #fff;
+            h6 {
+                font-size: 35px;
+                font-weight: 500;
+                letter-spacing: 6px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+                span {
+                    font-size: 25px;
+                    display: inline-block;
+                    margin: 0 14px;
+                    font-weight: 600;
+                }
+            }
+            p {
+                font-size: 16px;
+                line-height: 50px;
+                letter-spacing: 3px;
+            }
+        }
+    }
+}
+
+// 最新消息
+.news {
+    .all_width {
+        .news_box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 14%;
+            padding-top: 110px;
+            padding-bottom: 50px;
+        }
+        .news_left {
+            .index_title {
+                &::before {
+                    width: 237px;
+                }
+            }
+        }
+    }
+}
+
+// 服務項目
+.service {
+    .all_width {
+        .service_box {
+            padding: 0 14%;
+            padding-top: 110px;
+            padding-bottom: 87px;
+            .service_title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .service_item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 85px;
+                .service_item_self {
+                    text-align: center;
+                    img {
+                        margin-bottom: 24px;
+                    }
+                    p {
+                        font-size: 20px;
+                        color: #221814;
+                        font-weight: 500;
+                        margin-bottom: 6px;
+                    }
+                    span {
+                        font-size: 16px;
+                        color: #595757;
+                        font-family: Arial, sans-serif;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
