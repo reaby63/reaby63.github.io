@@ -3,6 +3,22 @@ const path = require('path');
 const cheerio = require('cheerio');
 const sass = require('sass');
 
+const config = {
+
+    // ==================================================
+    // 圖片 CDN 基礎路徑
+    //
+    // 例如：
+    // img/process-pic2.jpg
+    //
+    // 會輸出成：
+    // https://pic03.eapple.com.tw/willclean/process-pic2.jpg
+    // ==================================================
+
+    imageBaseUrl:
+        'https://pic03.eapple.com.tw/willclean/'
+
+};
 
 // ==================================================
 // Template Engine
@@ -62,6 +78,160 @@ const data = JSON.parse(
         'utf8'
     )
 );
+
+// ==================================================
+// 圖片路徑處理
+// ==================================================
+
+function convertImageUrl(url) {
+
+    if (!url) {
+        return url;
+    }
+
+    url = url.trim();
+
+    // --------------------------------------------------
+    // 已經是完整網址 / data URL
+    // 不處理
+    // --------------------------------------------------
+
+    if (
+        url.startsWith('http://') ||
+        url.startsWith('https://') ||
+        url.startsWith('//') ||
+        url.startsWith('data:') ||
+        url.startsWith('#')
+    ) {
+        return url;
+    }
+
+
+    // --------------------------------------------------
+    // 找 img/ 的位置
+    //
+    // 例如：
+    //
+    // ../../../img/process-pic2.jpg
+    //
+    // 找到：
+    //
+    // img/process-pic2.jpg
+    // --------------------------------------------------
+
+    const imgIndex =
+        url.indexOf('img/');
+
+
+    if (imgIndex === -1) {
+        return url;
+    }
+
+
+    const imagePath =
+        url.substring(
+            imgIndex + 4
+        );
+
+
+    // --------------------------------------------------
+    // 組合 CDN 路徑
+    // --------------------------------------------------
+
+    return (
+        config.imageBaseUrl +
+        imagePath
+    );
+
+}
+
+// ==================================================
+// HTML / CSS 圖片路徑替換
+// ==================================================
+
+function replaceImagePaths(html) {
+
+    const $ =
+        cheerio.load(
+            html,
+            {
+                decodeEntities: false
+            }
+        );
+
+
+    // ==================================================
+    // HTML <img src="">
+    // ==================================================
+
+    $('img[src]').each(
+        function () {
+
+            const img =
+                $(this);
+
+            const src =
+                img.attr('src');
+
+            const newSrc =
+                convertImageUrl(src);
+
+            img.attr(
+                'src',
+                newSrc
+            );
+
+        }
+    );
+
+
+    // ==================================================
+    // HTML / CSS 所有 url(...)
+    //
+    // 例如：
+    //
+    // background-image:
+    // url("../../../img/process-pic2.jpg");
+    //
+    // ==================================================
+
+    $('style').each(
+        function () {
+
+            const style =
+                $(this);
+
+            let css =
+                style.html() || '';
+
+
+            css =
+                css.replace(
+                    /url\(\s*(['"]?)(.*?)\1\s*\)/gi,
+                    function (
+                        match,
+                        quote,
+                        url
+                    ) {
+
+                        const newUrl =
+                            convertImageUrl(url);
+
+                        return `url("${newUrl}")`;
+
+                    }
+                );
+
+
+            style.html(css);
+
+        }
+    );
+
+
+    return $.html();
+
+}
 
 
 // ==================================================
@@ -888,6 +1058,15 @@ pages.forEach(file => {
         injectPageCss(
             finalHTML,
             pageCss
+        );
+
+    // ==================================================
+    // 統一處理圖片路徑
+    // ==================================================
+
+    finalHTML =
+        replaceImagePaths(
+            finalHTML
         );
 
 

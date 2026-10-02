@@ -58,12 +58,33 @@ button {
 }
 
 .index_bg {
-  background-image: url("../../../img/bg.jpg");
-  background-repeat: repeat;
+  background-image: url("https://pic03.eapple.com.tw/willclean/service-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index_title::before {
+  content: "";
+  display: block;
+  background-color: #ffcb00;
+  height: 4px;
+  width: 280px;
+  margin-bottom: 55px;
+}
+.index_title .en_title {
+  font-size: 60px;
+  font-family: "Audiowide", sans-serif;
+  color: #221814;
+}
+.index_title .ch_title {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #221814;
 }
 
 .process_header {
-  background-image: url("../../../img/process-pic.jpg");
+  background-image: url("https://pic03.eapple.com.tw/willclean/process-pic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 226px 0 300px;
@@ -73,7 +94,172 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.process_header .process_header_title > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+}
+.process_header .process_header_title > div p {
+  width: 100%;
+  font-size: 22px;
+  margin-bottom: 37px;
+  letter-spacing: 3px;
+}
+.process_header .process_header_title > div p span:first-child {
+  position: relative;
+  margin-right: 16px;
+}
+.process_header .process_header_title > div p span:first-child::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 22px;
+  background-color: #fff;
+  top: 6px;
+  right: -3px;
+}
+.process_header .process_header_title a {
+  color: #fff;
+  background-color: transparent;
+  border: solid 1px #fff;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 2px;
+  width: 169px;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+.process_header .process_header_title a span {
+  position: relative;
+  z-index: 2;
+}
+.process_header .process_header_title a:after {
+  content: "";
+  mask-image: url("https://pic03.eapple.com.tw/willclean/btn-arrow.svg");
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background-color: #fff;
+  margin-left: 6px;
+  position: relative;
+  z-index: 2;
+}
+.process_header .process_header_title a:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 50px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.process_header .process_header_title a:hover {
+  color: #000;
+}
+.process_header .process_header_title a:hover:after {
+  background-color: #000;
+}
+.process_header .process_header_title a:hover::before {
+  width: 169px;
+}
+
+.process_list {
+  padding-top: 98px;
+  padding-bottom: 105px;
+}
+.process_list .all_width {
+  padding: 0 14%;
+}
+.process_list .process_list_self {
+  margin-bottom: 99px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.process_list .process_list_self:nth-child(even) {
+  justify-content: flex-start;
+}
+.process_list .process_list_self .process_list_self_text {
+  max-width: 459px;
+}
+.process_list .process_list_self .process_list_self_text .process_list_self_title {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  position: relative;
+  padding-bottom: 18px;
+  margin-bottom: 25px;
+}
+.process_list .process_list_self .process_list_self_text .process_list_self_title::after {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 235px;
+  left: -13px;
+  bottom: 0;
+  background-color: #FFC700;
+}
+.process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_num {
+  font-size: 60px;
+  color: #221814;
+  font-family: "Audiowide", sans-serif;
+}
+.process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_ch {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+}
+.process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_en {
+  color: #595757;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-family: Arial, sans-serif;
+}
+.process_list .process_list_self .process_list_self_text .process_list_self_tag {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 55px;
+}
+.process_list .process_list_self .process_list_self_text p {
+  color: #595757;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 3px;
+}
+
+.process_step {
+  background-image: url("https://pic03.eapple.com.tw/willclean/process-pic2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.process_step .all_width {
+  padding: 0 14%;
+}
+.process_step .process_step_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 14%;
+  padding-top: 110px;
+  padding-bottom: 50px;
+}
+.process_step .process_step_title .ch_title,
+.process_step .process_step_title .en_title {
+  color: #fff;
 }
 
 </style>
@@ -102,10 +288,189 @@ button {
 </div>
 
 
-<div class="process index_bg">
+<div class="process_list index_bg">
+    <div class="all_width">
+        <div class="process_list_self">
+            <div class="process_list_self_text">
+                <div class="process_list_self_title">
+                    <div class="process_list_self_num">
+                        01
+                    </div>
+                    <div>
+                        <div class="process_list_self_ch">
+                            預約諮詢
+                        </div>
+                        <div class="process_list_self_en">
+                            Consultation
+                        </div>
+                    </div>
+                </div>
+                <div class="process_list_self_tag">
+                    了解需求，安排合適服務
+                </div>
+                <p>
+                    透過電話或線上聯繫威克，告知車型、目前車況及想施作的服務項目，預約合適的到店時間。
+                </p>
+            </div>
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/01.jpg" alt="">
+            </div>
+        </div>
+        <div class="process_list_self">
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/02.jpg" alt="">
+            </div>
+            <div class="process_list_self_text">
+                <div class="process_list_self_title">
+                    <div class="process_list_self_num">
+                        02
+                    </div>
+                    <div>
+                        <div class="process_list_self_ch">
+                            車況評估
+                        </div>
+                        <div class="process_list_self_en">
+                            Vehicle Assessment
+                        </div>
+                    </div>
+                </div>
+                <div class="process_list_self_tag">
+                    實際檢視，確認施作內容
+                </div>
+                <p>
+                    車輛到店後進行車況與漆面檢視，依實際狀況及車主需求，建議合適的汽車美容、打蠟、拋光、鍍膜或內裝清潔方案。
+                </p>
+            </div>
+        </div>
+        <div class="process_list_self">
+            <div class="process_list_self_text">
+                <div class="process_list_self_title">
+                    <div class="process_list_self_num">
+                        03
+                    </div>
+                    <div>
+                        <div class="process_list_self_ch">
+                            確認方案
+                        </div>
+                        <div class="process_list_self_en">
+                            Plan Confirmation
+                        </div>
+                    </div>
+                </div>
+                <div class="process_list_self_tag">
+                    項目說清楚，再開始施工
+                </div>
+                <p>
+                    確認施作項目、費用及預計作業時間，讓車主了解本次服務內容後，再進行後續汽車美容施作。
+                </p>
+            </div>
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/03.jpg" alt="">
+            </div>
+        </div>
+        <div class="process_list_self">
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/04.jpg" alt="">
+            </div>
+            <div class="process_list_self_text">
+                <div class="process_list_self_title">
+                    <div class="process_list_self_num">
+                        04
+                    </div>
+                    <div>
+                        <div class="process_list_self_ch">
+                            專業施作
+                        </div>
+                        <div class="process_list_self_en">
+                            Expert Application
+                        </div>
+                    </div>
+                </div>
+                <div class="process_list_self_tag">
+                    講究細節，用心處理每一道工序
+                </div>
+                <p>
+                    依選擇的服務方案進行車體清潔、汽車打蠟、拋光美容、車體鍍膜、玻璃鍍膜或內裝清潔，針對不同部位細心處理。
+                </p>
+            </div>
+        </div>
+        <div class="process_list_self">
+            <div class="process_list_self_text">
+                <div class="process_list_self_title">
+                    <div class="process_list_self_num">
+                        05
+                    </div>
+                    <div>
+                        <div class="process_list_self_ch">
+                            完工檢查
+                        </div>
+                        <div class="process_list_self_en">
+                            Final Inspection
+                        </div>
+                    </div>
+                </div>
+                <div class="process_list_self_tag">
+                    再次確認，把關施作品質
+                </div>
+                <p>
+                    服務完成後進行整體檢查，確認車體外觀、細節及施作項目完成狀況，做好最後品質把關。
+                </p>
+            </div>
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/05.jpg" alt="">
+            </div>
+        </div>
+        <div class="process_list_self">
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/06.jpg" alt="">
+            </div>
+            <div class="process_list_self_text">
+                <div class="process_list_self_title">
+                    <div class="process_list_self_num">
+                        06
+                    </div>
+                    <div>
+                        <div class="process_list_self_ch">
+                            交車說明
+                        </div>
+                        <div class="process_list_self_en">
+                            Handover &amp; Overview
+                        </div>
+                    </div>
+                </div>
+                <div class="process_list_self_tag">
+                    安心交車，保養方式一次說明
+                </div>
+                <p>
+                    完工後與車主確認車況，依施作項目說明後續清潔與日常養護注意事項，讓美容與鍍膜持效得更長久。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
-
-</div></main>
+<div class="process_step">
+    <div class="all_width">
+        <div class="process_step_title">
+            <div class="process_step_left">
+                <div class="index_title">
+                    <div class="en_title">
+                        PROCESS
+                    </div>
+                    <div class="ch_title">
+                        鍍膜施工流程
+                    </div>
+                </div>
+            </div>
+            <div class="process_step_right">
+                <button class="index_btn">
+                    <span>MORE</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
     
     <!-- <div id="footer"></div> -->
     

@@ -3214,11 +3214,39 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0 14%;
-  padding-top: 110px;
-  padding-bottom: 50px;
+  padding-top: 120px;
+  padding-bottom: 103px;
 }
 .process_step .process_step_title .ch_title,
 .process_step .process_step_title .en_title {
   color: #fff;
+}
+.process_step .process_step_title .process_step_right {
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+.process_step .process_step_title .process_step_right::before {
+  content: "";
+  position: absolute;
+  background-color: #B92907;
+  width: 14px;
+  height: 46px;
+  left: -30px;
+  top: -5px;
+}
+.process_step .process_step_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: 20px;
+}
+.process_step .process_step_grid .process_step_grid_self {
+  background: #ddd;
+}
+.process_step .process_step_grid .process_step_grid_self_big {
+  grid-column: span 2;
+  background: pink;
 }/*# sourceMappingURL=style.css.map */
