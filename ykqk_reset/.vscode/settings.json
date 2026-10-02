@@ -1,5 +1,8 @@
 {
     "liveServer.settings.port": 5502,
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.wait": 300,
+
     "liveSassCompile.settings.formats": [
         {
             "format": "expanded",
@@ -7,6 +10,7 @@
             "savePath": "styles/css"
         }
     ],
+
     "[scss]": {
         "editor.formatOnType": false
     }

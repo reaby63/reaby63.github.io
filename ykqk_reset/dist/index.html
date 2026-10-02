@@ -2,99 +2,856 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>切版雛形</title>
-    <link rel="stylesheet" href="styles/style.css">
+    
     <!-- bootstrap套用 -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Swiper套用 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     
+
+<style>
+/* ==================================================
+   Page SCSS
+   ================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans+TC:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.all_width {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.keyword_i {
+  display: none;
+}
+
+.index_title::before {
+  content: "";
+  display: block;
+  background-color: #ffcb00;
+  height: 4px;
+  width: 280px;
+  margin-bottom: 55px;
+}
+.index_title .en_title {
+  font-size: 60px;
+  font-family: "Audiowide", sans-serif;
+  color: #221814;
+}
+.index_title .ch_title {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #221814;
+}
+
+.index_bg {
+  background-image: url("../../../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index_btn {
+  color: #fff;
+  background-color: #000;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 169px;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+.index_btn span {
+  position: relative;
+  z-index: 2;
+}
+.index_btn:after {
+  content: "";
+  mask-image: url("../../../img/btn-arrow.svg");
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background-color: #fff;
+  margin-left: 6px;
+  position: relative;
+  z-index: 2;
+}
+.index_btn:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 50px;
+  background-color: #ffcc00;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.index_btn:hover {
+  color: #211713;
+}
+.index_btn:hover:after {
+  background-color: #211713;
+}
+.index_btn:hover::before {
+  width: 169px;
+}
+
+.about {
+  padding: 108px 0;
+  position: relative;
+}
+.about .all_width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 54px;
+}
+.about .about_left {
+  padding-left: 14%;
+  margin-bottom: 250px;
+}
+.about .about_left p {
+  font-size: 16px;
+  color: #595757;
+  line-height: 35px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+.about .about_left .about_tag {
+  margin-top: 16px;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.about .about_left .about_tag span {
+  display: inline-block;
+}
+.about .about_left .about_tag span:first-child:after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 25px;
+  background-color: #000;
+  position: relative;
+  top: 3px;
+  margin: 0 5px;
+}
+.about .about_right {
+  position: relative;
+  z-index: 2;
+}
+.about .about_runing {
+  font-size: 150px;
+  font-family: "Audiowide", sans-serif;
+  color: #d9dada;
+  position: absolute;
+  bottom: 148px;
+  left: 0;
+  z-index: 1;
+  animation: marquee 12s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1000px);
+  }
+}
+.dec_bg {
+  background-color: transparent;
+  padding: 123px 0;
+}
+.dec_bg .all_width .dec_in {
+  padding-left: 14%;
+  max-width: 875px;
+  color: #fff;
+}
+.dec_bg .all_width .dec_in h6 {
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.dec_bg .all_width .dec_in h6 span {
+  font-size: 25px;
+  display: inline-block;
+  margin: 0 14px;
+  font-weight: 600;
+}
+.dec_bg .all_width .dec_in p {
+  font-size: 16px;
+  line-height: 50px;
+  letter-spacing: 3px;
+}
+
+.news .all_width .news_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14%;
+  padding-top: 110px;
+  padding-bottom: 50px;
+}
+.news .all_width .news_left .index_title::before {
+  width: 237px;
+}
+
+.service .all_width .service_box {
+  padding: 0 14%;
+  padding-top: 110px;
+  padding-bottom: 87px;
+}
+.service .all_width .service_box .service_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.service .all_width .service_box .service_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 85px;
+}
+.service .all_width .service_box .service_item .service_item_self {
+  text-align: center;
+}
+.service .all_width .service_box .service_item .service_item_self:nth-child(odd) img {
+  animation: serviceAn 6s infinite;
+}
+.service .all_width .service_box .service_item .service_item_self:nth-child(even) img {
+  animation: serviceAn 6s infinite;
+  animation-delay: -4s;
+}
+.service .all_width .service_box .service_item .service_item_self img {
+  margin-bottom: 24px;
+}
+.service .all_width .service_box .service_item .service_item_self p {
+  font-size: 20px;
+  color: #221814;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.service .all_width .service_box .service_item .service_item_self span {
+  font-size: 16px;
+  color: #595757;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+@keyframes serviceAn {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  80% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+.choose {
+  background-image: url("../../../img/choose-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.choose .all_width .choose_box {
+  padding: 0 14%;
+  padding-top: 102px;
+  padding-bottom: 150px;
+}
+.choose .all_width .choose_box .index_title .en_title,
+.choose .all_width .choose_box .index_title .ch_title {
+  color: #fff;
+}
+.choose .all_width .choose_box .choose_item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 75px;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self {
+  width: calc((100% + 36px) / 3);
+  aspect-ratio: 1/1;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 56px;
+  box-sizing: border-box;
+  margin-right: -18px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, #fff 0deg 2deg, transparent 2deg 5deg);
+  mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
+  animation: chooseRotate 30s linear infinite;
+  pointer-events: none;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self:nth-child(3n) {
+  margin-right: 0;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self:nth-child(4), .choose .all_width .choose_box .choose_item .choose_item_self:nth-child(5) {
+  margin-top: -78px;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self .choose_item_num {
+  color: #B2B2B3;
+  font-size: 22px;
+  font-family: "Audiowide", sans-serif;
+  margin-bottom: 4px;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self .choose_item_title {
+  color: #FFCC00;
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self .choose_item_in {
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 3px;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self .choose_item_num,
+.choose .all_width .choose_box .choose_item .choose_item_self .choose_item_title,
+.choose .all_width .choose_box .choose_item .choose_item_self .choose_item_in {
+  position: relative;
+  z-index: 2;
+}
+.choose .all_width .choose_box .choose_item .choose_item_self:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes chooseRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.contact {
+  padding-bottom: 115px;
+}
+.contact .all_width .contact_box {
+  padding: 0 14%;
+  padding-top: 82px;
+}
+.contact .all_width .contact_box .contact_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 93px;
+}
+.contact .all_width .contact_box .contact_title .contact_left .contact_title_dec {
+  margin-top: 40px;
+  color: #595757;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 1.5px;
+}
+.contact .all_width .contact_box .contact_title .contact_right {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 44px;
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn {
+  aspect-ratio: 1/1;
+  width: 200px;
+  height: 200px;
+  margin-right: 24px;
+  box-sizing: border-box;
+  background-color: #221714;
+  color: #fff;
+  transition: all 0.7s;
+  position: relative;
+  top: 0;
+  box-shadow: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn > div p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn:last-child {
+  margin-right: 0;
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn .contact_btn_img {
+  background-color: #fff;
+  width: 40px;
+  max-height: 40px;
+  height: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 20px;
+  transition: all 0.7s;
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn:nth-child(1) .contact_btn_img {
+  mask-image: url("../../../img/w-Location.svg");
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn:nth-child(2) .contact_btn_img {
+  mask-image: url("../../../img/w-phone.svg");
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn:nth-child(3) .contact_btn_img {
+  mask-image: url("../../../img/w-line.svg");
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn:hover {
+  background-color: #FFCB00;
+  top: -12px;
+  color: #000;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+.contact .all_width .contact_box .contact_title .contact_right .contact_btn:hover .contact_btn_img {
+  background-color: #000;
+}
+.contact .contact_in {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.contact .contact_in .contact_running {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: contactRunning 35s linear infinite;
+}
+.contact .contact_in .contact_running img {
+  display: block;
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+.contact .contact_in .contact_square {
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 796px;
+  width: calc(100% - 40px);
+  background-color: rgba(34, 23, 20, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 55px 0;
+}
+.contact .contact_in .contact_square .contact_en {
+  font-family: "Audiowide", sans-serif;
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+.contact .contact_in .contact_square .contact_ch {
+  font-size: 18px;
+  letter-spacing: 10px;
+}
+.contact .contact_in .contact_square .contact_ch span {
+  position: relative;
+}
+.contact .contact_in .contact_square .contact_ch span:first-child {
+  margin-right: 12px;
+}
+.contact .contact_in .contact_square .contact_ch span:first-child::after, .contact .contact_in .contact_square .contact_ch span:first-child::before {
+  content: "";
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+}
+.contact .contact_in .contact_square .contact_ch span:first-child::after {
+  left: -14px;
+  top: 14px;
+  width: 6px;
+  height: 1px;
+}
+.contact .contact_in .contact_square .contact_ch span:first-child::before {
+  right: 6px;
+  top: 5px;
+  width: 1px;
+  height: 19px;
+}
+.contact .contact_in .contact_square .contact_ch span:last-child::before {
+  content: "";
+  display: inline-block;
+  background-color: #fff;
+  position: absolute;
+  right: -5px;
+  top: 14px;
+  width: 6px;
+  height: 1px;
+}
+
+@keyframes contactRunning {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2562px);
+  }
+}
+
+</style>
 </head>
 <body>
     <!-- <div id="header"></div> -->
     
-    <main id="main-content"><div>
-    <!-- Swiper -->
-    <!-- data-source 資料來源分類 - 第一層 key
-    data-template html 吃的資料模板 (類似react寫法)
-    data-key 資料來源分類 - 第二層 key
-    data-loop 是否循環播放
-    data-effect 切換效果 slide/fade/cube/coverflow/flip
-    data-slide-group 一次顯示幾張 但也一次滑動這個數量的張數 預設1
-    data-slides-per-view 一次顯示幾張 也可以寫auto
-    data-space-between 每張卡片間距(px)
-        data-slide-group-breakpoints='{
-            "768": 4
-        }'
-    data-autoplay 是否自動播放
-    data-pagination
-        data-pagination="bullet"      // 小圓點
-        data-pagination="fraction"    // 1 / 5
-        data-pagination="number"      // 1 2 3 4
-        data-pagination="progressbar" // 進度條
-        data-pagination="false"       // 關閉
-    data-navigation 是否顯示左右箭頭
-    data-scrollbar 是否顯示拖曳滾動條 -->
-    <div class="swiper mySwiper" data-source="banner" data-template="banner" data-key="one" data-effect="slide" data-loop="true" data-autoplay="true" data-pagination="true" data-navigation="true" data-slide-group="1" data-slide-group-breakpoints="{
-            &quot;768&quot;: 2
-        }" data-scrollbar="true">
-            <div class="swiper-wrapper swiper-slides">
-            <div class="swiper-slide">
+    <main id="main-content"><div class="keyword_i">
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+</div>
 
-                <div class="swiper-text">
 
-                    <h2>
-                        AAA
-                    </h2>
-
-                    
-                                <img src="icon1.svg" alt="icon" class="slide-icon">
-                            
-
-                    <p>
-                        111
-                    </p>
-
+<div class="about index_bg">
+    <div class="all_width">
+        <div class="about_left">
+            <div class="index_title">
+                <div class="en_title">
+                    ABOUT
                 </div>
-
-                
-                            <img src="banner1.jpg" alt="AAA">
-                        
-
+                <div class="ch_title">
+                    關於威克
+                </div>
             </div>
-        
-            <div class="swiper-slide">
-
-                <div class="swiper-text">
-
-                    <h2>
-                        BBB
-                    </h2>
-
-                    
-                                <img src="icon2.svg" alt="icon" class="slide-icon">
-                            
-
-                    <p>
-                        222
-                    </p>
-
-                </div>
-
-                
-                            <img src="banner2.jpg" alt="BBB">
-                        
-
+            <p>
+                專注於汽車美容、汽車鍍膜、車體美容與內裝清潔保養，從日常洗車打蠟、汽車拋光美容，到車體鍍膜、玻璃鍍膜與車室深層清潔，依照不同車況與使用需求，提供合適的美容養護服務。
+            </p>
+            <div class="about_tag">
+                <span>
+                    讓愛車重現質感
+                </span>
+                <span>
+                    專注每一道細節
+                </span>
             </div>
         </div>
-
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- 滾動條 -->
-        <div class="swiper-scrollbar"></div>
+        <div class="about_right">
+            <img src="../img/ind_01.jpg" alt="">
+        </div>
+        <div class="about_runing">
+            WICK AUTO  WICK AUTO
+        </div>
     </div>
+</div>
 
+<div class="dec_bg">
+    <div class="all_width">
+        <div class="dec_in">
+            <h6>
+                工程師背景 <span>×</span> 職人精神 <span>×</span> 細節品質
+            </h6>
+            <p>
+                Will老闆本身是一位南科工程師，將工程師對細節、流程與品質的講究，延伸到對汽車美容的熱愛，投入職人手作汽車美容與鍍膜服務。從車漆狀況判斷、清潔處理、拋光修復到鍍膜防護，每一道工序都用心完成，不只追求洗乾淨，更重視車漆光澤、細節質感與後續防護。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="news index_bg">
+    <div class="all_width">
+        <div class="news_box">
+            <div class="news_left">
+                <div class="index_title">
+                    <div class="en_title">
+                        NEWS
+                    </div>
+                    <div class="ch_title">
+                        最新消息
+                    </div>
+                </div>
+            </div>
+            <div class="news_right">
+                <button class="index_btn">
+                    <span>MORE</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="service index_bg">
+    <div class="all_width">
+        <div class="service_box">
+            <div class="service_title">
+                <div class="service_left">
+                    <div class="index_title">
+                        <div class="en_title">
+                            SERVICE
+                        </div>
+                        <div class="ch_title">
+                            服務項目
+                        </div>
+                    </div>
+                </div>
+                <div class="service_right">
+                    <button class="index_btn">
+                        <span>SERVICE</span>
+                    </button>
+                </div>
+            </div>
+            <div class="service_item">
+                <div class="service_item_self">
+                    <img src="../img/index-01.svg" alt="">
+                    <p>洗車打蠟</p>
+                    <span>
+                        Car Wash &amp; Wax
+                    </span>
+                </div>
+                <div class="service_item_self">
+                    <img src="../img/index-02.svg" alt="">
+                    <p>汽車拋光美容</p>
+                    <span>
+                        Auto Polishing
+                    </span>
+                </div>
+                <div class="service_item_self">
+                    <img src="../img/index-03.svg" alt="">
+                    <p>車體鍍膜</p>
+                    <span>
+                        Ceramic Coating
+                    </span>
+                </div>
+                <div class="service_item_self">
+                    <img src="../img/index-04.svg" alt="">
+                    <p>玻璃鍍膜</p>
+                    <span>
+                        Glass Coating
+                    </span>
+                </div>
+                <div class="service_item_self">
+                    <img src="../img/index-05.svg" alt="">
+                    <p>汽車內裝清潔</p>
+                    <span>
+                        Interior Detailing
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="choose">
+    <div class="all_width">
+        <div class="choose_box">
+            <div class="index_title">
+                <div class="en_title">
+                    WHY CHOOSE US
+                </div>
+                <div class="ch_title">
+                    優勢特色
+                </div>
+            </div>
+            <div class="choose_item">
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            01
+                        </div>
+                        <div class="choose_item_title">
+                            工程師的細節堅持
+                        </div>
+                        <div class="choose_item_in">
+                            將工程師對流程與細節的講究帶進汽車美容，仔細處理、不馬虎，只為呈現更好的車體質感。
+                        </div>
+                    </div>
+                </div>
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            02
+                        </div>
+                        <div class="choose_item_title">
+                            依照車況評估服務
+                        </div>
+                        <div class="choose_item_in">
+                            威克依實際車況與車主需求，提供洗車、打蠟、拋光、鍍膜及內裝清潔等適合的美容建議。
+                        </div>
+                    </div>
+                </div>
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            03
+                        </div>
+                        <div class="choose_item_title">
+                            多元汽車美容服務
+                        </div>
+                        <div class="choose_item_in">
+                            從精緻洗車、打蠟，到拋光、車體鍍膜、玻璃鍍膜與內裝清潔，一站滿足愛車內外美容養護需求。
+                        </div>
+                    </div>
+                </div>
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            04
+                        </div>
+                        <div class="choose_item_title">
+                            職人手作細心施工
+                        </div>
+                        <div class="choose_item_in">
+                            汽車美容不只洗淨，更重視細節與品質。威克細心做好每道工序，讓愛車展現亮眼質感。
+                        </div>
+                    </div>
+                </div>
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            05
+                        </div>
+                        <div class="choose_item_title">
+                            深耕高雄在地服務
+                        </div>
+                        <div class="choose_item_in">
+                            以高雄前金為服務據點，專業服務高雄地區車主，用心累積信任，成為在地推薦的汽車美容店家。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact index_bg">
+    <div class="all_width">
+        <div class="contact_box">
+            <div class="contact_title">
+                <div class="contact_left">
+                    <div class="index_title">
+                        <div class="en_title">
+                            CONTACT
+                        </div>
+                        <div class="ch_title">
+                            聯絡資訊
+                        </div>
+                    </div>
+                    <div class="contact_title_dec">
+                        威克希望以一步一腳印的專業服務，成為高雄前金、美術館周邊備受推薦的汽車美容店家，讓每一位車主都能放心把愛車交給威克照顧！
+                    </div>
+                </div>
+                <div class="contact_right">
+                    <a href="https://maps.app.goo.gl/cL4qeAt57YVL3XEd6" class="contact_btn" target="_blank">
+                        <div>
+                            <div class="contact_btn_img"></div>
+                            <p>高雄市前金區</p>
+                            <p>三川里南台橫路124號</p>
+                        </div>
+                    </a>
+                    <a href="tel:0918011662" class="contact_btn">
+                        <div>
+                            <div class="contact_btn_img"></div>
+                            <p>0918-011662</p>
+                        </div>
+                    </a>
+                    <a href="https://line.me/R/ti/p/~@793mhxqh" class="contact_btn" target="_blank">
+                        <div>
+                            <div class="contact_btn_img"></div>
+                            <p>@793mhxqh</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact_in">
+        <div class="contact_square">
+            <div class="contact_en">
+                ENGINEERED WITH PRECISION CRAFTED WITH CARE
+            </div>
+            <div class="contact_ch">
+                <span>
+                    工程師的講究
+                </span>
+                <span>
+                    職人級的細節
+                </span>
+            </div>
+        </div>
+        <div class="contact_running">
+            <img src="../img/contact-bg.png" alt=""><img src="../img/contact-bg.png" alt=""> 
+        </div>
+    </div>
+</div>
+
+
+
+<!-- <div>
     <div class="about" id="about">
         滑動第一區塊公司名稱
     </div>
@@ -106,8 +863,6 @@
     <div class="contact" id="contact">
         滑動第三區塊
     </div>
-
-    <!-- 迴圈資料套用方式 -->
     <div class="faq">
         
             <div class="faq-item">
@@ -139,7 +894,9 @@
         
     </div>
         
-</div></main>
+</div> -->
+
+</main>
     
     <!-- <div id="footer"></div> -->
     
@@ -173,11 +930,5 @@
 
 
             <script src="js/jquery-3.7.1.min.js">
-            </script>
-        
-            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js">
-            </script>
-        
-            <script src="js/components/swiper.js">
             </script>
         </body></html>

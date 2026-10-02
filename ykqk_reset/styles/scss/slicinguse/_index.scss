@@ -151,7 +151,8 @@
         bottom: 148px;
         left: 0;
         z-index: 1;
-        animation: marquee 8s linear infinite;
+        animation: marquee 12s linear infinite;
+        white-space: nowrap;
     }
 }
 
@@ -237,6 +238,17 @@
                 margin-top: 85px;
                 .service_item_self {
                     text-align: center;
+                    &:nth-child(odd){
+                        img {
+                            animation: serviceAn 6s infinite;
+                        }
+                    }
+                    &:nth-child(even) {
+                        img {
+                            animation: serviceAn 6s infinite;
+                            animation-delay: -4s;
+                        }
+                    }
                     img {
                         margin-bottom: 24px;
                     }
@@ -255,5 +267,332 @@
                 }
             }
         }
+    }
+}
+
+
+@keyframes serviceAn{
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(-1);
+    }
+
+    80% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+// 優勢特色
+.choose {
+    background-image: url("../../../img/choose-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .all_width {
+        .choose_box {
+            padding: 0 14%;
+            padding-top: 102px;
+            padding-bottom: 150px;
+            .index_title {
+                .en_title,
+                .ch_title {
+                    color: #fff;
+                }
+            }
+            .choose_item {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                margin-top: 75px;
+                .choose_item_self {
+                    width: calc( ( 100% + 36px ) / 3 );
+                    aspect-ratio: 1 / 1;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 0 56px;
+                    box-sizing: border-box;
+                    margin-right: -18px;
+                    position: relative;
+                    z-index: 1;
+                    overflow: hidden;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        aspect-ratio: 1 / 1;
+                        border-radius: 50%;
+                        background: rgba(0, 0, 0, 0.25);
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%) scale(0);
+                        transition: transform 0.5s ease;
+                        pointer-events: none;
+                        z-index: 1;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        border-radius: 50%;
+                        background: repeating-conic-gradient(
+                            from 0deg,
+                            #fff 0deg 2deg,       // 虛線長度
+                            transparent 2deg 5deg // 虛線間距
+                        );
+                        mask: radial-gradient(
+                            farthest-side,
+                            transparent calc(100% - 2px),
+                            #000 calc(100% - 2px)
+                        );
+                        -webkit-mask: radial-gradient(
+                            farthest-side,
+                            transparent calc(100% - 2px),
+                            #000 calc(100% - 2px)
+                        );
+                        animation: chooseRotate 30s linear infinite;
+                        pointer-events: none;
+                    }
+                    &:nth-child(3n){
+                        margin-right: 0;
+                    }
+                    &:nth-child(4),
+                    &:nth-child(5){
+                        margin-top: -78px;
+                    }
+                    .choose_item_num {
+                        color: #B2B2B3;
+                        font-size: 22px;
+                        font-family: "Audiowide", sans-serif;
+                        margin-bottom: 4px;
+                    }
+                    .choose_item_title {
+                        color: #FFCC00;
+                        font-weight: 500;
+                        font-size: 20px;
+                        margin-bottom: 30px;
+                        letter-spacing: 2px;
+                    }
+                    .choose_item_in {
+                        font-size: 16px;
+                        line-height: 40px;
+                        letter-spacing: 3px;
+                    }
+                    .choose_item_num ,
+                    .choose_item_title ,
+                    .choose_item_in {
+                        position: relative;
+                        z-index: 2;
+                    }
+                    &:hover {
+                        &::after {
+                            transform: translate(-50%, -50%) scale(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes chooseRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+// 聯絡資訊
+.contact {
+    padding-bottom: 115px;
+    .all_width {
+        .contact_box {
+            padding: 0 14%;
+            padding-top: 82px;
+            .contact_title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 24px;
+                margin-bottom: 93px;
+                .contact_left {
+                    .contact_title_dec {
+                        margin-top: 40px;
+                        color: #595757;
+                        font-size: 16px;
+                        line-height: 30px;
+                        letter-spacing: 1.5px;
+                    }
+                }
+                .contact_right {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                    margin-top: 44px;
+                    .contact_btn {
+                        aspect-ratio: 1 / 1;
+                        width: 200px;
+                        height: 200px;
+                        margin-right: 24px;
+                        box-sizing: border-box;
+                        background-color: #221714;
+                        color: #fff;
+                        transition: all 0.7s;
+                        position: relative;
+                        top: 0;
+                        box-shadow: transparent;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        > div {
+                            display: flex;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            p {
+                                width: 100%;
+                                font-size: 14px;
+                                line-height: 24px;
+                                letter-spacing: 1px;
+                            }
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        .contact_btn_img {
+                            background-color: #fff;
+                            width: 40px;
+                            max-height: 40px;
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            margin-bottom: 20px;
+                            transition: all 0.7s;
+                        }
+                        &:nth-child(1) {
+                            .contact_btn_img {
+                                mask-image: url('../../../img/w-Location.svg');
+                            }
+                        }
+                        &:nth-child(2) {
+                            .contact_btn_img {
+                                mask-image: url('../../../img/w-phone.svg');
+                            }
+                        }
+                        &:nth-child(3) {
+                            .contact_btn_img {
+                                mask-image: url('../../../img/w-line.svg');
+                            }
+                        }
+                        &:hover {
+                            background-color: #FFCB00;
+                            top: -12px;
+                            color: #000;
+                            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+                            .contact_btn_img {
+                                background-color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact_in {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        .contact_running {
+            display: flex;
+            flex-wrap: nowrap;
+            width: max-content;
+            animation: contactRunning 35s linear infinite;
+            img {
+                display: block;
+                flex-shrink: 0;
+                margin-right: 12px;
+            }
+        }
+        .contact_square {
+            position: absolute;
+            z-index: 9;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 796px;
+            width: calc(100% - 40px);
+            background-color: rgba(34, 23, 20, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 55px 0;
+            .contact_en {
+                font-family: "Audiowide", sans-serif;
+                font-size: 35px;
+                margin-bottom: 8px;
+            }
+            .contact_ch {
+                font-size: 18px;
+                letter-spacing: 10px;
+                span {
+                    position: relative;
+                    &:first-child {
+                        margin-right: 12px;
+                        &::after ,
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            background-color: #fff;
+                            position: absolute;
+                        }
+                        &::after {
+                            left: -14px;
+                            top: 14px;
+                            width: 6px;
+                            height: 1px;
+                        }
+                        &::before {
+                            right: 6px;
+                            top: 5px;
+                            width: 1px;
+                            height: 19px;
+                        }
+                    }
+                    &:last-child {
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            background-color: #fff;
+                            position: absolute;
+                            right: -5px;
+                            top: 14px;
+                            width: 6px;
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 跑馬燈
+@keyframes contactRunning {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-2562px);
     }
 }

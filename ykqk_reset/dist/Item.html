@@ -1,0 +1,903 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版雛形</title>
+    
+    <!-- bootstrap套用 -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Swiper套用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    
+
+<style>
+/* ==================================================
+   Page SCSS
+   ================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans+TC:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.all_width {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.keyword_i {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.index_bg {
+  background-image: url("../../../img/service-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item {
+  padding-top: 103px;
+}
+
+.item_header {
+  background-color: #2E2A28;
+  margin: 0 14%;
+  display: flex;
+  align-items: center;
+}
+.item_header .item_header_btn {
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  padding: 48px 0;
+  width: 20%;
+  box-sizing: border-box;
+  position: relative;
+}
+.item_header .item_header_btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 13px;
+  width: 0;
+  transition: all 0.5s;
+  background: linear-gradient(to right, #FFC900, #21A937);
+}
+.item_header .item_header_btn span {
+  display: block;
+}
+.item_header .item_header_btn span:first-child {
+  font-size: 20px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+.item_header .item_header_btn span:last-child {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.item_header .item_header_btn:hover::before {
+  width: 100%;
+}
+
+.item_content {
+  display: flex;
+  gap: 106px;
+  flex-wrap: wrap;
+  margin: 225px 14% 0;
+}
+.item_content .item_content_self {
+  width: calc((100% - 106px) / 2);
+  border-bottom: solid 1px #868686;
+  margin-bottom: 80px;
+}
+.item_content .item_content_self:nth-child(1) .item_self_img {
+  background-image: url("../../../img/item-01.jpg");
+}
+.item_content .item_content_self:nth-child(2) .item_self_img {
+  background-image: url("../../../img/item-02.jpg");
+}
+.item_content .item_content_self:nth-child(3) .item_self_img {
+  background-image: url("../../../img/item-03.jpg");
+}
+.item_content .item_content_self:nth-child(4) .item_self_img {
+  background-image: url("../../../img/item-04.jpg");
+}
+.item_content .item_content_self:nth-child(5) .item_self_img {
+  background-image: url("../../../img/item-05.jpg");
+}
+.item_content .item_content_self:last-child {
+  border-bottom: 0;
+}
+.item_content .item_content_self .item_self_img {
+  display: flex;
+  padding: 105px 37px;
+  align-items: center;
+  gap: 30px;
+  color: #fff;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  margin-bottom: 23px;
+  position: relative;
+  text-shadow: 4px 4px 10px #595757;
+}
+.item_content .item_content_self .item_self_img:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 0;
+  background: linear-gradient(to bottom, #FFC900, #21A937);
+  transition: all 0.5s;
+}
+.item_content .item_content_self .item_self_img .item_self_img_left {
+  font-family: "Audiowide", sans-serif;
+  font-size: 90px;
+}
+.item_content .item_content_self .item_self_img .item_self_img_right span {
+  display: block;
+}
+.item_content .item_content_self .item_self_img .item_self_img_right span:first-child {
+  font-size: 35px;
+  line-height: 45px;
+  margin-bottom: 8px;
+}
+.item_content .item_content_self .item_self_img .item_self_img_right span:last-child {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.item_content .item_content_self:hover .item_self_img:before {
+  height: 100%;
+}
+.item_content .item_content_self .item_self_list {
+  padding-bottom: 72px;
+  position: relative;
+}
+.item_content .item_content_self .item_self_list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #595757;
+  font-size: 20px;
+  border-bottom: solid 1px #585656;
+  padding: 12px 18px;
+}
+.item_content .item_content_self .item_self_list li div {
+  letter-spacing: 2px;
+}
+.item_content .item_content_self .item_self_list li div:last-child {
+  font-weight: 500;
+}
+.item_content .item_content_self .item_self_list li div:last-child span {
+  font-size: 400;
+  color: #B92A07;
+  font-size: 22px;
+  font-family: Arial, sans-serif;
+  letter-spacing: 4px;
+  margin-right: 8px;
+}
+.item_content .item_content_self .item_self_list li .item_self_list_price {
+  margin-right: 20px;
+}
+.item_content .item_content_self .item_self_list .orange_tag {
+  color: #E97C1A;
+  position: absolute;
+  font-size: 16px;
+  bottom: 25px;
+  left: 20px;
+  letter-spacing: 2px;
+}
+.item_content .item_content_self .item_self_list .orange_tag::before {
+  content: "";
+  display: inline-block;
+  mask-image: url("../../../img/item-arrow.svg");
+  width: 11px;
+  height: 11px;
+  background-color: #E97C1A;
+  margin-right: 4px;
+}
+.item_content .item_content_self .item_self_square .item_self_square_self {
+  margin-bottom: 20px;
+}
+.item_content .item_content_self .item_self_square .item_self_square_self h6 {
+  display: inline-block;
+  background-color: #B92907;
+  color: #fff;
+  font-size: 20px;
+  padding: 3px 16px;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.item_content .item_content_self .item_self_square .item_self_square_self p {
+  font-size: 20px;
+  color: #595757;
+  letter-spacing: 2.5px;
+  line-height: 35px;
+}
+
+.item_self_btn {
+  margin-top: 31px;
+}
+.item_self_btn a {
+  color: #fff;
+  background-color: #000;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 200px;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+.item_self_btn a span {
+  position: relative;
+  z-index: 2;
+}
+.item_self_btn a:after {
+  content: "";
+  mask-image: url("../../../img/btn-arrow.svg");
+  display: inline-block;
+  width: 13px;
+  height: 10px;
+  background-color: #fff;
+  margin-left: 6px;
+  position: relative;
+  z-index: 2;
+}
+.item_self_btn a:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 50px;
+  background-color: #ffcc00;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.item_self_btn a:hover {
+  color: #211713;
+}
+.item_self_btn a:hover:after {
+  background-color: #211713;
+}
+.item_self_btn a:hover::before {
+  width: 200px;
+}
+
+.item_self_square_green {
+  margin-top: 60px;
+}
+.item_self_square_green span {
+  display: inline-block;
+  color: #fff;
+  background-color: #21A937;
+  font-size: 20px;
+  padding: 3px 16px;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1440px) {
+  .item_content {
+    gap: 0;
+  }
+  .item_content .item_content_self {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+    <!-- <div id="header"></div> -->
+    
+    <main id="main-content"><!-- 服務項目 --><div class="item index_bg">
+    <div class="all_width">
+        <div class="item_header">
+            <a class="item_header_btn" href="#a">
+                <span>
+                    洗車打蠟
+                </span>
+                <span>
+                    Car Wash &amp; Wax
+                </span>
+            </a>
+            <a class="item_header_btn" href="#b">
+                <span>
+                    汽車拋光美容
+                </span>
+                <span>
+                    Auto Polishing
+                </span>
+            </a>
+            <a class="item_header_btn" href="#c">
+                <span>
+                    車體鍍膜
+                </span>
+                <span>
+                    Ceramic Coating
+                </span>
+            </a>
+            <a class="item_header_btn" href="#d">
+                <span>
+                    玻璃鍍膜
+                </span>
+                <span>
+                    Glass Coating
+                </span>
+            </a>
+            <a class="item_header_btn" href="#e">
+                <span>
+                    汽車內裝清潔
+                </span>
+                <span>
+                    Interior Detailing
+                </span>
+            </a>
+        </div>
+        <div class="item_content">
+            <div class="item_content_self" id="a">
+                <div class="item_self_img">
+                    <div class="item_self_img_left">
+                        1
+                    </div>
+                    <div class="item_self_img_right">
+                        <span>
+                            洗車打蠟
+                        </span>
+                        <span>
+                            Auto Polishing
+                        </span>
+                    </div>
+                </div>
+                <div class="item_self_list">
+                    <ul>
+                        <li>
+                            <div>
+                                基礎洗車打蠟
+                            </div>
+                            <div>
+                                <span>
+                                    $1,200
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                精緻棕櫚蠟
+                            </div>
+                            <div>
+                                <span>
+                                    $1,400
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                長效封體蠟
+                            </div>
+                            <div>
+                                <span>
+                                    $1,700
+                                </span>
+                                起
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item_self_square">
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                基礎洗車打蠟
+                            </h6>
+                        </div>
+                        <p>
+                            把車洗乾淨＋上一層「短期保護蠟」，適合常洗、重視當下乾淨與基本光澤的人。
+                        </p>
+                    </div>
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                精緻棕櫚蠟
+                            </h6>
+                        </div>
+                        <p>
+                            在基礎之上改用「天然棕櫚蠟」，光澤更溫潤、深度更好，但持久度仍屬短期。
+                        </p>
+                    </div>
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                長效封體蠟
+                            </h6>
+                        </div>
+                        <p>
+                            改用「合成封體劑（sealant）」，保護與耐久度明顯拉長，抗 UV、耐洗車與汙染物能力更好，適合想少頻繁回廠的人。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item_content_self" id="b">
+                <div class="item_self_img">
+                    <div class="item_self_img_left">
+                        2
+                    </div>
+                    <div class="item_self_img_right">
+                        <span>
+                            汽車拋光美容
+                        </span>
+                        <span>
+                            Auto Polishing
+                        </span>
+                    </div>
+                </div>
+                <div class="item_self_list">
+                    <ul>
+                        <li>
+                            <div>
+                                快速拋光
+                            </div>
+                            <div>
+                                <span>
+                                    $4,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                鏡面美容
+                            </div>
+                            <div>
+                                <span>
+                                    $5,500
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                極致大美容
+                            </div>
+                            <div>
+                                <span>
+                                    $8,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item_self_square">
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                快速拋光
+                            </h6>
+                        </div>
+                        <p>
+                            去除車身漆面顏色不均勻（黑刁底）、輕微水斑、水垢水痕、洗車痕，讓車漆快速提亮、增艷，適合日常保養。
+                        </p>
+                    </div>
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                鏡面美容
+                            </h6>
+                        </div>
+                        <p>
+                            在快速拋光的基礎下，進一步改善車漆細紋、太陽紋，光線下不平整，提升漆面的平整度。適合想進一步明顯提升質感、拍照好看的車主。
+                        </p>
+                    </div>
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                極致大美容
+                            </h6>
+                        </div>
+                        <p>
+                            全車拋光＋細節處理，將深層傷痕拋光改善成淺層細紋，將全車淺層細紋拋光移除達到接近鏡面的效果，修復全車車漆90%刮傷以上，適合想要長期維持車況者。
+                    </p></div>
+                </div>
+            </div>
+            <div class="item_content_self" id="c">
+                <div class="item_self_img">
+                    <div class="item_self_img_left">
+                        3
+                    </div>
+                    <div class="item_self_img_right">
+                        <span>
+                            車體鍍膜
+                        </span>
+                        <span>
+                            Ceramic Coating
+                        </span>
+                    </div>
+                </div>
+                <div class="item_self_list">
+                    <ul>
+                        <li>
+                            <div>
+                                一年期鍍膜｜水晶鍍膜
+                            </div>
+                            <div>
+                                <span>
+                                    $16,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                兩年期鍍膜｜石英陶瓷鍍膜
+                            </div>
+                            <div>
+                                <span>
+                                    $21,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                三年期鍍膜｜奈米金鑽鍍膜
+                            </div>
+                            <div>
+                                <span>
+                                    $28,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="orange_tag">
+                        以上項目均依照車型進行報價
+                    </div>
+                </div>
+                <div class="item_self_square">
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                一年期鍍膜｜水晶鍍膜$16,000 起
+                            </h6>
+                        </div>
+                        <p>
+                            入門長效保護，適合日常通勤、想要比打蠟更久更亮的車主。
+                        </p>
+                    </div>
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                兩年期鍍膜｜石英陶瓷鍍膜$21,000 起
+                            </h6>
+                        </div>
+                        <p>
+                            中階高硬度、耐酸雨與抗細紋更好，適合南部多雨、常戶外停車或對光澤要求更高的車主。
+                        </p>
+                    </div>
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                三年期鍍膜｜奈米金鑽鍍膜$28,000 起
+                            </h6>
+                        </div>
+                        <p>
+                            頂級長效與抗污能力，適合新車、高單價車款、或希望一次做到位、長期減少維護頻率的車主。
+                        </p>
+                    </div>
+                </div>
+                <div class="item_self_btn">
+                    <a href="https://willcleandetailing.com/paper/other_page.php?id=21399" target="_blank">
+                        <span>鍍膜施工流程</span>
+                    </a>
+                </div>
+                <div class="item_self_square_green">
+                    <span>
+                        可單獨購買項目：
+                    </span>
+                </div>
+                <div class="item_self_list">
+                    <ul>
+                        <li>
+                            <div>
+                                前後燈殼鍍膜
+                            </div>
+                            <div>
+                                <span>
+                                    $2,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                塑料鍍膜
+                            </div>
+                            <div>
+                                <span>
+                                    $2,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                輪框鍍膜
+                            </div>
+                            <div>
+                                <span>
+                                    $4,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item_content_self" id="d">
+                <div class="item_self_img">
+                    <div class="item_self_img_left">
+                        4
+                    </div>
+                    <div class="item_self_img_right">
+                        <span>
+                            玻璃鍍膜
+                        </span>
+                        <span>
+                            Glass Coating
+                        </span>
+                    </div>
+                </div>
+                <div class="item_self_list">
+                    <ul>
+                        <li>
+                            <div>
+                                前檔玻璃鍍膜
+                            </div>
+                            <div>
+                                <span>
+                                    $1,300
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                全車玻璃鍍膜
+                            </div>
+                            <div>
+                                <span>
+                                    $2,500
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                前檔強效玻鍍
+                            </div>
+                            <div>
+                                <span>
+                                    $2,500
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                全車強效玻鍍
+                            </div>
+                            <div>
+                                <span>
+                                    $3,200
+                                </span>
+                                起
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="item_self_square">
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                玻璃鍍膜施工
+                            </h6>
+                        </div>
+                        <p>
+                            透過玻璃表面清潔與鍍膜防護，提升撥水效果並減少水漬、髒污附著，讓玻璃日常清潔維護更加輕鬆。
+                        </p>
+                    </div>
+                </div>
+                <div class="item_self_btn ">
+                    <a href="https://willcleandetailing.com/paper/other_page.php?id=21399" target="_blank">
+                        <span>鍍膜施工流程</span>
+                    </a>
+                </div>
+            </div>
+            <div class="item_content_self" id="e">
+                <div class="item_self_img">
+                    <div class="item_self_img_left">
+                        5
+                    </div>
+                    <div class="item_self_img_right">
+                        <span>
+                            車室防疫護理
+                        </span>
+                        <span>
+                            Interior Detailing
+                        </span>
+                    </div>
+                </div>
+                <div class="item_self_list">
+                    <ul>
+                        <li>
+                            <div>
+                                內裝潔淨美容(依車型報價)
+                            </div>
+                            <div>
+                                <span>
+                                    $4,000
+                                </span>
+                                起
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="orange_tag">
+                        內裝全套深度清潔＋保養方案，適合半年～一年做一次的大保養
+                    </div>
+                </div>
+                <div class="item_self_square">
+                    <div class="item_self_square_self">
+                        <div>
+                            <h6>
+                                施工內容包含：
+                            </h6>
+                        </div>
+                        <p>
+                            1.全車深度吸塵（座椅縫隙、地毯、後車廂）<br>
+                            2.布椅/地毯/頂棚的重點去汙清潔<br>
+                            3.儀表板、門板、中控台等塑膠、橡膠件的清潔＋上保護<br>
+                            4.皮革清潔＋保養（若全車皮椅）<br>
+                            5.視情況做蒸氣殺菌 / 除臭處理<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="item_self_square_green">
+                    <span>
+                        可單獨購買項目：
+                    </span>
+                </div>
+                <div class="item_self_list">
+                    <ul>
+                        <li>
+                            <div>
+                                奈米光觸媒O3殺菌
+                            </div>
+                            <div>
+                                <span>
+                                    $600
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                銀離子除臭循環淨化
+                            </div>
+                            <div>
+                                <span>
+                                    $700
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                皮革清潔保養護理
+                            </div>
+                            <div>
+                                <span>
+                                    $600
+                                </span>
+                                起
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                其他（如嘔吐物、食物翻倒內裝清潔）
+                            </div>
+                            <div class="item_self_list_price">
+                                <span>
+                                    評估後報價
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+    
+    <!-- <div id="footer"></div> -->
+    
+    <!-- 彈窗內容 -->
+    <div id="modal_container"></div>
+
+
+
+
+<!-- 共用模板引擎 -->
+
+<!-- gsap套用 -->
+ 
+
+<!-- bootstrap套用 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- Swiper套用 -->
+
+<!-- 其他套用 -->
+
+
+
+
+
+
+
+
+
+<!-- 進場動畫 -->
+
+
+
+            <script src="js/jquery-3.7.1.min.js">
+            </script>
+        </body></html>
