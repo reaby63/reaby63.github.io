@@ -2,6 +2,8 @@
 
 
 .box_container {
+--c-offset: 80px;
+
 
 // 共用樣式
 .index_bg {
@@ -16,19 +18,27 @@
         display: block;
         background-color: #ffcb00;
         height: 4px;
-        width: 280px;
+        width: 0;
         margin-bottom: 55px;
+        transition: all 0.5s;
     }
     .en_title {
         font-size: 60px;
         font-family: "Audiowide", sans-serif;
         color: #221814;
+        transition-delay: 0.3s;
     }
     .ch_title {
         font-size: 30px;
         font-weight: 600;
         letter-spacing: 2px;
         color: #221814;
+        transition-delay: 0.5s;
+    }
+    &.in-view {
+        &:before {
+            width: 280px;
+        }
     }
 }
 
@@ -85,6 +95,7 @@
             transition: all 0.5s;
             position: relative;
             z-index: 1;
+            transition-delay: 0.8s;
             span {
                 position: relative;
                 z-index: 2;
@@ -151,10 +162,11 @@
                     content: "";
                     position: absolute;
                     height: 12px;
-                    width: 235px;
+                    width: 0;
                     left: -13px;
                     bottom: 0;
                     background-color: #FFC700;
+                    transition: all 0.5s;
                 }
                 .process_list_self_num {
                     font-size: 60px;
@@ -174,18 +186,26 @@
                     letter-spacing: 1px;
                     font-family: Arial, sans-serif;
                 }
+                &.in-view {
+                    &::after {
+                        width: 235px;
+                        transition-delay: 0.8s;
+                    }
+                }
             }
             .process_list_self_tag {
                 font-size: 18px;
                 font-weight: 500;
                 letter-spacing: 2px;
                 margin-bottom: 55px;
+                transition-delay: 1.2s;
             }
             p {
                 color: #595757;
                 font-size: 16px;
                 line-height: 30px;
                 letter-spacing: 3px;
+                transition-delay: 1.8s;
             }
         }
         .process_list_self_img {
@@ -193,6 +213,7 @@
             width: 50%;
             height: -webkit-fill-available;
             overflow: hidden;
+            opacity: 0;
             img {
                 width: 100%;
                 object-fit: cover;
@@ -209,9 +230,48 @@
                 }
             }
         }
+        &.in-view {
+            &:nth-child(odd) {
+                .process_list_self_img {
+                    transform: translateX(50px);
+                    animation: fadeInRight 1.5s ease-out forwards;
+                    animation-delay: 0.8s;
+                }
+            }
+            &:nth-child(even) {
+                .process_list_self_img {
+                    transform: translateX(50px);
+                    animation: fadeInLeft 1.5s ease-out forwards;
+                    animation-delay: 0.8s;
+                }
+            }
+        }
     }
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 .process_step {
     background-image: url("../../../img/process-pic2.jpg");
@@ -236,6 +296,7 @@
             font-size: 20px;
             font-weight: 500;
             letter-spacing: 3px;
+            transition-delay: 1.5s;
             &::before {
                 content: "";
                 position: absolute;

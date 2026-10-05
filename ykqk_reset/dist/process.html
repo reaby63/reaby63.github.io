@@ -7,6 +7,9 @@
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- Swiper套用 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://pic03.eapple.com.tw/yk_js_web/cmp.js"></script> 
+    <link rel="stylesheet" href="https://pic03.eapple.com.tw/yk_js_web/cmp.css">
     
 
 <style>
@@ -76,6 +79,9 @@
   display: none;
 }
 
+.box_container {
+  --c-offset: 80px;
+}
 .box_container .index_bg {
   background-image: url("https://pic03.eapple.com.tw/willclean/service-bg.jpg");
   background-repeat: no-repeat;
@@ -86,19 +92,25 @@
   display: block;
   background-color: #ffcb00;
   height: 4px;
-  width: 280px;
+  width: 0;
   margin-bottom: 55px;
+  transition: all 0.5s;
 }
 .box_container .index_title .en_title {
   font-size: 60px;
   font-family: "Audiowide", sans-serif;
   color: #221814;
+  transition-delay: 0.3s;
 }
 .box_container .index_title .ch_title {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 2px;
   color: #221814;
+  transition-delay: 0.5s;
+}
+.box_container .index_title.in-view:before {
+  width: 280px;
 }
 .box_container .process_header {
   background-image: url("https://pic03.eapple.com.tw/willclean/process-pic.jpg");
@@ -153,6 +165,7 @@
   transition: all 0.5s;
   position: relative;
   z-index: 1;
+  transition-delay: 0.8s;
 }
 .box_container .process_header .process_header_title a span {
   position: relative;
@@ -220,10 +233,11 @@
   content: "";
   position: absolute;
   height: 12px;
-  width: 235px;
+  width: 0;
   left: -13px;
   bottom: 0;
   background-color: #FFC700;
+  transition: all 0.5s;
 }
 .box_container .process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_num {
   font-size: 60px;
@@ -243,23 +257,30 @@
   letter-spacing: 1px;
   font-family: Arial, sans-serif;
 }
+.box_container .process_list .process_list_self .process_list_self_text .process_list_self_title.in-view::after {
+  width: 235px;
+  transition-delay: 0.8s;
+}
 .box_container .process_list .process_list_self .process_list_self_text .process_list_self_tag {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 2px;
   margin-bottom: 55px;
+  transition-delay: 1.2s;
 }
 .box_container .process_list .process_list_self .process_list_self_text p {
   color: #595757;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 3px;
+  transition-delay: 1.8s;
 }
 .box_container .process_list .process_list_self .process_list_self_img {
   max-width: 780px;
   width: 50%;
   height: -webkit-fill-available;
   overflow: hidden;
+  opacity: 0;
 }
 .box_container .process_list .process_list_self .process_list_self_img img {
   width: 100%;
@@ -271,6 +292,36 @@
 }
 .box_container .process_list .process_list_self:hover .process_list_self_img img {
   transform: scale(1.05);
+}
+.box_container .process_list .process_list_self.in-view:nth-child(odd) .process_list_self_img {
+  transform: translateX(50px);
+  animation: fadeInRight 1.5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+.box_container .process_list .process_list_self.in-view:nth-child(even) .process_list_self_img {
+  transform: translateX(50px);
+  animation: fadeInLeft 1.5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .box_container .process_step {
   background-image: url("https://pic03.eapple.com.tw/willclean/process-pic2.jpg");
@@ -297,6 +348,7 @@
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
+  transition-delay: 1.5s;
 }
 .box_container .process_step .process_step_title .process_step_right::before {
   content: "";
@@ -494,7 +546,7 @@
 <div class="process_header">
     <div class="process_header_title">
         <div>
-            <p>
+            <p data-ani="up">
                 <span>
                     從車況評估到完工交車
                 </span>
@@ -502,7 +554,7 @@
                     每一步都細心對待
                 </span>
             </p>
-            <a href="https://willcleandetailing.com/paper/other_page.php?id=21398" target="_blank">
+            <a data-ani="up" href="https://willcleandetailing.com/paper/other_page.php?id=21398" target="_blank">
                 <span>
                     SERVICE
                 </span>
@@ -515,158 +567,158 @@
 
 <div class="process_list index_bg">
     <div class="all_width">
-        <div class="process_list_self">
+        <div class="process_list_self" data-ani="">
             <div class="process_list_self_img">
                 <img src="https://pic03.eapple.com.tw/willclean/01.jpg" alt="">
             </div>
             <div class="process_list_self_text">
-                <div class="process_list_self_title">
-                    <div class="process_list_self_num">
+                <div class="process_list_self_title" data-ani="">
+                    <div class="process_list_self_num" data-ani="up">
                         01
                     </div>
                     <div>
-                        <div class="process_list_self_ch">
+                        <div class="process_list_self_ch" data-ani="up">
                             預約諮詢
                         </div>
-                        <div class="process_list_self_en">
+                        <div class="process_list_self_en" data-ani="up">
                             Consultation
                         </div>
                     </div>
                 </div>
-                <div class="process_list_self_tag">
+                <div class="process_list_self_tag" data-ani="up">
                     了解需求，安排合適服務
                 </div>
-                <p>
+                <p data-ani="up">
                     透過電話或線上聯繫威克，告知車型、目前車況及想施作的服務項目，預約合適的到店時間。
                 </p>
             </div>
         </div>
-        <div class="process_list_self">
+        <div class="process_list_self" data-ani="">
             <div class="process_list_self_img">
                 <img src="https://pic03.eapple.com.tw/willclean/02.jpg" alt="">
             </div>
             <div class="process_list_self_text">
-                <div class="process_list_self_title">
-                    <div class="process_list_self_num">
+                <div class="process_list_self_title" data-ani="">
+                    <div class="process_list_self_num" data-ani="up">
                         02
                     </div>
                     <div>
-                        <div class="process_list_self_ch">
+                        <div class="process_list_self_ch" data-ani="up">
                             車況評估
                         </div>
-                        <div class="process_list_self_en">
+                        <div class="process_list_self_en" data-ani="up">
                             Vehicle Assessment
                         </div>
                     </div>
                 </div>
-                <div class="process_list_self_tag">
+                <div class="process_list_self_tag" data-ani="up">
                     實際檢視，確認施作內容
                 </div>
-                <p>
+                <p data-ani="up">
                     車輛到店後進行車況與漆面檢視，依實際狀況及車主需求，建議合適的汽車美容、打蠟、拋光、鍍膜或內裝清潔方案。
                 </p>
             </div>
         </div>
-        <div class="process_list_self">
+        <div class="process_list_self" data-ani="">
             <div class="process_list_self_img">
                 <img src="https://pic03.eapple.com.tw/willclean/03.jpg" alt="">
             </div>
             <div class="process_list_self_text">
-                <div class="process_list_self_title">
-                    <div class="process_list_self_num">
+                <div class="process_list_self_title" data-ani="">
+                    <div class="process_list_self_num" data-ani="up">
                         03
                     </div>
                     <div>
-                        <div class="process_list_self_ch">
+                        <div class="process_list_self_ch" data-ani="up">
                             確認方案
                         </div>
-                        <div class="process_list_self_en">
+                        <div class="process_list_self_en" data-ani="up">
                             Plan Confirmation
                         </div>
                     </div>
                 </div>
-                <div class="process_list_self_tag">
+                <div class="process_list_self_tag" data-ani="up">
                     項目說清楚，再開始施工
                 </div>
-                <p>
+                <p data-ani="up">
                     確認施作項目、費用及預計作業時間，讓車主了解本次服務內容後，再進行後續汽車美容施作。
                 </p>
             </div>
         </div>
-        <div class="process_list_self">
+        <div class="process_list_self" data-ani="">
             <div class="process_list_self_img">
                 <img src="https://pic03.eapple.com.tw/willclean/04.jpg" alt="">
             </div>
             <div class="process_list_self_text">
-                <div class="process_list_self_title">
-                    <div class="process_list_self_num">
+                <div class="process_list_self_title" data-ani="">
+                    <div class="process_list_self_num" data-ani="up">
                         04
                     </div>
                     <div>
-                        <div class="process_list_self_ch">
+                        <div class="process_list_self_ch" data-ani="up">
                             專業施作
                         </div>
-                        <div class="process_list_self_en">
+                        <div class="process_list_self_en" data-ani="up">
                             Expert Application
                         </div>
                     </div>
                 </div>
-                <div class="process_list_self_tag">
+                <div class="process_list_self_tag" data-ani="up">
                     講究細節，用心處理每一道工序
                 </div>
-                <p>
+                <p data-ani="up">
                     依選擇的服務方案進行車體清潔、汽車打蠟、拋光美容、車體鍍膜、玻璃鍍膜或內裝清潔，針對不同部位細心處理。
                 </p>
             </div>
         </div>
-        <div class="process_list_self">
+        <div class="process_list_self" data-ani="">
             <div class="process_list_self_img">
                 <img src="https://pic03.eapple.com.tw/willclean/05.jpg" alt="">
             </div>
             <div class="process_list_self_text">
-                <div class="process_list_self_title">
-                    <div class="process_list_self_num">
+                <div class="process_list_self_title" data-ani="">
+                    <div class="process_list_self_num" data-ani="up">
                         05
                     </div>
                     <div>
-                        <div class="process_list_self_ch">
+                        <div class="process_list_self_ch" data-ani="up">
                             完工檢查
                         </div>
-                        <div class="process_list_self_en">
+                        <div class="process_list_self_en" data-ani="up">
                             Final Inspection
                         </div>
                     </div>
                 </div>
-                <div class="process_list_self_tag">
+                <div class="process_list_self_tag" data-ani="up">
                     再次確認，把關施作品質
                 </div>
-                <p>
+                <p data-ani="up">
                     服務完成後進行整體檢查，確認車體外觀、細節及施作項目完成狀況，做好最後品質把關。
                 </p>
             </div>
         </div>
-        <div class="process_list_self">
+        <div class="process_list_self" data-ani="">
             <div class="process_list_self_img">
                 <img src="https://pic03.eapple.com.tw/willclean/06.jpg" alt="">
             </div>
             <div class="process_list_self_text">
-                <div class="process_list_self_title">
-                    <div class="process_list_self_num">
+                <div class="process_list_self_title" data-ani="">
+                    <div class="process_list_self_num" data-ani="up">
                         06
                     </div>
                     <div>
-                        <div class="process_list_self_ch">
+                        <div class="process_list_self_ch" data-ani="up">
                             交車說明
                         </div>
-                        <div class="process_list_self_en">
+                        <div class="process_list_self_en" data-ani="up">
                             Handover &amp; Overview
                         </div>
                     </div>
                 </div>
-                <div class="process_list_self_tag">
+                <div class="process_list_self_tag" data-ani="up">
                     安心交車，保養方式一次說明
                 </div>
-                <p>
+                <p data-ani="up">
                     完工後與車主確認車況，依施作項目說明後續清潔與日常養護注意事項，讓美容與鍍膜持效得更長久。
                 </p>
             </div>
@@ -678,21 +730,21 @@
     <div class="all_width">
         <div class="process_step_title">
             <div class="process_step_left">
-                <div class="index_title">
-                    <div class="en_title">
+                <div class="index_title" data-ani="">
+                    <div class="en_title" data-ani="up">
                         PROCESS
                     </div>
-                    <div class="ch_title">
+                    <div class="ch_title" data-ani="up">
                         鍍膜施工流程
                     </div>
                 </div>
             </div>
-            <div class="process_step_right">
+            <div class="process_step_right" data-ani="up">
                 整體專業施工時間約 8–10 小時，會依車漆狀況與車齡微調。
             </div>
         </div>
         <div class="process_step_grid">
-            <div class="process_step_grid_self">
+            <div class="process_step_grid_self" data-ani="up">
                 <div class="process_step_grid_title">
                     STEP 01
                 </div>
@@ -703,7 +755,7 @@
                     進廠後先讓車身散熱並拆除車牌，方便完整施工。
                 </p>
             </div>
-            <div class="process_step_grid_self">
+            <div class="process_step_grid_self" data-ani="up">
                 <div class="process_step_grid_title">
                     STEP 02
                 </div>
@@ -714,7 +766,7 @@
                     包含預洗、柏油鐵粉去除、鋁圈深層清潔、兩次泡沫清洗，徹底帶走泥沙、髒汙與化學殘留。
                 </p>
             </div>
-            <div class="process_step_grid_self">
+            <div class="process_step_grid_self" data-ani="up">
                 <div class="process_step_grid_title">
                     STEP 03
                 </div>
@@ -725,7 +777,7 @@
                     清除玻璃油汙，並用奈米磁土布去除車漆表面細小顆粒，讓觸感更滑順。
                 </p>
             </div>
-            <div class="process_step_grid_self">
+            <div class="process_step_grid_self" data-ani="up">
                 <div class="process_step_grid_title">
                     STEP 04
                 </div>
@@ -736,7 +788,7 @@
                     視車況進行拋光，修正輕微紋路、提升光澤，為鍍膜打好基礎。
                 </p>
             </div>
-            <div class="process_step_grid_self">
+            <div class="process_step_grid_self" data-ani="up">
                 <div class="process_step_grid_title">
                     STEP 05
                 </div>
@@ -747,7 +799,7 @@
                     使用風槍將縫隙與飾條吹乾，再對車漆、玻璃與塑膠件脫脂，確保鍍膜附著力。
                 </p>
             </div>
-            <div class="process_step_grid_self process_step_grid_self_big">
+            <div class="process_step_grid_self process_step_grid_self_big" data-ani="up">
                 <div class="process_step_grid_self">
                     <div class="process_step_grid_title">
                         STEP 06
@@ -808,7 +860,7 @@
                     </div>
                 </div>
             </div>
-            <div class="process_step_grid_self">
+            <div class="process_step_grid_self" data-ani="up">
                 <div class="process_step_grid_title">
                     STEP 07
                 </div>
@@ -819,7 +871,7 @@
                     車內吸塵、擦拭、腳踏墊清洗，並進行空調循環消毒殺菌。
                 </p>
             </div>
-            <div class="process_step_grid_self">
+            <div class="process_step_grid_self" data-ani="up">
                 <div class="process_step_grid_title">
                     STEP 08
                 </div>
@@ -835,7 +887,6 @@
 </div>
 </div></main>
     
-
 
 
 
@@ -859,6 +910,7 @@
 
 
 <!-- 進場動畫 -->
+
 
 
 

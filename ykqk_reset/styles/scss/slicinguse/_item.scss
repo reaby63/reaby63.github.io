@@ -1,6 +1,7 @@
 @use "../base/Reset" as *;
 
 .box_container {
+--c-offset: 100px;
 
 html {
     scroll-behavior: smooth;

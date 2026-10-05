@@ -2,6 +2,7 @@
 
 // 共用樣式
 .box_container {
+--c-offset: 80px;
 
 .contact_header {
     background-image: url("../../../img/contact-pic.jpg");
@@ -63,6 +64,7 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                transition-delay: 0.5s;
                 > div {
                     display: flex;
                     justify-content: center;
@@ -135,6 +137,7 @@
             box-sizing: border-box;
             position: relative;
             margin-top: 45px;
+            transition-delay: 0.5s;
             .contact_content_link_title {
                 position: absolute;
                 top: -45px;
