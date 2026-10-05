@@ -54,16 +54,12 @@
   },
   "faq": [
     {
-        "question": "Q1 什麼是你們的服務？",
-        "answer": "A1 我們提供網站設計與前端切版服務。"
+        "question": "Q1 123",
+        "answer": "A1 資料1"
     },
     {
-        "question": "Q2 網站製作需要多久？",
-        "answer": "A2 一般網站約需要 2～4 週。"
-    },
-    {
-        "question": "Q3 可以做 RWD 嗎？",
-        "answer": "A3 可以，我們會製作手機、平板與桌機版本。"
+        "question": "Q2 456",
+        "answer": "A2 資料2"
     }
 ]
 }

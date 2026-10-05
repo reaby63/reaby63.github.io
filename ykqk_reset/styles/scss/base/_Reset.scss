@@ -1,42 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans+TC:wght@100..900&display=swap');
-* {
+ /* Module Settings*/
+.pageIndex {
+    max-width: 100%;
     padding: 0;
-    margin: 0;
-    font-family: "Noto Sans TC", sans-serif;
-    font-optical-sizing: auto;
 }
-
-body {
-    overflow-x: hidden;
-    min-height: 100dvh;
-    scroll-behavior: smooth;
-    margin: 0;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    border: 0;
+.main_part {
+    max-width: 2000px;
     padding: 0;
-    margin: 0;
-    cursor: pointer;
-}
-
-.all_width {
-    max-width: 1920px;
     margin: 0 auto;
 }
-
-button {
-    border: 0;
+.edit,
+.edit_part,
+.show_content,
+.main_part {
+    width: 100%;
+    max-width: 100%;
     padding: 0;
-    margin: 0;
-    cursor: pointer;
+}
+.edit * {
+    word-break: normal;
 }
 
-.keyword_i {
-    display: none;
+.box_container {
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Noto Sans TC", sans-serif;
+        font-optical-sizing: auto;
+    }
+
+    body {
+        overflow-x: hidden;
+        min-height: 100dvh;
+        scroll-behavior: smooth;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .all_width {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+
+    button {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .keyword_i {
+        display: none;
+    }
 }

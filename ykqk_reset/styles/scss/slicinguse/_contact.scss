@@ -1,0 +1,277 @@
+@use "../base/Reset" as *;
+
+// 共用樣式
+.box_container {
+
+.contact_header {
+    background-image: url("../../../img/contact-pic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 138px 0 110px;
+    .contact_header_title {
+        color: #fff;
+        text-align: center;
+        .contact_header_title_top {
+            p {
+                font-size: 22px;
+                letter-spacing: 3px;
+                span {
+                    display: inline-block;
+                    margin-right: 25px;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 7px;
+                        right: -16px;
+                        width: 1px;
+                        height: 22px;
+                        background-color: #fff;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+                &:first-child {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        .contact_header_title_bottom {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            margin-top: 225px;
+            .contact_btn {
+                aspect-ratio: 1 / 1;
+                width: 200px;
+                height: 200px;
+                margin-right: 24px;
+                box-sizing: border-box;
+                background-color: transparent;
+                border: solid 1px #fff;
+                color: #fff;
+                transition: all 0.7s;
+                position: relative;
+                top: 0;
+                box-shadow: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                > div {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    p {
+                        width: 100%;
+                        font-size: 14px;
+                        line-height: 24px;
+                        letter-spacing: 1px;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                .contact_btn_img {
+                    width: 40px;
+                    max-height: 40px;
+                    height: 100%;
+                    aspect-ratio: 1 / 1;
+                    margin-bottom: 20px;
+                    transition: all 0.7s;
+                }
+                .contact_btn_location {
+                    width: 100%;
+                }
+                &:hover {
+                    background-color: #FFCB00;
+                    top: -12px;
+                    color: #000;
+                    border: solid 1px #FFCB00;
+                    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+                    .contact_btn_img {
+                        filter: brightness(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact_content {
+    padding-top: 90px;
+    padding-bottom: 100px;
+    .all_width {
+        padding: 0 14%;
+    }
+    .contact_content_title {
+        color: #221814;
+        text-align: center;
+        margin-bottom: 51px;
+        h6 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 2.5px;
+        }
+        p {
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+    }
+    .contact_content_bottom {
+        padding: 0 82px;
+        display: flex;
+        gap: 144px;
+        .contact_content_link {
+            background-color: #FFCA00;
+            border: solid 1px #2E2A28;
+            padding-top: 44px;
+            box-sizing: border-box;
+            position: relative;
+            margin-top: 45px;
+            .contact_content_link_title {
+                position: absolute;
+                top: -45px;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                background-color: #2E2A28;
+                color: #fff;
+                width: 237px;
+                padding: 4px 0;
+                div {
+                    font-size: 23px;
+                    font-weight: 500;
+                    margin-bottom: 2px;
+                    letter-spacing: 3px;
+                }
+                p {
+                    font-size: 16px;
+                    font-family: Arial, sans-serif;
+                    letter-spacing: 1px;
+                }
+            }
+            .contact_content_in {
+                background-color: #D4D4D4;
+                padding: 30px 35px;
+            }
+        }
+        .contact_content_map {
+            width: calc( 100% - 410px );
+        }
+        .contact_content_fb {
+            width: 410px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+}
+
+
+// 手機板開始~~~
+@media (max-width: 1680px) {
+    .box_container .contact_header .contact_header_title {
+        padding: 0 5%;
+    }
+    .box_container .contact_content .all_width {
+        padding: 0 5%;
+    }
+    .box_container .contact_content .contact_content_bottom {
+        gap: 100px;
+    }
+}
+
+@media (max-width: 1320px) {
+    .box_container .contact_header {
+        padding: 100px 0 90px;
+    }
+    .box_container .contact_header .contact_header_title .contact_header_title_bottom {
+        margin-top: 147px;
+    }
+    .box_container .contact_content .contact_content_bottom {
+        padding: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .box_container .contact_header {
+        padding: 80px 0 70px;
+    }
+    .box_container .contact_header .contact_header_title .contact_header_title_bottom {
+        margin-top: 120px;
+    }
+    .box_container .contact_content .contact_content_bottom {
+        display: block;
+    }
+    .box_container .contact_content .contact_content_bottom .contact_content_map {
+        width: 100%;
+    }
+    .box_container .contact_content .contact_content_bottom .contact_content_link {
+        margin-top: 100px;
+    }
+    .box_container .contact_content .contact_content_bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+    }
+}
+
+
+@media (max-width: 730px) {
+    .box_container .contact_header .contact_header_title .contact_header_title_bottom .contact_btn {
+        width: 150px;
+        height: 150px;
+        padding: 8px;
+        box-sizing: border-box;
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 540px) {
+    .box_container .contact_header .contact_header_title .contact_header_title_bottom {
+        flex-wrap: wrap;
+    }
+    .box_container .contact_header .contact_header_title .contact_header_title_bottom .contact_btn {
+        width: 100%;
+        height: auto;
+        aspect-ratio: initial;
+        margin-right: 0;
+        margin-bottom: 16px;
+        padding: 16px 8px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .box_container .contact_header .contact_header_title .contact_header_title_bottom .contact_btn > div {
+        flex-wrap: nowrap;
+        align-items: center;
+        .contact_btn_img {
+            display: inline-flex;
+            width: 20px;
+            height: 20px;
+            margin-bottom: 0;
+            margin-right: 8px;
+        }
+        .contact_btn_location {
+            text-align: left;
+            p {
+                display: inline;
+            }
+        }
+    }
+    .box_container .contact_content .contact_content_bottom .contact_content_fb {
+        max-width: 410px;
+        width: 100%;
+        .contact_content_in {
+            overflow: hidden;
+        }
+    }
+}

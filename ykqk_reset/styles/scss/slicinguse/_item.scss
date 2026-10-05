@@ -1,5 +1,7 @@
 @use "../base/Reset" as *;
 
+.box_container {
+
 html {
     scroll-behavior: smooth;
 }
@@ -187,10 +189,11 @@ html {
                 &::before {
                     content: "";
                     display: inline-block;
-                    mask-image: url('../../../img/item-arrow.svg');
-                    width: 11px;
-                    height: 11px;
-                    background-color: #E97C1A;
+                    width: 0;
+                    height: 0;
+                    border-left: 5.5px solid transparent;
+                    border-right: 5.5px solid transparent;
+                    border-bottom: 9px solid #E97C1A;
                     margin-right: 4px;
                 }
             }
@@ -237,17 +240,13 @@ html {
         span {
             position: relative;
             z-index: 2;
+            margin-right: 8px;
         }
-        &:after {
-            content: "";
-            mask-image: url("../../../img/btn-arrow.svg");
-            display: inline-block;
-            width: 13px;
-            height: 10px;
-            background-color: #fff;
-            margin-left: 6px;
+        img {
             position: relative;
             z-index: 2;
+            filter: brightness(0) invert(1);
+            transition: all 0.5s;
         }
         &:before {
             content: "";
@@ -262,8 +261,8 @@ html {
         }
         &:hover {
             color: #211713;
-            &:after {
-                background-color: #211713;
+            img {
+                filter: brightness(1) invert(0);
             }
             &::before {
                 width: 200px;
@@ -284,13 +283,44 @@ html {
         letter-spacing: 2px;
     }
 }
+}
 
+// 手機板開始~~~
+@media (max-width: 1680px) {
+    .box_container {
+        .item_header {
+            margin: 0 5%;
+        }
+        .item_content {
+            margin: 150px 5% 0;
+        }
+    }
+}
 
-@media (max-width: 1440px) {
-    .item_content {
-        gap: 0;
-        .item_content_self {
-            width: 100%;
+@media (max-width: 1335px) {
+    .box_container {
+        .item_content {
+            gap: 0;
+            .item_content_self {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .box_container {
+        .item_header {
+            background-color: transparent;
+            flex-wrap: wrap;
+            justify-content: center;
+            .item_header_btn {
+                background-color: #2E2A28;
+                width: calc( 100% / 2 );
+                &:last-child {
+                    width: 100%;
+                }
+            }
         }
     }
 }

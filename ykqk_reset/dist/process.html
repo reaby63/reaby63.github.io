@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>切版雛形</title>
+    <title>威克車體美學</title>
     
     <!-- bootstrap套用 -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -15,55 +15,73 @@
    ================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans+TC:wght@100..900&display=swap");
-* {
+/* Module Settings*/
+.pageIndex {
+  max-width: 100%;
+  padding: 0;
+}
+
+.main_part {
+  max-width: 2000px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.edit,
+.edit_part,
+.show_content,
+.main_part {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.edit * {
+  word-break: normal;
+}
+
+.box_container * {
   padding: 0;
   margin: 0;
   font-family: "Noto Sans TC", sans-serif;
   font-optical-sizing: auto;
 }
-
-body {
+.box_container body {
   overflow-x: hidden;
   min-height: 100dvh;
   scroll-behavior: smooth;
   margin: 0;
 }
-
-ul {
+.box_container ul {
   list-style: none;
 }
-
-a {
+.box_container a {
   text-decoration: none;
   border: 0;
   padding: 0;
   margin: 0;
   cursor: pointer;
 }
-
-.all_width {
+.box_container .all_width {
   max-width: 1920px;
   margin: 0 auto;
 }
-
-button {
+.box_container button {
   border: 0;
   padding: 0;
   margin: 0;
   cursor: pointer;
 }
-
-.keyword_i {
+.box_container .keyword_i {
   display: none;
 }
 
-.index_bg {
+.box_container .index_bg {
   background-image: url("https://pic03.eapple.com.tw/willclean/service-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.index_title::before {
+.box_container .index_title::before {
   content: "";
   display: block;
   background-color: #ffcb00;
@@ -71,48 +89,47 @@ button {
   width: 280px;
   margin-bottom: 55px;
 }
-.index_title .en_title {
+.box_container .index_title .en_title {
   font-size: 60px;
   font-family: "Audiowide", sans-serif;
   color: #221814;
 }
-.index_title .ch_title {
+.box_container .index_title .ch_title {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 2px;
   color: #221814;
 }
-
-.process_header {
+.box_container .process_header {
   background-image: url("https://pic03.eapple.com.tw/willclean/process-pic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 226px 0 300px;
 }
-.process_header .process_header_title {
+.box_container .process_header .process_header_title {
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.process_header .process_header_title > div {
+.box_container .process_header .process_header_title > div {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-.process_header .process_header_title > div p {
+.box_container .process_header .process_header_title > div p {
   width: 100%;
   font-size: 22px;
   margin-bottom: 37px;
   letter-spacing: 3px;
 }
-.process_header .process_header_title > div p span:first-child {
+.box_container .process_header .process_header_title > div p span:first-child {
   position: relative;
   margin-right: 16px;
 }
-.process_header .process_header_title > div p span:first-child::after {
+.box_container .process_header .process_header_title > div p span:first-child::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -121,7 +138,7 @@ button {
   top: 6px;
   right: -3px;
 }
-.process_header .process_header_title a {
+.box_container .process_header .process_header_title a {
   color: #fff;
   background-color: transparent;
   border: solid 1px #fff;
@@ -137,22 +154,18 @@ button {
   position: relative;
   z-index: 1;
 }
-.process_header .process_header_title a span {
+.box_container .process_header .process_header_title a span {
   position: relative;
   z-index: 2;
+  margin-right: 8px;
 }
-.process_header .process_header_title a:after {
-  content: "";
-  mask-image: url("https://pic03.eapple.com.tw/willclean/btn-arrow.svg");
-  display: inline-block;
-  width: 13px;
-  height: 10px;
-  background-color: #fff;
-  margin-left: 6px;
+.box_container .process_header .process_header_title a img {
   position: relative;
   z-index: 2;
+  filter: brightness(0) invert(1);
+  transition: all 0.5s;
 }
-.process_header .process_header_title a:before {
+.box_container .process_header .process_header_title a:before {
   content: "";
   display: inline-block;
   width: 0;
@@ -163,37 +176,39 @@ button {
   z-index: 1;
   transition: all 0.5s;
 }
-.process_header .process_header_title a:hover {
+.box_container .process_header .process_header_title a:hover {
   color: #000;
 }
-.process_header .process_header_title a:hover:after {
-  background-color: #000;
+.box_container .process_header .process_header_title a:hover img {
+  filter: brightness(1) invert(0);
 }
-.process_header .process_header_title a:hover::before {
+.box_container .process_header .process_header_title a:hover::before {
   width: 169px;
 }
-
-.process_list {
+.box_container .process_list {
   padding-top: 98px;
   padding-bottom: 105px;
 }
-.process_list .all_width {
+.box_container .process_list .all_width {
   padding: 0 14%;
 }
-.process_list .process_list_self {
+.box_container .process_list .process_list_self {
   margin-bottom: 99px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 25px;
 }
-.process_list .process_list_self:nth-child(even) {
+.box_container .process_list .process_list_self:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.box_container .process_list .process_list_self:nth-child(even) {
   justify-content: flex-start;
 }
-.process_list .process_list_self .process_list_self_text {
+.box_container .process_list .process_list_self .process_list_self_text {
   max-width: 459px;
 }
-.process_list .process_list_self .process_list_self_text .process_list_self_title {
+.box_container .process_list .process_list_self .process_list_self_text .process_list_self_title {
   display: flex;
   align-items: center;
   gap: 22px;
@@ -201,7 +216,7 @@ button {
   padding-bottom: 18px;
   margin-bottom: 25px;
 }
-.process_list .process_list_self .process_list_self_text .process_list_self_title::after {
+.box_container .process_list .process_list_self .process_list_self_text .process_list_self_title::after {
   content: "";
   position: absolute;
   height: 12px;
@@ -210,64 +225,80 @@ button {
   bottom: 0;
   background-color: #FFC700;
 }
-.process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_num {
+.box_container .process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_num {
   font-size: 60px;
   color: #221814;
   font-family: "Audiowide", sans-serif;
 }
-.process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_ch {
+.box_container .process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_ch {
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
   margin-bottom: 4px;
   letter-spacing: 2px;
 }
-.process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_en {
+.box_container .process_list .process_list_self .process_list_self_text .process_list_self_title .process_list_self_en {
   color: #595757;
   font-size: 16px;
   letter-spacing: 1px;
   font-family: Arial, sans-serif;
 }
-.process_list .process_list_self .process_list_self_text .process_list_self_tag {
+.box_container .process_list .process_list_self .process_list_self_text .process_list_self_tag {
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 2px;
   margin-bottom: 55px;
 }
-.process_list .process_list_self .process_list_self_text p {
+.box_container .process_list .process_list_self .process_list_self_text p {
   color: #595757;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 3px;
 }
-
-.process_step {
+.box_container .process_list .process_list_self .process_list_self_img {
+  max-width: 780px;
+  width: 50%;
+  height: -webkit-fill-available;
+  overflow: hidden;
+}
+.box_container .process_list .process_list_self .process_list_self_img img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+  transform-origin: center center;
+}
+.box_container .process_list .process_list_self:hover .process_list_self_img img {
+  transform: scale(1.05);
+}
+.box_container .process_step {
   background-image: url("https://pic03.eapple.com.tw/willclean/process-pic2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-.process_step .all_width {
+.box_container .process_step .all_width {
   padding: 0 14%;
 }
-.process_step .process_step_title {
+.box_container .process_step .process_step_title {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding-top: 120px;
   padding-bottom: 103px;
 }
-.process_step .process_step_title .ch_title,
-.process_step .process_step_title .en_title {
+.box_container .process_step .process_step_title .ch_title,
+.box_container .process_step .process_step_title .en_title {
   color: #fff;
 }
-.process_step .process_step_title .process_step_right {
+.box_container .process_step .process_step_title .process_step_right {
   position: relative;
   color: #fff;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
 }
-.process_step .process_step_title .process_step_right::before {
+.box_container .process_step .process_step_title .process_step_right::before {
   content: "";
   position: absolute;
   background-color: #B92907;
@@ -276,26 +307,191 @@ button {
   left: -30px;
   top: -5px;
 }
-.process_step .process_step_grid {
+.box_container .process_step .process_step_grid {
   display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(2, 190px);
+  gap: 90px 105px;
+  padding-bottom: 90px;
+}
+.box_container .process_step .process_step_grid .process_step_grid_self {
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+.box_container .process_step .process_step_grid .process_step_grid_self:before {
+  content: "";
+  position: absolute;
+  left: -55px;
+  top: 0;
+  width: 1px;
+  height: 232px;
+  background-color: #fff;
+}
+.box_container .process_step .process_step_grid .process_step_grid_self:nth-child(1)::before, .box_container .process_step .process_step_grid .process_step_grid_self:nth-child(6)::before {
+  display: none;
+}
+.box_container .process_step .process_step_grid .process_step_grid_self_big {
+  grid-column: span 3;
+  color: #fff;
+  display: flex;
+  gap: 68px;
+}
+.box_container .process_step .process_step_grid .process_step_grid_self_big .process_step_grid_self {
+  width: 190px;
+}
+.box_container .process_step .process_step_grid .process_step_grid_title {
+  margin-bottom: 12px;
+  background-color: #FFC900;
+  font-family: "Audiowide", sans-serif;
+  color: #221814;
+  font-size: 28px;
+}
+.box_container .process_step .process_step_grid h6 {
+  font-size: 20px;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+.box_container .process_step .process_step_grid p {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-align: left;
+  text-align: justify;
+}
+.box_container .process_step .process_step_grid .process_step_grid_redspace .process_step_grid_redspace_self {
+  display: flex;
   gap: 20px;
+  margin-bottom: 14px;
 }
-.process_step .process_step_grid .process_step_grid_self {
-  background: #ddd;
+.box_container .process_step .process_step_grid .process_step_grid_redspace .process_step_grid_redspace_self > div:nth-child(1) {
+  background-color: #B92907;
+  display: inline-flex;
+  width: 85px;
+  padding: 5px 16px;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
-.process_step .process_step_grid .process_step_grid_self_big {
-  grid-column: span 2;
-  background: pink;
+.box_container .process_step .process_step_grid .process_step_grid_redspace .process_step_grid_redspace_self > div:nth-child(2) {
+  letter-spacing: 1.5px;
+  text-align: left;
+  width: calc(100% - 85px);
+}
+.box_container .process_step .process_step_grid .process_step_grid_redspace .process_step_grid_redspace_self:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1680px) {
+  .box_container .process_header .process_header_title {
+    padding: 0 5%;
+  }
+  .box_container .process_list .all_width {
+    padding: 0 5%;
+  }
+  .box_container .process_step .all_width {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 1260px) {
+  .box_container .process_header {
+    padding: 180px 0 220px;
+  }
+  .box_container .process_step .process_step_grid {
+    gap: 90px 64px;
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self:before {
+    left: -33px;
+  }
+}
+@media (max-width: 1170px) {
+  .box_container .process_list .process_list_self .process_list_self_text {
+    max-width: 50%;
+  }
+  .box_container .process_step .process_step_title {
+    display: block;
+  }
+  .box_container .process_step .process_step_title .process_step_left {
+    margin-bottom: 40px;
+  }
+  .box_container .process_step .process_step_title .process_step_right {
+    margin-left: 32px;
+  }
+  .box_container .process_step .process_step_grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 190px);
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self:nth-child(6)::before {
+    display: block;
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self:nth-child(5)::before, .box_container .process_step .process_step_grid .process_step_grid_self:nth-child(7)::before {
+    display: none;
+  }
+}
+@media (max-width: 870px) {
+  .box_container .process_step .process_step_grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 190px);
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self:nth-child(5)::before {
+    display: block;
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self:nth-child(4)::before, .box_container .process_step .process_step_grid .process_step_grid_self:nth-child(6)::before, .box_container .process_step .process_step_grid .process_step_grid_self:nth-child(7)::before {
+    display: none;
+  }
+}
+@media (max-width: 660px) {
+  .box_container .process_header {
+    padding: 150px 0 140px;
+  }
+  .box_container .process_step .process_step_grid {
+    display: block;
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self {
+    margin-bottom: 70px;
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self:last-child {
+    margin-bottom: 0;
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self_big {
+    display: block;
+  }
+  .box_container .process_step .process_step_grid .process_step_grid_self_big .process_step_grid_self {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .box_container .process_list .process_list_self {
+    display: block;
+  }
+  .box_container .process_list .process_list_self .process_list_self_img,
+  .box_container .process_list .process_list_self .process_list_self_text {
+    width: 100%;
+    max-width: 100%;
+  }
+  .box_container .process_list .process_list_self .process_list_self_img {
+    margin-bottom: 30px;
+  }
+  .box_container .process_list .process_list_self:nth-child(odd) {
+    flex-direction: initial;
+  }
+  .box_container .process_list .process_list_self:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 400px) {
+  .box_container .index_title .en_title {
+    font-size: 50px;
+  }
 }
 
 </style>
 </head>
 <body>
-    <!-- <div id="header"></div> -->
     
-    <main id="main-content"><!-- 服務流程 --><div class="process_header">
+    <main id="main-content"><!-- 服務流程 --><div class="box_container">
+<div class="process_header">
     <div class="process_header_title">
         <div>
             <p>
@@ -310,6 +506,7 @@ button {
                 <span>
                     SERVICE
                 </span>
+                <img src="https://pic03.eapple.com.tw/willclean/btn-arrow.svg" alt="">
             </a>
         </div>
     </div>
@@ -319,6 +516,9 @@ button {
 <div class="process_list index_bg">
     <div class="all_width">
         <div class="process_list_self">
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/01.jpg" alt="">
+            </div>
             <div class="process_list_self_text">
                 <div class="process_list_self_title">
                     <div class="process_list_self_num">
@@ -339,9 +539,6 @@ button {
                 <p>
                     透過電話或線上聯繫威克，告知車型、目前車況及想施作的服務項目，預約合適的到店時間。
                 </p>
-            </div>
-            <div class="process_list_self_img">
-                <img src="https://pic03.eapple.com.tw/willclean/01.jpg" alt="">
             </div>
         </div>
         <div class="process_list_self">
@@ -371,6 +568,9 @@ button {
             </div>
         </div>
         <div class="process_list_self">
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/03.jpg" alt="">
+            </div>
             <div class="process_list_self_text">
                 <div class="process_list_self_title">
                     <div class="process_list_self_num">
@@ -391,9 +591,6 @@ button {
                 <p>
                     確認施作項目、費用及預計作業時間，讓車主了解本次服務內容後，再進行後續汽車美容施作。
                 </p>
-            </div>
-            <div class="process_list_self_img">
-                <img src="https://pic03.eapple.com.tw/willclean/03.jpg" alt="">
             </div>
         </div>
         <div class="process_list_self">
@@ -423,6 +620,9 @@ button {
             </div>
         </div>
         <div class="process_list_self">
+            <div class="process_list_self_img">
+                <img src="https://pic03.eapple.com.tw/willclean/05.jpg" alt="">
+            </div>
             <div class="process_list_self_text">
                 <div class="process_list_self_title">
                     <div class="process_list_self_num">
@@ -443,9 +643,6 @@ button {
                 <p>
                     服務完成後進行整體檢查，確認車體外觀、細節及施作項目完成狀況，做好最後品質把關。
                 </p>
-            </div>
-            <div class="process_list_self_img">
-                <img src="https://pic03.eapple.com.tw/willclean/05.jpg" alt="">
             </div>
         </div>
         <div class="process_list_self">
@@ -496,20 +693,148 @@ button {
         </div>
         <div class="process_step_grid">
             <div class="process_step_grid_self">
-                123
+                <div class="process_step_grid_title">
+                    STEP 01
+                </div>
+                <h6>
+                    車輛降溫與前處理
+                </h6>
+                <p>
+                    進廠後先讓車身散熱並拆除車牌，方便完整施工。
+                </p>
             </div>
-            <div class="process_step_grid_self_big">
-                123
+            <div class="process_step_grid_self">
+                <div class="process_step_grid_title">
+                    STEP 02
+                </div>
+                <h6>
+                    全車深度清潔
+                </h6>
+                <p>
+                    包含預洗、柏油鐵粉去除、鋁圈深層清潔、兩次泡沫清洗，徹底帶走泥沙、髒汙與化學殘留。
+                </p>
+            </div>
+            <div class="process_step_grid_self">
+                <div class="process_step_grid_title">
+                    STEP 03
+                </div>
+                <h6>
+                    玻璃與漆面去汙
+                </h6>
+                <p>
+                    清除玻璃油汙，並用奈米磁土布去除車漆表面細小顆粒，讓觸感更滑順。
+                </p>
+            </div>
+            <div class="process_step_grid_self">
+                <div class="process_step_grid_title">
+                    STEP 04
+                </div>
+                <h6>
+                    車漆拋光提亮
+                </h6>
+                <p>
+                    視車況進行拋光，修正輕微紋路、提升光澤，為鍍膜打好基礎。
+                </p>
+            </div>
+            <div class="process_step_grid_self">
+                <div class="process_step_grid_title">
+                    STEP 05
+                </div>
+                <h6>
+                    徹底吹乾與脫脂
+                </h6>
+                <p>
+                    使用風槍將縫隙與飾條吹乾，再對車漆、玻璃與塑膠件脫脂，確保鍍膜附著力。
+                </p>
+            </div>
+            <div class="process_step_grid_self process_step_grid_self_big">
+                <div class="process_step_grid_self">
+                    <div class="process_step_grid_title">
+                        STEP 06
+                    </div>
+                    <h6>
+                        多部位鍍膜施工
+                    </h6>
+                    <p>
+                        依據不同材質專注分區對待，以職人工藝重塑全車巔峰質感。
+                    </p>
+                </div>
+                <div class="process_step_grid_redspace">
+                    <div class="process_step_grid_redspace_self">
+                        <div>
+                            <span>車</span>
+                            <span>漆</span>
+                        </div>
+                        <div>
+                            依方案施作石英／陶瓷／金鑽雙層等鍍膜服務。
+                        </div>
+                    </div>
+                    <div class="process_step_grid_redspace_self">
+                        <div>
+                            <span>玻</span>
+                            <span>璃</span>
+                        </div>
+                        <div>
+                            強化撥水與抗污，大幅提升雨天行駛視線。
+                        </div>
+                    </div>
+                    <div class="process_step_grid_redspace_self">
+                        <div>
+                            <span>塑</span>
+                            <span>膠</span>
+                            <span>件</span>
+                        </div>
+                        <div>
+                            施作專屬特殊藥劑，提升抗紫外線與耐老化。
+                        </div>
+                    </div>
+                    <div class="process_step_grid_redspace_self">
+                        <div>
+                            <span>鋁</span>
+                            <span>圈</span>
+                        </div>
+                        <div>
+                            耐高溫鍍膜，可減少煞車粉塵附著。
+                        </div>
+                    </div>
+                    <div class="process_step_grid_redspace_self">
+                        <div>
+                            <span>輪</span>
+                            <span>胎</span>
+                        </div>
+                        <div>
+                            進行深層清潔與滋養，完成專業胎皮護理上光。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="process_step_grid_self">
+                <div class="process_step_grid_title">
+                    STEP 07
+                </div>
+                <h6>
+                    內裝清潔與空調消毒
+                </h6>
+                <p>
+                    車內吸塵、擦拭、腳踏墊清洗，並進行空調循環消毒殺菌。
+                </p>
+            </div>
+            <div class="process_step_grid_self">
+                <div class="process_step_grid_title">
+                    STEP 08
+                </div>
+                <h6>
+                    完工檢查與交車
+                </h6>
+                <p>
+                    全車內外最終檢視，確認鍍膜均勻度與細節清潔後交車。
+                </p>
             </div>
         </div>
     </div>
 </div>
-</main>
+</div></main>
     
-    <!-- <div id="footer"></div> -->
-    
-    <!-- 彈窗內容 -->
-    <div id="modal_container"></div>
 
 
 
