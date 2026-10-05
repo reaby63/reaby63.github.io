@@ -2802,6 +2802,9 @@ body.is-open {
     padding: 0 5%;
     padding-top: 82px;
   }
+  .box_container .wk_contact {
+    overflow: hidden;
+  }
 }
 @media (max-width: 1280px) {
   .box_container .wk_contact .contact_in .contact_square {
