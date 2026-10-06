@@ -277,4 +277,22 @@
             overflow: hidden;
         }
     }
+    .box_container .contact_content .contact_content_bottom .contact_content_map {
+        .contact_content_in {
+            iframe {
+                height: 400px !important;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 400px) {
+    .box_container .contact_content .contact_content_bottom .contact_content_map {
+        .contact_content_in {
+            iframe {
+                height: 300px !important;
+            }
+        }
+    }
 }

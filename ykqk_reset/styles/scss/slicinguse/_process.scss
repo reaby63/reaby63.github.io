@@ -47,6 +47,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 226px 0 300px;
+    background-position: center;
     .process_header_title {
         color: #fff;
         display: flex;
@@ -515,6 +516,10 @@
         &:last-child {
             margin-bottom: 0;
         }
+    }
+    .box_container .process_list .process_list_self.in-view:nth-child(odd) .process_list_self_img ,
+    .box_container .process_list .process_list_self.in-view:nth-child(even) .process_list_self_img {
+        animation-delay: 0;
     }
 }
 

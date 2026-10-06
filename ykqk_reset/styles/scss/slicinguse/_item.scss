@@ -304,6 +304,9 @@ html {
             gap: 0;
             .item_content_self {
                 width: 100%;
+                &:nth-child(4) {
+                    border: none;
+                }
             }
         }
     }
@@ -323,5 +326,74 @@ html {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 650px) {
+    .box_container .item_header .item_header_btn {
+        padding: 36px 0;
+    }
+    .box_container .item_header .item_header_btn::before {
+        height: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .box_container .item_content .item_content_self .item_self_list_five {
+        padding-bottom: 89px;
+    }
+}
+
+@media (max-width: 500px) {
+    //列表排列轉換
+    .box_container .item_content .item_content_self .item_self_list li {
+        display: block;
+        div {
+            &:first-child {
+                margin-bottom: 8px;
+                font-weight: 500;
+                color: #000;
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .box_container .item_content {
+        margin: 120px 5% 0;
+    }
+    .box_container .item_header .item_header_btn span:first-child {
+        font-size: 18px;
+    }
+    .box_container .item_header .item_header_btn span:last-child {
+        font-size: 14px;
+    }
+    .box_container .item_content .item_content_self .item_self_img {
+        padding: 65px 28px;
+        gap: 20px
+    }
+    .box_container .item_content .item_content_self .item_self_img .item_self_img_left {
+        font-size: 77px;
+    }
+    .box_container .item_content .item_content_self .item_self_img .item_self_img_right span:first-child {
+        font-size: 30px;
+    }
+    .box_container .item_content .item_content_self .item_self_img:before {
+        width: 8px;
+    }
+}
+
+@media (max-width: 340px) {
+    .box_container .item_content .item_content_self .item_self_list_five {
+        padding-bottom: 116px;
+    }
+}
+
+@media (max-width: 330px) {
+    .box_container .item_header .item_header_btn {
+        padding: 30px 0;
+    }
+    .box_container .item_header .item_header_btn::before {
+        height: 8px;
     }
 }

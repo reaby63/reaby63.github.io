@@ -252,6 +252,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 .box_container .dec_bg .all_width .dec_in h6 span {
   font-size: 25px;
@@ -263,6 +264,7 @@
   font-size: 16px;
   line-height: 50px;
   letter-spacing: 3px;
+  transition-delay: 0.8s;
 }
 .box_container .wk_news .all_width .news_box {
   display: flex;
@@ -512,6 +514,9 @@
   margin-bottom: 20px;
   transition: all 0.7s;
 }
+.box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn .contact_btn_location {
+  width: 100%;
+}
 .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn:hover {
   background-color: #FFCB00;
   top: -12px;
@@ -603,6 +608,9 @@
 }
 
 @media (max-width: 1680px) {
+  .box_container .wk_about .about_right {
+    height: 900px;
+  }
   .box_container .wk_about .about_left {
     padding-left: 5%;
   }
@@ -633,6 +641,9 @@
   }
 }
 @media (max-width: 1280px) {
+  .box_container .wk_about .about_right {
+    height: 700px;
+  }
   .box_container .wk_contact .contact_in .contact_square {
     max-width: 796px;
   }
@@ -642,6 +653,20 @@
   }
 }
 @media (max-width: 1000px) {
+  .box_container .wk_about .about_right {
+    height: 500px;
+  }
+  .box_container .wk_about .about_runing {
+    font-size: 100px;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-670px);
+    }
+  }
   .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self {
     width: calc((100% + 18px) / 2);
   }
@@ -673,12 +698,16 @@
     margin-bottom: 100px;
   }
   .box_container .wk_about .about_right {
-    height: 450px;
+    height: auto;
+    aspect-ratio: 1/1;
   }
   .box_container .wk_about .all_width {
     gap: 0;
     flex-wrap: wrap;
     flex-direction: row-reverse;
+  }
+  .box_container .dec_bg .all_width .dec_in h6 {
+    font-size: 30px;
   }
   .box_container .wk_service .all_width .service_box .service_item {
     flex-wrap: wrap;
@@ -709,16 +738,7 @@
     margin-bottom: 4px;
   }
 }
-@media (max-width: 620px) {
-  .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(3n), .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(4) {
-    margin-top: -10px;
-    margin-right: 0;
-  }
-  .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(5) {
-    margin-top: -45px;
-  }
-}
-@media (max-width: 560px) {
+@media (max-width: 600px) {
   .box_container .wk_news .all_width .news_box,
   .box_container .wk_service .all_width .service_box .service_title {
     display: block;
@@ -773,15 +793,55 @@
     top: 4px;
   }
 }
-@media (max-width: 365px) {
+@media (max-width: 450px) {
+  .box_container .dec_bg .all_width .dec_in h6 span {
+    margin: 0;
+  }
   .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn {
-    width: 130px;
-    height: 130px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: initial;
+    margin-right: 0;
+  }
+  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn > div {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn > div p {
+    width: auto;
+  }
+  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn .contact_btn_img {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn .contact_btn_location {
+    text-align: left;
+  }
+}
+@media (max-width: 410px) {
+  .box_container .dec_bg .all_width .dec_in h6 {
+    font-size: 25px;
+  }
+  .box_container .dec_bg .all_width .dec_in h6 span {
+    font-size: 20px;
+  }
+}
+@media (max-width: 365px) {
+  .box_container .dec_bg .all_width .dec_in h6 {
+    font-size: 21px;
   }
 }
 @media (max-width: 345px) {
   .box_container .index_title .en_title {
     font-size: 55px;
+  }
+}
+@media (max-width: 330px) {
+  .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(2), .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(3), .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(4), .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(5) {
+    margin-top: -10px;
+  }
+  .box_container .index_title .en_title {
+    font-size: 52px;
   }
 }
 
@@ -836,10 +896,10 @@
 <div class="dec_bg">
     <div class="all_width">
         <div class="dec_in">
-            <h6>
+            <h6 data-ani="up">
                 工程師背景 <span>×</span> 職人精神 <span>×</span> 細節品質
             </h6>
-            <p>
+            <p data-ani="up">
                 Will老闆本身是一位南科工程師，將工程師對細節、流程與品質的講究，延伸到對汽車美容的熱愛，投入職人手作汽車美容與鍍膜服務。從車漆狀況判斷、清潔處理、拋光修復到鍍膜防護，每一道工序都用心完成，不只追求洗乾淨，更重視車漆光澤、細節質感與後續防護。
             </p>
         </div>
@@ -1036,8 +1096,10 @@
                             <div class="contact_btn_img">
                                 <img src="https://pic03.eapple.com.tw/willclean/w-Location.svg" alt="">
                             </div>
-                            <p>高雄市前金區</p>
-                            <p>三川里南台橫路124號</p>
+                            <div class="contact_btn_location">
+                                <p>高雄市前金區</p>
+                                <p>三川里南台橫路124號</p>
+                            </div>
                         </div>
                     </a>
                     <a href="tel:0918011662" class="contact_btn">
