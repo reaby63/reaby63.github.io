@@ -12,11 +12,11 @@ const config = {
     // img/process-pic2.jpg
     //
     // 會輸出成：
-    // https://pic03.eapple.com.tw/willclean/process-pic2.jpg
+    // https://pic03.eapple.com.tw/cyuanmei/process-pic2.jpg
     // ==================================================
 
     imageBaseUrl:
-        'https://pic03.eapple.com.tw/willclean/'
+        'https://pic03.eapple.com.tw/cyuanmei/'
 
 };
 

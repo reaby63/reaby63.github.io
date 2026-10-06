@@ -1,0 +1,48 @@
+@use "../base/Reset" as *;
+// 開始切版寫這哦~
+.box_container {
+    --c-offset: 100px;
+
+    .cy_ab_top {
+        background-image: url("../../../img/about_topbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .cy_ab_top_title {
+            display: flex;
+            align-items: flex-end;
+            color: #F06402;
+            .cy_about_left_title_en {
+                font-family: "Poppins", sans-serif;
+                font-weight: bold;
+                font-size: 41px;
+                position: relative;
+                padding-right: 10px;
+                letter-spacing: 1.5px;
+                margin-right: 28px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    background-color: #F06402;
+                    right: -11px;
+                    bottom: 21px;
+                }
+            }
+            .cy_about_left_title_ch {
+                font-size: 20px;
+                margin-bottom: 12px;
+                letter-spacing: 1.5px;
+                font-weight: 500;
+            }
+        }
+        .cy_ab_top_rightimg {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+
+}
