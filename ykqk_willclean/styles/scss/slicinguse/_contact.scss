@@ -175,6 +175,14 @@
     }
 }
 
+// 針對fb粉專調整
+ .contact_content_in section {
+    overflow: hidden;
+}
+.contact_content_in section iframe {
+    transform: scale(1.03);
+}
+
 }
 
 

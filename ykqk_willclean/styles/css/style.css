@@ -4016,6 +4016,12 @@ body.is-open {
   width: 410px;
   box-sizing: border-box;
 }
+.box_container .contact_content_in section {
+  overflow: hidden;
+}
+.box_container .contact_content_in section iframe {
+  transform: scale(1.03);
+}
 
 @media (max-width: 1680px) {
   .box_container .contact_header .contact_header_title {
