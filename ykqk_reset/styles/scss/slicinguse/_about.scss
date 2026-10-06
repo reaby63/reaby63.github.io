@@ -12,13 +12,14 @@
             display: flex;
             align-items: flex-end;
             color: #F06402;
+            margin-left: 5%;
+            padding-top: 261px;
+            padding-bottom: 45px;
             .cy_about_left_title_en {
-                font-family: "Poppins", sans-serif;
                 font-weight: bold;
                 font-size: 41px;
                 position: relative;
                 padding-right: 10px;
-                letter-spacing: 1.5px;
                 margin-right: 28px;
                 &::after {
                     content: "";
@@ -28,6 +29,11 @@
                     background-color: #F06402;
                     right: -11px;
                     bottom: 21px;
+                }
+                p {
+                    font-family: "Poppins", sans-serif;
+                    letter-spacing: 1.5px;
+                    line-height: 48px;
                 }
             }
             .cy_about_left_title_ch {
@@ -41,8 +47,118 @@
             position: absolute;
             top: 0;
             right: 0;
+            z-index: 2;
         }
     }
 
+    .cy_ab_bg {
+        background-image: url("../../../img/about_bg_01.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #fff;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 55%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url("../../../img/about_bg_02.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right center;
+            z-index: 1;
+        }
+        .cy_ab_bg_width {
+            margin:0 5%;
+            padding-top: 115px;
+            padding-bottom: 95px;
+            position: relative;
+            z-index: 2;
+            .cy_ab_content {
+                padding-bottom: 44px;
+                border-bottom: solid 1px #EF6302;
+                .cy_ab_content_tag {
+                    font-size: 20px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    color: #F06402;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-weight: 600;
+                    color: #151515;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    max-width: 770px;
+                }
+            }
+        }
+    }
 
+    .cy_ab_list {
+        position: relative;
+        z-index: 2;
+        .cy_ab_list_self {
+            display: flex;
+            align-items: flex-end;
+            width: 80%;
+            background-color: #fff;
+            position: relative;
+            margin-bottom: 84px;
+            > img {
+                position: absolute;
+                top: 39px;
+                right: 41px;
+            }
+            .cy_ab_list_self_left {
+                width: 50.5%;
+                height: -webkit-fill-available;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .cy_ab_list_self_right {
+                flex: 1;
+                padding: 39px 41px 76px 50px;
+                box-sizing: border-box;
+                .cy_ab_list_self_right_num {
+                    font-size: 47.2px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 30px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 9px;
+                        height: 9px;
+                        background-color: #EF6302;
+                        top: 7px;
+                        left: 7px;
+                        border-radius: 50%;
+                    }
+                }
+                .cy_ab_list_self_right_tag {
+                    font-size: 21px;
+                    color: #F06402;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    margin-bottom: 18px;
+                    margin-left: 3px;
+                }
+                p {
+                    font-size: 15px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
 }
