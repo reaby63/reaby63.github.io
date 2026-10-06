@@ -1,17 +1,3 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>威克車體美學</title>
-    
-    <!-- bootstrap套用 -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- Swiper套用 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="https://pic03.eapple.com.tw/yk_js_web/cmp.js"></script> 
-    <link rel="stylesheet" href="https://pic03.eapple.com.tw/yk_js_web/cmp.css">
-    
-
 <style>
 /* ==================================================
    Page SCSS
@@ -41,10 +27,6 @@
 
 .edit * {
   word-break: normal;
-}
-
-.animated15 {
-  animation: none;
 }
 
 .box_container * {
@@ -83,33 +65,24 @@
   display: none;
 }
 
-.box_container {
-  --c-offset: 100px;
-}
 .box_container .index_title::before {
   content: "";
   display: block;
   background-color: #ffcb00;
   height: 4px;
-  width: 0;
+  width: 280px;
   margin-bottom: 55px;
-  transition: all 0.5s;
 }
 .box_container .index_title .en_title {
   font-size: 60px;
   font-family: "Audiowide", sans-serif;
   color: #221814;
-  transition-delay: 0.3s;
 }
 .box_container .index_title .ch_title {
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 2px;
   color: #221814;
-  transition-delay: 0.5s;
-}
-.box_container .index_title.in-view:before {
-  width: 280px;
 }
 .box_container .index_bg {
   background-image: url("https://pic03.eapple.com.tw/willclean/bg.jpg");
@@ -182,14 +155,12 @@
   line-height: 35px;
   font-weight: 500;
   margin-top: 50px;
-  transition-delay: 1s;
 }
 .box_container .wk_about .about_left .about_tag {
   margin-top: 16px;
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 3px;
-  transition-delay: 1.5s;
 }
 .box_container .wk_about .about_left .about_tag span {
   display: inline-block;
@@ -209,7 +180,6 @@
   z-index: 2;
   width: 100%;
   height: 1018px;
-  transition-delay: 1.8s;
 }
 .box_container .wk_about .about_right img {
   object-fit: cover;
@@ -226,11 +196,6 @@
   z-index: 1;
   animation: marquee 12s linear infinite;
   white-space: nowrap;
-  opacity: 0;
-  transition: all 3s;
-}
-.box_container .wk_about .about_runing.in-view {
-  opacity: 1;
 }
 @keyframes marquee {
   0% {
@@ -256,7 +221,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  flex-wrap: wrap;
 }
 .box_container .dec_bg .all_width .dec_in h6 span {
   font-size: 25px;
@@ -268,7 +232,6 @@
   font-size: 16px;
   line-height: 50px;
   letter-spacing: 3px;
-  transition-delay: 0.8s;
 }
 .box_container .wk_news .all_width .news_box {
   display: flex;
@@ -278,8 +241,8 @@
   padding-top: 110px;
   padding-bottom: 50px;
 }
-.box_container .wk_news .all_width .news_left .index_title.in-view:before {
-  width: 280px;
+.box_container .wk_news .all_width .news_left .index_title::before {
+  width: 237px;
 }
 .box_container .wk_service .all_width .service_box {
   padding: 0 14%;
@@ -321,18 +284,6 @@
   color: #595757;
   font-family: Arial, sans-serif;
   letter-spacing: 1px;
-}
-.box_container .wk_service .all_width .service_box .service_item .service_item_self.in-view:nth-child(2) {
-  transition-delay: 0.3s;
-}
-.box_container .wk_service .all_width .service_box .service_item .service_item_self.in-view:nth-child(3) {
-  transition-delay: 0.6s;
-}
-.box_container .wk_service .all_width .service_box .service_item .service_item_self.in-view:nth-child(4) {
-  transition-delay: 0.9s;
-}
-.box_container .wk_service .all_width .service_box .service_item .service_item_self.in-view:nth-child(5) {
-  transition-delay: 1.2s;
 }
 @keyframes serviceAn {
   0% {
@@ -470,14 +421,12 @@
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 1.5px;
-  transition-delay: 1s;
 }
 .box_container .wk_contact .all_width .contact_box .contact_title .contact_right {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   margin-top: 44px;
-  transition-delay: 1.8s;
 }
 .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn {
   aspect-ratio: 1/1;
@@ -517,9 +466,6 @@
   aspect-ratio: 1/1;
   margin-bottom: 20px;
   transition: all 0.7s;
-}
-.box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn .contact_btn_location {
-  width: 100%;
 }
 .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn:hover {
   background-color: #FFCB00;
@@ -612,9 +558,6 @@
 }
 
 @media (max-width: 1680px) {
-  .box_container .wk_about .about_right {
-    height: 900px;
-  }
   .box_container .wk_about .about_left {
     padding-left: 5%;
   }
@@ -640,14 +583,8 @@
     padding: 0 5%;
     padding-top: 82px;
   }
-  .box_container .wk_contact {
-    overflow: hidden;
-  }
 }
 @media (max-width: 1280px) {
-  .box_container .wk_about .about_right {
-    height: 700px;
-  }
   .box_container .wk_contact .contact_in .contact_square {
     max-width: 796px;
   }
@@ -657,20 +594,6 @@
   }
 }
 @media (max-width: 1000px) {
-  .box_container .wk_about .about_right {
-    height: 500px;
-  }
-  .box_container .wk_about .about_runing {
-    font-size: 100px;
-  }
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-670px);
-    }
-  }
   .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self {
     width: calc((100% + 18px) / 2);
   }
@@ -702,16 +625,12 @@
     margin-bottom: 100px;
   }
   .box_container .wk_about .about_right {
-    height: auto;
-    aspect-ratio: 1/1;
+    height: 450px;
   }
   .box_container .wk_about .all_width {
     gap: 0;
     flex-wrap: wrap;
     flex-direction: row-reverse;
-  }
-  .box_container .dec_bg .all_width .dec_in h6 {
-    font-size: 30px;
   }
   .box_container .wk_service .all_width .service_box .service_item {
     flex-wrap: wrap;
@@ -742,7 +661,15 @@
     margin-bottom: 4px;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 620px) {
+  .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(3n), .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(4) {
+    margin-top: -10px;
+  }
+  .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(5) {
+    margin-top: -45px;
+  }
+}
+@media (max-width: 560px) {
   .box_container .wk_news .all_width .news_box,
   .box_container .wk_service .all_width .service_box .service_title {
     display: block;
@@ -773,26 +700,6 @@
   .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn:last-child {
     margin-bottom: 0;
   }
-  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn {
-    width: 100%;
-    height: auto;
-    aspect-ratio: initial;
-    margin-right: 0;
-  }
-  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn > div {
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn > div p {
-    width: auto;
-  }
-  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn .contact_btn_img {
-    margin-bottom: 0;
-    margin-right: 8px;
-  }
-  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn .contact_btn_location {
-    text-align: left;
-  }
 }
 @media (max-width: 470px) {
   .box_container .wk_service .all_width .service_box .service_item .service_item_self {
@@ -817,22 +724,10 @@
     top: 4px;
   }
 }
-@media (max-width: 450px) {
-  .box_container .dec_bg .all_width .dec_in h6 span {
-    margin: 0;
-  }
-}
-@media (max-width: 410px) {
-  .box_container .dec_bg .all_width .dec_in h6 {
-    font-size: 25px;
-  }
-  .box_container .dec_bg .all_width .dec_in h6 span {
-    font-size: 20px;
-  }
-}
 @media (max-width: 365px) {
-  .box_container .dec_bg .all_width .dec_in h6 {
-    font-size: 21px;
+  .box_container .wk_contact .all_width .contact_box .contact_title .contact_right .contact_btn {
+    width: 130px;
+    height: 130px;
   }
 }
 @media (max-width: 345px) {
@@ -840,22 +735,325 @@
     font-size: 55px;
   }
 }
-@media (max-width: 330px) {
-  .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(2), .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(3), .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(4), .box_container .wk_choose .all_width .choose_box .choose_item .choose_item_self:nth-child(5) {
-    margin-top: -10px;
-  }
-  .box_container .index_title .en_title {
-    font-size: 52px;
-  }
-}
 
 </style>
-</head>
-<body>
-    
-    <main id="main-content"><!-- 開始切版寫這哦~~~ --></main>
-    
 
+<div class="box_container">
+<div class="keyword_i">
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6>
+</div>
+
+
+<div class="wk_about index_bg">
+    <div class="all_width">
+        <div class="about_left">
+            <div class="index_title">
+                <div class="en_title">
+                    ABOUT
+                </div>
+                <div class="ch_title">
+                    關於威克
+                </div>
+            </div>
+            <p>
+                專注於汽車美容、汽車鍍膜、車體美容與內裝清潔保養，從日常洗車打蠟、汽車拋光美容，到車體鍍膜、玻璃鍍膜與車室深層清潔，依照不同車況與使用需求，提供合適的美容養護服務。
+            </p>
+            <div class="about_tag">
+                <span>
+                    讓愛車重現質感
+                </span>
+                <span>
+                    專注每一道細節
+                </span>
+            </div>
+        </div>
+        <div class="about_right">
+            <img src="https://pic03.eapple.com.tw/willclean/ind_01.jpg" alt="">
+        </div>
+        <div class="about_runing">
+            WICK AUTO  WICK AUTO
+        </div>
+    </div>
+</div>
+
+<div class="dec_bg">
+    <div class="all_width">
+        <div class="dec_in">
+            <h6>
+                工程師背景 <span>×</span> 職人精神 <span>×</span> 細節品質
+            </h6>
+            <p>
+                Will老闆本身是一位南科工程師，將工程師對細節、流程與品質的講究，延伸到對汽車美容的熱愛，投入職人手作汽車美容與鍍膜服務。從車漆狀況判斷、清潔處理、拋光修復到鍍膜防護，每一道工序都用心完成，不只追求洗乾淨，更重視車漆光澤、細節質感與後續防護。
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="wk_news index_bg">
+    <div class="all_width">
+        <div class="news_box">
+            <div class="news_left">
+                <div class="index_title">
+                    <div class="en_title">
+                        NEWS
+                    </div>
+                    <div class="ch_title">
+                        最新消息
+                    </div>
+                </div>
+            </div>
+            <div class="news_right">
+                <button class="index_btn">
+                    <span>MORE</span>
+                    <img src="https://pic03.eapple.com.tw/willclean/btn-arrow.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wk_service index_bg">
+    <div class="all_width">
+        <div class="service_box">
+            <div class="service_title">
+                <div class="service_left">
+                    <div class="index_title">
+                        <div class="en_title">
+                            SERVICE
+                        </div>
+                        <div class="ch_title">
+                            服務項目
+                        </div>
+                    </div>
+                </div>
+                <div class="service_right">
+                    <button class="index_btn">
+                        <span>SERVICE</span>
+                        <img src="https://pic03.eapple.com.tw/willclean/btn-arrow.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="service_item">
+                <div class="service_item_self">
+                    <img src="https://pic03.eapple.com.tw/willclean/index-01.svg" alt="">
+                    <p>洗車打蠟</p>
+                    <span>
+                        Car Wash &amp; Wax
+                    </span>
+                </div>
+                <div class="service_item_self">
+                    <img src="https://pic03.eapple.com.tw/willclean/index-02.svg" alt="">
+                    <p>汽車拋光美容</p>
+                    <span>
+                        Auto Polishing
+                    </span>
+                </div>
+                <div class="service_item_self">
+                    <img src="https://pic03.eapple.com.tw/willclean/index-03.svg" alt="">
+                    <p>車體鍍膜</p>
+                    <span>
+                        Ceramic Coating
+                    </span>
+                </div>
+                <div class="service_item_self">
+                    <img src="https://pic03.eapple.com.tw/willclean/index-04.svg" alt="">
+                    <p>玻璃鍍膜</p>
+                    <span>
+                        Glass Coating
+                    </span>
+                </div>
+                <div class="service_item_self">
+                    <img src="https://pic03.eapple.com.tw/willclean/index-05.svg" alt="">
+                    <p>汽車內裝清潔</p>
+                    <span>
+                        Interior Detailing
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wk_choose">
+    <div class="all_width">
+        <div class="choose_box">
+            <div class="index_title">
+                <div class="en_title">
+                    WHY CHOOSE US
+                </div>
+                <div class="ch_title">
+                    優勢特色
+                </div>
+            </div>
+            <div class="choose_item">
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            01
+                        </div>
+                        <div class="choose_item_title">
+                            工程師的細節堅持
+                        </div>
+                        <div class="choose_item_in">
+                            將工程師對流程與細節的講究帶進汽車美容，仔細處理、不馬虎，只為呈現更好的車體質感。
+                        </div>
+                    </div>
+                </div>
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            02
+                        </div>
+                        <div class="choose_item_title">
+                            依照車況評估服務
+                        </div>
+                        <div class="choose_item_in">
+                            威克依實際車況與車主需求，提供洗車、打蠟、拋光、鍍膜及內裝清潔等適合的美容建議。
+                        </div>
+                    </div>
+                </div>
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            03
+                        </div>
+                        <div class="choose_item_title">
+                            多元汽車美容服務
+                        </div>
+                        <div class="choose_item_in">
+                            從精緻洗車、打蠟，到拋光、車體鍍膜、玻璃鍍膜與內裝清潔，一站滿足愛車內外美容養護需求。
+                        </div>
+                    </div>
+                </div>
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            04
+                        </div>
+                        <div class="choose_item_title">
+                            職人手作細心施工
+                        </div>
+                        <div class="choose_item_in">
+                            汽車美容不只洗淨，更重視細節與品質。威克細心做好每道工序，讓愛車展現亮眼質感。
+                        </div>
+                    </div>
+                </div>
+                <div class="choose_item_self">
+                    <div>
+                        <div class="choose_item_num">
+                            05
+                        </div>
+                        <div class="choose_item_title">
+                            深耕高雄在地服務
+                        </div>
+                        <div class="choose_item_in">
+                            以高雄前金為服務據點，專業服務高雄地區車主，用心累積信任，成為在地推薦的汽車美容店家。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wk_contact index_bg">
+    <div class="all_width">
+        <div class="contact_box">
+            <div class="contact_title">
+                <div class="contact_left">
+                    <div class="index_title">
+                        <div class="en_title">
+                            CONTACT
+                        </div>
+                        <div class="ch_title">
+                            聯絡資訊
+                        </div>
+                    </div>
+                    <div class="contact_title_dec">
+                        威克希望以一步一腳印的專業服務，成為高雄前金、美術館周邊備受推薦的汽車美容店家，讓每一位車主都能放心把愛車交給威克照顧！
+                    </div>
+                </div>
+                <div class="contact_right">
+                    <a href="https://maps.app.goo.gl/cL4qeAt57YVL3XEd6" class="contact_btn" target="_blank">
+                        <div>
+                            <div class="contact_btn_img">
+                                <img src="https://pic03.eapple.com.tw/willclean/w-Location.svg" alt="">
+                            </div>
+                            <p>高雄市前金區</p>
+                            <p>三川里南台橫路124號</p>
+                        </div>
+                    </a>
+                    <a href="tel:0918011662" class="contact_btn">
+                        <div>
+                            <div class="contact_btn_img">
+                                <img src="https://pic03.eapple.com.tw/willclean/w-phone.svg" alt="">
+                            </div>
+                            <p>0918-011662</p>
+                        </div>
+                    </a>
+                    <a href="https://line.me/R/ti/p/~@793mhxqh" class="contact_btn" target="_blank">
+                        <div>
+                            <div class="contact_btn_img">
+                                <img src="https://pic03.eapple.com.tw/willclean/w-line.svg" alt="">
+                            </div>
+                            <p>@793mhxqh</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact_in">
+        <div class="contact_square">
+            <div class="contact_en">
+                ENGINEERED WITH PRECISION CRAFTED WITH CARE
+            </div>
+            <div class="contact_ch">
+                <span>
+                    工程師的講究
+                </span>
+                <span>
+                    職人級的細節
+                </span>
+            </div>
+        </div>
+        <div class="contact_running">
+            <img src="https://pic03.eapple.com.tw/willclean/contact-bg.png" alt=""><img src="https://pic03.eapple.com.tw/willclean/contact-bg.png" alt=""> 
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- <div>
+    <div class="faq">
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    Q1 123
+                </div>
+                <div class="faq-answer">
+                    A1 資料1
+                </div>
+            </div>
+        
+            <div class="faq-item">
+                <div class="faq-question">
+                    Q2 456
+                </div>
+                <div class="faq-answer">
+                    A2 資料2
+                </div>
+            </div>
+        
+    </div>
+</div> -->
+
+</div></main>
 
 
 <!-- 共用模板引擎 -->
@@ -878,7 +1076,6 @@
 
 
 <!-- 進場動畫 -->
-
 
 
 

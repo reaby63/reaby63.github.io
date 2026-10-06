@@ -1,0 +1,177 @@
+@use "sass:math";
+@use "sass:map";
+
+$bodyFontSize: 16;
+$bodyLineHeight: 24;
+
+// unit
+$digits: 1;
+$mode: round;
+
+@function fd($number, $digits, $mode) {
+  $pow: math.pow(10, $digits);
+
+  @if $mode == floor {
+    @return math.div(math.floor($number * $pow), $pow);
+  } @else if $mode == ceil {
+    @return math.div(math.ceil($number * $pow), $pow);
+  } @else {
+    // 預設 round
+    @return math.div(math.round($number * $pow), $pow);
+  }
+}
+
+@function rm($val, $fz: $bodyFontSize) {
+  $unit: if($fz == null, 16, $fz);
+  @if $val == auto {
+    @return auto;
+  } @else {
+    $result: math.div($val, $unit);
+
+    @if $digits != null {
+      @return fd($result, $digits, $mode) * 1rem;
+    } @else {
+      @return $result * 1rem;
+    }
+  }
+}
+
+@function em($val, $fz: $bodyFontSize) {
+  $unit: if($fz == null, 16, $fz);
+  @if $val == auto {
+    @return auto;
+  } @else {
+    $result: math.div($val, $unit);
+
+    @if $digits != null {
+      @return fd($result, $digits, $mode) * 1em;
+    } @else {
+      @return $result * 1em;
+    }
+  }
+}
+
+@function vw($val, $win: 1920) {
+  @if $val == auto {
+    @return auto;
+  } @else {
+    $result: math.div($val, math.div($win, 100));
+
+    @if $digits != null {
+      @return fd($result, $digits, $mode) * 1vw;
+    } @else {
+      @return $result * 1vw;
+    }
+  }
+}
+
+@function dvw($val, $win: 1920) {
+  @if $val == auto {
+    @return auto;
+  } @else {
+    $result: math.div($val, math.div($win, 100));
+
+    @if $digits != null {
+      @return fd($result, $digits, $mode) * 1dvw;
+    } @else {
+      @return $result * 1dvw;
+    }
+  }
+}
+
+@function vh($val, $h: 1080) {
+  @if $val == auto {
+    @return auto;
+  } @else {
+    $result: math.div($val, math.div($h, 100));
+
+    @if $digits != null {
+      @return fd($result, $digits, $mode) * 1vh;
+    } @else {
+      @return $result * 1vh;
+    }
+  }
+}
+
+@function dvh($val, $h: 1080) {
+  @if $val == auto {
+    @return auto;
+  } @else {
+    $result: math.div($val, math.div($h, 100));
+
+    @if $digits != null {
+      @return fd($result, $digits, $mode) * 1dvh;
+    } @else {
+      @return $result * 1dvh;
+    }
+  }
+}
+
+@function pa($val, $D: 1920) {
+  @if $val == auto {
+    @return auto;
+  } @else {
+    $ratio: math.div($val, $D);
+
+    @if $digits != null {
+      $fixed: fd($ratio * 100, $digits, $mode);
+      @return $fixed * 1%;
+    } @else {
+      @return $ratio * 100 * 1%;
+    }
+  }
+}
+
+@function hypotenuse($a, $b) {
+  $res: math.sqrt($a * $a + $b * $b);
+
+  @if $digits != null {
+    @return fd($res, $digits, $mode);
+  } @else {
+    @return $res;
+  }
+}
+
+@function fld($max, $min, $flow: null) {
+  $real-min: min($max, $min);
+  $real-max: max($max, $min);
+
+  $real-float: dvw($real-max);
+
+  @if $real-min < 0 {
+    $real-float: dvw($real-min);
+  }
+
+  @if $flow != null {
+    $real-float: $flow;
+  }
+
+  @return clamp(#{$real-min}px, #{$real-float}, #{$real-max}px);
+}
+
+@function lh($lh: $bodyLineHeight, $px: $bodyFontSize) {
+  @if math.unit($lh) == '%' {
+    @return calc($lh / 100%);
+  } @else {
+    $result: math.div($lh, $px);
+  
+    @if $digits != null {
+      @return fd($result, $digits, $mode);
+    } @else {
+      @return $result;
+    }
+  }
+}
+
+@function ls($ls: 0, $font: $bodyFontSize) {
+  @if $ls ==0 {
+    @return 0;
+  }
+  @else {
+    @if math.unit($ls) == '%' {
+      @return calc($ls / 100%)+em;
+    } @else {
+      @return calc($ls / 100)+em;
+    }
+  }
+}
