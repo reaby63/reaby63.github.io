@@ -183,16 +183,20 @@
 .box_container .cy_ab_list {
   position: relative;
   z-index: 2;
+  padding-bottom: 180px;
 }
 .box_container .cy_ab_list .cy_ab_list_self {
+  margin-bottom: 84px;
+}
+.box_container .cy_ab_list .cy_ab_list_self .cy_ab_list_self_width {
   display: flex;
   align-items: flex-end;
   width: 80%;
   background-color: #fff;
   position: relative;
-  margin-bottom: 84px;
+  box-shadow: 1px 2px 20px #ccc;
 }
-.box_container .cy_ab_list .cy_ab_list_self > img {
+.box_container .cy_ab_list .cy_ab_list_self .cy_ab_list_self_width > img {
   position: absolute;
   top: 39px;
   right: 41px;
@@ -242,6 +246,20 @@
   letter-spacing: 1px;
   line-height: 30px;
 }
+.box_container .cy_ab_list .cy_ab_list_self:nth-child(even) {
+  justify-content: flex-end;
+  display: flex;
+}
+.box_container .cy_ab_list .cy_ab_list_self:nth-child(even) .cy_ab_list_self_width > img {
+  left: 41px;
+}
+.box_container .cy_ab_list .cy_ab_list_self:nth-child(even) .cy_ab_list_self_left {
+  display: inline-flex;
+  order: 2;
+}
+.box_container .cy_ab_list .cy_ab_list_self:last-child {
+  margin-bottom: 0;
+}
 
 </style>
 </head>
@@ -281,38 +299,62 @@
         </div>
         <div class="cy_ab_list">
             <div class="cy_ab_list_self">
-                <div class="cy_ab_list_self_left">
-                    <img src="https://pic03.eapple.com.tw/cyuanmei/about_01.jpg" alt="">
-                </div>
-                <div class="cy_ab_list_self_right">
-                    <div class="cy_ab_list_self_right_num">
-                        01
+                <div class="cy_ab_list_self_width">
+                    <div class="cy_ab_list_self_left">
+                        <img src="https://pic03.eapple.com.tw/cyuanmei/about_01.jpg" alt="">
                     </div>
-                    <div class="cy_ab_list_self_right_tag">
-                        重視每一道施工細節
+                    <div class="cy_ab_list_self_right">
+                        <div class="cy_ab_list_self_right_num">
+                            01
+                        </div>
+                        <div class="cy_ab_list_self_right_tag">
+                            重視每一道施工細節
+                        </div>
+                        <p>
+                            從牆面整理、批土打磨到塗刷收邊，我們留意牆面的平整度、漆面的均勻度，以及邊角交接的細節，讓表面的質感建立在紮實的施工基礎上。
+                        </p>
                     </div>
-                    <p>
-                        從牆面整理、批土打磨到塗刷收邊，我們留意牆面的平整度、漆面的均勻度，以及邊角交接的細節，讓表面的質感建立在紮實的施工基礎上。
-                    </p>
+                    <img src="https://pic03.eapple.com.tw/cyuanmei/about01.svg" alt="">
                 </div>
-                <img src="https://pic03.eapple.com.tw/cyuanmei/about01.svg" alt="">
             </div>
             <div class="cy_ab_list_self">
-                <div class="cy_ab_list_self_left">
-                    <img src="https://pic03.eapple.com.tw/cyuanmei/about_01.jpg" alt="">
-                </div>
-                <div class="cy_ab_list_self_right">
-                    <div class="cy_ab_list_self_right_num">
-                        01
+                <div class="cy_ab_list_self_width">
+                    <div class="cy_ab_list_self_left">
+                        <img src="https://pic03.eapple.com.tw/cyuanmei/about_02.jpg" alt="">
                     </div>
-                    <div class="cy_ab_list_self_right_tag">
-                        重視每一道施工細節
+                    <div class="cy_ab_list_self_right">
+                        <div class="cy_ab_list_self_right_num">
+                            02
+                        </div>
+                        <div class="cy_ab_list_self_right_tag">
+                            從居家油漆到建築塗裝
+                        </div>
+                        <p>
+                            服務涵蓋新建建築、居家裝潢與廠房油漆，並提供防水隔熱、漏水抓漏、壁癌處理、藝術塗料及公共工程塗裝，依不同的使用環境，規劃相應的材料與工序。
+                        </p>
                     </div>
-                    <p>
-                        從牆面整理、批土打磨到塗刷收邊，我們留意牆面的平整度、漆面的均勻度，以及邊角交接的細節，讓表面的質感建立在紮實的施工基礎上。
-                    </p>
+                    <img src="https://pic03.eapple.com.tw/cyuanmei/about02.svg" alt="">
                 </div>
-                <img src="https://pic03.eapple.com.tw/cyuanmei/about01.svg" alt="">
+            </div>
+            <div class="cy_ab_list_self">
+                <div class="cy_ab_list_self_width">
+                    <div class="cy_ab_list_self_left">
+                        <img src="https://pic03.eapple.com.tw/cyuanmei/about_01.jpg" alt="">
+                    </div>
+                    <div class="cy_ab_list_self_right">
+                        <div class="cy_ab_list_self_right_num">
+                            03
+                        </div>
+                        <div class="cy_ab_list_self_right_tag">
+                            免費到場估價
+                        </div>
+                        <p>
+                            有些施工需求，需要看過現場，才能討論得更清楚。<br>
+                            我們提供免費到場估價，歡迎分享現場照片、設計圖或初步想法，讓我們了解空間狀況，一起討論合適的施工安排。
+                        </p>
+                    </div>
+                    <img src="https://pic03.eapple.com.tw/cyuanmei/about03.svg" alt="">
+                </div>
             </div>
         </div>
     </div>

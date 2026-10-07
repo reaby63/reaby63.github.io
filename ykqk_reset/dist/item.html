@@ -1,0 +1,447 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荃渼油漆工程</title>
+    
+    <!-- bootstrap套用 -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Swiper套用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://pic03.eapple.com.tw/yk_js_web/cmp.js"></script> 
+    <link rel="stylesheet" href="https://pic03.eapple.com.tw/yk_js_web/cmp.css">
+    
+
+<style>
+/* ==================================================
+   Page SCSS
+   ================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Module Settings*/
+.pageIndex {
+  max-width: 100%;
+  padding: 0;
+}
+
+.main_part {
+  max-width: 2000px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.edit,
+.edit_part,
+.show_content,
+.main_part {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.edit * {
+  word-break: normal;
+}
+
+.animated15 {
+  animation: none;
+}
+
+.box_container * {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+}
+.box_container body {
+  overflow-x: hidden;
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+.box_container ul {
+  list-style: none;
+}
+.box_container a {
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.box_container .all_width {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.box_container button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.box_container .keyword_i {
+  display: none;
+}
+
+.box_container {
+  --c-offset: 100px;
+}
+.box_container .cy_ab_top {
+  background-image: url("https://pic03.eapple.com.tw/cyuanmei/about_topbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.box_container .cy_ab_top .cy_ab_top_title {
+  display: flex;
+  align-items: flex-end;
+  color: #F06402;
+  margin-left: 5%;
+  padding-top: 309px;
+  padding-bottom: 45px;
+}
+.box_container .cy_ab_top .cy_ab_top_title .cy_about_left_title_en {
+  font-weight: bold;
+  font-size: 41px;
+  position: relative;
+  padding-right: 10px;
+  margin-right: 28px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 48px;
+}
+.box_container .cy_ab_top .cy_ab_top_title .cy_about_left_title_en::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #F06402;
+  right: -11px;
+  bottom: 21px;
+}
+.box_container .cy_ab_top .cy_ab_top_title .cy_about_left_title_en p {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 48px;
+}
+.box_container .cy_ab_top .cy_ab_top_title .cy_about_left_title_ch {
+  font-size: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+.box_container .cy_ab_top .cy_ab_top_rightimg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.box_container .cy_ab_bg {
+  background-image: url("https://pic03.eapple.com.tw/cyuanmei/about_bg_01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  position: relative;
+}
+.box_container .cy_ab_bg .cy_ab_bg_width {
+  margin: 0 5%;
+  padding-top: 207px;
+  padding-bottom: 95px;
+  position: relative;
+  z-index: 2;
+}
+.box_container .cy_ser_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 56px 41px;
+}
+.box_container .cy_ser_list .cy_ser_list_self {
+  width: calc((100% - 82px) / 3);
+  position: relative;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_chtitle {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: #fff;
+  padding: 20px 12px;
+  border: solid 1px #EF6302;
+  box-sizing: border-box;
+  writing-mode: vertical-rl;
+  letter-spacing: 3px;
+  right: 18px;
+  top: 0;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_box {
+  background-color: #fff;
+  box-shadow: 1px 2px 20px #ccc;
+  height: 100%;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_box .cy_ser_list_self_box_top {
+  box-sizing: border-box;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_box .cy_ser_list_self_box_top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_box .cy_ser_list_self_box_bottom {
+  padding: 54px 30px;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_box .cy_ser_list_self_box_bottom .cy_ser_list_self_box_orange {
+  color: #F06402;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 50px;
+  letter-spacing: 0.3px;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_box .cy_ser_list_self_box_bottom p {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_box .cy_ser_list_self_box_bottom p:before {
+  content: "";
+  display: inline-flex;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 50%;
+  margin-right: 28px;
+}
+.box_container .cy_ser_list .cy_ser_list_self .cy_ser_list_self_box .cy_ser_list_self_box_bottom p:last-child {
+  margin-bottom: 0;
+}
+
+</style>
+</head>
+<body>
+    
+    <main id="main-content"><!-- 服務項目 --><div class="box_container">
+
+<div class="cy_ab_top">
+    <div class="cy_ab_top_title">
+        <div class="cy_about_left_title_en">
+            SERVICE
+        </div>
+        <div class="cy_about_left_title_ch">
+            服務項目
+        </div>
+    </div>
+    <div class="cy_ab_top_rightimg">
+        <img src="https://pic03.eapple.com.tw/cyuanmei/service_topimg.jpg" alt="">
+    </div>
+</div>
+
+<div class="cy_ab_bg">
+    <div class="cy_ab_bg_width">
+        <div class="cy_ser_list">
+            
+                <div class="cy_ser_list_self">
+                    <div class="cy_ser_list_self_entitle">
+                        SERVICE 01
+                    </div>
+                    <div class="cy_ser_list_self_chtitle">
+                        新建案油漆工程
+                    </div>
+                    <div class="cy_ser_list_self_box">
+                        <div class="cy_ser_list_self_box_top">
+                            <img src="https://pic03.eapple.com.tw/cyuanmei/service_01.jpg" alt="">
+                        </div>
+                        <div class="cy_ser_list_self_box_bottom">
+                            <div class="cy_ser_list_self_box_orange">
+                                配合新建工程進度，從牆面基底處理到面漆收邊，完成整體建築塗裝。
+                            </div>
+                            
+                                <p>集合式住宅、新建透天及大樓油漆</p>
+                            
+                                <p>接待中心室內外油漆</p>
+                            
+                                <p>室內平頂、牆面批土油漆</p>
+                            
+                                <p>實品屋油漆、樣品屋油漆</p>
+                            
+                                <p>停車格標線畫設</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="cy_ser_list_self">
+                    <div class="cy_ser_list_self_entitle">
+                        SERVICE 02
+                    </div>
+                    <div class="cy_ser_list_self_chtitle">
+                        居家裝潢油漆工程
+                    </div>
+                    <div class="cy_ser_list_self_box">
+                        <div class="cy_ser_list_self_box_top">
+                            <img src="https://pic03.eapple.com.tw/cyuanmei/service_02.jpg" alt="">
+                        </div>
+                        <div class="cy_ser_list_self_box_bottom">
+                            <div class="cy_ser_list_self_box_orange">
+                                配合屋主需求，透過色彩搭配與細節處理，讓牆面融入整體裝潢風格。
+                            </div>
+                            
+                                <p>室內牆面批土</p>
+                            
+                                <p>室內油漆粉刷</p>
+                            
+                                <p>輕隔間油漆</p>
+                            
+                                <p>跳色油漆</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="cy_ser_list_self">
+                    <div class="cy_ser_list_self_entitle">
+                        SERVICE 03
+                    </div>
+                    <div class="cy_ser_list_self_chtitle">
+                        廠房油漆工程
+                    </div>
+                    <div class="cy_ser_list_self_box">
+                        <div class="cy_ser_list_self_box_top">
+                            <img src="https://pic03.eapple.com.tw/cyuanmei/service_03.jpg" alt="">
+                        </div>
+                        <div class="cy_ser_list_self_box_bottom">
+                            <div class="cy_ser_list_self_box_orange">
+                                針對鋼構、鐵皮、屋頂與地坪，依建材特性及使用需求，安排塗裝與表面處理。
+                            </div>
+                            
+                                <p>鋼構廠房、科技廠房油漆</p>
+                            
+                                <p>鐵皮鋼構除鏽、防鏽油漆</p>
+                            
+                                <p>屋頂防水、隔熱工程</p>
+                            
+                                <p>地坪耐磨漆工程</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="cy_ser_list_self">
+                    <div class="cy_ser_list_self_entitle">
+                        SERVICE 04
+                    </div>
+                    <div class="cy_ser_list_self_chtitle">
+                        防水隔熱、壁癌抓漏
+                    </div>
+                    <div class="cy_ser_list_self_box">
+                        <div class="cy_ser_list_self_box_top">
+                            <img src="https://pic03.eapple.com.tw/cyuanmei/service_04.jpg" alt="">
+                        </div>
+                        <div class="cy_ser_list_self_box_bottom">
+                            <div class="cy_ser_list_self_box_orange">
+                                依現場狀況評估漏水、壁癌及隔熱需求，規劃合適的防水與修繕方式。
+                            </div>
+                            
+                                <p>外牆屋頂防水隔熱</p>
+                            
+                                <p>複式防水隔熱</p>
+                            
+                                <p>室內結構防水、自癒防水</p>
+                            
+                                <p>漏水抓漏</p>
+                            
+                                <p>壁癌處理防治</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="cy_ser_list_self">
+                    <div class="cy_ser_list_self_entitle">
+                        SERVICE 05
+                    </div>
+                    <div class="cy_ser_list_self_chtitle">
+                        藝術塗料與特殊塗裝
+                    </div>
+                    <div class="cy_ser_list_self_box">
+                        <div class="cy_ser_list_self_box_top">
+                            <img src="https://pic03.eapple.com.tw/cyuanmei/service_05.jpg" alt="">
+                        </div>
+                        <div class="cy_ser_list_self_box_bottom">
+                            <div class="cy_ser_list_self_box_orange">
+                                依設計風格與施作材質，運用不同塗料及工法，呈現色澤與紋理層次。
+                            </div>
+                            
+                                <p>鐵件冷烤漆、噴漆</p>
+                            
+                                <p>木件木皮染色</p>
+                            
+                                <p>後製清水模、司曼特、樂土</p>
+                            
+                                <p>石頭漆、紋理漆施工</p>
+                            
+                                <p>班傑明油漆施工</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="cy_ser_list_self">
+                    <div class="cy_ser_list_self_entitle">
+                        SERVICE 06
+                    </div>
+                    <div class="cy_ser_list_self_chtitle">
+                        政府機關與公共空間油漆
+                    </div>
+                    <div class="cy_ser_list_self_box">
+                        <div class="cy_ser_list_self_box_top">
+                            <img src="https://pic03.eapple.com.tw/cyuanmei/service_06.jpg" alt="">
+                        </div>
+                        <div class="cy_ser_list_self_box_bottom">
+                            <div class="cy_ser_list_self_box_orange">
+                                配合公共空間用途與工程規劃，進行建物油漆及修繕施工，重視整體色調與細節的協調。
+                            </div>
+                            
+                                <p>政府單位、公家機關建物油漆工程</p>
+                            
+                                <p>公共空間油漆及油漆修繕翻新工程程</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+</div></main>
+    
+
+
+
+<!-- 共用模板引擎 -->
+
+<!-- gsap套用 -->
+ 
+
+<!-- bootstrap套用 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- Swiper套用 -->
+
+<!-- 其他套用 -->
+
+
+
+
+
+
+
+
+
+<!-- 進場動畫 -->
+
+
+
+
+            <script src="js/jquery-3.7.1.min.js">
+            </script>
+        </body></html>

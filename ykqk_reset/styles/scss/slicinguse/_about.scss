@@ -102,17 +102,21 @@
     .cy_ab_list {
         position: relative;
         z-index: 2;
+        padding-bottom: 180px;
         .cy_ab_list_self {
-            display: flex;
-            align-items: flex-end;
-            width: 80%;
-            background-color: #fff;
-            position: relative;
             margin-bottom: 84px;
-            > img {
-                position: absolute;
-                top: 39px;
-                right: 41px;
+            .cy_ab_list_self_width {
+                display: flex;
+                align-items: flex-end;
+                width: 80%;
+                background-color: #fff;
+                position: relative;
+                box-shadow: 1px 2px 20px #ccc;
+                > img {
+                    position: absolute;
+                    top: 39px;
+                    right: 41px;
+                }
             }
             .cy_ab_list_self_left {
                 width: 50.5%;
@@ -158,6 +162,20 @@
                     letter-spacing: 1px;
                     line-height: 30px;
                 }
+            }
+            &:nth-child(even) {
+                justify-content: flex-end;
+                display: flex;
+                .cy_ab_list_self_width > img {
+                    left: 41px;
+                }
+                .cy_ab_list_self_left {
+                    display: inline-flex;
+                    order: 2;
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }

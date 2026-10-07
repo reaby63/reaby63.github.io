@@ -1,0 +1,49 @@
+<!-- 服務項目 -->
+
+<div class="box_container">
+
+<div class="cy_ab_top">
+    <div class="cy_ab_top_title">
+        <div class="cy_about_left_title_en">
+            SERVICE
+        </div>
+        <div class="cy_about_left_title_ch">
+            服務項目
+        </div>
+    </div>
+    <div class="cy_ab_top_rightimg">
+        <img src="../img/service_topimg.jpg" alt="">
+    </div>
+</div>
+
+<div class="cy_ab_bg">
+    <div class="cy_ab_bg_width">
+        <div class="cy_ser_list">
+            {{#each item}}
+                <div class="cy_ser_list_self">
+                    <div class="cy_ser_list_self_entitle">
+                        {{ titleEN }}
+                    </div>
+                    <div class="cy_ser_list_self_chtitle">
+                        {{ titleCH }}
+                    </div>
+                    <div class="cy_ser_list_self_box">
+                        <div class="cy_ser_list_self_box_top">
+                            <img src="../img/{{ img }}" alt="">
+                        </div>
+                        <div class="cy_ser_list_self_box_bottom">
+                            <div class="cy_ser_list_self_box_orange">
+                                {{ tag }}
+                            </div>
+                            {{#each list}}
+                                <p>{{ text }}</p>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+</div>

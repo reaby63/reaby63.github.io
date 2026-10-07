@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>荃渼油漆工程</title>
+    
+    <!-- bootstrap套用 -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- Swiper套用 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://pic03.eapple.com.tw/yk_js_web/cmp.js"></script> 
+    <link rel="stylesheet" href="https://pic03.eapple.com.tw/yk_js_web/cmp.css">
+    
+
+<style>
+/* ==================================================
+   Page SCSS
+   ================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Module Settings*/
+.pageIndex {
+  max-width: 100%;
+  padding: 0;
+}
+
+.main_part {
+  max-width: 2000px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.edit,
+.edit_part,
+.show_content,
+.main_part {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.edit * {
+  word-break: normal;
+}
+
+.animated15 {
+  animation: none;
+}
+
+.box_container * {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+}
+.box_container body {
+  overflow-x: hidden;
+  min-height: 100dvh;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+.box_container ul {
+  list-style: none;
+}
+.box_container a {
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.box_container .all_width {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+.box_container button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.box_container .keyword_i {
+  display: none;
+}
+
+.box_container {
+  --c-offset: 100px;
+}
+.box_container .cy_ab_top {
+  background-image: url("https://pic03.eapple.com.tw/cyuanmei/about_topbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.box_container .cy_ab_top .cy_ab_top_title {
+  display: flex;
+  align-items: flex-end;
+  color: #F06402;
+  margin-left: 5%;
+  padding-top: 309px;
+  padding-bottom: 30px;
+}
+.box_container .cy_ab_top .cy_ab_top_title .cy_about_left_title_en {
+  font-weight: bold;
+  font-size: 41px;
+  position: relative;
+  padding-right: 10px;
+  margin-right: 28px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 48px;
+}
+.box_container .cy_ab_top .cy_ab_top_title .cy_about_left_title_en::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #F06402;
+  right: -11px;
+  bottom: 21px;
+}
+.box_container .cy_ab_top .cy_ab_top_title .cy_about_left_title_en p {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 48px;
+}
+.box_container .cy_ab_top .cy_ab_top_title .cy_about_left_title_ch {
+  font-size: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+}
+.box_container .cy_ab_top .cy_ab_top_rightimg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.box_container .cy_ab_bg {
+  background-image: url("https://pic03.eapple.com.tw/cyuanmei/about_bg_01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  padding-bottom: 95px;
+  padding-top: 164px;
+}
+.box_container .cy_ab_bg .cy_ab_bg_white {
+  position: relative;
+  z-index: 3;
+}
+.box_container .cy_ab_bg .cy_ab_bg_white::after {
+  content: "";
+  position: absolute;
+  width: 88%;
+  height: 1151px;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+}
+.box_container .cy_ab_bg .cy_pro_list_width {
+  margin: 0 15%;
+  position: relative;
+  z-index: 2;
+}
+.box_container .cy_pro_list {
+  padding-top: 146px;
+}
+.box_container .cy_pro_list .cy_pro_list_self {
+  display: flex;
+  align-items: center;
+  margin-bottom: 123px;
+}
+.box_container .cy_pro_list .cy_pro_list_self:last-child {
+  margin-bottom: 0;
+}
+.box_container .cy_pro_list .cy_pro_list_self .cy_pro_list_self_num {
+  font-size: 36px;
+  color: #F06402;
+  font-weight: 700;
+}
+.box_container .cy_pro_list .cy_pro_list_self .cy_pro_list_self_num span {
+  display: inline-flex;
+  font-size: 16px;
+}
+
+</style>
+</head>
+<body>
+    
+    <main id="main-content"><!-- 服務流程 --><div class="box_container">
+
+<div class="cy_ab_top">
+    <div class="cy_ab_top_title">
+        <div class="cy_about_left_title_en">
+            PROCESS
+        </div>
+        <div class="cy_about_left_title_ch">
+            服務流程
+        </div>
+    </div>
+    <div class="cy_ab_top_rightimg">
+        <img src="https://pic03.eapple.com.tw/cyuanmei/process_topimg.jpg" alt="">
+    </div>
+</div>
+
+<div class="cy_ab_bg">
+    <div class="cy_ab_bg_white">
+        <div class="cy_pro_list_width">
+            <div class="cy_pro_list">
+                <div class="cy_pro_list_self">
+                    <div class="cy_pro_list_self_num">
+                        <span>
+                            STEP
+                        </span>
+                        01
+                    </div>
+                    <div class="cy_pro_list_self_img">
+                        <img src="https://pic03.eapple.com.tw/cyuanmei/process01.svg" alt="">
+                    </div>
+                    <div class="cy_pro_list_self_text">
+                        <div>
+                            免費到場估價
+                        </div>
+                        <p>
+                            到場了解現場狀況、施作範圍與您的需求，估價不收取車馬費。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+</div></main>
+    
+
+
+
+<!-- 共用模板引擎 -->
+
+<!-- gsap套用 -->
+ 
+
+<!-- bootstrap套用 -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- Swiper套用 -->
+
+<!-- 其他套用 -->
+
+
+
+
+
+
+
+
+
+<!-- 進場動畫 -->
+
+
+
+
+            <script src="js/jquery-3.7.1.min.js">
+            </script>
+        </body></html>

@@ -1,0 +1,108 @@
+@use "../base/Reset" as *;
+// 開始切版寫這哦~
+.box_container {
+    --c-offset: 100px;
+
+.cy_ab_top {
+    background-image: url("../../../img/about_topbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .cy_ab_top_title {
+        display: flex;
+        align-items: flex-end;
+        color: #F06402;
+        margin-left: 5%;
+        padding-top: 309px;
+        padding-bottom: 30px;
+        .cy_about_left_title_en {
+            font-weight: bold;
+            font-size: 41px;
+            position: relative;
+            padding-right: 10px;
+            margin-right: 28px;
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 1.5px;
+            line-height: 48px;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background-color: #F06402;
+                right: -11px;
+                bottom: 21px;
+            }
+            p {
+                font-family: "Poppins", sans-serif;
+                letter-spacing: 1.5px;
+                line-height: 48px;
+            }
+        }
+        .cy_about_left_title_ch {
+            font-size: 20px;
+            margin-bottom: 12px;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+    }
+    .cy_ab_top_rightimg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+}
+
+.cy_ab_bg {
+    background-image: url("../../../img/about_bg_01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+    padding-bottom: 95px;
+    padding-top: 164px;
+    .cy_ab_bg_white {
+        position: relative;
+        z-index: 3;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 88%;
+            height: 1151px;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+            z-index: 1;
+        }
+    }
+    .cy_pro_list_width {
+        margin:0 15%;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+
+.cy_pro_list {
+    padding-top: 146px;
+    .cy_pro_list_self {
+        display: flex;
+        align-items: center;
+        margin-bottom: 123px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .cy_pro_list_self_num {
+            font-size: 36px;
+            color: #F06402;
+            font-weight: 700;
+            span {
+                display: inline-flex;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+}
